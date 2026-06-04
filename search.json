@@ -4,70 +4,21 @@
     "href": "posts.html",
     "title": "All Posts",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nDescription\n\n\n\nCategories\n\n\n\nReading Time\n\n\n\n\n\n\n\n\nJun 11, 2026\n\n\nMeasuring Campaign Impact with CausalImpact\n\n\nA practical walkthrough of Google’s CausalImpact package — from data to causal claim.\n\n\npractical, causal inference, R, time series\n\n\n2 min\n\n\n\n\n\n\nJun 4, 2026\n\n\nWhat Is a Counterfactual?\n\n\nThe fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions.\n\n\ntheory, causal inference, econometrics\n\n\n23 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nDescription\n\n\n\nCategories\n\n\n\nReading Time\n\n\n\n\n\n\n\n\nJun 4, 2026\n\n\nWhat Is a Counterfactual?\n\n\nThe fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions.\n\n\ntheory, causal inference, econometrics\n\n\n23 min\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/causalimpact-practical/causalimpact_index.html",
-    "href": "posts/causalimpact-practical/causalimpact_index.html",
-    "title": "Measuring Campaign Impact with CausalImpact",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Counterfactual Thinking",
     "section": "",
-    "text": "You run an email campaign on week 10. Sales data exists for 20 weeks. Did the campaign cause an increase in sales?\nThis is exactly the problem CausalImpact (Google, 2014) was built for. It fits a Bayesian structural time series model on the pre-intervention period, then extrapolates what would have happened without the intervention — your counterfactual."
+    "text": "23 min\n\n\ntheory\n\ncausal inference\n\neconometrics\n\n\n\nThe fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions.\n\n\n\nJun 4, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/causalimpact-practical/causalimpact_index.html#the-setup",
-    "href": "posts/causalimpact-practical/causalimpact_index.html#the-setup",
-    "title": "Measuring Campaign Impact with CausalImpact",
+    "objectID": "index.html#recent-posts",
+    "href": "index.html#recent-posts",
+    "title": "Counterfactual Thinking",
     "section": "",
-    "text": "You run an email campaign on week 10. Sales data exists for 20 weeks. Did the campaign cause an increase in sales?\nThis is exactly the problem CausalImpact (Google, 2014) was built for. It fits a Bayesian structural time series model on the pre-intervention period, then extrapolates what would have happened without the intervention — your counterfactual."
-  },
-  {
-    "objectID": "posts/causalimpact-practical/causalimpact_index.html#the-data",
-    "href": "posts/causalimpact-practical/causalimpact_index.html#the-data",
-    "title": "Measuring Campaign Impact with CausalImpact",
-    "section": "The data",
-    "text": "The data\nlibrary(CausalImpact)\nlibrary(tidyverse)\n\nset.seed(42)\n\n# Simulate 20 weeks of sales\n# Campaign starts on week 10\nn &lt;- 20\ntime &lt;- 1:n\n\n# Control series (unaffected by campaign)\ncontrol &lt;- 100 + cumsum(rnorm(n, 0, 2))\n\n# Treatment series: follows control, then bumps up after week 10\ntreatment &lt;- control + rnorm(n, 0, 3)\ntreatment[10:n] &lt;- treatment[10:n] + 15  # true effect = +15\n\ndf &lt;- data.frame(week = time, sales = treatment, control = control)"
-  },
-  {
-    "objectID": "posts/causalimpact-practical/causalimpact_index.html#running-causalimpact",
-    "href": "posts/causalimpact-practical/causalimpact_index.html#running-causalimpact",
-    "title": "Measuring Campaign Impact with CausalImpact",
-    "section": "Running CausalImpact",
-    "text": "Running CausalImpact\nThe package needs: 1. A time series matrix (treatment + optional control series) 2. The pre/post period indices\n# Define periods\npre_period  &lt;- c(1, 9)\npost_period &lt;- c(10, 20)\n\n# Format for CausalImpact (zoo object)\nts_data &lt;- zoo(\n  cbind(sales = df$sales, control = df$control),\n  order.by = df$week\n)\n\n# Run the model\nimpact &lt;- CausalImpact(ts_data, pre_period, post_period)"
-  },
-  {
-    "objectID": "posts/causalimpact-practical/causalimpact_index.html#reading-the-results",
-    "href": "posts/causalimpact-practical/causalimpact_index.html#reading-the-results",
-    "title": "Measuring Campaign Impact with CausalImpact",
-    "section": "Reading the results",
-    "text": "Reading the results\nplot(impact)\nsummary(impact)\nsummary(impact, \"report\")\nThe three panels show:\n\nOriginal — actual vs. predicted (counterfactual) series\nPointwise — difference at each time point\nCumulative — total accumulated effect"
-  },
-  {
-    "objectID": "posts/causalimpact-practical/causalimpact_index.html#what-the-numbers-mean",
-    "href": "posts/causalimpact-practical/causalimpact_index.html#what-the-numbers-mean",
-    "title": "Measuring Campaign Impact with CausalImpact",
-    "section": "What the numbers mean",
-    "text": "What the numbers mean\n\n\n\nMetric\nMeaning\n\n\n\n\nAverage\nEstimated effect per time point\n\n\nCumulative\nTotal effect over the post period\n\n\np-value\nProbability of this effect under no intervention\n\n\n\nIn our simulation, we injected a true effect of +15 units. CausalImpact should recover something close to that."
-  },
-  {
-    "objectID": "posts/causalimpact-practical/causalimpact_index.html#key-assumptions",
-    "href": "posts/causalimpact-practical/causalimpact_index.html#key-assumptions",
-    "title": "Measuring Campaign Impact with CausalImpact",
-    "section": "Key assumptions",
-    "text": "Key assumptions\n\n\n\n\n\n\nWarningWhen this breaks down\n\n\n\n\nThe control series must be unaffected by the treatment.\nThe relationship between treatment and control must be stable before the intervention.\nNo other events happen at the same time."
-  },
-  {
-    "objectID": "posts/causalimpact-practical/causalimpact_index.html#when-to-use-this",
-    "href": "posts/causalimpact-practical/causalimpact_index.html#when-to-use-this",
-    "title": "Measuring Campaign Impact with CausalImpact",
-    "section": "When to use this",
-    "text": "When to use this\nCausalImpact is a good fit when:\n\nYou have high-frequency data (daily/weekly)\nYou have no control group but have related series\nThe intervention has a clear start date\n\nClassic applications: product launches, PR events, policy changes, algorithm updates."
-  },
-  {
-    "objectID": "posts/causalimpact-practical/causalimpact_index.html#references",
-    "href": "posts/causalimpact-practical/causalimpact_index.html#references",
-    "title": "Measuring Campaign Impact with CausalImpact",
-    "section": "References",
-    "text": "References\n\nBrodersen et al. (2015). Inferring causal impact using Bayesian structural time-series models. Annals of Applied Statistics.\nCausalImpact R package"
+    "text": "23 min\n\n\ntheory\n\ncausal inference\n\neconometrics\n\n\n\nThe fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions.\n\n\n\nJun 4, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -75,20 +26,6 @@
     "title": "About",
     "section": "",
     "text": "I’m a Strategy Consultant and Economist at EY-Parthenon, and a Ph.D. Candidate at ISEG – University of Lisbon, where I also spent three years as a Teaching Assistant in applied econometrics and microeconomics.\nMy work sits at the intersection of causal inference, forecasting, and strategic decision-making. I design econometric frameworks to answer hard questions: did this policy work? what would have happened without this intervention? how elastic is demand at this price point? I’ve applied these methods across public policy evaluation, financial instrument impact assessment, and pricing strategy — always with the goal of turning rigorous analysis into decisions that actually get made.\nThis blog is where I think out loud about the methods I use and care about. Some posts work through theory and intuition. Others are hands-on walkthroughs with real code and data. Most are somewhere in between.\n\nWhat I write about\n\nCounterfactual analysis — synthetic controls, difference-in-differences, interrupted time series\nCausal inference — identification strategies, DAGs, potential outcomes framework\nForecasting — probabilistic forecasting, model evaluation, uncertainty quantification\nApplied examples — using real and simulated data to answer concrete questions\n\n\n\nBackground\n\nPh.D. Candidate in Economics — ISEG, University of Lisbon (2019 – present)\nMSc in Applied Econometrics and Forecasting — ISEG, University of Lisbon\nBSc in Management — Faculty of Economics, University of Coimbra\nSenior Consultant, Strategy & Data Analytics — EY-Parthenon (2024 – present)\n\n\nAll views are my own. Code is available on GitHub."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Counterfactual Thinking",
-    "section": "",
-    "text": "2 min\n\n\npractical\n\ncausal inference\n\nR\n\ntime series\n\n\n\nA practical walkthrough of Google’s CausalImpact package — from data to causal claim.\n\n\n\nJun 11, 2026\n\n\n\n\n\n\n\n\n\n\n\n23 min\n\n\ntheory\n\ncausal inference\n\neconometrics\n\n\n\nThe fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions.\n\n\n\nJun 4, 2026\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#recent-posts",
-    "href": "index.html#recent-posts",
-    "title": "Counterfactual Thinking",
-    "section": "",
-    "text": "2 min\n\n\npractical\n\ncausal inference\n\nR\n\ntime series\n\n\n\nA practical walkthrough of Google’s CausalImpact package — from data to causal claim.\n\n\n\nJun 11, 2026\n\n\n\n\n\n\n\n\n\n\n\n23 min\n\n\ntheory\n\ncausal inference\n\neconometrics\n\n\n\nThe fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions.\n\n\n\nJun 4, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html",
