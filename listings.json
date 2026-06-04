@@ -2,12 +2,14 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/DID/did_for_ceos.html",
       "/posts/what-is-counterfactual/what-is-counterfactual-index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/posts/DID/did_for_ceos.html",
       "/posts/what-is-counterfactual/what-is-counterfactual-index.html"
     ]
   }
