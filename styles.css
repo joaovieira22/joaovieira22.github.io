@@ -1,0 +1,50 @@
+/* Typography */
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4 {
+  font-family: "system-ui", sans-serif;
+  font-weight: 600;
+}
+
+/* Code blocks */
+pre {
+  border-radius: 6px;
+}
+
+/* Post cards */
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* Category badges */
+.quarto-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Callout blocks */
+.callout {
+  border-radius: 6px;
+}
+
+/* Math */
+.math {
+  font-size: 1.05em;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
