@@ -1,0 +1,499 @@
+---
+title: "What Is a Counterfactual?"
+description: "The fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions."
+date: 2026-06-04
+categories: [theory, causal inference, econometrics]
+---
+
+## The limits of observational analysis
+
+Your company launches an aggressive marketing campaign in March. At the end of the month, sales are up 20%. Did the campaign work?
+
+Most corporate data analysts would say yes. That conclusion is incomplete, and in the context of capital allocation it is potentially costly. The correct question is:
+
+> *What would sales have been in March had the campaign never run?*
+
+That hypothetical scenario, the world in which the intervention did not occur, is a **counterfactual**. Constructing a credible counterfactual is not an academic exercise. It is the core of every causal inference project.
+
+The distinction is consequential. A 20% increase in sales might indicate that the campaign was transformative. Alternatively, it might mean sales would have risen regardless, due to seasonality, a competitor's exit, or organic product virality, which would make the campaign spend a pure sunk cost. Without a counterfactual, it is impossible to distinguish correlation from causation.
+
+---
+
+## The Fundamental Problem of Causal Inference
+
+The technical constraint is direct: **we can never directly observe a counterfactual**.
+
+In the real world, each unit of analysis (a customer, a store, a firm, a country) exists in only one state at a time. It either received the treatment, or it did not. We observe one outcome; the other remains permanently hidden.
+
+Holland (1986) formalised this as the **Fundamental Problem of Causal Inference**. In the potential outcomes framework, due originally to Neyman (1923) and later extended by Rubin (1974), the individual causal effect for unit $i$ is defined as:
+
+$$\tau_i = Y_i(1) - Y_i(0)$$
+
+where:
+
+- $Y_i(1)$ is the outcome *if* unit $i$ receives treatment,
+- $Y_i(0)$ is the outcome *if* unit $i$ does not receive treatment,
+- $\tau_i$ is the individual causal effect.
+
+In practice, we observe $Y_i(1)$ **or** $Y_i(0)$, never both simultaneously. The individual causal effect $\tau_i$ is, by construction, unidentifiable for a single unit. This is often referred to in the literature as the **missing data problem of causal inference** (Rubin, 1974; Imbens and Rubin, 2015).
+
+```{r}
+#| label: missing-cf
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: "The missing counterfactual. For each unit, we observe only one potential outcome. The causal effect (the distance between the two states) is never directly observed."
+
+library(tidyverse)
+library(ggplot2)
+
+set.seed(42)
+n <- 10
+
+df <- tibble(
+  unit    = 1:n,
+  y1      = round(50 + rnorm(n, 0, 8) + seq(0, 20, length.out = n)),
+  y0      = round(40 + rnorm(n, 0, 8) + seq(0, 15, length.out = n)),
+  treated = sample(c(TRUE, FALSE), n, replace = TRUE)
+) |>
+  mutate(
+    y_observed = if_else(treated, y1, y0),
+    y_missing  = if_else(treated, y0, y1)
+  )
+
+df_long <- bind_rows(
+  df |> transmute(unit, y = y_observed, type = "Observed"),
+  df |> transmute(unit, y = y_missing,  type = "Counterfactual (missing)")
+)
+
+ggplot(df_long, aes(x = unit, y = y, shape = type, colour = type)) +
+  geom_point(size = 3.5) +
+  geom_segment(
+    data = df,
+    aes(x = unit, xend = unit, y = y0, yend = y1),
+    inherit.aes = FALSE,
+    colour = "grey60", linetype = "dashed", linewidth = 0.5
+  ) +
+  scale_shape_manual(values = c("Observed" = 16, "Counterfactual (missing)" = 4)) +
+  scale_colour_manual(values = c("Observed" = "#2c7bb6", "Counterfactual (missing)" = "#d7191c")) +
+  labs(
+    x = "Unit", y = "Outcome",
+    colour = NULL, shape = NULL,
+    title = "The missing counterfactual",
+    subtitle = "For each unit we see only one potential outcome. The causal effect is the gap."
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom")
+```
+
+Because we cannot observe both potential outcomes for the same unit, we are forced to **construct a plausible counterfactual from other data**. The methodology we choose and the assumptions we invoke define the credibility of the entire causal claim.
+
+---
+
+## Prediction versus causal inference
+
+A critical preliminary is the distinction between causal inference and conventional predictive modelling. Conflating the two is the primary source of errors in data-driven strategic decisions.
+
+**Prediction** asks: given what I observe today, what will happen tomorrow?  
+**Causal inference** asks: if I intervene and alter variable $X$, what happens *as a direct consequence of that alteration*?
+
+A machine learning model can be outstanding for prediction and entirely uninformative for strategic decision-making. The classical illustration: umbrella sales predict rainfall with high accuracy. Subsidising umbrella production does not cause rain. If you are a public official deciding on drainage infrastructure investment, knowing that "umbrella sales are elevated" is a useful forecast but carries zero causal content.
+
+Pearl (2009) formalised this distinction with the **do-calculus**. Observational data provides $P(Y \mid X = x)$, the distribution of outcomes conditional on observing $X = x$. Causal inference, by contrast, targets $P(Y \mid do(X = x))$, the distribution of outcomes if we were to *force* $X = x$ through an external intervention. These are distinct mathematical objects. The do-operator represents a graph surgery on the causal model: it severs all edges into $X$ and fixes its value, removing any confounding by variables that previously determined $X$. Observational conditioning does none of this (Pearl, Glymour, and Jewell, 2016).
+
+This distinction also maps onto Pearl's three-rung hierarchy of causation (Pearl and Mackenzie, 2018): (1) *association*, which captures statistical correlations and is sufficient for prediction; (2) *intervention*, which asks what happens if we act, corresponding to $do$-expressions; and (3) *counterfactuals*, which ask what would have happened to a specific unit under conditions contrary to those actually observed. Standard regression and machine learning operate exclusively at the first rung. Causal inference targets the second and third.
+
+---
+  
+  ## The identification landscape: how we build counterfactuals
+  
+  Since the counterfactual is not directly observable, every causal identification strategy is, in practice, an answer to a single question: *which other data can validly substitute for the missing potential outcome?*
+  
+  The following table summarises the principal strategies, grouped by the structure of data they exploit, together with their identifying assumptions and key vulnerabilities.
+
+::: {.callout-note}
+### Principal identification strategies
+
+| Strategy | Core assumption | Counterfactual comes from | Key vulnerability |
+|---|---|---|---|
+| **Randomised experiment (RCT)** | Random assignment of treatment | The control group, by construction | External validity (generalisation to real-world conditions) |
+| **Difference-in-Differences (DiD)** | Parallel trends absent treatment | A control group with a parallel time trend | Violation of the parallel trends assumption |
+| **Synthetic control** | A weighted combination of donors fits pre-treatment trends | An artificial composite from a donor pool | Interpolation bias; arbitrary pool selection |
+| **Regression Discontinuity (RD)** | Units just above and below a threshold are comparable | Units on the other side of the cutoff | Strictly local validity (estimates hold only near the cutoff) |
+| **Instrumental Variables (IV)** | Instrument shifts treatment but does not affect the outcome directly | Exogenous variation induced by the instrument | Weak instruments; violation of the exclusion restriction |
+| **G-computation / G-formula** | No unmeasured confounders (conditional exchangeability) | Predicted outcomes from a correctly specified outcome model | Model misspecification |
+
+:::
+
+Each strategy requires a different identifying assumption. The quality of a causal claim is only as strong as the plausibility of that assumption in the specific empirical context.
+
+---
+  
+## Building counterfactuals in practice
+  
+  Consider a common operational scenario: a unit is observed over time, an intervention occurs at a known point, and we want to estimate the intervention's effect. The counterfactual is the trajectory the unit *would have followed* in the absence of the intervention.
+
+```{r}
+#| label: att-trajectory
+#| echo: false
+#| fig-cap: "Counterfactual trajectory. We observe the treated unit up to the point of intervention. In the post-period, two paths diverge: what was actually observed, and what would have occurred absent the treatment."
+
+set.seed(1)
+time <- 1:20
+intervention_t <- 12
+
+trend            <- 0.8 * time
+noise            <- rnorm(20, 0, 2)
+treatment_effect <- c(rep(0, intervention_t), cumsum(rep(1.2, 20 - intervention_t)))
+
+y_observed       <- trend + noise + treatment_effect
+y_counterfactual <- trend + noise
+
+df_ts <- tibble(
+  time,
+  observed       = y_observed,
+  counterfactual = y_counterfactual
+) |>
+  pivot_longer(-time, names_to = "series", values_to = "y")
+
+ggplot(df_ts, aes(x = time, y = y, colour = series, linetype = series)) +
+  geom_vline(xintercept = intervention_t + 0.5, linetype = "dotted", colour = "grey40") +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2) +
+  annotate("text", x = intervention_t + 0.8, y = max(y_observed) - 2,
+           label = "Intervention", hjust = 0, size = 3.5, colour = "grey40") +
+  annotate("segment",
+           x = 17, xend = 17,
+           y = y_observed[17], yend = y_counterfactual[17],
+           arrow = arrow(ends = "both", length = unit(0.15, "cm")),
+           colour = "#d7191c") +
+  annotate("text", x = 17.3, y = (y_observed[17] + y_counterfactual[17]) / 2,
+           label = "ATT", hjust = 0, size = 3.5, colour = "#d7191c") +
+  scale_colour_manual(
+    values = c("observed" = "#2c7bb6", "counterfactual" = "#d7191c"),
+    labels = c("observed" = "Observed (treated)", "counterfactual" = "Counterfactual (never treated)")
+  ) +
+  scale_linetype_manual(
+    values = c("observed" = "solid", "counterfactual" = "dashed"),
+    labels = c("observed" = "Observed (treated)", "counterfactual" = "Counterfactual (never treated)")
+  ) +
+  labs(
+    title    = "Observed versus counterfactual trajectory",
+    subtitle = "The causal effect (ATT) is the gap at each post-treatment period",
+    x = "Time", y = "Outcome", colour = NULL, linetype = NULL
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom")
+```
+
+The **Average Treatment Effect on the Treated (ATT)** is the average gap between the observed and counterfactual trajectories across the post-treatment period. At time $t$, it is defined as:
+
+$$ATT(t) = E[Y_i(1) - Y_i(0) \mid D_i = 1]$$
+
+The estimation problem is that we observe only one of the two lines. Every identification strategy is a different method for recovering the red dashed line.
+
+---
+
+## Counterfactuals by data structure
+
+The appropriate strategy depends intrinsically on the structure of the available data. The three principal settings are time-series data, panel data, and cross-sectional data with covariates.
+
+### Time-series counterfactuals
+
+When a **single unit is observed over time** (a country, a firm, a city) and an intervention occurs at a known date, the counterfactual is the projection of what the series would have done absent the intervention.
+
+The standard tool is to fit a model to the **pre-intervention period** and extrapolate it into the post-period. This is the logic underlying **CausalImpact** (Brodersen et al., 2015), which models the pre-treatment period with a Bayesian structural time-series model using auxiliary covariates as controls. It is also the logic of **Causal ARIMA** (Menchetti, Cipollini, and Mealli, 2023), which extends ARIMA models to a causal inference setting, and of **synthetic control** methods applied to a single treated unit.
+
+The credibility of this approach depends entirely on two conditions: the quality of the model's fit during the pre-intervention period, and the absence of other concurrent events (exogenous shocks) that coincide with the intervention. A good in-sample fit does not guarantee a valid out-of-sample extrapolation when there is an unmodelled structural break.
+
+```{r}
+#| label: ts-arima-cf
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: "Time-series counterfactual via ARIMA extrapolation. A model is fitted on the pre-treatment data and extrapolated into the post-treatment period. The gap between the observed series and the forecast is the estimated causal effect."
+
+library(forecast)
+
+set.seed(7)
+n_pre   <- 24
+n_post  <- 12
+n_total <- n_pre + n_post
+
+y_pre      <- 100 + arima.sim(list(ar = 0.7), n = n_pre, sd = 3) |> as.numeric()
+y_post_cf  <- tail(y_pre, 1) + arima.sim(list(ar = 0.7), n = n_post, sd = 3) |> as.numeric()
+y_post_obs <- y_post_cf + seq(2, 18, length.out = n_post)
+
+y_full    <- c(y_pre, y_post_obs)
+time_full <- 1:n_total
+
+fit <- auto.arima(ts(y_pre))
+fc  <- forecast(fit, h = n_post)
+
+df_ts2 <- tibble(
+  time     = time_full,
+  observed = y_full,
+  cf_mean  = c(rep(NA, n_pre), fc$mean    |> as.numeric()),
+  cf_lo    = c(rep(NA, n_pre), fc$lower[, 2] |> as.numeric()),
+  cf_hi    = c(rep(NA, n_pre), fc$upper[, 2] |> as.numeric())
+)
+
+ggplot(df_ts2, aes(x = time)) +
+  geom_vline(xintercept = n_pre + 0.5, linetype = "dotted", colour = "grey50") +
+  geom_ribbon(aes(ymin = cf_lo, ymax = cf_hi), fill = "#d7191c", alpha = 0.15) +
+  geom_line(aes(y = observed), colour = "#2c7bb6", linewidth = 1) +
+  geom_line(aes(y = cf_mean),  colour = "#d7191c", linewidth = 1, linetype = "dashed") +
+  annotate("text", x = n_pre + 1, y = max(y_full, na.rm = TRUE),
+           label = "Intervention", hjust = 0, size = 3.5, colour = "grey40") +
+  labs(
+    title    = "Time-series counterfactual via ARIMA extrapolation",
+    subtitle = "Blue = observed. Red dashed = ARIMA forecast from pre-treatment. Shaded = 95% CI.",
+    x = "Time", y = "Outcome"
+  ) +
+  theme_minimal(base_size = 13)
+```
+
+### Panel data counterfactuals: Difference-in-Differences
+
+When **multiple units are observed over time** and only a subset receives treatment, the untreated units can serve as the counterfactual for the treated units. This is the foundation of **Difference-in-Differences (DiD)**.
+
+The key identifying assumption is **parallel trends**: in the absence of treatment, the treated and control groups would have followed the same temporal trajectory. Under this assumption, the counterfactual for the treated group after treatment is their pre-treatment level plus the trend observed in the control group.
+
+```{r}
+#| label: did-plot
+#| echo: false
+#| fig-cap: "Difference-in-Differences. Under the parallel trends assumption, the evolution of the control group after treatment begins informs what the treated group would have done absent the intervention."
+
+set.seed(3)
+time_did <- c(2019, 2020, 2021, 2022)
+
+treat_line <- tibble(
+  time  = time_did,
+  y     = c(50, 52, 54, 70),
+  group = "Treated (observed)"
+)
+
+ctrl_line <- tibble(
+  time  = time_did,
+  y     = c(48, 50, 52, 54),
+  group = "Control"
+)
+
+cf_line <- tibble(
+  time  = c(2021, 2022),
+  y     = c(54, 56),
+  group = "Counterfactual (parallel trend)"
+)
+
+all_lines <- bind_rows(treat_line, ctrl_line, cf_line)
+
+colours <- c(
+  "Treated (observed)"               = "#2c7bb6",
+  "Control"                          = "#1a9641",
+  "Counterfactual (parallel trend)"  = "#d7191c"
+)
+linetypes <- c(
+  "Treated (observed)"               = "solid",
+  "Control"                          = "solid",
+  "Counterfactual (parallel trend)"  = "dashed"
+)
+
+ggplot(all_lines, aes(x = time, y = y, colour = group, linetype = group)) +
+  geom_vline(xintercept = 2021.5, linetype = "dotted", colour = "grey50") +
+  geom_line(linewidth = 1) +
+  geom_point(size = 3) +
+  annotate("segment",
+           x = 2022.05, xend = 2022.05, y = 56, yend = 70,
+           arrow = arrow(ends = "both", length = unit(0.15, "cm")),
+           colour = "#d7191c") +
+  annotate("text", x = 2022.1, y = 63,
+           label = "DiD\nestimate", size = 3.5, colour = "#d7191c", hjust = 0) +
+  annotate("text", x = 2021.6, y = 72,
+           label = "Treatment\nstarts", size = 3.5, colour = "grey40", hjust = 0) +
+  scale_colour_manual(values = colours) +
+  scale_linetype_manual(values = linetypes) +
+  scale_x_continuous(breaks = time_did) +
+  labs(
+    title    = "Difference-in-Differences",
+    subtitle = "The control group's trend serves as the counterfactual for the treated group",
+    x = NULL, y = "Outcome", colour = NULL, linetype = NULL
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom")
+```
+
+The DiD estimator is:
+  
+  $$\widehat{ATT} = \underbrace{(\bar{Y}_{\text{treated, post}} - \bar{Y}_{\text{treated, pre}})}_{\text{change in treated}} - \underbrace{(\bar{Y}_{\text{control, post}} - \bar{Y}_{\text{control, pre}})}_{\text{change in control}}$$
+  
+  The control group's trend is subtracted from the treated group's change. The residual, the portion of the change not attributable to a common trend, is the estimated causal effect.
+
+A note on recent methodological developments: the DiD literature has undergone substantial revision since Callaway and Sant'Anna (2021) and Goodman-Bacon (2021) demonstrated that the canonical Two-Way Fixed Effects (TWFE) estimator can produce severely biased estimates under staggered treatment adoption when treatment effects are heterogeneous across cohorts or over time. In such settings, already-treated units can act as "forbidden comparisons" in the TWFE decomposition. Robust alternatives, including the Callaway–Sant'Anna group-time average treatment effect estimator and the stacked regression approach (Baker et al., 2022), are now standard practice for staggered DiD designs.
+
+### Cross-sectional counterfactuals: G-computation
+
+When **cross-sectional data with covariates** are available but no natural control group or time series exists, counterfactuals can still be constructed through **G-computation**, also known as the g-formula or outcome regression standardisation (Robins, 1986; Hernán and Robins, 2020).
+
+The procedure follows three steps. First, fit an outcome model $\hat{E}[Y \mid X, D]$ using the observed data. Second, use this fitted model to impute what each unit's outcome *would have been* under a hypothetical intervention, that is, setting $D = 1$ for all units (to obtain $\hat{Y}_i(1)$) and setting $D = 0$ for all units (to obtain $\hat{Y}_i(0)$), while holding covariates $X_i$ fixed at their observed values. Third, compare the two distributions of imputed outcomes.
+
+Under the assumption of **conditional exchangeability** (also termed no unmeasured confounding or ignorability), which states that treatment assignment is independent of potential outcomes conditional on the observed covariates, $D \perp\!\!\!\perp \{Y(0), Y(1)\} \mid X$, this procedure yields a consistent estimate of the causal effect (Robins, 1986).
+
+```{r}
+#| label: gcomp-plot
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: "G-computation: each unit's outcome is predicted under D = 1 and D = 0 by setting the treatment indicator while holding covariates at their observed values. The ATE is the average of unit-level differences."
+
+library(broom)
+
+set.seed(99)
+n_gc <- 300
+
+age      <- rnorm(n_gc, 45, 10)
+severity <- rnorm(n_gc, 5, 2)
+p_treat  <- plogis(-1 + 0.4 * severity + 0.01 * age)
+treated_gc <- rbinom(n_gc, 1, p_treat)
+y_gc <- 30 - 3 * treated_gc + 0.5 * age + 2 * severity + rnorm(n_gc, 0, 5)
+
+df_gc  <- tibble(y = y_gc, treated = treated_gc, age, severity)
+fit_gc <- lm(y ~ treated + age + severity, data = df_gc)
+
+y_pred_1 <- predict(fit_gc, newdata = df_gc |> mutate(treated = 1))
+y_pred_0 <- predict(fit_gc, newdata = df_gc |> mutate(treated = 0))
+ate_gc   <- mean(y_pred_1 - y_pred_0)
+
+df_plot_gc <- tibble(
+  unit     = 1:n_gc,
+  y_treat1 = y_pred_1,
+  y_treat0 = y_pred_0,
+  effect   = y_pred_1 - y_pred_0
+) |>
+  arrange(effect) |>
+  mutate(rank = row_number())
+
+df_plot_long <- df_plot_gc |>
+  pivot_longer(c(y_treat1, y_treat0), names_to = "scenario", values_to = "y_pred") |>
+  mutate(scenario = if_else(scenario == "y_treat1", "D = 1 (treated world)", "D = 0 (control world)"))
+
+ggplot(df_plot_long, aes(x = rank, y = y_pred, colour = scenario)) +
+  geom_point(alpha = 0.5, size = 0.8) +
+  geom_smooth(se = FALSE, linewidth = 1.2) +
+  geom_hline(yintercept = mean(y_pred_1), linetype = "dashed", colour = "#2c7bb6", alpha = 0.5) +
+geom_hline(yintercept = mean(y_pred_0), linetype = "dashed", colour = "#d7191c", alpha = 0.5) +
+  annotate("text", x = 280, y = mean(y_pred_1) + 1.5, label = "E[Y(1)]", colour = "#2c7bb6", size = 3.5) +
+  annotate("text", x = 280, y = mean(y_pred_0) - 1.5, label = "E[Y(0)]", colour = "#d7191c", size = 3.5) +
+  scale_colour_manual(values = c("D = 1 (treated world)" = "#2c7bb6", "D = 0 (control world)" = "#d7191c")) +
+  labs(
+    title    = "G-computation: predicted outcomes under each intervention",
+    subtitle = glue::glue("Each unit's outcome is predicted under D = 1 and D = 0. ATE = {round(ate_gc, 2)}"),
+    x = "Units (ranked by effect)", y = "Predicted outcome",
+    colour = NULL
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom")
+```
+
+The **Average Treatment Effect (ATE)** under g-computation is:
+  
+  $$\widehat{ATE} = \frac{1}{n} \sum_{i=1}^{n} \left[ \hat{E}[Y \mid X_i, D=1] - \hat{E}[Y \mid X_i, D=0] \right]$$
+  
+  This approach is notably flexible: it accommodates any outcome model, handles both continuous and discrete treatments, and naturally extends to the analysis of heterogeneous treatment effects by examining the distribution of unit-level effects rather than only the mean.
+
+One important distinction concerns the estimand. G-computation as described above targets the ATE, standardising over the full covariate distribution. Restricting the standardisation to the treated units' covariate distribution yields the ATT; restricting to the untreated units yields the ATU. The practical implication is that the choice of estimand should be determined by the decision question, not by computational convenience (Hernán and Robins, 2020; Arel-Bundock et al., 2024).
+
+The principal vulnerability is model misspecification. If the outcome model is incorrectly specified, the counterfactual predictions inherit that misspecification. This is the rationale for **doubly robust estimators** such as the Augmented Inverse Probability Weighting (AIPW) estimator (Robins, Rotnitzky, and Zhao, 1994), which combines outcome regression (g-computation) with propensity score weighting. If either model, the outcome model or the propensity score model, is correctly specified, the final estimate remains consistent. Targeted Maximum Likelihood Estimation (TMLE), developed by van der Laan and Rubin (2006), provides a semiparametric, doubly robust alternative that also permits flexible machine learning nuisance models while preserving valid statistical inference.
+
+---
+
+## Three estimands: ATE, ATT, ATU
+
+A recurring source of confusion in applied work is the conflation of distinct causal estimands. G-computation makes the distinction transparent because the estimand is directly determined by the population over which we standardise.
+
+The **Average Treatment Effect (ATE)** is the expected causal effect if a randomly selected unit from the full population were treated:
+
+$$ATE = E[Y_i(1) - Y_i(0)]$$
+
+The **Average Treatment Effect on the Treated (ATT)** conditions on the treated subpopulation:
+
+$$ATT = E[Y_i(1) - Y_i(0) \mid D_i = 1]$$
+
+The **Average Treatment Effect on the Untreated (ATU)** conditions on the control subpopulation:
+
+$$ATU = E[Y_i(1) - Y_i(0) \mid D_i = 0]$$
+
+The ATE, ATT, and ATU coincide when treatment effect heterogeneity is absent or when treatment assignment is independent of potential outcomes (as in a randomised experiment). In observational settings with selection into treatment, the three can differ substantially. A job training programme, for instance, may exhibit a large ATT because the population that self-selects into training differs systematically from those who do not, and the programme may be less effective for the latter group.
+
+---
+
+## Connecting the approaches
+
+The three strategies described above operate on the same underlying logic at different levels of data abstraction:
+
+  1. **What would have happened** to this unit had things been different?
+  2. We construct the answer using different sources of variation — time-series trends, cross-unit comparisons, or covariate-adjusted predictions.
+  3. The causal claim is only as credible as the assumption that our constructed counterfactual is a valid stand-in for the unobserved one.
+
+```{r}
+#| label: data-structures-summary
+#| echo: false
+#| fig-height: 3
+#| fig-cap: "Three data structures, three counterfactual strategies."
+
+library(patchwork)
+
+df_boxes <- tibble(
+  x     = c(1, 2, 3),
+  label = c(
+    "Time series\n(single unit over time)\n→ Extrapolation / synthetic control",
+    "Panel data\n(multiple units over time)\n→ DiD / event study",
+    "Cross-section\n(multiple units, one period)\n→ G-computation / IPW"
+  ),
+  col = c("#2c7bb6", "#1a9641", "#d7191c")
+)
+
+ggplot(df_boxes, aes(x = x, y = 1, label = label, fill = col)) +
+  geom_tile(width = 0.85, height = 0.7, colour = "white", linewidth = 1) +
+  geom_text(colour = "white", fontface = "bold", size = 3.2) +
+  scale_fill_identity() +
+  xlim(0.4, 3.6) + ylim(0.5, 1.5) +
+  theme_void() +
+  labs(title = "Three data structures → three counterfactual strategies")
+```
+
+
+
+---
+
+## What comes next
+
+This post has introduced the foundational concepts. Subsequent posts will go deeper on each identification strategy:
+
+- **Difference-in-Differences**: from the canonical 2×2 case to staggered adoption and the pitfalls of TWFE
+- **Synthetic control**: building an artificial counterfactual from a donor pool
+- **G-computation and doubly robust estimators**: when rich covariate data are available but no natural experiment exists
+- **Regression Discontinuity**: exploiting threshold rules for local identification
+- **Event studies**: testing parallel trends and tracing treatment effect dynamics over time
+
+---
+
+## References
+
+- Arel-Bundock, V., Greifer, N., and Heiss, A. (2024). How to Interpret Statistical Models Using marginaleffects for R and Python. *Journal of Statistical Software*, 111(9), 1–32.
+- Baker, A., Callaway, B., Cunningham, S., Goodman-Bacon, A., and Sant'Anna, P.H.C. (2025). Difference-in-Differences Designs: A Practitioner's Guide. *Journal of Economic Literature*.
+- Brodersen, K.H., Gallusser, F., Koehler, J., Remy, N., and Scott, S.L. (2015). Inferring causal impact using Bayesian structural time-series models. *Annals of Applied Statistics*, 9(1), 247–274.
+- Callaway, B. and Sant'Anna, P.H.C. (2021). Difference-in-Differences with multiple time periods. *Journal of Econometrics*, 225(2), 200–230.
+- Cunningham, S. (2021). *Causal Inference: The Mixtape*. Yale University Press.
+- Goodman-Bacon, A. (2021). Difference-in-differences with variation in treatment timing. *Journal of Econometrics*, 225(2), 254–277.
+- Hernán, M.A. and Robins, J.M. (2020). *Causal Inference: What If*. Chapman and Hall/CRC.
+- Holland, P.W. (1986). Statistics and Causal Inference. *Journal of the American Statistical Association*, 81(396), 945–960.
+- Imbens, G.W. and Rubin, D.B. (2015). *Causal Inference for Statistics, Social, and Biomedical Sciences*. Cambridge University Press.
+- Menchetti, F., Cipollini, F., and Mealli, F. (2023). Combining counterfactual outcomes and ARIMA models for policy evaluation. *The Econometrics Journal*, 26(1), 1–24.
+- Neyman, J. (1923 [1990]). On the application of probability theory to agricultural experiments. Essay on principles. Section 9. *Statistical Science*, 5(4), 465–480.
+- Pearl, J. (2009). *Causality: Models, Reasoning, and Inference* (2nd ed.). Cambridge University Press.
+- Pearl, J., Glymour, M., and Jewell, N.P. (2016). *Causal Inference in Statistics: A Primer*. Wiley.
+- Pearl, J. and Mackenzie, D. (2018). *The Book of Why: The New Science of Cause and Effect*. Basic Books.
+- Robins, J.M. (1986). A new approach to causal inference in mortality studies with a sustained exposure period: application to control of the healthy worker survivor effect. *Mathematical Modelling*, 7, 1393–1512.
+- Robins, J.M., Rotnitzky, A., and Zhao, L.P. (1994). Estimation of regression coefficients when some regressors are not always observed. *Journal of the American Statistical Association*, 89(427), 846–866.
+- Rubin, D.B. (1974). Estimating causal effects of treatments in randomized and nonrandomized studies. *Journal of Educational Psychology*, 66(5), 688–701.
+- van der Laan, M.J. and Rubin, D. (2006). Targeted maximum likelihood learning. *International Journal of Biostatistics*, 2(1).

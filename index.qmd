@@ -1,6 +1,6 @@
 ---
-title: "Counterfactual Thinking"
-subtitle: "Causal inference, forecasting, and the art of asking *what would have happened.*"
+title: "The Causal Layer"
+subtitle: "Causal inference, econometrics, and the methods behind defensible decisions."
 page-layout: full
 toc: false
 listing:
@@ -13,7 +13,8 @@ listing:
     fields: [image, date, title, description, categories, reading-time]
 ---
 
-## Recent Posts
+Applied writing on causal inference and econometrics, for analysts and
+decision-makers who want rigor without the textbook padding.
 
 ::: {#recent-posts}
 :::

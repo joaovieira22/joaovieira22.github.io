@@ -3,33 +3,35 @@ title: "About"
 toc: false
 about:
   template: trestles
-  image: profile.jpg
+  image: foto3.jpeg
   links:
-    - icon: github
-      text: GitHub
-      href: https://github.com/yourusername
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/in/yourusername
+      href: https://www.linkedin.com/in/joao-vieira-iseg/
     - icon: envelope
       text: Email
-      href: mailto:your@email.com
+      href: mailto:joaoviei7a@gmail.com
 ---
 
-I'm a data scientist focused on causal inference and forecasting — two disciplines that, together, let you not just predict the future, but understand *why* things happen and *what would change* if you acted differently.
+I'm a Strategy Consultant and Economist at **EY-Parthenon**, and a Ph.D. Candidate at ISEG – University of Lisbon, where I also spent three years as a Teaching Assistant in applied econometrics and microeconomics.
 
-This blog is where I share what I'm learning, building, and thinking about. Some posts are purely theoretical — working through the math and intuition behind methods like difference-in-differences or synthetic control. Others are fully practical — walking through real code and real data. Most are somewhere in between.
+My work sits at the intersection of causal inference, forecasting, and strategic decision-making. I design econometric frameworks to answer hard questions: did this policy work? what would have happened without this intervention? how elastic is demand at this price point? I've applied these methods across public policy evaluation, financial instrument impact assessment, and pricing strategy — always with the goal of turning rigorous analysis into decisions that actually get made.
 
-### Topics I write about
+This blog is where I think out loud about the methods I use and care about. Some posts work through theory and intuition. Others are hands-on walkthroughs with real code and data. Most are somewhere in between.
 
-- **Counterfactual analysis** — synthetic controls, DiD, interrupted time series
-- **Causal inference** — DAGs, identification strategies, potential outcomes
-- **Forecasting** — probabilistic forecasting, calibration, forecast evaluation
-- **Applied examples** — using public datasets to answer real questions
+### What I write about
+
+- **Counterfactual analysis** — synthetic controls, difference-in-differences, interrupted time series
+- **Causal inference** — identification strategies, DAGs, potential outcomes framework
+- **Forecasting** — probabilistic forecasting, model evaluation, uncertainty quantification
+- **Applied examples** — using real and simulated data to answer concrete questions
 
 ### Background
 
-[Write a few lines about yourself here — your background, what you've worked on, what you're looking for.]
+- **Ph.D. Candidate in Economics** — ISEG, University of Lisbon *(2019 – present)*
+- **MSc in Applied Econometrics and Forecasting** — ISEG, University of Lisbon
+- **BSc in Management** — Faculty of Economics, University of Coimbra
+- **Senior Consultant, Strategy & Data Analytics** — EY-Parthenon *(2024 – present)*
 
 ---
 

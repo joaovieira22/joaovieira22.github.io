@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "Counterfactual Thinking"
-  description: "Causal inference, forecasting, and the art of asking what would have happened."
+  title: "The Causal Layer"
+  description: "Causal inference, econometrics, and the methods behind defensible decisions."
   navbar:
     left:
       - href: index.qmd
@@ -15,9 +15,9 @@ website:
         text: About
     right:
       - icon: github
-        href: https://github.com/yourusername
+        href: https://github.com/joaovieira22
       - icon: linkedin
-        href: https://linkedin.com/in/yourusername
+        href: https://linkedin.com/in/joaoviei7a
 
   favicon: favicon.ico
 
