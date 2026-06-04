@@ -1,0 +1,10 @@
+---
+title: "All Posts"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: table
+  categories: true
+  fields: [date, title, description, categories, reading-time]
+toc: false
+---

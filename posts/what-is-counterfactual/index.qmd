@@ -1,0 +1,91 @@
+---
+title: "What Is a Counterfactual, Really?"
+description: "The fundamental problem of causal inference — and why it matters more than prediction."
+date: 2026-06-04
+categories: [theory, causal inference, counterfactuals]
+image: thumbnail.png
+---
+
+## The question that changes everything
+
+Imagine your company runs a marketing campaign in March. Sales go up 20% that month.
+
+Did the campaign work?
+
+Most analysts would say yes. But that's the wrong question — or rather, it's an incomplete one. The right question is:
+
+> *What would sales have been in March if we had never run the campaign?*
+
+That hypothetical — the world where the campaign didn't happen — is a **counterfactual**. And answering it is the entire project of causal inference.
+
+---
+
+## The Fundamental Problem
+
+Here's the uncomfortable truth: **we can never directly observe a counterfactual**.
+
+Every unit — a person, a company, a country — can only be in one state at a time. Either they received the treatment, or they didn't. We observe one outcome. The other is forever hidden.
+
+This is known as the **Fundamental Problem of Causal Inference** (Holland, 1986).
+
+Formally, for unit $i$:
+
+$$\tau_i = Y_i(1) - Y_i(0)$$
+
+Where:
+
+- $Y_i(1)$ = outcome if treated
+- $Y_i(0)$ = outcome if not treated
+- $\tau_i$ = individual treatment effect
+
+We observe either $Y_i(1)$ *or* $Y_i(0)$, never both. The individual causal effect $\tau_i$ is fundamentally unobservable.
+
+---
+
+## So what do we do?
+
+Since we can't observe both potential outcomes for the same unit, we do the next best thing: **we construct a plausible counterfactual from other data**.
+
+This can be done in several ways:
+
+::: {.callout-note}
+### The main identification strategies
+
+| Strategy | Core idea |
+|---|---|
+| **Randomized experiment** | Randomly assign treatment, so groups are identical on average |
+| **Difference-in-differences** | Use a control group that follows parallel trends |
+| **Synthetic control** | Build an artificial control unit from a weighted combination of others |
+| **Regression discontinuity** | Compare units just above/below an arbitrary threshold |
+| **Instrumental variables** | Find a variable that affects treatment but not outcomes directly |
+:::
+
+Each strategy makes a different assumption about how to construct the counterfactual. The quality of your causal claim is only as good as the plausibility of that assumption.
+
+---
+
+## Why this matters more than prediction
+
+Prediction and causal inference are often conflated, but they answer fundamentally different questions.
+
+**Prediction asks:** given what I know, what will happen?
+
+**Causal inference asks:** if I do X, what will happen *because of* X?
+
+A model can be excellent at prediction and completely useless for decision-making. 
+
+Classic example: umbrella sales predict rain very well. But buying umbrellas doesn't cause rain. If you're a city planner deciding whether to build drainage infrastructure, "umbrella sales are high" is useful prediction but worthless causal knowledge.
+
+---
+
+## Coming up
+
+In the next posts, I'll walk through how each identification strategy actually constructs the counterfactual — starting with difference-in-differences, which is probably the most widely used in applied work.
+
+---
+
+## References
+
+- Holland, P.W. (1986). Statistics and Causal Inference. *Journal of the American Statistical Association*.
+- Pearl, J., Glymour, M., & Jewell, N.P. (2016). *Causal Inference in Statistics: A Primer*. Wiley.
+- Cunningham, S. (2021). *Causal Inference: The Mixtape*. Yale University Press. (Free online)

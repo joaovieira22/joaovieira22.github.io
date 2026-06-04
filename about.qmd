@@ -1,0 +1,36 @@
+---
+title: "About"
+toc: false
+about:
+  template: trestles
+  image: profile.jpg
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/yourusername
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/yourusername
+    - icon: envelope
+      text: Email
+      href: mailto:your@email.com
+---
+
+I'm a data scientist focused on causal inference and forecasting — two disciplines that, together, let you not just predict the future, but understand *why* things happen and *what would change* if you acted differently.
+
+This blog is where I share what I'm learning, building, and thinking about. Some posts are purely theoretical — working through the math and intuition behind methods like difference-in-differences or synthetic control. Others are fully practical — walking through real code and real data. Most are somewhere in between.
+
+### Topics I write about
+
+- **Counterfactual analysis** — synthetic controls, DiD, interrupted time series
+- **Causal inference** — DAGs, identification strategies, potential outcomes
+- **Forecasting** — probabilistic forecasting, calibration, forecast evaluation
+- **Applied examples** — using public datasets to answer real questions
+
+### Background
+
+[Write a few lines about yourself here — your background, what you've worked on, what you're looking for.]
+
+---
+
+*All views are my own. Code is available on GitHub.*

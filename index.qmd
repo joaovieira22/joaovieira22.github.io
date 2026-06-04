@@ -1,0 +1,19 @@
+---
+title: "Counterfactual Thinking"
+subtitle: "Causal inference, forecasting, and the art of asking *what would have happened.*"
+page-layout: full
+toc: false
+listing:
+  - id: recent-posts
+    contents: posts
+    sort: "date desc"
+    type: grid
+    max-items: 6
+    categories: true
+    fields: [image, date, title, description, categories, reading-time]
+---
+
+## Recent Posts
+
+::: {#recent-posts}
+:::
