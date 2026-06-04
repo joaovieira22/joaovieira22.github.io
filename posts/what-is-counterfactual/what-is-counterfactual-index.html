@@ -392,21 +392,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-limits-of-observational-analysis" id="toc-the-limits-of-observational-analysis" class="nav-link active" data-scroll-target="#the-limits-of-observational-analysis">The limits of observational analysis</a></li>
-  <li><a href="#the-fundamental-problem-of-causal-inference" id="toc-the-fundamental-problem-of-causal-inference" class="nav-link" data-scroll-target="#the-fundamental-problem-of-causal-inference">The Fundamental Problem of Causal Inference</a></li>
+  <li><a href="#the-fundamental-problem-of-causal-inference" id="toc-the-fundamental-problem-of-causal-inference" class="nav-link active" data-scroll-target="#the-fundamental-problem-of-causal-inference">The Fundamental Problem of Causal Inference</a></li>
   <li><a href="#prediction-versus-causal-inference" id="toc-prediction-versus-causal-inference" class="nav-link" data-scroll-target="#prediction-versus-causal-inference">Prediction versus causal inference</a></li>
-  <li><a href="#the-identification-landscape-how-we-build-counterfactuals" id="toc-the-identification-landscape-how-we-build-counterfactuals" class="nav-link" data-scroll-target="#the-identification-landscape-how-we-build-counterfactuals">The identification landscape: how we build counterfactuals</a></li>
-  <li><a href="#building-counterfactuals-in-practice" id="toc-building-counterfactuals-in-practice" class="nav-link" data-scroll-target="#building-counterfactuals-in-practice">Building counterfactuals in practice</a></li>
-  <li><a href="#counterfactuals-by-data-structure" id="toc-counterfactuals-by-data-structure" class="nav-link" data-scroll-target="#counterfactuals-by-data-structure">Counterfactuals by data structure</a>
-  <ul class="collapse">
-  <li><a href="#time-series-counterfactuals" id="toc-time-series-counterfactuals" class="nav-link" data-scroll-target="#time-series-counterfactuals">Time-series counterfactuals</a></li>
-  <li><a href="#panel-data-counterfactuals-difference-in-differences" id="toc-panel-data-counterfactuals-difference-in-differences" class="nav-link" data-scroll-target="#panel-data-counterfactuals-difference-in-differences">Panel data counterfactuals: Difference-in-Differences</a></li>
-  <li><a href="#cross-sectional-counterfactuals-g-computation" id="toc-cross-sectional-counterfactuals-g-computation" class="nav-link" data-scroll-target="#cross-sectional-counterfactuals-g-computation">Cross-sectional counterfactuals: G-computation</a></li>
-  </ul></li>
-  <li><a href="#three-estimands-ate-att-atu" id="toc-three-estimands-ate-att-atu" class="nav-link" data-scroll-target="#three-estimands-ate-att-atu">Three estimands: ATE, ATT, ATU</a></li>
-  <li><a href="#connecting-the-approaches" id="toc-connecting-the-approaches" class="nav-link" data-scroll-target="#connecting-the-approaches">Connecting the approaches</a></li>
-  <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -420,7 +407,6 @@ window.Quarto = {
   <div class="quarto-categories">
     <div class="quarto-category">theory</div>
     <div class="quarto-category">causal inference</div>
-    <div class="quarto-category">counterfactuals</div>
     <div class="quarto-category">econometrics</div>
   </div>
   </div>
@@ -450,8 +436,7 @@ window.Quarto = {
 </header>
 
 
-<section id="the-limits-of-observational-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="the-limits-of-observational-analysis">The limits of observational analysis</h2>
+<p>## The limits of observational analysis</p>
 <p>Your company launches an aggressive marketing campaign in March. At the end of the month, sales are up 20%. Did the campaign work?</p>
 <p>Most corporate data analysts would say yes. That conclusion is incomplete, and in the context of capital allocation it is potentially costly. The correct question is:</p>
 <blockquote class="blockquote">
@@ -460,7 +445,6 @@ window.Quarto = {
 <p>That hypothetical scenario, the world in which the intervention did not occur, is a <strong>counterfactual</strong>. Constructing a credible counterfactual is not an academic exercise. It is the core of every causal inference project.</p>
 <p>The distinction is consequential. A 20% increase in sales might indicate that the campaign was transformative. Alternatively, it might mean sales would have risen regardless, due to seasonality, a competitor’s exit, or organic product virality, which would make the campaign spend a pure sunk cost. Without a counterfactual, it is impossible to distinguish correlation from causation.</p>
 <hr>
-</section>
 <section id="the-fundamental-problem-of-causal-inference" class="level2">
 <h2 class="anchored" data-anchor-id="the-fundamental-problem-of-causal-inference">The Fundamental Problem of Causal Inference</h2>
 <p>The technical constraint is direct: <strong>we can never directly observe a counterfactual</strong>.</p>
@@ -479,7 +463,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="what-is-counterfactual-index_files/figure-html/missing-cf-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption>The missing counterfactual. For each unit, we observe only one potential outcome. The causal effect — the distance between the two states — is never directly observed.</figcaption>
+<figcaption>The missing counterfactual. For each unit, we observe only one potential outcome. The causal effect (the distance between the two states) is never directly observed.</figcaption>
 </figure>
 </div>
 </div>
@@ -496,9 +480,7 @@ window.Quarto = {
 <p>Pearl (2009) formalised this distinction with the <strong>do-calculus</strong>. Observational data provides <span class="math inline">P(Y \mid X = x)</span>, the distribution of outcomes conditional on observing <span class="math inline">X = x</span>. Causal inference, by contrast, targets <span class="math inline">P(Y \mid do(X = x))</span>, the distribution of outcomes if we were to <em>force</em> <span class="math inline">X = x</span> through an external intervention. These are distinct mathematical objects. The do-operator represents a graph surgery on the causal model: it severs all edges into <span class="math inline">X</span> and fixes its value, removing any confounding by variables that previously determined <span class="math inline">X</span>. Observational conditioning does none of this (Pearl, Glymour, and Jewell, 2016).</p>
 <p>This distinction also maps onto Pearl’s three-rung hierarchy of causation (Pearl and Mackenzie, 2018): (1) <em>association</em>, which captures statistical correlations and is sufficient for prediction; (2) <em>intervention</em>, which asks what happens if we act, corresponding to <span class="math inline">do</span>-expressions; and (3) <em>counterfactuals</em>, which ask what would have happened to a specific unit under conditions contrary to those actually observed. Standard regression and machine learning operate exclusively at the first rung. Causal inference targets the second and third.</p>
 <hr>
-</section>
-<section id="the-identification-landscape-how-we-build-counterfactuals" class="level2">
-<h2 class="anchored" data-anchor-id="the-identification-landscape-how-we-build-counterfactuals">The identification landscape: how we build counterfactuals</h2>
+<p>## The identification landscape: how we build counterfactuals</p>
 <p>Since the counterfactual is not directly observable, every causal identification strategy is, in practice, an answer to a single question: <em>which other data can validly substitute for the missing potential outcome?</em></p>
 <p>The following table summarises the principal strategies, grouped by the structure of data they exploit, together with their identifying assumptions and key vulnerabilities.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -565,13 +547,10 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+<p>:::</p>
 <p>Each strategy requires a different identifying assumption. The quality of a causal claim is only as strong as the plausibility of that assumption in the specific empirical context.</p>
 <hr>
-</section>
-<section id="building-counterfactuals-in-practice" class="level2">
-<h2 class="anchored" data-anchor-id="building-counterfactuals-in-practice">Building counterfactuals in practice</h2>
+<p>## Building counterfactuals in practice</p>
 <p>Consider a common operational scenario: a unit is observed over time, an intervention occurs at a known point, and we want to estimate the intervention’s effect. The counterfactual is the trajectory the unit <em>would have followed</em> in the absence of the intervention.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -587,7 +566,6 @@ window.Quarto = {
 <p><span class="math display">ATT(t) = E[Y_i(1) - Y_i(0) \mid D_i = 1]</span></p>
 <p>The estimation problem is that we observe only one of the two lines. Every identification strategy is a different method for recovering the red dashed line.</p>
 <hr>
-</section>
 <section id="counterfactuals-by-data-structure" class="level2">
 <h2 class="anchored" data-anchor-id="counterfactuals-by-data-structure">Counterfactuals by data structure</h2>
 <p>The appropriate strategy depends intrinsically on the structure of the available data. The three principal settings are time-series data, panel data, and cross-sectional data with covariates.</p>
@@ -664,7 +642,21 @@ window.Quarto = {
 <section id="connecting-the-approaches" class="level2">
 <h2 class="anchored" data-anchor-id="connecting-the-approaches">Connecting the approaches</h2>
 <p>The three strategies described above operate on the same underlying logic at different levels of data abstraction:</p>
-<p>We ask what would have happened to a unit had conditions been different. We construct the answer using different sources of variation: temporal extrapolation, cross-unit comparisons under parallel trends, or covariate-adjusted outcome predictions. The causal claim is precisely as credible as the assumption that our constructed counterfactual is a valid substitute for the unobserved one.</p>
+<ol type="1">
+<li><strong>What would have happened</strong> to this unit had things been different?</li>
+<li>We construct the answer using different sources of variation — time-series trends, cross-unit comparisons, or covariate-adjusted predictions.</li>
+<li>The causal claim is only as credible as the assumption that our constructed counterfactual is a valid stand-in for the unobserved one.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="what-is-counterfactual-index_files/figure-html/data-structures-summary-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Three data structures, three counterfactual strategies.</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="what-comes-next" class="level2">
@@ -677,7 +669,6 @@ window.Quarto = {
 <li><strong>Regression Discontinuity</strong>: exploiting threshold rules for local identification</li>
 <li><strong>Event studies</strong>: testing parallel trends and tracing treatment effect dynamics over time</li>
 </ul>
-<p>In every case, the same question underlies the analysis: have we constructed a credible counterfactual?</p>
 <hr>
 </section>
 <section id="references" class="level2">
@@ -706,6 +697,9 @@ window.Quarto = {
 
 <!-- -->
 
+</section>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1177,18 +1171,18 @@ window.Quarto = {
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "What Is a Counterfactual?"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "The fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions."</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2026-06-04</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [theory, causal inference, counterfactuals, econometrics]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [theory, causal inference, econometrics]</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## The limits of observational analysis</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Your company launches an aggressive marketing campaign in March. At the end of the month, sales are up 20%. Did the campaign work?</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Most corporate data analysts would say yes. That conclusion is incomplete, and in the context of capital allocation it is potentially costly. The correct question is:</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *What would sales have been in March had the campaign never run?*</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>That hypothetical scenario, the world in which the intervention did not occur, is a **counterfactual**. Constructing a credible counterfactual is not an academic exercise. It is the core of every causal inference project.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  ## The limits of observational analysis</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  Your company launches an aggressive marketing campaign in March. At the end of the month, sales are up 20%. Did the campaign work?</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  Most corporate data analysts would say yes. That conclusion is incomplete, and in the context of capital allocation it is potentially costly. The correct question is:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">&gt; *What would sales have been in March had the campaign never run?*</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  That hypothetical scenario, the world in which the intervention did not occur, is a **counterfactual**. Constructing a credible counterfactual is not an academic exercise. It is the core of every causal inference project.</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>The distinction is consequential. A 20% increase in sales might indicate that the campaign was transformative. Alternatively, it might mean sales would have risen regardless, due to seasonality, a competitor's exit, or organic product virality, which would make the campaign spend a pure sunk cost. Without a counterfactual, it is impossible to distinguish correlation from causation.</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
@@ -1217,7 +1211,7 @@ window.Quarto = {
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "The missing counterfactual. For each unit, we observe only one potential outcome. The causal effect — the distance between the two states — is never directly observed."</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "The missing counterfactual. For each unit, we observe only one potential outcome. The causal effect (the distance between the two states) is never directly observed."</span></span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -1279,33 +1273,33 @@ window.Quarto = {
 <span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>This distinction also maps onto Pearl's three-rung hierarchy of causation (Pearl and Mackenzie, 2018): (1) *association*, which captures statistical correlations and is sufficient for prediction; (2) *intervention*, which asks what happens if we act, corresponding to $do$-expressions; and (3) *counterfactuals*, which ask what would have happened to a specific unit under conditions contrary to those actually observed. Standard regression and machine learning operate exclusively at the first rung. Causal inference targets the second and third.</span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## The identification landscape: how we build counterfactuals</span></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>Since the counterfactual is not directly observable, every causal identification strategy is, in practice, an answer to a single question: *which other data can validly substitute for the missing potential outcome?*</span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>The following table summarises the principal strategies, grouped by the structure of data they exploit, together with their identifying assumptions and key vulnerabilities.</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>  ## The identification landscape: how we build counterfactuals</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>  Since the counterfactual is not directly observable, every causal identification strategy is, in practice, an answer to a single question: *which other data can validly substitute for the missing potential outcome?*</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>  The following table summarises the principal strategies, grouped by the structure of data they exploit, together with their identifying assumptions and key vulnerabilities.</span>
 <span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
 <span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="fu">### Principal identification strategies</span></span>
 <span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Strategy <span class="pp">|</span> Core assumption <span class="pp">|</span> Counterfactual comes from <span class="pp">|</span> Key vulnerability <span class="pp">|</span></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Randomised experiment (RCT)** <span class="pp">|</span> Random assignment of treatment <span class="pp">|</span> The control group, by construction <span class="pp">|</span> External validity (generalisation to real-world conditions) <span class="pp">|</span></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Difference-in-Differences (DiD)** <span class="pp">|</span> Parallel trends absent treatment <span class="pp">|</span> A control group with a parallel time trend <span class="pp">|</span> Violation of the parallel trends assumption <span class="pp">|</span></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Synthetic control** <span class="pp">|</span> A weighted combination of donors fits pre-treatment trends <span class="pp">|</span> An artificial composite from a donor pool <span class="pp">|</span> Interpolation bias; arbitrary pool selection <span class="pp">|</span></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Regression Discontinuity (RD)** <span class="pp">|</span> Units just above and below a threshold are comparable <span class="pp">|</span> Units on the other side of the cutoff <span class="pp">|</span> Strictly local validity (estimates hold only near the cutoff) <span class="pp">|</span></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Instrumental Variables (IV)** <span class="pp">|</span> Instrument shifts treatment but does not affect the outcome directly <span class="pp">|</span> Exogenous variation induced by the instrument <span class="pp">|</span> Weak instruments; violation of the exclusion restriction <span class="pp">|</span></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **G-computation / G-formula** <span class="pp">|</span> No unmeasured confounders (conditional exchangeability) <span class="pp">|</span> Predicted outcomes from a correctly specified outcome model <span class="pp">|</span> Model misspecification <span class="pp">|</span></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>Each strategy requires a different identifying assumption. The quality of a causal claim is only as strong as the plausibility of that assumption in the specific empirical context.</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>  <span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>  <span class="pp">|</span> **Randomised experiment (RCT)** <span class="pp">|</span> Random assignment of treatment <span class="pp">|</span> The control group, by construction <span class="pp">|</span> External validity (generalisation to real-world conditions) <span class="pp">|</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>  <span class="pp">|</span> **Difference-in-Differences (DiD)** <span class="pp">|</span> Parallel trends absent treatment <span class="pp">|</span> A control group with a parallel time trend <span class="pp">|</span> Violation of the parallel trends assumption <span class="pp">|</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>  <span class="pp">|</span> **Synthetic control** <span class="pp">|</span> A weighted combination of donors fits pre-treatment trends <span class="pp">|</span> An artificial composite from a donor pool <span class="pp">|</span> Interpolation bias; arbitrary pool selection <span class="pp">|</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>  <span class="pp">|</span> **Regression Discontinuity (RD)** <span class="pp">|</span> Units just above and below a threshold are comparable <span class="pp">|</span> Units on the other side of the cutoff <span class="pp">|</span> Strictly local validity (estimates hold only near the cutoff) <span class="pp">|</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>  <span class="pp">|</span> **Instrumental Variables (IV)** <span class="pp">|</span> Instrument shifts treatment but does not affect the outcome directly <span class="pp">|</span> Exogenous variation induced by the instrument <span class="pp">|</span> Weak instruments; violation of the exclusion restriction <span class="pp">|</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>  <span class="pp">|</span> **G-computation / G-formula** <span class="pp">|</span> No unmeasured confounders (conditional exchangeability) <span class="pp">|</span> Predicted outcomes from a correctly specified outcome model <span class="pp">|</span> Model misspecification <span class="pp">|</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>  :::</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>  Each strategy requires a different identifying assumption. The quality of a causal claim is only as strong as the plausibility of that assumption in the specific empirical context.</span>
 <span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="fu">## Building counterfactuals in practice</span></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>Consider a common operational scenario: a unit is observed over time, an intervention occurs at a known point, and we want to estimate the intervention's effect. The counterfactual is the trajectory the unit *would have followed* in the absence of the intervention.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>  ## Building counterfactuals in practice</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>  Consider a common operational scenario: a unit is observed over time, an intervention occurs at a known point, and we want to estimate the intervention's effect. The counterfactual is the trajectory the unit *would have followed* in the absence of the intervention.</span>
 <span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: att-trajectory</span></span>
@@ -1421,7 +1415,7 @@ window.Quarto = {
 <span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="st">"Intervention"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="fl">3.5</span>, <span class="at">colour =</span> <span class="st">"grey40"</span>) <span class="sc">+</span></span>
 <span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"Time-series counterfactual via ARIMA extrapolation"</span>,</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Blue = observed. Red dashed = ARIMA forecast from pre-treatment period (counterfactual). Shaded = 95% CI."</span>,</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Blue = observed. Red dashed = ARIMA forecast from pre-treatment. Shaded = 95% CI."</span>,</span>
 <span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Time"</span>, <span class="at">y =</span> <span class="st">"Outcome"</span></span>
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span>
@@ -1497,10 +1491,10 @@ window.Quarto = {
 <span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>The DiD estimator is:</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>$$\widehat{ATT} = \underbrace{(\bar{Y}_{\text{treated, post}} - \bar{Y}_{\text{treated, pre}})}_{\text{change in treated}} - \underbrace{(\bar{Y}_{\text{control, post}} - \bar{Y}_{\text{control, pre}})}_{\text{change in control}}$$</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>The control group's trend is subtracted from the treated group's change. The residual, the portion of the change not attributable to a common trend, is the estimated causal effect.</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>  $$\widehat{ATT} = \underbrace{(\bar{Y}_{\text{treated, post}} - \bar{Y}_{\text{treated, pre}})}_{\text{change in treated}} - \underbrace{(\bar{Y}_{\text{control, post}} - \bar{Y}_{\text{control, pre}})}_{\text{change in control}}$$</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>  The control group's trend is subtracted from the treated group's change. The residual, the portion of the change not attributable to a common trend, is the estimated causal effect.</span>
 <span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>A note on recent methodological developments: the DiD literature has undergone substantial revision since Callaway and Sant'Anna (2021) and Goodman-Bacon (2021) demonstrated that the canonical Two-Way Fixed Effects (TWFE) estimator can produce severely biased estimates under staggered treatment adoption when treatment effects are heterogeneous across cohorts or over time. In such settings, already-treated units can act as "forbidden comparisons" in the TWFE decomposition. Robust alternatives, including the Callaway–Sant'Anna group-time average treatment effect estimator and the stacked regression approach (Baker et al., 2022), are now standard practice for staggered DiD designs.</span>
 <span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
@@ -1554,7 +1548,7 @@ window.Quarto = {
 <span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
 <span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
 <span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(y_pred_1), <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">colour =</span> <span class="st">"#2c7bb6"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(y_pred_0), <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">colour =</span> <span class="st">"#d7191c"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(y_pred_0), <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">colour =</span> <span class="st">"#d7191c"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
 <span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">280</span>, <span class="at">y =</span> <span class="fu">mean</span>(y_pred_1) <span class="sc">+</span> <span class="fl">1.5</span>, <span class="at">label =</span> <span class="st">"E[Y(1)]"</span>, <span class="at">colour =</span> <span class="st">"#2c7bb6"</span>, <span class="at">size =</span> <span class="fl">3.5</span>) <span class="sc">+</span></span>
 <span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">280</span>, <span class="at">y =</span> <span class="fu">mean</span>(y_pred_0) <span class="sc">-</span> <span class="fl">1.5</span>, <span class="at">label =</span> <span class="st">"E[Y(0)]"</span>, <span class="at">colour =</span> <span class="st">"#d7191c"</span>, <span class="at">size =</span> <span class="fl">3.5</span>) <span class="sc">+</span></span>
 <span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"D = 1 (treated world)"</span> <span class="ot">=</span> <span class="st">"#2c7bb6"</span>, <span class="st">"D = 0 (control world)"</span> <span class="ot">=</span> <span class="st">"#d7191c"</span>)) <span class="sc">+</span></span>
@@ -1569,10 +1563,10 @@ window.Quarto = {
 <span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>The **Average Treatment Effect (ATE)** under g-computation is:</span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>$$\widehat{ATE} = \frac{1}{n} \sum_{i=1}^{n} \left<span class="co">[</span><span class="ot"> \hat{E}[Y \mid X_i, D=1] - \hat{E}[Y \mid X_i, D=0] \right</span><span class="co">]</span>$$</span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>This approach is notably flexible: it accommodates any outcome model, handles both continuous and discrete treatments, and naturally extends to the analysis of heterogeneous treatment effects by examining the distribution of unit-level effects rather than only the mean.</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>  $$\widehat{ATE} = \frac{1}{n} \sum_{i=1}^{n} \left<span class="co">[</span><span class="ot"> \hat{E}[Y \mid X_i, D=1] - \hat{E}[Y \mid X_i, D=0] \right</span><span class="co">]</span>$$</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>  This approach is notably flexible: it accommodates any outcome model, handles both continuous and discrete treatments, and naturally extends to the analysis of heterogeneous treatment effects by examining the distribution of unit-level effects rather than only the mean.</span>
 <span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>One important distinction concerns the estimand. G-computation as described above targets the ATE, standardising over the full covariate distribution. Restricting the standardisation to the treated units' covariate distribution yields the ATT; restricting to the untreated units yields the ATU. The practical implication is that the choice of estimand should be determined by the decision question, not by computational convenience (Hernán and Robins, 2020; Arel-Bundock et al., 2024).</span>
 <span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a></span>
@@ -1604,44 +1598,73 @@ window.Quarto = {
 <span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>The three strategies described above operate on the same underlying logic at different levels of data abstraction:</span>
 <span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>We ask what would have happened to a unit had conditions been different. We construct the answer using different sources of variation: temporal extrapolation, cross-unit comparisons under parallel trends, or covariate-adjusted outcome predictions. The causal claim is precisely as credible as the assumption that our constructed counterfactual is a valid substitute for the unobserved one.</span>
-<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>**What would have happened** to this unit had things been different?</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>We construct the answer using different sources of variation — time-series trends, cross-unit comparisons, or covariate-adjusted predictions.</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a><span class="ss">  3. </span>The causal claim is only as credible as the assumption that our constructed counterfactual is a valid stand-in for the unobserved one.</span>
 <span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a><span class="fu">## What comes next</span></span>
-<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>This post has introduced the foundational concepts. Subsequent posts will go deeper on each identification strategy:</span>
-<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Difference-in-Differences**: from the canonical 2×2 case to staggered adoption and the pitfalls of TWFE</span>
-<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Synthetic control**: building an artificial counterfactual from a donor pool</span>
-<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**G-computation and doubly robust estimators**: when rich covariate data are available but no natural experiment exists</span>
-<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Regression Discontinuity**: exploiting threshold rules for local identification</span>
-<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Event studies**: testing parallel trends and tracing treatment effect dynamics over time</span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: data-structures-summary</span></span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3</span></span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Three data structures, three counterfactual strategies."</span></span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
 <span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>In every case, the same question underlies the analysis: have we constructed a credible counterfactual?</span>
-<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
-<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Arel-Bundock, V., Greifer, N., and Heiss, A. (2024). How to Interpret Statistical Models Using marginaleffects for R and Python. *Journal of Statistical Software*, 111(9), 1–32.</span>
-<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Baker, A., Callaway, B., Cunningham, S., Goodman-Bacon, A., and Sant'Anna, P.H.C. (2025). Difference-in-Differences Designs: A Practitioner's Guide. *Journal of Economic Literature*.</span>
-<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Brodersen, K.H., Gallusser, F., Koehler, J., Remy, N., and Scott, S.L. (2015). Inferring causal impact using Bayesian structural time-series models. *Annals of Applied Statistics*, 9(1), 247–274.</span>
-<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Callaway, B. and Sant'Anna, P.H.C. (2021). Difference-in-Differences with multiple time periods. *Journal of Econometrics*, 225(2), 200–230.</span>
-<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cunningham, S. (2021). *Causal Inference: The Mixtape*. Yale University Press.</span>
-<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Goodman-Bacon, A. (2021). Difference-in-differences with variation in treatment timing. *Journal of Econometrics*, 225(2), 254–277.</span>
-<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hernán, M.A. and Robins, J.M. (2020). *Causal Inference: What If*. Chapman and Hall/CRC.</span>
-<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Holland, P.W. (1986). Statistics and Causal Inference. *Journal of the American Statistical Association*, 81(396), 945–960.</span>
-<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Imbens, G.W. and Rubin, D.B. (2015). *Causal Inference for Statistics, Social, and Biomedical Sciences*. Cambridge University Press.</span>
-<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Menchetti, F., Cipollini, F., and Mealli, F. (2023). Combining counterfactual outcomes and ARIMA models for policy evaluation. *The Econometrics Journal*, 26(1), 1–24.</span>
-<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Neyman, J. (1923 <span class="co">[</span><span class="ot">1990</span><span class="co">]</span>). On the application of probability theory to agricultural experiments. Essay on principles. Section 9. *Statistical Science*, 5(4), 465–480.</span>
-<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pearl, J. (2009). *Causality: Models, Reasoning, and Inference* (2nd ed.). Cambridge University Press.</span>
-<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pearl, J., Glymour, M., and Jewell, N.P. (2016). *Causal Inference in Statistics: A Primer*. Wiley.</span>
-<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pearl, J. and Mackenzie, D. (2018). *The Book of Why: The New Science of Cause and Effect*. Basic Books.</span>
-<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Robins, J.M. (1986). A new approach to causal inference in mortality studies with a sustained exposure period: application to control of the healthy worker survivor effect. *Mathematical Modelling*, 7, 1393–1512.</span>
-<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Robins, J.M., Rotnitzky, A., and Zhao, L.P. (1994). Estimation of regression coefficients when some regressors are not always observed. *Journal of the American Statistical Association*, 89(427), 846–866.</span>
-<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rubin, D.B. (1974). Estimating causal effects of treatments in randomized and nonrandomized studies. *Journal of Educational Psychology*, 66(5), 688–701.</span>
-<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>van der Laan, M.J. and Rubin, D. (2006). Targeted maximum likelihood learning. *International Journal of Biostatistics*, 2(1).</span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>df_boxes <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>  <span class="at">x     =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">c</span>(</span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Time series</span><span class="sc">\n</span><span class="st">(single unit over time)</span><span class="sc">\n</span><span class="st">→ Extrapolation / synthetic control"</span>,</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Panel data</span><span class="sc">\n</span><span class="st">(multiple units over time)</span><span class="sc">\n</span><span class="st">→ DiD / event study"</span>,</span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cross-section</span><span class="sc">\n</span><span class="st">(multiple units, one period)</span><span class="sc">\n</span><span class="st">→ G-computation / IPW"</span></span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#2c7bb6"</span>, <span class="st">"#1a9641"</span>, <span class="st">"#d7191c"</span>)</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_boxes, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> <span class="dv">1</span>, <span class="at">label =</span> label, <span class="at">fill =</span> col)) <span class="sc">+</span></span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">width =</span> <span class="fl">0.85</span>, <span class="at">height =</span> <span class="fl">0.7</span>, <span class="at">colour =</span> <span class="st">"white"</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">colour =</span> <span class="st">"white"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="fl">3.2</span>) <span class="sc">+</span></span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_identity</span>() <span class="sc">+</span></span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="fl">0.4</span>, <span class="fl">3.6</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fl">0.5</span>, <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Three data structures → three counterfactual strategies"</span>)</span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a><span class="fu">## What comes next</span></span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>This post has introduced the foundational concepts. Subsequent posts will go deeper on each identification strategy:</span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Difference-in-Differences**: from the canonical 2×2 case to staggered adoption and the pitfalls of TWFE</span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Synthetic control**: building an artificial counterfactual from a donor pool</span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**G-computation and doubly robust estimators**: when rich covariate data are available but no natural experiment exists</span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Regression Discontinuity**: exploiting threshold rules for local identification</span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Event studies**: testing parallel trends and tracing treatment effect dynamics over time</span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Arel-Bundock, V., Greifer, N., and Heiss, A. (2024). How to Interpret Statistical Models Using marginaleffects for R and Python. *Journal of Statistical Software*, 111(9), 1–32.</span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Baker, A., Callaway, B., Cunningham, S., Goodman-Bacon, A., and Sant'Anna, P.H.C. (2025). Difference-in-Differences Designs: A Practitioner's Guide. *Journal of Economic Literature*.</span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Brodersen, K.H., Gallusser, F., Koehler, J., Remy, N., and Scott, S.L. (2015). Inferring causal impact using Bayesian structural time-series models. *Annals of Applied Statistics*, 9(1), 247–274.</span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Callaway, B. and Sant'Anna, P.H.C. (2021). Difference-in-Differences with multiple time periods. *Journal of Econometrics*, 225(2), 200–230.</span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cunningham, S. (2021). *Causal Inference: The Mixtape*. Yale University Press.</span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Goodman-Bacon, A. (2021). Difference-in-differences with variation in treatment timing. *Journal of Econometrics*, 225(2), 254–277.</span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hernán, M.A. and Robins, J.M. (2020). *Causal Inference: What If*. Chapman and Hall/CRC.</span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Holland, P.W. (1986). Statistics and Causal Inference. *Journal of the American Statistical Association*, 81(396), 945–960.</span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Imbens, G.W. and Rubin, D.B. (2015). *Causal Inference for Statistics, Social, and Biomedical Sciences*. Cambridge University Press.</span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Menchetti, F., Cipollini, F., and Mealli, F. (2023). Combining counterfactual outcomes and ARIMA models for policy evaluation. *The Econometrics Journal*, 26(1), 1–24.</span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Neyman, J. (1923 <span class="co">[</span><span class="ot">1990</span><span class="co">]</span>). On the application of probability theory to agricultural experiments. Essay on principles. Section 9. *Statistical Science*, 5(4), 465–480.</span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pearl, J. (2009). *Causality: Models, Reasoning, and Inference* (2nd ed.). Cambridge University Press.</span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pearl, J., Glymour, M., and Jewell, N.P. (2016). *Causal Inference in Statistics: A Primer*. Wiley.</span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pearl, J. and Mackenzie, D. (2018). *The Book of Why: The New Science of Cause and Effect*. Basic Books.</span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Robins, J.M. (1986). A new approach to causal inference in mortality studies with a sustained exposure period: application to control of the healthy worker survivor effect. *Mathematical Modelling*, 7, 1393–1512.</span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Robins, J.M., Rotnitzky, A., and Zhao, L.P. (1994). Estimation of regression coefficients when some regressors are not always observed. *Journal of the American Statistical Association*, 89(427), 846–866.</span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rubin, D.B. (1974). Estimating causal effects of treatments in randomized and nonrandomized studies. *Journal of Educational Psychology*, 66(5), 688–701.</span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>van der Laan, M.J. and Rubin, D. (2006). Targeted maximum likelihood learning. *International Journal of Biostatistics*, 2(1).</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

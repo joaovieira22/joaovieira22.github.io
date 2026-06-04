@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://joaovieira22.github.io/.github.io/SETUP_GUIDE.html</loc>
-    <lastmod>2026-06-04T11:22:30.921Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/.github.io/posts/what-is-counterfactual/what-is-counterfactual-index.html</loc>
-    <lastmod>2026-06-04T13:11:04.138Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/.github.io/index.html</loc>
-    <lastmod>2026-06-04T11:22:30.925Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/.github.io/about.html</loc>
-    <lastmod>2026-06-04T11:38:23.480Z</lastmod>
+    <loc>https://joaovieira22.github.io/.github.io/posts.html</loc>
+    <lastmod>2026-06-04T11:22:30.927Z</lastmod>
   </url>
   <url>
     <loc>https://joaovieira22.github.io/.github.io/posts/causalimpact-practical/causalimpact_index.html</loc>
     <lastmod>2026-06-04T11:28:50.742Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/.github.io/posts.html</loc>
-    <lastmod>2026-06-04T11:22:30.927Z</lastmod>
+    <loc>https://joaovieira22.github.io/.github.io/about.html</loc>
+    <lastmod>2026-06-04T11:38:23.480Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/.github.io/index.html</loc>
+    <lastmod>2026-06-04T11:22:30.925Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/.github.io/posts/what-is-counterfactual/what-is-counterfactual-index.html</loc>
+    <lastmod>2026-06-04T13:35:23.079Z</lastmod>
   </url>
 </urlset>

@@ -1,13 +1,13 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/posts.html",
     "items": [
       "/posts/causalimpact-practical/causalimpact_index.html",
       "/posts/what-is-counterfactual/what-is-counterfactual-index.html"
     ]
   },
   {
-    "listing": "/posts.html",
+    "listing": "/index.html",
     "items": [
       "/posts/causalimpact-practical/causalimpact_index.html",
       "/posts/what-is-counterfactual/what-is-counterfactual-index.html"
