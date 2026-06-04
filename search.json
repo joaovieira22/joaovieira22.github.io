@@ -70,67 +70,88 @@
     "text": "Dúvidas?\nPede ajuda ao Claude a qualquer momento — para criar novos posts, ajustar o design, ou resolver erros."
   },
   {
-    "objectID": "posts/what-is-counterfactual/index.html",
-    "href": "posts/what-is-counterfactual/index.html",
-    "title": "What Is a Counterfactual, Really?",
+    "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html",
+    "href": "posts/what-is-counterfactual/what-is-counterfactual-index.html",
+    "title": "What Is a Counterfactual?",
     "section": "",
-    "text": "Imagine your company runs a marketing campaign in March. Sales go up 20% that month.\nDid the campaign work?\nMost analysts would say yes. But that’s the wrong question — or rather, it’s an incomplete one. The right question is:\n\nWhat would sales have been in March if we had never run the campaign?\n\nThat hypothetical — the world where the campaign didn’t happen — is a counterfactual. And answering it is the entire project of causal inference."
+    "text": "Imagine your company runs a marketing campaign in March. Sales go up 20% that month. Did the campaign work?\nMost analysts would say yes. But that’s incomplete. The right question is:\n\nWhat would sales have been in March if we had never run the campaign?\n\nThat hypothetical — the world where the campaign didn’t happen — is a counterfactual. And constructing a credible counterfactual is the entire project of causal inference.\nThis distinction matters enormously. A 20% increase in sales could mean the campaign was transformative. Or it could mean sales were going to rise anyway — seasonality, a competitor’s exit, a product going viral — and the campaign did nothing. Without a counterfactual, you can’t tell."
   },
   {
-    "objectID": "posts/what-is-counterfactual/index.html#the-question-that-changes-everything",
-    "href": "posts/what-is-counterfactual/index.html#the-question-that-changes-everything",
-    "title": "What Is a Counterfactual, Really?",
+    "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html#the-question-that-changes-everything",
+    "href": "posts/what-is-counterfactual/what-is-counterfactual-index.html#the-question-that-changes-everything",
+    "title": "What Is a Counterfactual?",
     "section": "",
-    "text": "Imagine your company runs a marketing campaign in March. Sales go up 20% that month.\nDid the campaign work?\nMost analysts would say yes. But that’s the wrong question — or rather, it’s an incomplete one. The right question is:\n\nWhat would sales have been in March if we had never run the campaign?\n\nThat hypothetical — the world where the campaign didn’t happen — is a counterfactual. And answering it is the entire project of causal inference."
+    "text": "Imagine your company runs a marketing campaign in March. Sales go up 20% that month. Did the campaign work?\nMost analysts would say yes. But that’s incomplete. The right question is:\n\nWhat would sales have been in March if we had never run the campaign?\n\nThat hypothetical — the world where the campaign didn’t happen — is a counterfactual. And constructing a credible counterfactual is the entire project of causal inference.\nThis distinction matters enormously. A 20% increase in sales could mean the campaign was transformative. Or it could mean sales were going to rise anyway — seasonality, a competitor’s exit, a product going viral — and the campaign did nothing. Without a counterfactual, you can’t tell."
   },
   {
-    "objectID": "posts/what-is-counterfactual/index.html#the-fundamental-problem",
-    "href": "posts/what-is-counterfactual/index.html#the-fundamental-problem",
-    "title": "What Is a Counterfactual, Really?",
-    "section": "The Fundamental Problem",
-    "text": "The Fundamental Problem\nHere’s the uncomfortable truth: we can never directly observe a counterfactual.\nEvery unit — a person, a company, a country — can only be in one state at a time. Either they received the treatment, or they didn’t. We observe one outcome. The other is forever hidden.\nThis is known as the Fundamental Problem of Causal Inference (Holland, 1986).\nFormally, for unit i:\n\\tau_i = Y_i(1) - Y_i(0)\nWhere:\n\nY_i(1) = outcome if treated\nY_i(0) = outcome if not treated\n\\tau_i = individual treatment effect\n\nWe observe either Y_i(1) or Y_i(0), never both. The individual causal effect \\tau_i is fundamentally unobservable."
+    "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html#the-fundamental-problem-of-causal-inference",
+    "href": "posts/what-is-counterfactual/what-is-counterfactual-index.html#the-fundamental-problem-of-causal-inference",
+    "title": "What Is a Counterfactual?",
+    "section": "The Fundamental Problem of Causal Inference",
+    "text": "The Fundamental Problem of Causal Inference\nHere’s the uncomfortable truth: we can never directly observe a counterfactual.\nEvery unit — a person, a firm, a country — exists in only one state at a time. Either they received the treatment, or they didn’t. We observe one outcome. The other is forever hidden.\nHolland (1986) called this the Fundamental Problem of Causal Inference. Formally, for unit i:\n\\tau_i = Y_i(1) - Y_i(0)\nwhere:\n\nY_i(1) = outcome if treated\nY_i(0) = outcome if not treated\n\n\\tau_i = the individual causal effect\n\nWe observe either Y_i(1) or Y_i(0), never both. The individual effect \\tau_i is fundamentally unobservable. This is sometimes called the missing data problem of causal inference.\n\n\n\n\n\nThe missing counterfactual. For each unit we observe only one potential outcome. The causal effect — the gap between the two — is never directly observed.\n\n\n\n\nSince we cannot observe both potential outcomes for the same unit, we have to construct a plausible counterfactual from other data. How we do that — and what assumptions we need — defines the entire field of causal inference."
   },
   {
-    "objectID": "posts/what-is-counterfactual/index.html#so-what-do-we-do",
-    "href": "posts/what-is-counterfactual/index.html#so-what-do-we-do",
-    "title": "What Is a Counterfactual, Really?",
-    "section": "So what do we do?",
-    "text": "So what do we do?\nSince we can’t observe both potential outcomes for the same unit, we do the next best thing: we construct a plausible counterfactual from other data.\nThis can be done in several ways:\n\n\n\n\n\n\nNoteThe main identification strategies\n\n\n\n\n\n\n\n\n\n\nStrategy\nCore idea\n\n\n\n\nRandomized experiment\nRandomly assign treatment, so groups are identical on average\n\n\nDifference-in-differences\nUse a control group that follows parallel trends\n\n\nSynthetic control\nBuild an artificial control unit from a weighted combination of others\n\n\nRegression discontinuity\nCompare units just above/below an arbitrary threshold\n\n\nInstrumental variables\nFind a variable that affects treatment but not outcomes directly\n\n\n\n\n\nEach strategy makes a different assumption about how to construct the counterfactual. The quality of your causal claim is only as good as the plausibility of that assumption."
+    "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html#prediction-vs.-causal-inference",
+    "href": "posts/what-is-counterfactual/what-is-counterfactual-index.html#prediction-vs.-causal-inference",
+    "title": "What Is a Counterfactual?",
+    "section": "Prediction vs. causal inference",
+    "text": "Prediction vs. causal inference\nBefore going further, it’s worth being precise about what causal inference is not.\nPrediction asks: given what I observe, what will happen next?\nCausal inference asks: if I intervene and change X, what happens because of X?\nA model can be excellent at prediction and completely useless for decision-making. The classic example: umbrella sales predict rain very well. But buying umbrellas doesn’t cause rain. If you’re a city planner deciding whether to build drainage infrastructure, “umbrella sales are high” is useful prediction but worthless causal knowledge.\nPearl (2009) formalises this with his do-calculus. Observational data gives us P(Y \\mid X = x) — the distribution of outcomes given that we observe X = x. Causal inference targets P(Y \\mid do(X = x)) — the distribution of outcomes if we were to set X = x by intervention. These are different objects, and confusing them is the source of most errors in data-driven decision-making."
   },
   {
-    "objectID": "posts/what-is-counterfactual/index.html#why-this-matters-more-than-prediction",
-    "href": "posts/what-is-counterfactual/index.html#why-this-matters-more-than-prediction",
-    "title": "What Is a Counterfactual, Really?",
-    "section": "Why this matters more than prediction",
-    "text": "Why this matters more than prediction\nPrediction and causal inference are often conflated, but they answer fundamentally different questions.\nPrediction asks: given what I know, what will happen?\nCausal inference asks: if I do X, what will happen because of X?\nA model can be excellent at prediction and completely useless for decision-making.\nClassic example: umbrella sales predict rain very well. But buying umbrellas doesn’t cause rain. If you’re a city planner deciding whether to build drainage infrastructure, “umbrella sales are high” is useful prediction but worthless causal knowledge."
+    "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html#the-identification-landscape-how-we-build-counterfactuals",
+    "href": "posts/what-is-counterfactual/what-is-counterfactual-index.html#the-identification-landscape-how-we-build-counterfactuals",
+    "title": "What Is a Counterfactual?",
+    "section": "The identification landscape: how we build counterfactuals",
+    "text": "The identification landscape: how we build counterfactuals\nSince we can’t observe the counterfactual directly, every causal identification strategy is really a different answer to: which other data can stand in for the missing potential outcome?\nHere are the main strategies, grouped by the type of data they exploit.\n\n\n\n\n\n\nNoteMain identification strategies\n\n\n\n\n\n\n\n\n\n\n\n\nStrategy\nCore assumption\nCounterfactual comes from…\nKey vulnerability\n\n\n\n\nRandomised experiment\nTreatment is randomly assigned\nThe control group by construction\nExternal validity\n\n\nDifference-in-differences\nParallel trends in the absence of treatment\nA control group that moves in parallel\nParallel trends assumption\n\n\nSynthetic control\nA weighted combination of controls fits pre-treatment trends\nAn artificial “donor pool” composite\nInterpolation bias\n\n\nRegression discontinuity\nUnits just above/below a threshold are comparable\nUnits on the other side of the cutoff\nLocal validity only\n\n\nInstrumental variables\nAn instrument shifts treatment but not outcomes directly\nVariation induced by the instrument\nWeak instruments\n\n\nG-computation / G-formula\nNo unmeasured confounders (conditional exchangeability)\nPredicted outcomes from a correctly-specified model\nModel misspecification\n\n\n\n\n\nEach strategy makes a different identifying assumption. The quality of your causal claim is only as good as the plausibility of that assumption in your context."
   },
   {
-    "objectID": "posts/what-is-counterfactual/index.html#coming-up",
-    "href": "posts/what-is-counterfactual/index.html#coming-up",
-    "title": "What Is a Counterfactual, Really?",
-    "section": "Coming up",
-    "text": "Coming up\nIn the next posts, I’ll walk through how each identification strategy actually constructs the counterfactual — starting with difference-in-differences, which is probably the most widely used in applied work."
+    "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html#building-counterfactuals-in-practice",
+    "href": "posts/what-is-counterfactual/what-is-counterfactual-index.html#building-counterfactuals-in-practice",
+    "title": "What Is a Counterfactual?",
+    "section": "Building counterfactuals in practice",
+    "text": "Building counterfactuals in practice\nLet’s make this concrete. Consider a simple case: we observe a unit over time, an intervention happens at some point, and we want to estimate its effect. The counterfactual is the trajectory the unit would have followed had the intervention never happened.\n\n\n\n\n\nA counterfactual trajectory. We observe the treated unit up to the intervention, then two possible post-period paths: what actually happened, and what would have happened without treatment.\n\n\n\n\nThe Average Treatment Effect on the Treated (ATT) is the average gap between the observed and counterfactual trajectories in the post-treatment period. In the graph above, the ATT at time t is:\nATT(t) = E[Y_i(1) - Y_i(0) \\mid D_i = 1]\nThe problem: we only observe one of the two lines. Every identification strategy is a different way of estimating the red dashed line."
   },
   {
-    "objectID": "posts/what-is-counterfactual/index.html#references",
-    "href": "posts/what-is-counterfactual/index.html#references",
-    "title": "What Is a Counterfactual, Really?",
+    "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html#counterfactuals-by-data-structure",
+    "href": "posts/what-is-counterfactual/what-is-counterfactual-index.html#counterfactuals-by-data-structure",
+    "title": "What Is a Counterfactual?",
+    "section": "Counterfactuals by data structure",
+    "text": "Counterfactuals by data structure\nThe right strategy depends heavily on the structure of your data. Here I’ll sketch the three main settings — time series, panel data, and cross-sectional with covariates (the g-computation approach) — and show how each constructs the counterfactual.\n\nTime-series counterfactuals\nWhen you have a single unit observed over time (a country, a company, a region) and an intervention at a known date, the counterfactual is what the series would have looked like had the intervention never happened.\nThe key tool here is fitting a model to the pre-intervention period and extrapolating it into the post-period. This is the logic of CausalImpact (Brodersen et al., 2015), Causal ARIMA (Menchetti et al., 2022), and synthetic controls.\nThe credibility rests on the quality of the pre-intervention model fit and the absence of other events coinciding with the intervention.\n\n\n\n\n\nTime-series counterfactual: fit a model on pre-treatment data, extrapolate, compare to observed.\n\n\n\n\n\n\nPanel data counterfactuals: Difference-in-Differences\nWhen you have multiple units observed over time, and only some are treated, you can use the untreated units to construct the counterfactual for the treated ones. This is the idea behind difference-in-differences (DiD).\nThe key assumption is parallel trends: in the absence of treatment, the treated and control groups would have followed the same trend. The counterfactual for the treated group after treatment is their pre-treatment level plus the trend observed in the control group.\n\n\n\n\n\nDifference-in-differences. Under parallel trends, the control group’s post-treatment trend tells us what the treated group would have done.\n\n\n\n\nThe DiD estimator is:\n\\widehat{ATT} = \\underbrace{(\\bar{Y}_{treated,post} - \\bar{Y}_{treated,pre})}_{\\text{change in treated}} - \\underbrace{(\\bar{Y}_{control,post} - \\bar{Y}_{control,pre})}_{\\text{change in control}}\nThis subtracts the control group’s trend from the treated group’s change. Whatever is left — the part of the change not explained by the common trend — is the causal effect.\n\n\nCross-sectional counterfactuals: G-computation\nWhen you have cross-sectional data with covariates and no natural control group or time series, you can still construct counterfactuals using a technique called G-computation (also called the g-formula or outcome regression approach).\nThe idea: fit a model E[Y \\mid X, D] using observed data, then use it to predict what outcomes would have been under a hypothetical intervention — i.e., setting D = 0 for everyone, or D = 1 for everyone.\nUnder the assumption of no unmeasured confounding (conditional exchangeability), this gives a consistent estimate of the causal effect.\n\n\n\n\n\nG-computation: predict counterfactual outcomes by setting treatment to 0 for all units, holding covariates fixed.\n\n\n\n\nThe Average Treatment Effect (ATE) under g-computation is:\n\\widehat{ATE} = \\frac{1}{n} \\sum_{i=1}^{n} \\left[ \\hat{E}[Y \\mid X_i, D=1] - \\hat{E}[Y \\mid X_i, D=0] \\right]\nThis is remarkably powerful: it works for any outcome model, handles continuous and discrete treatments, and naturally extends to heterogeneous effects (by looking at the distribution of unit-level effects rather than just the mean).\nThe main vulnerability is model misspecification — if the outcome model is wrong, the counterfactual predictions are wrong. This is why doubly robust estimators combine g-computation with propensity score weighting: if either model is correctly specified, the estimate is consistent."
+  },
+  {
+    "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html#connecting-the-pieces",
+    "href": "posts/what-is-counterfactual/what-is-counterfactual-index.html#connecting-the-pieces",
+    "title": "What Is a Counterfactual?",
+    "section": "Connecting the pieces",
+    "text": "Connecting the pieces\nEach of the three approaches above is really the same idea at different levels of abstraction:\n\nWhat would have happened to this unit had things been different?\nWe construct the answer using different sources of variation — time-series trends, cross-unit comparisons, or covariate-adjusted predictions.\nThe causal claim is only as credible as the assumption that our constructed counterfactual is a valid stand-in for the unobserved one.\n\n\n\n\n\n\nThree data structures, three counterfactual strategies."
+  },
+  {
+    "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html#what-comes-next",
+    "href": "posts/what-is-counterfactual/what-is-counterfactual-index.html#what-comes-next",
+    "title": "What Is a Counterfactual?",
+    "section": "What comes next",
+    "text": "What comes next\nThis post has introduced the core idea. In the posts that follow, I’ll go deeper on each strategy:\n\nDifference-in-differences — from the canonical 2×2 case to staggered adoption and the problems with TWFE\nSynthetic control — building an artificial counterfactual from a donor pool\nG-computation and doubly robust estimators — when you have rich covariates but no natural experiment\nEvent studies — how to check parallel trends and trace treatment effect dynamics over time\n\nThe through-line in all of them: every causal estimate is a counterfactual claim in disguise. The question is always whether we’ve constructed a credible one."
+  },
+  {
+    "objectID": "posts/what-is-counterfactual/what-is-counterfactual-index.html#references",
+    "href": "posts/what-is-counterfactual/what-is-counterfactual-index.html#references",
+    "title": "What Is a Counterfactual?",
     "section": "References",
-    "text": "References\n\nHolland, P.W. (1986). Statistics and Causal Inference. Journal of the American Statistical Association.\nPearl, J., Glymour, M., & Jewell, N.P. (2016). Causal Inference in Statistics: A Primer. Wiley.\nCunningham, S. (2021). Causal Inference: The Mixtape. Yale University Press. (Free online)"
+    "text": "References\n\nHolland, P.W. (1986). Statistics and Causal Inference. Journal of the American Statistical Association, 81(396), 945–960.\nPearl, J. (2009). Causality: Models, Reasoning, and Inference (2nd ed.). Cambridge University Press.\nRubin, D.B. (1974). Estimating causal effects of treatments in randomized and nonrandomized studies. Journal of Educational Psychology, 66(5), 688–701.\nRobins, J.M. (1986). A new approach to causal inference in mortality studies. Mathematical Modelling, 7, 1393–1512.\nBaker, A., Callaway, B., Cunningham, S., Goodman-Bacon, A., & Sant’Anna, P.H.C. (2025). Difference-in-Differences Designs: A Practitioner’s Guide. Journal of Economic Literature.\nBrodersen, K.H., Gallusser, F., Koehler, J., Remy, N., & Scott, S.L. (2015). Inferring causal impact using Bayesian structural time-series models. Annals of Applied Statistics, 9(1), 247–274.\nHernán, M.A. & Robins, J.M. (2020). Causal Inference: What If. Chapman & Hall/CRC. (Free online)\nCunningham, S. (2021). Causal Inference: The Mixtape. Yale University Press. (Free online)"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Counterfactual Thinking",
     "section": "",
-    "text": "2 min\n\n\npractical\n\ncausal inference\n\nR\n\ntime series\n\n\n\nA practical walkthrough of Google’s CausalImpact package — from data to causal claim.\n\n\n\nJun 11, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n3 min\n\n\ntheory\n\ncausal inference\n\ncounterfactuals\n\n\n\nThe fundamental problem of causal inference — and why it matters more than prediction.\n\n\n\nJun 4, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "2 min\n\n\npractical\n\ncausal inference\n\nR\n\ntime series\n\n\n\nA practical walkthrough of Google’s CausalImpact package — from data to causal claim.\n\n\n\nJun 11, 2026\n\n\n\n\n\n\n\n\n\n\n\n17 min\n\n\ntheory\n\ncausal inference\n\ncounterfactuals\n\n\n\nThe fundamental question of causal inference — what would have happened? — and how we try to answer it.\n\n\n\nJun 4, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#recent-posts",
     "href": "index.html#recent-posts",
     "title": "Counterfactual Thinking",
     "section": "",
-    "text": "2 min\n\n\npractical\n\ncausal inference\n\nR\n\ntime series\n\n\n\nA practical walkthrough of Google’s CausalImpact package — from data to causal claim.\n\n\n\nJun 11, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n3 min\n\n\ntheory\n\ncausal inference\n\ncounterfactuals\n\n\n\nThe fundamental problem of causal inference — and why it matters more than prediction.\n\n\n\nJun 4, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "2 min\n\n\npractical\n\ncausal inference\n\nR\n\ntime series\n\n\n\nA practical walkthrough of Google’s CausalImpact package — from data to causal claim.\n\n\n\nJun 11, 2026\n\n\n\n\n\n\n\n\n\n\n\n17 min\n\n\ntheory\n\ncausal inference\n\ncounterfactuals\n\n\n\nThe fundamental question of causal inference — what would have happened? — and how we try to answer it.\n\n\n\nJun 4, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -207,6 +228,6 @@
     "href": "posts.html",
     "title": "All Posts",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nDescription\n\n\n\nCategories\n\n\n\nReading Time\n\n\n\n\n\n\n\n\nJun 11, 2026\n\n\nMeasuring Campaign Impact with CausalImpact\n\n\nA practical walkthrough of Google’s CausalImpact package — from data to causal claim.\n\n\npractical, causal inference, R, time series\n\n\n2 min\n\n\n\n\n\n\nJun 4, 2026\n\n\nWhat Is a Counterfactual, Really?\n\n\nThe fundamental problem of causal inference — and why it matters more than prediction.\n\n\ntheory, causal inference, counterfactuals\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nDescription\n\n\n\nCategories\n\n\n\nReading Time\n\n\n\n\n\n\n\n\nJun 11, 2026\n\n\nMeasuring Campaign Impact with CausalImpact\n\n\nA practical walkthrough of Google’s CausalImpact package — from data to causal claim.\n\n\npractical, causal inference, R, time series\n\n\n2 min\n\n\n\n\n\n\nJun 4, 2026\n\n\nWhat Is a Counterfactual?\n\n\nThe fundamental question of causal inference — what would have happened? — and how we try to answer it.\n\n\ntheory, causal inference, counterfactuals\n\n\n17 min\n\n\n\n\n\n\nNo matching items"
   }
 ]
