@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB Testing/ab_test_probably_wrong.html",
       "/posts/DID/did_for_ceos.html",
       "/posts/what-is-counterfactual/what-is-counterfactual-index.html"
@@ -10,6 +11,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB Testing/ab_test_probably_wrong.html",
       "/posts/DID/did_for_ceos.html",
       "/posts/what-is-counterfactual/what-is-counterfactual-index.html"
