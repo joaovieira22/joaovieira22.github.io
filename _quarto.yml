@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "The Causal Layer"
+  description: "Causal inference, econometrics, and the methods behind defensible decisions."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: posts.qmd
+        text: Posts
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/joaovieira22
+      - icon: linkedin
+        href: https://linkedin.com/in/joaoviei7a
+
+  favicon: favicon.ico
+
+  open-graph: true
+  twitter-card: true
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    highlight-style: github
+    code-fold: true
+    code-tools: true
+    toc: true
+    toc-depth: 3
+    fig-width: 8
+    fig-height: 5
+    html-math-method: katex
+    css: styles.css

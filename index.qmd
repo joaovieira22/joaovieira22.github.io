@@ -1,0 +1,20 @@
+---
+title: "The Causal Layer"
+subtitle: "Causal inference, econometrics, and the methods behind defensible decisions."
+page-layout: full
+toc: false
+listing:
+  - id: recent-posts
+    contents: posts
+    sort: "date desc"
+    type: grid
+    max-items: 6
+    categories: true
+    fields: [image, date, title, description, categories, reading-time]
+---
+
+Applied writing on causal inference and econometrics, for analysts and
+decision-makers who want rigor without the textbook padding.
+
+::: {#recent-posts}
+:::
