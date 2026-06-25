@@ -1,10 +1,9 @@
 ---
 title: "When A/B Tests Lie: Spillovers, Interference, and SUTVA Violations"
-subtitle: "A Complete Guide to Causal Inference in Networked Experiments"
-author: "João Vieira"
+description: "The fundamental assumption of A/B testing fails silently in every platform where users share content, compete for attention, or trade in the same market. A complete practitioner guide to detecting, measuring, and designing around spillovers, with real cases from Kuaishou, Amazon, and Facebook. With full R implementation."
 date: 2026-06-22
 categories: [causal inference, A/B testing, network effects, econometrics, R]
-#draft: true
+draft: true
 ---
 
 ```{r setup, include=FALSE}
@@ -18,9 +17,7 @@ library(ggplot2)
 library(dplyr)
 ```
 
-# When A/B Tests Lie: Spillovers, Interference, and SUTVA Violations {#sec-title}
-
-## Series Introduction {#sec-intro}
+## When the Test Passes and the Product Fails
 
 It's Friday afternoon. Your PM is staring at a dashboard. The new feed-ranking algorithm is **green**: +5% engagement, *p* < 0.01. You roll it out to 100% of users on Monday. Three months later, the quarterly business review happens. Global 30-day retention is down 3%. Revenue is flat. The PM is confused. The A/B test didn't *look* like it lied. The design did.
 

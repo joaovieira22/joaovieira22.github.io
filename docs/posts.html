@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Causal Layer</title>
+<title>All Posts – The Causal Layer</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -115,20 +115,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-recent-posts .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-recent-posts'] = new List('listing-recent-posts', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -187,11 +187,9 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="The Causal Layer">
-<meta property="og:description" content="Causal inference, econometrics, and the methods behind defensible decisions.">
+<meta property="og:title" content="All Posts – The Causal Layer">
 <meta property="og:site_name" content="The Causal Layer">
-<meta name="twitter:title" content="The Causal Layer">
-<meta name="twitter:description" content="Causal inference, econometrics, and the methods behind defensible decisions.">
+<meta name="twitter:title" content="All Posts – The Causal Layer">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -375,11 +373,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link active" href="./posts.html" aria-current="page"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
@@ -407,24 +405,23 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QSUyRkIlMjB0ZXN0aW5n">A/B testing <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QmF5ZXNpYW4lMjBzdGF0aXN0aWNz">Bayesian statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2F1c2FsJTIwaW5mZXJlbmNl">causal inference <span class="quarto-category-count">(4)</span></div><div class="category" data-category="ZGlmZmVyZW5jZS1pbi1kaWZmZXJlbmNlcw==">difference-in-differences <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZWNvbm9tZXRyaWNz">econometrics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="ZXhwZXJpbWVudGF0aW9u">experimentation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV0d29yayUyMGVmZmVjdHM=">network effects <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c3BpbGxvdmVycw==">spillovers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGhlb3J5">theory <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">The Causal Layer</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Causal inference, econometrics, and the methods behind defensible decisions.</p>
+<div class="quarto-title-block"><div><h1 class="title">All Posts</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -436,147 +433,143 @@ window.Quarto = {
 </header>
 
 
-<p>Applied writing on causal inference and econometrics, for analysts and decision-makers who want rigor without the textbook padding.</p>
-<div id="listing-recent-posts" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Y2F1c2FsJTIwaW5mZXJlbmNlJTJDQSUyRkIlMjB0ZXN0aW5nJTJDbmV0d29yayUyMGVmZmVjdHMlMkNzcGlsbG92ZXJzJTJDUg==" data-listing-date-sort="1785279600000" data-listing-file-modified-sort="1782430206590" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="55" data-listing-word-count-sort="10977">
-<a href="./posts/AB testing com Spillovers Runbook/runbook.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts\AB testing com Spillovers Runbook\runbook_files\figure-html\unnamed-chunk-1-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-A/B Testing with Spillovers: A Runbook
-</h5>
-<div class="listing-reading-time card-text text-muted">55 min</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2F1c2FsJTIwaW5mZXJlbmNl'); return false;">causal inference</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QSUyRkIlMjB0ZXN0aW5n'); return false;">A/B testing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV0d29yayUyMGVmZmVjdHM='); return false;">network effects</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3BpbGxvdmVycw=='); return false;">spillovers</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>The practical companion to ‘When A/B Tests Lie’: a step-by-step path from detection to design to estimator for experiments where units can contaminate each other, with full…</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jul 29, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="QSUyRkIlMjB0ZXN0aW5nJTJDY2F1c2FsJTIwaW5mZXJlbmNlJTJDZXhwZXJpbWVudGF0aW9uJTJDUiUyQ0JheWVzaWFuJTIwc3RhdGlzdGljcyUyQ2Vjb25vbWV0cmljcw==" data-listing-date-sort="1781391600000" data-listing-file-modified-sort="1781444113606" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="86" data-listing-word-count-sort="17035">
-<a href="./posts/AB Testing/ab_test_probably_wrong.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts\AB Testing\ab_test_probably_wrong_files\figure-html\rct-diagram-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-From RCTs to A/B Tests: A Practitioner’s Guide to Trustworthy Experimentation
-</h5>
-<div class="listing-reading-time card-text text-muted">86 min</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('QSUyRkIlMjB0ZXN0aW5n'); return false;">A/B testing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2F1c2FsJTIwaW5mZXJlbmNl'); return false;">causal inference</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZXhwZXJpbWVudGF0aW9u'); return false;">experimentation</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QmF5ZXNpYW4lMjBzdGF0aXN0aWNz'); return false;">Bayesian statistics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZWNvbm9tZXRyaWNz'); return false;">econometrics</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>The RCT is the gold standard of causal inference. The A/B test is its industrial implementation, and it is harder to do correctly than most organisations admit. A complete…</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jun 14, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Y2F1c2FsJTIwaW5mZXJlbmNlJTJDZWNvbm9tZXRyaWNzJTJDZGlmZmVyZW5jZS1pbi1kaWZmZXJlbmNlcyUyQ1I=" data-listing-date-sort="1780873200000" data-listing-file-modified-sort="1782153088330" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="44" data-listing-word-count-sort="8744">
-<a href="./posts/DID/did_for_ceos.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts\DID\did_for_ceos_files\figure-html\canonical-did-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-The Causal Compass: From Classical DiD to the Callaway–Sant’Anna Framework
-</h5>
-<div class="listing-reading-time card-text text-muted">44 min</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2F1c2FsJTIwaW5mZXJlbmNl'); return false;">causal inference</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZWNvbm9tZXRyaWNz'); return false;">econometrics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlmZmVyZW5jZS1pbi1kaWZmZXJlbmNlcw=='); return false;">difference-in-differences</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Why staggered rollout analyses using TWFE can be misleading, and how to fix it. A practitioner’s guide from the canonical 2×2 DiD to cohort-time ATTs, with full R…</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jun 8, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="dGhlb3J5JTJDY2F1c2FsJTIwaW5mZXJlbmNlJTJDZWNvbm9tZXRyaWNz" data-listing-date-sort="1780527600000" data-listing-file-modified-sort="1780597630417" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4454">
-<a href="./posts/what-is-counterfactual/what-is-counterfactual-index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts\what-is-counterfactual\what-is-counterfactual-index_files\figure-html\missing-cf-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-What Is a Counterfactual?
-</h5>
-<div class="listing-reading-time card-text text-muted">23 min</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGhlb3J5'); return false;">theory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2F1c2FsJTIwaW5mZXJlbmNl'); return false;">causal inference</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZWNvbm9tZXRyaWNz'); return false;">econometrics</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>The fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jun 4, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
 
 
 
 <!-- -->
 
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+Description
+</th>
+
+<th>
+Categories
+</th>
+
+<th>
+Reading Time
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-categories="Y2F1c2FsJTIwaW5mZXJlbmNlJTJDQSUyRkIlMjB0ZXN0aW5nJTJDbmV0d29yayUyMGVmZmVjdHMlMkNzcGlsbG92ZXJzJTJDUg==" data-listing-date-sort="1785279600000" data-listing-file-modified-sort="1782430206590" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="55" data-listing-word-count-sort="10977" data-listing-title-sort="A/B Testing with Spillovers: A Runbook" data-listing-filename-sort="runbook.qmd">
+<td>
+<span class="listing-date">Jul 29, 2026</span>
+</td>
+<td>
+<a href="./posts/AB testing com Spillovers Runbook/runbook.html" class="title listing-title">A/B Testing with Spillovers: A Runbook</a>
+</td>
+<td>
+<span class="listing-description">The practical companion to ‘When A/B Tests Lie’: a step-by-step path from detection to design to estimator for experiments where units can contaminate each other, with full R code.</span>
+</td>
+<td>
+<span class="listing-categories">causal inference, A/B testing, network effects, spillovers, R</span>
+</td>
+<td>
+<span class="listing-reading-time">55 min</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="QSUyRkIlMjB0ZXN0aW5nJTJDY2F1c2FsJTIwaW5mZXJlbmNlJTJDZXhwZXJpbWVudGF0aW9uJTJDUiUyQ0JheWVzaWFuJTIwc3RhdGlzdGljcyUyQ2Vjb25vbWV0cmljcw==" data-listing-date-sort="1781391600000" data-listing-file-modified-sort="1781444113606" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="86" data-listing-word-count-sort="17035" data-listing-title-sort="From RCTs to A/B Tests: A Practitioner's Guide to Trustworthy Experimentation" data-listing-filename-sort="ab_test_probably_wrong.qmd">
+<td>
+<span class="listing-date">Jun 14, 2026</span>
+</td>
+<td>
+<a href="./posts/AB Testing/ab_test_probably_wrong.html" class="title listing-title">From RCTs to A/B Tests: A Practitioner’s Guide to Trustworthy Experimentation</a>
+</td>
+<td>
+<span class="listing-description">The RCT is the gold standard of causal inference. The A/B test is its industrial implementation, and it is harder to do correctly than most organisations admit. A complete practitioner guide covering design, diagnostics, power, sequential testing, fat tails, interference, and Bayesian decision theory. With full R implementation.</span>
+</td>
+<td>
+<span class="listing-categories">A/B testing, causal inference, experimentation, R, Bayesian statistics, econometrics</span>
+</td>
+<td>
+<span class="listing-reading-time">86 min</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="Y2F1c2FsJTIwaW5mZXJlbmNlJTJDZWNvbm9tZXRyaWNzJTJDZGlmZmVyZW5jZS1pbi1kaWZmZXJlbmNlcyUyQ1I=" data-listing-date-sort="1780873200000" data-listing-file-modified-sort="1782153088330" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="44" data-listing-word-count-sort="8744" data-listing-title-sort="The Causal Compass: From Classical DiD to the Callaway–Sant'Anna Framework" data-listing-filename-sort="did_for_ceos.qmd">
+<td>
+<span class="listing-date">Jun 8, 2026</span>
+</td>
+<td>
+<a href="./posts/DID/did_for_ceos.html" class="title listing-title">The Causal Compass: From Classical DiD to the Callaway–Sant’Anna Framework</a>
+</td>
+<td>
+<span class="listing-description">Why staggered rollout analyses using TWFE can be misleading, and how to fix it. A practitioner’s guide from the canonical 2×2 DiD to cohort-time ATTs, with full R implementation.</span>
+</td>
+<td>
+<span class="listing-categories">causal inference, econometrics, difference-in-differences, R</span>
+</td>
+<td>
+<span class="listing-reading-time">44 min</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="dGhlb3J5JTJDY2F1c2FsJTIwaW5mZXJlbmNlJTJDZWNvbm9tZXRyaWNz" data-listing-date-sort="1780527600000" data-listing-file-modified-sort="1780597630417" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4454" data-listing-title-sort="What Is a Counterfactual?" data-listing-filename-sort="what-is-counterfactual-index.qmd">
+<td>
+<span class="listing-date">Jun 4, 2026</span>
+</td>
+<td>
+<a href="./posts/what-is-counterfactual/what-is-counterfactual-index.html" class="title listing-title">What Is a Counterfactual?</a>
+</td>
+<td>
+<span class="listing-description">The fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions.</span>
+</td>
+<td>
+<span class="listing-categories">theory, causal inference, econometrics</span>
+</td>
+<td>
+<span class="listing-reading-time">23 min</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1042,25 +1035,15 @@ Jun 4, 2026
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "The Causal Layer"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Causal inference, econometrics, and the methods behind defensible decisions."</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> false</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: recent-posts</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: posts</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    sort: "date desc"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    type: grid</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    max-items: 6</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    categories: true</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [image, date, title, description, categories, reading-time]</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Applied writing on causal inference and econometrics, for analysts and</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>decision-makers who want rigor without the textbook padding.</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>::: {#recent-posts}</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "All Posts"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: posts</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "date desc"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  type: table</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: true</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: [date, title, description, categories, reading-time]</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> false</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
