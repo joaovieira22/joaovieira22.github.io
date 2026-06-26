@@ -12,53 +12,26 @@ about:
       text: Email
       href: mailto:joaoviei7a@gmail.com
 ---
-<<<<<<< HEAD
 I'm a Strategy Consultant and Economist at **EY-Parthenon**, and hold a Ph.D. in Economics from ISEG – University of Lisbon, where I also spent three years as a Teaching Assistant in applied econometrics and microeconomics.
 
 My doctoral thesis, *Essays on Panel Data Mode Regression*, developed new estimators for modal regression in panel data settings, a minimum distance estimator with fixed effects, and an extension allowing for interactive fixed effects via common correlated effects, with an application to public policy. It was approved unanimously, with distinction and honors.
 
 My work sits at the intersection of causal inference, forecasting, and strategic decision-making. At EY-Parthenon, I design quasi-experimental frameworks — difference-in-differences, regression discontinuity, instrumental variables — to answer hard questions on large-scale datasets: did this policy work? what would have happened without this intervention? how elastic is demand at this price point? I've applied these methods across public policy evaluation, financial instrument impact assessment, and pricing strategy, always with the goal of turning rigorous analysis into decisions that actually get made.
-=======
-
-I'm a Strategy Consultant and Economist at **EY-Parthenon**, and a Ph.D. Candidate at ISEG – University of Lisbon, where I also spent three years as a Teaching Assistant in applied econometrics and microeconomics.
-
-My work sits at the intersection of causal inference, forecasting, and strategic decision-making. I design econometric frameworks to answer hard questions: did this policy work? what would have happened without this intervention? how elastic is demand at this price point? I've applied these methods across public policy evaluation, financial instrument impact assessment, and pricing strategy, always with the goal of turning rigorous analysis into decisions that actually get made.
->>>>>>> 8d80aff9d6fae19b26f5dd3a00ae29ecc7b37e69
 
 This blog is where I think out loud about the methods I use and care about. Some posts work through theory and intuition. Others are hands-on walkthroughs with real code and data. Most are somewhere in between.
 
 ### What I write about
-<<<<<<< HEAD
 - **Counterfactual analysis**: synthetic controls, difference-in-differences, interrupted time series
 - **Causal inference**: identification strategies, DAGs, potential outcomes framework, treatment effect heterogeneity (CATE, causal forests)
 - **Forecasting**: probabilistic forecasting, model evaluation, uncertainty quantification
 - **Applied examples**: using real and simulated data to answer concrete questions, with full R implementation
 
 ### Background
-
-- **Senior Consultant, Strategy & Data Analytics**: EY-Parthenon *(2024 – present)*
-- **Ph.D. Candidate in Economics**: ISEG, University of Lisbon *(2019 – present)*
+- **Senior Consultant, Data Analytics & Causal Inference**: EY-Parthenon *(2024 – present)*
+- **Ph.D. in Economics**: ISEG, University of Lisbon *(2019 – 2026)*
 - **MSc in Applied Econometrics and Forecasting**: ISEG, University of Lisbon
 - **BSc in Management**: Faculty of Economics, University of Coimbra
-=======
-
-- **Counterfactual analysis**: synthetic controls, difference-in-differences, interrupted time series
-- **Causal inference**: identification strategies, DAGs, potential outcomes framework
-- **Forecasting**: probabilistic forecasting, model evaluation, uncertainty quantification
-- **Applied examples**: using real and simulated data to answer concrete questions
-
-### Background
-
-- **Ph.D. Candidate in Economics**: ISEG, University of Lisbon *(2019 – present)*
-- **MSc in Applied Econometrics and Forecasting**: ISEG, University of Lisbon
-- **BSc in Management**: Faculty of Economics, University of Coimbra
-- **Senior Consultant, Strategy & Data Analytics**: EY-Parthenon *(2024 – present)*
->>>>>>> 8d80aff9d6fae19b26f5dd3a00ae29ecc7b37e69
 
 ---
 
 *All views are my own. Code is available on GitHub.*
-<<<<<<< HEAD
-
-=======
->>>>>>> 8d80aff9d6fae19b26f5dd3a00ae29ecc7b37e69
