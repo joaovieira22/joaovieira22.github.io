@@ -2,7 +2,11 @@
   {
     "listing": "/posts.html",
     "items": [
+<<<<<<< HEAD
       "/posts/AB testing com Spillovers Runbook/runbook.html",
+=======
+      "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
+>>>>>>> 8d80aff9d6fae19b26f5dd3a00ae29ecc7b37e69
       "/posts/AB Testing/ab_test_probably_wrong.html",
       "/posts/DID/did_for_ceos.html",
       "/posts/what-is-counterfactual/what-is-counterfactual-index.html"
@@ -11,7 +15,11 @@
   {
     "listing": "/index.html",
     "items": [
+<<<<<<< HEAD
       "/posts/AB testing com Spillovers Runbook/runbook.html",
+=======
+      "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
+>>>>>>> 8d80aff9d6fae19b26f5dd3a00ae29ecc7b37e69
       "/posts/AB Testing/ab_test_probably_wrong.html",
       "/posts/DID/did_for_ceos.html",
       "/posts/what-is-counterfactual/what-is-counterfactual-index.html"
