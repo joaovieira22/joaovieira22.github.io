@@ -19,7 +19,7 @@ library(dplyr)
 
 ## Who this is for, and how to use it
 
-A couple of weeks ago I wrote [When A/B Tests Lie: Spillovers, Interference, and SUTVA Violations](https://joaovieira22.github.io/posts/AB%20testing%20com%20Spillovers/when_ab_tests_lie.html), a long-form walkthrough of why the Stable Unit Treatment Value Assumption (SUTVA) breaks down on modern platforms, and the full toolkit for detecting, designing around, and correcting for it. If you read that post and walked away convinced spillovers are a real risk for your experiments, but not entirely sure what to actually open on a Monday morning, this post is for you.
+A week ago I wrote [When A/B Tests Lie: Spillovers, Interference, and SUTVA Violations](https://joaovieira22.github.io/posts/AB%20testing%20com%20Spillovers/when_ab_tests_lie.html), a long-form walkthrough of why the Stable Unit Treatment Value Assumption (SUTVA) breaks down on modern platforms, and the full toolkit for detecting, designing around, and correcting for it. If you read that post and walked away convinced spillovers are a real risk for your experiments, but not entirely sure what to actually open on a Monday morning, this post is for you.
 
 You know how to run an A/B test. You know what a p-value is, you've shipped things based on a green metric, you've probably also been burned once by a launch that "won" the test and did nothing in production.
 
@@ -190,7 +190,7 @@ Under 50/50 randomisation in a cluster of 1,000 units, treatment intensity sits 
 $$Y_{ij} = \alpha + \beta \, T_{ij} + f\!\left(T^{\text{intensity}}_{ij}\right) + g\!\left(N_j\right) + \theta \, Y^{0}_{ij} + \epsilon_{ij}$$
 
 - $\beta$ on `treat` is your **direct effect**: what a standard A/B test would have reported.
-- $f(\cdot)$ on `treat_intensity` is the **spillover effect**. If it's statistically significant, SUTVA is violated, full stop.
+- $f(\cdot)$ on `treat_intensity` is the **spillover effect**.
 - $g(N_j)$ controls for cluster size; leave this out and you'll confound cluster-size effects with spillover.
 - $Y^0_{ij}$ is the pre-period value of the outcome, included purely for precision.
 - Cluster your standard errors at the cluster level, not the unit level. Skip this and you're not just biased, your confidence intervals stop being valid probability statements (Eckles, Karrer, and Ugander, 2017).

@@ -809,7 +809,7 @@ A cluster of size 2 with 50/50 randomisation will have intensity values of 0 or 
 
 $$Y_{ij} = \alpha + \beta \, T_{ij} + f\!\left(T^{\text{intensity}}_{ij}\right) + g\!\left(N_j\right) + \theta \, Y^{0}_{ij} + \epsilon_{ij}$$
 
-$\beta \, T_{ij}$ is the **direct treatment effect** ($\tau^{direct}$). $f\!\left(T^{\text{intensity}}_{ij}\right)$ is the **spillover effect**, if this coefficient is statistically significant, SUTVA is violated. $g\!\left(N_j\right)$ is a **control for cluster size** (not optional, without it, you conflate cluster-size effects with spillover effects). $Y^{0}_{ij}$ is the **pre-period outcome** for precision. Standard errors must be **clustered at the cluster level**.
+$\beta \, T_{ij}$ is the **direct treatment effect** ($\tau^{direct}$). $f\!\left(T^{\text{intensity}}_{ij}\right)$ is the **spillover effect**, if this coefficient is statistically significant, SUTVA was violated. $g\!\left(N_j\right)$ is a **control for cluster size** (not optional, without it, you conflate cluster-size effects with spillover effects). $Y^{0}_{ij}$ is the **pre-period outcome** for precision. Standard errors must be **clustered at the cluster level**.
 
 The "Flywheel Effect" ($\tau^{total}$), the total impact when both unit $i$ and all its peers are treated, is $\beta + f(1)$.
 
