@@ -160,11 +160,15 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="From RCTs to A/B Tests: A Practitioner’s Guide to Trustworthy Experimentation – The Causal Layer">
 <meta property="og:description" content="The RCT is the gold standard of causal inference. The A/B test is its industrial implementation, and it is harder to do correctly than most organisations admit. A complete practitioner guide covering design, diagnostics, power, sequential testing, fat tails, interference, and Bayesian decision theory. With full R implementation.">
-<meta property="og:image" content="ab_test_probably_wrong_files/figure-html/rct-diagram-1.png">
+<meta property="og:image" content="https://joaovieira22.github.io/posts/AB Testing/ab_test_probably_wrong_files/figure-html/rct-diagram-1.png">
 <meta property="og:site_name" content="The Causal Layer">
+<meta property="og:image:height" content="768">
+<meta property="og:image:width" content="1536">
 <meta name="twitter:title" content="From RCTs to A/B Tests: A Practitioner’s Guide to Trustworthy Experimentation – The Causal Layer">
 <meta name="twitter:description" content="The RCT is the gold standard of causal inference. The A/B test is its industrial implementation, and it is harder to do correctly than most organisations admit. A complete practitioner guide covering design, diagnostics, power, sequential testing, fat tails, interference, and Bayesian decision theory. With full R implementation.">
-<meta name="twitter:image" content="ab_test_probably_wrong_files/figure-html/rct-diagram-1.png">
+<meta name="twitter:image" content="https://joaovieira22.github.io/posts/AB Testing/ab_test_probably_wrong_files/figure-html/rct-diagram-1.png">
+<meta name="twitter:image-height" content="768">
+<meta name="twitter:image-width" content="1536">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -2104,7 +2108,7 @@ Figure&nbsp;13: Posterior distribution of the ATE (CUPED-adjusted). The shaded r
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/joaovieira22\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
