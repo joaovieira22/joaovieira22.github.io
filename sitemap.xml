@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://joaovieira22.github.io/.github.io/posts.html</loc>
+    <loc>https://joaovieira22.github.io/posts.html</loc>
     <lastmod>2026-06-04T14:19:17.776Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/.github.io/posts/DID/did_for_ceos.html</loc>
+    <loc>https://joaovieira22.github.io/posts/DID/did_for_ceos.html</loc>
     <lastmod>2026-06-22T18:31:28.330Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/.github.io/posts/AB Testing/ab_test_probably_wrong.html</loc>
-    <lastmod>2026-06-14T13:35:13.606Z</lastmod>
+    <loc>https://joaovieira22.github.io/posts/AB testing com Spillovers/when_ab_tests_lie.html</loc>
+    <lastmod>2026-06-26T00:16:58.486Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/.github.io/about.html</loc>
-    <lastmod>2026-06-05T07:59:49.130Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/.github.io/index.html</loc>
+    <loc>https://joaovieira22.github.io/index.html</loc>
     <lastmod>2026-06-04T14:19:17.776Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/.github.io/posts/AB testing com Spillovers/when_ab_tests_lie.html</loc>
-    <lastmod>2026-06-22T18:31:27.044Z</lastmod>
+    <loc>https://joaovieira22.github.io/about.html</loc>
+    <lastmod>2026-06-26T00:18:39.349Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/.github.io/posts/what-is-counterfactual/what-is-counterfactual-index.html</loc>
+    <loc>https://joaovieira22.github.io/posts/AB Testing/ab_test_probably_wrong.html</loc>
+    <lastmod>2026-06-14T13:35:13.606Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/AB testing com Spillovers Runbook/runbook.html</loc>
+    <lastmod>2026-06-25T23:58:57.072Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/what-is-counterfactual/what-is-counterfactual-index.html</loc>
     <lastmod>2026-06-04T18:27:10.417Z</lastmod>
   </url>
 </urlset>
