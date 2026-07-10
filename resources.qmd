@@ -1,0 +1,257 @@
+---
+title: "Resources"
+subtitle: "Books, courses, papers, and tools I actually use — not a wish list."
+toc: true
+toc-depth: 3
+---
+
+A curated collection of the material I go back to. Not an exhaustive
+list — just what has been genuinely useful for my work in causal
+inference, pricing, and forecasting.
+
+If something on this page led you somewhere interesting, let me know.
+
+---
+
+## Books
+
+### Causal Inference
+
+- **Angrist & Pischke** — *Mostly Harmless Econometrics* (2009).
+  The classic. Read chapters 3 (regression) and 5 (DiD) at least twice.
+- **Cunningham** — *Causal Inference: The Mixtape* (2021).
+  Free online: <https://mixtape.scunning.com/>. The most practitioner-friendly
+  introduction to identification strategies.
+- **Hernán & Robins** — *Causal Inference: What If* (2020).
+  Free online: <https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/>.
+  The potential outcomes framework, done rigorously.
+- **Pearl, Glymour & Jewell** — *Causal Inference in Statistics: A Primer* (2016).
+  The graphical / DAG side of causal inference.
+- **Facure** — *Causal Inference for the Brave and True* (2022).
+  Free online: <https://matheusfacure.github.io/python-causality-handbook/>.
+  Python-first, notebook-style walkthroughs.
+
+### Pricing, Demand & Revenue Management
+
+- **Phillips** — *Pricing and Revenue Optimization* (2021, 2nd ed.).
+  The book on the subject.
+- **Talluri & van Ryzin** — *The Theory and Practice of Revenue Management* (2004).
+  Deeper on the airline/hotel revenue management side.
+- **Ariely** — *Predictably Irrational* (2008).
+  Behavioural side of pricing. Short, useful.
+
+### Forecasting
+
+- **Hyndman & Athanasopoulos** — *Forecasting: Principles and Practice* (2021, 3rd ed.).
+  Free online: <https://otexts.com/fpp3/>. The reference.
+- **Petropoulos et al.** — *Forecasting: theory and practice* (2022).
+  A 300-page survey paper. Free: <https://arxiv.org/abs/2012.03854>.
+
+### Experimentation
+
+- **Kohavi, Tang & Xu** — *Trustworthy Online Controlled Experiments* (2020).
+  Written by people who run experiments at scale (Microsoft, Airbnb, LinkedIn).
+  If you only read one book on A/B testing, read this one.
+- **Gerber & Green** — *Field Experiments: Design, Analysis, and Interpretation* (2012).
+  The academic counterpart. Strong on design.
+
+### Bayesian Methods
+
+- **McElreath** — *Statistical Rethinking* (2020, 2nd ed.).
+  The book that makes Bayesian inference click. Companion lectures on YouTube.
+- **Gelman et al.** — *Bayesian Data Analysis* (2013, 3rd ed.).
+  Free online: <https://sites.stat.columbia.edu/gelman/book/>. The reference.
+
+---
+
+## Courses
+
+- **MIT OCW — 14.32 Econometrics** (undergraduate).  
+<https://ocw.mit.edu/courses/14-32-econometrics-spring-2007/>
+  
+- **MIT OCW — 14.382 Econometrics** (graduate).  
+<https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/>
+  
+- **MIT OCW — 14.310x Data Analysis for Social Scientists** (Duflo & Ellison).  
+<https://ocw.mit.edu/courses/14-310x-data-analysis-for-social-scientists-spring-2023/>  
+  Probability, statistics, regression, and applied causal inference framed
+around policy questions. Great pairing with *Mostly Harmless Econometrics* —
+the textbook gives you the theory, this course gives you the applied intuition.
+
+- **MIT OCW — 14.750x Political Economy and Economic Development** (Duflo & Banerjee).  
+<https://ocw.mit.edu/courses/14-750-political-economy-and-economic-development-spring-2018/>  
+  Advanced applied causal inference in development economics, from the
+Nobel-winning J-PAL team.
+
+- **The Effect — Video Series (Nick Huntington-Klein)**.  
+<https://www.youtube.com/playlist?list=PLwJRxp3blEvZyQBTTOMFRP_TDaSdly3gU>  
+  Full companion video series to the book *The Effect*. 69+ episodes on
+research design and causal inference, from DAGs to IV to synthetic control.
+Book (free): <https://theeffectbook.net/>.
+
+- **The Effect — Video Series (Nick Huntington-Klein)**.
+  <https://www.youtube.com/playlist?list=PLwJRxp3blEvZyQBTTOMFRP_TDaSdly3gU>
+  Full companion video series to the book *The Effect*. 69+ episodes on
+  research design and causal inference, from DAGs to IV to synthetic control.
+
+- **Statistical Rethinking Lectures — McElreath** (YouTube).  
+<https://github.com/rmcelreath/stat_rethinking_2024>  
+  The best Bayesian course, free.
+
+- **Causal Inference Bootcamp — Duke / Kyle Butts**.  
+<https://kylebutts.com/econ-teaching.html>
+
+
+
+## Blogs & Practitioner Sites
+
+### Econometrics & Causal Inference
+
+- **Chris Bilder** — <https://www.chrisbilder.com/>.
+  Categorical data and applied stats, with R code you can actually run.
+- **Andrew Gelman** — <https://statmodeling.stat.columbia.edu/>.
+  Bayesian statistics, methodology critique, occasional politics.
+- **Marc Bellemare** — <https://marcfbellemare.com/wordpress/>.
+  Applied econometrics, IV, and academic career advice.
+- **Ryan Cornelius (Very Sensible)** — <https://verysensible.com/>.
+  Causal inference for practitioners.
+- **Andrew Heiss** — <https://www.andrewheiss.com/blog/>.
+  Bayesian econometrics with R walkthroughs.
+- **Nick Huntington-Klein** — <https://nickchk.com/>.
+  Econometrics teaching, R packages, and thoughtful writing.
+
+### Experimentation & Product Data Science
+
+- **Netflix Tech Blog — Experimentation** —
+  <https://netflixtechblog.com/tagged/experimentation>.
+- **Airbnb Data Science** — <https://medium.com/airbnb-engineering/ai-ml>.
+- **Uber Engineering — Experimentation** —
+  <https://www.uber.com/en-PT/blog/engineering/>.
+- **Booking.com — Data & Experimentation** —
+  <https://booking.ai/>.
+- **Spotify R&D** — <https://research.atspotify.com/>.
+
+### Pricing, MMM & Marketing Science
+
+- **PyMC Labs Blog** — <https://www.pymc-labs.com/blog-posts/>.
+  Bayesian MMM, marketing measurement, PyMC-Marketing tutorials.
+- **Google Ads Attribution & Incrementality**
+  (search "Google Ads Data Hub" and "geo experiments" documentation).
+
+### Forecasting
+
+- **Rob Hyndman's Blog** — <https://robjhyndman.com/hyndsight/>.
+  From the co-author of *Forecasting: Principles and Practice*.
+- **Nixtla Blog** — <https://nixtla.github.io/nixtla/>.
+  Python-first forecasting stack (StatsForecast, MLForecast, NeuralForecast).
+
+### General
+
+- **R-bloggers** — <https://www.r-bloggers.com/>.
+  Aggregator of R content. Set up an RSS feed on causal / forecasting tags.
+
+---
+
+## Papers I keep coming back to
+
+### DiD / Staggered Adoption
+
+- Callaway & Sant'Anna (2021). *Difference-in-differences with multiple time periods*. Journal of Econometrics. <https://doi.org/10.1016/j.jeconom.2020.12.001>
+- Goodman-Bacon (2021). *Difference-in-differences with variation in treatment timing*. Journal of Econometrics.
+- Sun & Abraham (2021). *Estimating dynamic treatment effects in event studies with heterogeneous treatment effects*. Journal of Econometrics.
+- Roth, Sant'Anna, Bilinski & Poe (2023). *What's trending in difference-in-differences?* Journal of Econometrics.
+
+### Synthetic Control
+
+- Abadie, Diamond & Hainmueller (2010). *Synthetic control methods for comparative case studies*. JASA.
+- Abadie (2021). *Using synthetic controls: feasibility, data requirements, and methodological aspects*. JEL.
+
+### Regression Discontinuity
+
+- Cattaneo, Idrobo & Titiunik (2019). *A practical introduction to regression discontinuity designs*. Cambridge.
+
+### DML & Causal Forests
+
+- Chernozhukov et al. (2018). *Double/debiased machine learning*. Econometrics Journal.
+- Wager & Athey (2018). *Estimation and inference of heterogeneous treatment effects using random forests*. JASA.
+
+### Experimentation
+
+- Deng, Xu, Kohavi & Walker (2013). *Improving the sensitivity of online controlled experiments by utilizing pre-experiment data* — the CUPED paper.
+- Bojinov, Simchi-Levi & Zhao (2023). *Design and analysis of switchback experiments*. Management Science.
+
+### Marketing Mix Modeling
+
+- Jin, Wang, Sun, Chan & Koehler (2017). *Bayesian methods for media mix modeling with carryover and shape effects*. Google.
+
+---
+
+## R Packages (that I actually use)
+
+### Causal Inference
+
+- **`fixest`** — <https://lrberge.github.io/fixest/>.
+  Fast fixed-effects regression. My default for DiD and panel data.
+- **`did`** — <https://bcallaway11.github.io/did/>.
+  Callaway & Sant'Anna staggered-adoption DiD.
+- **`Synth`** — synthetic control.
+- **`rdrobust`** — Cattaneo et al. RDD implementation.
+- **`grf`** — <https://grf-labs.github.io/grf/>.
+  Generalized random forests (causal forests, DML).
+- **`DoubleML`** — <https://docs.doubleml.org/>.
+  Chernozhukov et al. DML in R.
+- **`marginaleffects`** — <https://marginaleffects.com/>.
+  Interpretation of anything, from OLS to Bayesian.
+- **`adjustedCurves`** — G-computation for survival.
+
+### Forecasting
+
+- **`fable`** and **`fabletools`** — <https://fable.tidyverts.org/>.
+  Hyndman's tidyverse forecasting stack.
+- **`forecast`** — the older classic.
+- **`prophet`** — <https://facebook.github.io/prophet/>.
+
+### Bayesian
+
+- **`brms`** — <https://paul-buerkner.github.io/brms/>.
+  Bayesian regression, Stan under the hood, formula syntax.
+- **`rstanarm`** — Bayesian versions of standard R models.
+- **`CausalImpact`** — Google's BSTS for causal inference.
+
+### General
+
+- **`tidyverse`** — `dplyr`, `ggplot2`, `tidyr`, `purrr`.
+- **`patchwork`** — combining ggplot2 figures.
+- **`scales`** — proper axis formatting.
+- **`gt`** and **`kableExtra`** — tables that don't embarrass you.
+
+---
+
+## Python
+
+- **`statsmodels`** — the basics: OLS, panel, GLM.
+- **`linearmodels`** — panel data, IV, and system estimators.
+- **`econml`** — <https://econml.azurewebsites.net/>.
+  Microsoft's DML / meta-learners / policy learning.
+- **`pymc`** — <https://www.pymc.io/>.
+  Probabilistic programming, general-purpose Bayesian modelling.
+- **`pymc-marketing`** — <https://www.pymc-marketing.io/>.
+  Bayesian MMM out of the box: adstock, saturation, budget optimisation.
+- **`causalinference`** — implements matching and other estimators.
+- **`dowhy`** — <https://www.pywhy.org/dowhy/>.
+  Causal inference with a graphical model layer.
+- **`nixtla` stack** — `statsforecast`, `mlforecast`, `neuralforecast`.
+
+---
+
+## Communities
+
+- **Causal Inference Slack** (invite through the Mixtape site).
+- **R for Data Science online community** — <https://rfordatasci.com/>.
+- **Cross Validated** (stats.stackexchange.com) — still the best place to
+  ask sharp methodological questions.
+
+---
+
+*If a link here is broken or you have a strong recommendation to add,
+let me know via [email](mailto:joaoviei7a@gmail.com) or LinkedIn.*
