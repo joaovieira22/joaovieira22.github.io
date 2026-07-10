@@ -64,13 +64,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../favicon.ico" rel="icon">
+<link href="../../foto3.jpeg" rel="icon" type="image/jpeg">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -82,9 +81,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-09fdf1c988cf04e6fc3f8b602695d7e1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-5471fee98bb1022e344fa01fd8cd8237.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-09fdf1c988cf04e6fc3f8b602695d7e1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c3ec530b6f8a19b58ffd72ce98371a5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-6ea507b90afd36dfcf636ae1abab9ce3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c3ec530b6f8a19b58ffd72ce98371a5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,23 +111,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -158,18 +144,6 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="A/B Testing Is an Optimization Problem – The Causal Layer">
-<meta property="og:description" content="Statistical significance was built for scientific inference, not for profit. A practitioner’s guide to reframing A/B tests as a Test &amp; Roll decision problem, with the closed-form sample size that maximises expected profit instead of minimising false positives.">
-<meta property="og:image" content="https://joaovieira22.github.io/posts/AB_Testing_Profit_Optimization/ab_testing_optimization_files/figure-html/fig-test-roll-vs-nhst-1.png">
-<meta property="og:site_name" content="The Causal Layer">
-<meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1536">
-<meta name="twitter:title" content="A/B Testing Is an Optimization Problem – The Causal Layer">
-<meta name="twitter:description" content="Statistical significance was built for scientific inference, not for profit. A practitioner’s guide to reframing A/B tests as a Test &amp; Roll decision problem, with the closed-form sample size that maximises expected profit instead of minimising false positives.">
-<meta name="twitter:image" content="https://joaovieira22.github.io/posts/AB_Testing_Profit_Optimization/ab_testing_optimization_files/figure-html/fig-test-roll-vs-nhst-1.png">
-<meta name="twitter:image-height" content="960">
-<meta name="twitter:image-width" content="1536">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -341,6 +315,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../foto3.jpeg" alt="" class="navbar-logo light-content">
+    <img src="../../foto3.jpeg" alt="" class="navbar-logo dark-content">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">The Causal Layer</span>
     </a>
@@ -355,9 +333,37 @@ window.Quarto = {
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Series</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-series">    
+        <li>
+    <a class="dropdown-item" href="../../series.html">
+ <span class="dropdown-text">All Series</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../series/causal-inference.html">
+ <span class="dropdown-text">Causal Inference</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../series/pricing.html">
+ <span class="dropdown-text">Pricing &amp; Demand</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../series/forecasting.html">
+ <span class="dropdown-text">Forecasting</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../posts.html"> 
-<span class="menu-text">Posts</span></a>
+<span class="menu-text">All Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources.qmd"> 
+<span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
@@ -366,12 +372,17 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/joaovieira22"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/joao-vieira-iseg/"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://linkedin.com/in/joaoviei7a"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="mailto:joaoviei7a@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -399,7 +410,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#section-iii.-the-test-roll-sample-size-formula" id="toc-section-iii.-the-test-roll-sample-size-formula" class="nav-link" data-scroll-target="#section-iii.-the-test-roll-sample-size-formula">Section III. The Test &amp; Roll Sample Size Formula</a>
   <ul class="collapse">
-  <li><a href="#what-sigma_delta2-actually-means" id="toc-what-sigma_delta2-actually-means" class="nav-link" data-scroll-target="#what-sigma_delta2-actually-means">What <span class="math inline">\sigma_\delta^2</span> actually means</a></li>
+  <li><a href="#what-sigma_delta2-actually-means" id="toc-what-sigma_delta2-actually-means" class="nav-link" data-scroll-target="#what-sigma_delta2-actually-means">What <span class="math inline">\(\sigma_\delta^2\)</span> actually means</a></li>
   </ul></li>
   <li><a href="#section-iv.-the-optimal-stopping-rule-a-simulation-approach" id="toc-section-iv.-the-optimal-stopping-rule-a-simulation-approach" class="nav-link" data-scroll-target="#section-iv.-the-optimal-stopping-rule-a-simulation-approach">Section IV. The Optimal Stopping Rule: A Simulation Approach</a>
   <ul class="collapse">
@@ -490,18 +501,18 @@ window.Quarto = {
 <p>The PM is staring at the experimentation dashboard at the end of Q1. One hundred A/B tests ran this quarter. In every single one, the treatment outperformed the control in the sample. None of them crossed 0.05. The p-values landed at 0.06, 0.07, 0.08, close enough to make the team uncomfortable, far enough to make them ship nothing. The roadmap promised forty shipped features this quarter. The dashboard shows zero. Nobody got fired, because nobody did anything wrong by the rules they were given. The rules were the problem.</p>
 <p>Zaliznyak and Powers (2026), in a technical essay that quantifies this exact pattern with 100,000 simulated experiments under realistic noise, find that a stopping rule built around expected value rather than a fixed significance threshold produces roughly twice as many conversions in the long run, in about half the time. Their framing is not peer-reviewed, but the underlying mechanics rest on well-established results in Bayesian decision theory and are directly consistent with the peer-reviewed literature we build on below (Feit and Berman, 2019; Gelman and Carlin, 2014; Azevedo et al., 2020). The decision rule that controls false positives did exactly what it was built to do. It also cost the business a fortune, and nobody put that cost on a dashboard.</p>
 <p>Suppose the true average lift across those 100 tests was +2% on a metric worth €10M in annual revenue, a realistic number for a mid-sized subscription product. Shipping the winning variant in any one test, even without statistical significance, captures that lift <em>in expectation</em>, because the variant that beat control in the sample is more likely than not to be the genuinely better one. The arithmetic is simple: 2% of €10M is €200k per test. Across 100 tests that is €20M in foregone annual revenue. Naturally, the exact figure depends on effect persistence, rollout assumptions, and the realized correlation between sample-winners and true-winners across the portfolio; a more conservative accounting that shrinks each observed lift toward zero (as we do formally in Section VI) would land at a smaller number. The <em>direction</em> of the opportunity cost, however, is unambiguous: the significance filter did not protect the organisation from shipping something harmful. The variants were not harmful, they were simply not provably better, which is a very different statement. A VP of Data reading this should be asking not “were the tests run correctly?” but “what did it cost us to require that they be run correctly?”</p>
-<p>The root cause is that statistical significance was designed for scientific inference, not for business decisions. Fisher (1925) and Neyman and Pearson (1933) built null hypothesis significance testing to control false positive rates in contexts where a false positive destroys reproducibility and wastes years of follow-on research. The framework encodes an assumption: that declaring an effect where none exists is the most expensive kind of error a researcher can make. In business, that assumption is often wrong. If you choose variant A over variant B and the two are in fact equal, users experience A regardless, and the <em>user-level</em> incremental cost is approximately zero. There are, of course, real costs to shipping any variant: engineering maintenance, operational complexity, UX consistency, support burden. The point is not that false positives are free in an absolute sense; it is that in most consumer product contexts the user-level payoff structure is far closer to symmetric than NHST assumes, and often skewed the other way: a false negative means not shipping A when A is genuinely better, and that is real revenue lost every day the test runs and every day after it ends. A decision rule built on the assumption that Type I and Type II errors are symmetric will systematically leave money on the table whenever that assumption fails, and in most product contexts it does.</p>
+<p>The root cause is that statistical significance was designed for scientific inference, not for business decisions. Fisher (1925) built tests of significance as a continuous measure of evidence against the null. Neyman and Pearson (1933) later built a separate framework for hypothesis testing with explicit Type I and Type II error control. The hybrid we now call NHST, the recipe of p-value plus fixed threshold plus reject-or-accept decision, was codified in mid-20th century applied textbooks, most influentially by Lindquist (1940), and it is what practitioners actually use today (Gigerenzer 2004; Hubbard 2004). All three variants share a common purpose: statistical inference in scientific contexts where the cost of declaring a spurious effect is high. The framework encodes an assumption: that declaring an effect where none exists is the most expensive kind of error a researcher can make. In business, that assumption is often wrong. If you choose variant A over variant B and the two are in fact equal, users experience A regardless, and the <em>user-level</em> incremental cost is approximately zero. There are, of course, real costs to shipping any variant: engineering maintenance, operational complexity, UX consistency, support burden. The point is not that false positives are free in an absolute sense; it is that in most consumer product contexts the user-level payoff structure is far closer to symmetric than NHST assumes, and often skewed the other way: a false negative means not shipping A when A is genuinely better, and that is real revenue lost every day the test runs and every day after it ends. A decision rule built on the assumption that Type I and Type II errors are symmetric will systematically leave money on the table whenever that assumption fails, and in most product contexts it does.</p>
 <p>As we saw in the A/B testing guide <a href="https://joaovieira22.github.io/posts/AB%20Testing/ab_test_probably_wrong.html">From RCTs to A/B Tests</a>, Type M error captures a related failure mode: even when NHST does detect an effect, the magnitude it reports is often overstated. The deeper issue here is different. NHST was never trying to maximise the right quantity in the first place.</p>
 <p>The central question of this post is therefore not “is this result statistically significant?” but “at what point does continuing this test cost more than it returns?” This is not a rhetorical question. It has a computable answer, expressed in the same units as the metric on the dashboard, and the rest of this post derives it.</p>
 <p>Before we can build the right framework, we need to understand precisely what went wrong with the old one.</p>
 </section>
 <section id="section-ii.-what-statistical-significance-was-actually-designed-for" class="level2">
 <h2 class="anchored" data-anchor-id="section-ii.-what-statistical-significance-was-actually-designed-for">Section II. What Statistical Significance Was Actually Designed For</h2>
-<p>The original purpose of NHST is not what most practitioners think it is. Fisher (1925) introduced the p-value as a continuous measure of evidence against the null hypothesis, not as a binary decision rule. In Fisher’s framing, a p-value of 0.04 was not categorically different from 0.06. It was simply more evidence against the null, to be weighed alongside everything else the researcher knew about the problem. Neyman and Pearson (1933) introduced the binary decision framework a few years later, with explicit Type I and Type II error control and pre-registered decision rules. The 0.05 threshold that practitioners treat as a law of nature was a convention Fisher suggested in passing for agricultural experiments, a pragmatic cutoff to keep tables of critical values manageable rather than an epistemic boundary between truth and falsehood. Neither framework was designed with profit maximisation in mind.</p>
+<p>The original purpose of NHST is not what most practitioners think it is, and it does not have a single clean origin. Fisher (1925) introduced the p-value as a continuous measure of evidence against the null hypothesis, not as a binary decision rule. In Fisher’s framing, a p-value of 0.04 was not categorically different from 0.06. It was simply more evidence against the null, to be weighed alongside everything else the researcher knew about the problem. Neyman and Pearson (1933) introduced a separate binary decision framework a few years later, with explicit Type I and Type II error control and pre-registered decision rules. The two frameworks were never meant to be combined. Lindquist (1940), writing for educational researchers, was the first to merge them into the p-value-plus-threshold recipe that became the standard applied procedure, and it is this hybrid, not either original, that practitioners now call NHST (Gigerenzer 2004; Hubbard 2004). The 0.05 threshold that practitioners treat as a law of nature was a convention Fisher suggested in passing for agricultural experiments, a pragmatic cutoff to keep tables of critical values manageable rather than an epistemic boundary between truth and falsehood. None of the three frameworks, neither Fisher’s, nor Neyman-Pearson’s, nor the Lindquist hybrid, was designed with profit maximisation in mind.</p>
 <p>The asymmetry of error costs in business is what breaks the framework. In science, a false positive means publishing a result that does not replicate, damaging careers and eroding the credibility of the field. In business, the picture is more nuanced. A false positive means shipping variant A when A and B are actually equal: the user-level incremental payoff is roughly zero (users experience A regardless, and A was already an acceptable default or you would not have tested it), but the firm still pays engineering, maintenance, and complexity costs that scale with the number of shipped variants. A false negative means not shipping A when A is genuinely better, and the cost is the lift times the size of the roll population times the length of the delay. Kohavi, Tang and Xu (2020) discuss this same asymmetry in detail. In most consumer product contexts, the Type II cost dominates the Type I cost by an order of magnitude or more; the Type I and Type II framing that treats these as symmetric costs strikes a balance that is rarely the right one for a firm whose objective is profit.</p>
 <p>NHST also smuggles in an assumption that practitioners rarely examine. Standard power analysis requires specifying a single minimum detectable effect (MDE) before the test begins, and the sample size is computed to detect that effect at the desired significance and power. Feit and Berman (2019) show why this is a problem in practice, not just in principle: the recommended sample size grows with the square of the response variance and does not depend on the size of the population the firm is actually deploying to. In online advertising settings, where response is noisy, this routinely produces required sample sizes larger than the population available to test on. The calculation has no mechanism for recognising when it is asking for more data than exists, so the test consumes traffic that would have generated more value in the roll stage, delays release while chasing a threshold with no connection to profit, and keeps exposing the population to the worse variant for longer than the decision actually requires. As we saw in the A/B testing guide <a href="https://joaovieira22.github.io/posts/AB%20Testing/ab_test_probably_wrong.html">From RCTs to A/B Tests</a>, this is the same machinery that produces Type M error. The deeper issue is that a sample size derived this way has no connection to the expected profit of the experiment.</p>
-<p>Following Feit and Berman (2019), the correct framing is a decision problem, not an inference problem. A firm has a total population of <span class="math inline">N</span> users. It allocates <span class="math inline">n</span> of them to a test, split equally between control and treatment, observes the outcomes, picks the empirical winner, and deploys it to the remaining <span class="math inline">N - n</span> users. The objective is to choose <span class="math inline">n</span> to maximise the expected profit across the test and roll stages combined, not to minimise the probability of a false positive. Every user in the test is a user not in the roll, and every user in the roll is a user exposed to whatever the test decides. The trade-off is not “more certainty versus less certainty”. It is “more information versus more deployment”, and the right answer depends on how many users are left to deploy to. This is a fundamentally different optimisation problem than the one NHST solves, and the sample size it produces is correspondingly different.</p>
-<p>The key insight is that the optimal <span class="math inline">n</span> depends on <span class="math inline">N</span>. When <span class="math inline">N</span> is large, the roll stage dominates the expected profit calculation, and the test is worth running even with relatively little certainty, because even a small lift applied to a large population generates enormous value. A noisy test that picks the right variant 60% of the time is perfectly fine when the roll population is ten million users. When <span class="math inline">N</span> is small, over-testing is especially costly. Every user in the test is a user not in the roll, and the test consumes a large fraction of the total population that could have been generating revenue. NHST ignores <span class="math inline">N</span> entirely. A test powered at 80% to detect a 1% lift produces the same required sample size whether the roll population is one thousand users or one billion, which is absurd on its face, and a sample size optimal at ten thousand users is wildly wrong at ten million.</p>
+<p>Following Feit and Berman (2019), the correct framing is a decision problem, not an inference problem. A firm has a total population of <span class="math inline">\(N\)</span> users. It allocates <span class="math inline">\(n\)</span> of them to a test, split equally between control and treatment, observes the outcomes, picks the empirical winner, and deploys it to the remaining <span class="math inline">\(N - n\)</span> users. The objective is to choose <span class="math inline">\(n\)</span> to maximise the expected profit across the test and roll stages combined, not to minimise the probability of a false positive. Every user in the test is a user not in the roll, and every user in the roll is a user exposed to whatever the test decides. The trade-off is not “more certainty versus less certainty”. It is “more information versus more deployment”, and the right answer depends on how many users are left to deploy to. This is a fundamentally different optimisation problem than the one NHST solves, and the sample size it produces is correspondingly different.</p>
+<p>The key insight is that the optimal <span class="math inline">\(n\)</span> depends on <span class="math inline">\(N\)</span>. When <span class="math inline">\(N\)</span> is large, the roll stage dominates the expected profit calculation, and the test is worth running even with relatively little certainty, because even a small lift applied to a large population generates enormous value. A noisy test that picks the right variant 60% of the time is perfectly fine when the roll population is ten million users. When <span class="math inline">\(N\)</span> is small, over-testing is especially costly. Every user in the test is a user not in the roll, and the test consumes a large fraction of the total population that could have been generating revenue. NHST ignores <span class="math inline">\(N\)</span> entirely. A test powered at 80% to detect a 1% lift produces the same required sample size whether the roll population is one thousand users or one billion, which is absurd on its face, and a sample size optimal at ten thousand users is wildly wrong at ten million.</p>
 <p>Now that the problem is correctly framed, the next section derives the Test &amp; Roll sample size formula that maximises expected profit. The formula will look unfamiliar to anyone trained on standard power analysis, but it follows directly from putting expected profit, rather than false-positive rate, at the centre of the problem.</p>
 <section id="the-problem-in-one-sentence" class="level3">
 <h3 class="anchored" data-anchor-id="the-problem-in-one-sentence">The problem in one sentence</h3>
@@ -510,23 +521,23 @@ window.Quarto = {
 </section>
 <section id="section-iii.-the-test-roll-sample-size-formula" class="level2">
 <h2 class="anchored" data-anchor-id="section-iii.-the-test-roll-sample-size-formula">Section III. The Test &amp; Roll Sample Size Formula</h2>
-<p>As established in Section II, the firm’s problem is not to detect an effect. It is to choose a test size <span class="math inline">n</span> that maximizes total expected profit across both stages of the experiment. Out of a total population of <span class="math inline">N</span> users, <span class="math inline">n</span> are allocated to the test (split between the two variants) and the remaining <span class="math inline">N - n</span> are rolled out to whichever variant comes out ahead:</p>
-<p><span class="math display">
+<p>As established in Section II, the firm’s problem is not to detect an effect. It is to choose a test size <span class="math inline">\(n\)</span> that maximizes total expected profit across both stages of the experiment. Out of a total population of <span class="math inline">\(N\)</span> users, <span class="math inline">\(n\)</span> are allocated to the test (split between the two variants) and the remaining <span class="math inline">\(N - n\)</span> are rolled out to whichever variant comes out ahead:</p>
+<p><span class="math display">\[
 \mathbb{E}[\Pi] = \underbrace{n \cdot \mu_{\text{winner}}}_{\text{test stage}} + \underbrace{(N - n)\cdot \mu_{\text{winner}}}_{\text{roll stage}}
-</span></p>
-<p>where <span class="math inline">\mu_{\text{winner}}</span> is the expected outcome of whichever variant turns out to perform better. The tension is what makes this a real optimization problem rather than a checklist. A larger <span class="math inline">n</span> buys a more reliable read on which variant is actually better. It buys that reliability by shrinking the population left for the roll stage, which is where almost all of the value gets captured.</p>
-<p>Feit and Berman (2019) solved this exactly, for the case of two variants with symmetric normal priors on the mean response. Three quantities determine the answer. <span class="math inline">N</span> is the total population, defined above. <span class="math inline">s</span> is the within-experiment outcome standard deviation: how noisy a single user’s response is, independent of which variant they happened to see. <span class="math inline">\sigma</span> is the prior standard deviation of each variant’s mean response, how much one variant’s true conversion rate would typically differ from another’s, before any data comes in. Their closed-form solution, Equation 10 in the paper, is</p>
-<p><span class="math display">
+\]</span></p>
+<p>where <span class="math inline">\(\mu_{\text{winner}}\)</span> is the expected outcome of whichever variant turns out to perform better. The tension is what makes this a real optimization problem rather than a checklist. A larger <span class="math inline">\(n\)</span> buys a more reliable read on which variant is actually better. It buys that reliability by shrinking the population left for the roll stage, which is where almost all of the value gets captured.</p>
+<p>Feit and Berman (2019) solved this exactly, for the case of two variants with symmetric normal priors on the mean response. Three quantities determine the answer. <span class="math inline">\(N\)</span> is the total population, defined above. <span class="math inline">\(s\)</span> is the within-experiment outcome standard deviation: how noisy a single user’s response is, independent of which variant they happened to see. <span class="math inline">\(\sigma\)</span> is the prior standard deviation of each variant’s mean response, how much one variant’s true conversion rate would typically differ from another’s, before any data comes in. Their closed-form solution, Equation 10 in the paper, is</p>
+<p><span class="math display">\[
 n_1^* = n_2^* = \sqrt{\frac{N}{4}\left(\frac{s}{\sigma}\right)^2 + \left(\frac{3}{4}\left(\frac{s}{\sigma}\right)^2\right)^2} \; - \; \frac{3}{4}\left(\frac{s}{\sigma}\right)^2
-</span></p>
-<p><span class="math inline">\sigma</span> is easier to reason about through a related quantity, <span class="math inline">\sigma_\delta</span>: the prior standard deviation of the <em>lift</em> itself, the difference between the two variants rather than either one alone. Two variants drawn independently from the same prior have a difference distributed <span class="math inline">N(0, 2\sigma^2)</span>, so <span class="math inline">\sigma_\delta^2 = 2\sigma^2</span>. <span class="math inline">\sigma_\delta</span> is the number that should replace the MDE in your head. Not the smallest effect you would be embarrassed to miss, but the typical size of the effects your team’s experiments actually produce.</p>
+\]</span></p>
+<p><span class="math inline">\(\sigma\)</span> is easier to reason about through a related quantity, <span class="math inline">\(\sigma_\delta\)</span>: the prior standard deviation of the <em>lift</em> itself, the difference between the two variants rather than either one alone. Two variants drawn independently from the same prior have a difference distributed <span class="math inline">\(N(0, 2\sigma^2)\)</span>, so <span class="math inline">\(\sigma_\delta^2 = 2\sigma^2\)</span>. <span class="math inline">\(\sigma_\delta\)</span> is the number that should replace the MDE in your head. Not the smallest effect you would be embarrassed to miss, but the typical size of the effects your team’s experiments actually produce.</p>
 <section id="what-sigma_delta2-actually-means" class="level3">
-<h3 class="anchored" data-anchor-id="what-sigma_delta2-actually-means">What <span class="math inline">\sigma_\delta^2</span> actually means</h3>
-<p><span class="math inline">\sigma_\delta^2</span> is just the spread of the lifts you have actually observed across past experiments, squared and averaged. You estimate it the same way you would estimate any variance: pull the lifts from your last fifty or so tests (including the flat ones and the losers, not just the wins) and compute their sample variance. A team that mostly ships small, marginal changes will have a small <span class="math inline">\sigma_\delta</span>; a team that occasionally ships redesigns will have a larger one, and the formula below will size tests accordingly.</p>
-<p>A concrete scenario. Baseline conversion is 3%, the Post-Test population is <span class="math inline">N = 500{,}000</span>, and the lift is believed to follow <span class="math inline">\mathcal{N}(0, 0.01^2)</span>: effects of around one percentage point are typical, most experiments land closer to zero than that. With <span class="math inline">s = \sqrt{0.03 \cdot 0.97} \approx 0.171</span> and <span class="math inline">\sigma_\delta = 0.01</span>, the formula above returns <span class="math inline">n^* \approx 8{,}104</span> users per arm. A classical power calculation aimed at the same effect size (<code>pwr.2p.test()</code> with <code>h = ES.h(0.03, 0.04)</code>, <span class="math inline">\alpha = 0.05</span>, power <span class="math inline">= 0.80</span>) asks for about 5,276 users per arm.</p>
-<p>That comparison runs the opposite direction from the one this kind of post usually promises, and it is worth sitting with rather than rounding away. At <span class="math inline">N = 500{,}000</span>, Test &amp; Roll wants <em>more</em> data than NHST, not less. The reason is not that Test &amp; Roll has become conservative. It is that <span class="math inline">n^*</span> grows with <span class="math inline">N</span> (it scales roughly as <span class="math inline">\sqrt{N}</span>), while the NHST sample size, fixed once you pick an MDE, does not depend on <span class="math inline">N</span> at all. Run the numbers across a range of <span class="math inline">N</span> and the two curves cross at roughly <span class="math inline">N \approx 223{,}000</span>. Below that, Test &amp; Roll recommends the dramatically smaller test you would expect; above it, the value at stake in the roll stage (half a million deployments riding on a one-point distinction) makes the extra precision worth paying for. NHST cannot see this because its formula has no <span class="math inline">N</span> in it. That blindness, not a fixed direction of bias, is the actual lesson, and it is exactly the point made in Section II: the optimal <span class="math inline">n</span> depends on <span class="math inline">N</span>, and a method that ignores <span class="math inline">N</span> entirely cannot be calibrated to it in either direction.</p>
-<p>Where that crossover sits is scenario-specific, not universal. Feit and Berman’s own applications make the point: in their display advertising example, the response is far noisier relative to the typical effect than in the scenario above, and Test &amp; Roll stays an order of magnitude smaller than the NHST benchmark even out to <span class="math inline">N = 10^7</span>. The direction of the comparison depends on how your particular <span class="math inline">s</span>, <span class="math inline">\sigma_\delta</span>, and chosen MDE relate to one another, which is itself a reason to compute <span class="math inline">n^*</span> for your own numbers rather than trust a rule of thumb either way.</p>
-<p>The intuition generalizes past this one example. When <span class="math inline">\sigma_\delta</span> is large (your tests tend to produce big winners and big losers), a small sample is enough to tell them apart, so <span class="math inline">n^*</span> stays small regardless of <span class="math inline">N</span>. When effects are small and tightly clustered, as in the scenario above, picking the wrong variant barely costs anything per user, but exactly how little it costs scales with how many users see the decision. NHST has no equivalent of <span class="math inline">\sigma_\delta</span> to encode either fact. It sizes every test for the same fixed worst case, blind to both the realistic spread of your effects and the size of the population waiting on the other side of the test.</p>
+<h3 class="anchored" data-anchor-id="what-sigma_delta2-actually-means">What <span class="math inline">\(\sigma_\delta^2\)</span> actually means</h3>
+<p><span class="math inline">\(\sigma_\delta^2\)</span> is just the spread of the lifts you have actually observed across past experiments, squared and averaged. You estimate it the same way you would estimate any variance: pull the lifts from your last fifty or so tests (including the flat ones and the losers, not just the wins) and compute their sample variance. A team that mostly ships small, marginal changes will have a small <span class="math inline">\(\sigma_\delta\)</span>; a team that occasionally ships redesigns will have a larger one, and the formula below will size tests accordingly.</p>
+<p>A concrete scenario. Baseline conversion is 3%, the Post-Test population is <span class="math inline">\(N = 500{,}000\)</span>, and the lift is believed to follow <span class="math inline">\(\mathcal{N}(0, 0.01^2)\)</span>: effects of around one percentage point are typical, most experiments land closer to zero than that. With <span class="math inline">\(s = \sqrt{0.03 \cdot 0.97} \approx 0.171\)</span> and <span class="math inline">\(\sigma_\delta = 0.01\)</span>, the formula above returns <span class="math inline">\(n^* \approx 8{,}104\)</span> users per arm. A classical power calculation aimed at the same effect size (<code>pwr.2p.test()</code> with <code>h = ES.h(0.03, 0.04)</code>, <span class="math inline">\(\alpha = 0.05\)</span>, power <span class="math inline">\(= 0.80\)</span>) asks for about 5,276 users per arm.</p>
+<p>That comparison runs the opposite direction from the one this kind of post usually promises, and it is worth sitting with rather than rounding away. At <span class="math inline">\(N = 500{,}000\)</span>, Test &amp; Roll wants <em>more</em> data than NHST, not less. The reason is not that Test &amp; Roll has become conservative. It is that <span class="math inline">\(n^*\)</span> grows with <span class="math inline">\(N\)</span> (it scales roughly as <span class="math inline">\(\sqrt{N}\)</span>), while the NHST sample size, fixed once you pick an MDE, does not depend on <span class="math inline">\(N\)</span> at all. Run the numbers across a range of <span class="math inline">\(N\)</span> and the two curves cross at roughly <span class="math inline">\(N \approx 223{,}000\)</span>. Below that, Test &amp; Roll recommends the dramatically smaller test you would expect; above it, the value at stake in the roll stage (half a million deployments riding on a one-point distinction) makes the extra precision worth paying for. NHST cannot see this because its formula has no <span class="math inline">\(N\)</span> in it. That blindness, not a fixed direction of bias, is the actual lesson, and it is exactly the point made in Section II: the optimal <span class="math inline">\(n\)</span> depends on <span class="math inline">\(N\)</span>, and a method that ignores <span class="math inline">\(N\)</span> entirely cannot be calibrated to it in either direction.</p>
+<p>Where that crossover sits is scenario-specific, not universal. Feit and Berman’s own applications make the point: in their display advertising example, the response is far noisier relative to the typical effect than in the scenario above, and Test &amp; Roll stays an order of magnitude smaller than the NHST benchmark even out to <span class="math inline">\(N = 10^7\)</span>. The direction of the comparison depends on how your particular <span class="math inline">\(s\)</span>, <span class="math inline">\(\sigma_\delta\)</span>, and chosen MDE relate to one another, which is itself a reason to compute <span class="math inline">\(n^*\)</span> for your own numbers rather than trust a rule of thumb either way.</p>
+<p>The intuition generalizes past this one example. When <span class="math inline">\(\sigma_\delta\)</span> is large (your tests tend to produce big winners and big losers), a small sample is enough to tell them apart, so <span class="math inline">\(n^*\)</span> stays small regardless of <span class="math inline">\(N\)</span>. When effects are small and tightly clustered, as in the scenario above, picking the wrong variant barely costs anything per user, but exactly how little it costs scales with how many users see the decision. NHST has no equivalent of <span class="math inline">\(\sigma_\delta\)</span> to encode either fact. It sizes every test for the same fixed worst case, blind to both the realistic spread of your effects and the size of the population waiting on the other side of the test.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -598,18 +609,18 @@ Figure&nbsp;1: Test &amp; Roll sample size versus the classical NHST sample size
 </div>
 </div>
 </div>
-<p>The formula above tells you how large to make the test before it starts. But it commits you to a fixed horizon. What if you want to stop the moment you have enough information to decide, rather than waiting for a pre-registered <span class="math inline">n^*</span> to fill up? That calls for a different tool: simulation.</p>
+<p>The formula above tells you how large to make the test before it starts. But it commits you to a fixed horizon. What if you want to stop the moment you have enough information to decide, rather than waiting for a pre-registered <span class="math inline">\(n^*\)</span> to fill up? That calls for a different tool: simulation.</p>
 </section>
 </section>
 <section id="section-iv.-the-optimal-stopping-rule-a-simulation-approach" class="level2">
 <h2 class="anchored" data-anchor-id="section-iv.-the-optimal-stopping-rule-a-simulation-approach">Section IV. The Optimal Stopping Rule: A Simulation Approach</h2>
-<p>A fixed-horizon test, sized correctly with the formula above, is still a blunt instrument. Some experiments produce a clear signal in the first few days, because the true effect happens to be large; others stay ambiguous for the whole planned duration, because it does not. Committing to <span class="math inline">n^*</span> in advance means treating both cases identically: you wait out the full test even when the data told you the answer on day four, and you stop at the same moment even when the data is genuinely still unclear. A stopping rule asks a sharper, ongoing question instead: given what has accumulated so far today, is there enough information to act, or is the remaining roll-stage value still worth waiting for? The answer depends on how much value is sitting in the roll stage, which depends on Post-Test <span class="math inline">N</span>, exactly as it did in Section III.</p>
-<p>Following the simulation framework in Zaliznyak and Powers (2026, an online technical essay rather than a peer-reviewed paper), we answer this question by simulation, because no closed form exists for the optimal <span class="math inline">\theta^*</span> the way one exists for <span class="math inline">n^*</span> in Section III. The two problems differ enough that this is not a small gap to fill. The sample size formula has a clean analytical solution because it asks a <em>static</em> question: what <span class="math inline">n</span> maximizes expected profit before any data exists. The stopping threshold asks a <em>dynamic</em> one: given the data observed so far on a given day, is it worth continuing, and that path-dependent optimization over a realistic prior on effects has no known closed form. Draw a true treatment effect for each of many simulated experiments, with positive and negative effects equally likely and most draws close to zero. Run each one day by day, updating the Bayesian posterior on each variant’s conversion rate as the data accumulates (updating the Beta-Binomial posterior as in the A/B testing guide). On each day, check whether either variant’s <span class="math inline">\Pr(\text{best})</span> has crossed a candidate threshold <span class="math inline">\theta</span>. The expected loss framework from the A/B testing guide applies here directly: <span class="math inline">\Pr(\text{best})</span> is exactly the quantity that framework is built around, just tracked day by day instead of computed once at a fixed endpoint. If the threshold is crossed, the experiment stops and deploys the leading variant. Score each candidate <span class="math inline">\theta</span> by the average long-run value it produces across all simulated experiments, where long-run value is the output captured during the test plus whatever the deployed variant goes on to produce across the rest of <span class="math inline">N</span>. The optimal <span class="math inline">\theta^*</span> is whichever threshold maximizes that average.</p>
+<p>A fixed-horizon test, sized correctly with the formula above, is still a blunt instrument. Some experiments produce a clear signal in the first few days, because the true effect happens to be large; others stay ambiguous for the whole planned duration, because it does not. Committing to <span class="math inline">\(n^*\)</span> in advance means treating both cases identically: you wait out the full test even when the data told you the answer on day four, and you stop at the same moment even when the data is genuinely still unclear. A stopping rule asks a sharper, ongoing question instead: given what has accumulated so far today, is there enough information to act, or is the remaining roll-stage value still worth waiting for? The answer depends on how much value is sitting in the roll stage, which depends on Post-Test <span class="math inline">\(N\)</span>, exactly as it did in Section III.</p>
+<p>Following the simulation framework in Zaliznyak and Powers (2026, an online technical essay rather than a peer-reviewed paper), we answer this question by simulation, because no closed form exists for the optimal <span class="math inline">\(\theta^*\)</span> the way one exists for <span class="math inline">\(n^*\)</span> in Section III. The two problems differ enough that this is not a small gap to fill. The sample size formula has a clean analytical solution because it asks a <em>static</em> question: what <span class="math inline">\(n\)</span> maximizes expected profit before any data exists. The stopping threshold asks a <em>dynamic</em> one: given the data observed so far on a given day, is it worth continuing, and that path-dependent optimization over a realistic prior on effects has no known closed form. Draw a true treatment effect for each of many simulated experiments, with positive and negative effects equally likely and most draws close to zero. Run each one day by day, updating the Bayesian posterior on each variant’s conversion rate as the data accumulates (updating the Beta-Binomial posterior as in the A/B testing guide). On each day, check whether either variant’s <span class="math inline">\(\Pr(\text{best})\)</span> has crossed a candidate threshold <span class="math inline">\(\theta\)</span>. The expected loss framework from the A/B testing guide applies here directly: <span class="math inline">\(\Pr(\text{best})\)</span> is exactly the quantity that framework is built around, just tracked day by day instead of computed once at a fixed endpoint. If the threshold is crossed, the experiment stops and deploys the leading variant. Score each candidate <span class="math inline">\(\theta\)</span> by the average long-run value it produces across all simulated experiments, where long-run value is the output captured during the test plus whatever the deployed variant goes on to produce across the rest of <span class="math inline">\(N\)</span>. The optimal <span class="math inline">\(\theta^*\)</span> is whichever threshold maximizes that average.</p>
 <section id="the-θ-trap" class="level3">
 <h3 class="anchored" data-anchor-id="the-θ-trap">The θ trap</h3>
-<p><span class="math inline">\theta^*</span> is not a universal constant. It is calibrated to a specific Post-Test <span class="math inline">N</span> and a specific prior on effect sizes, exactly the two inputs that drove the sample size formula in Section III. Adopting <span class="math inline">\theta^* = 0.95</span> as a house standard and applying it to every experiment regardless of audience size is precisely the same mistake as <span class="math inline">\alpha = 0.05</span>: a fixed threshold borrowed from someone else’s decision problem, not derived from yours.</p>
-<p>Run this simulation for the same scenario as Section III (baseline conversion 3%, lift <span class="math inline">\sim \mathcal{N}(0, 0.01^2)</span>) and the picture that emerges is a curve that climbs steadily as <span class="math inline">\theta</span> rises, then flattens. Lower thresholds stop fast but deploy the wrong variant often enough to leave real value on the table; pushing <span class="math inline">\theta</span> higher buys a steady reduction in error at the cost of a longer test, and for this scenario that trade keeps paying off all the way to the edge of a sensible search range. For <span class="math inline">N = 500{,}000</span>, the curve peaks at <span class="math inline">\theta^* = 0.99</span>: at that threshold, the simulated tests stop after roughly 33 days on average and deploy the wrong variant about 9% of the time, against a roughly threefold higher error rate for thresholds around 0.80. Worth noting for anyone tempted to treat the third decimal as gospel: the curve is nearly flat for <span class="math inline">\theta</span> above 0.95, so the exact peak matters far less than simply being somewhere in that neighborhood rather than down near 0.80.</p>
-<p>How does <span class="math inline">\theta^*</span> move with Post-Test <span class="math inline">N</span>? As <span class="math inline">N</span> grows, so does the value riding on getting the call right, since that one decision gets multiplied across more deployments. The simulation bears this out directly: <span class="math inline">\theta^*</span> rises from <span class="math inline">0.93</span> at <span class="math inline">N = 50{,}000</span> to <span class="math inline">0.97</span> by <span class="math inline">N = 200{,}000</span> and reaches <span class="math inline">0.99</span>, the most patient threshold in the grid, by around <span class="math inline">N = 350{,}000</span>, holding there through <span class="math inline">N = 10^6</span>. This mirrors the pattern reported in Zaliznyak and Powers’s own simulations: as Post-Test <span class="math inline">N</span> grows, the stakes of each stopping decision rise, and the optimal threshold rises with them, demanding stronger evidence before committing. There is no dip back down at the largest populations in this scenario. The pull toward patience simply gets stronger and then saturates once the candidate thresholds run out.</p>
+<p><span class="math inline">\(\theta^*\)</span> is not a universal constant. It is calibrated to a specific Post-Test <span class="math inline">\(N\)</span> and a specific prior on effect sizes, exactly the two inputs that drove the sample size formula in Section III. Adopting <span class="math inline">\(\theta^* = 0.95\)</span> as a house standard and applying it to every experiment regardless of audience size is precisely the same mistake as <span class="math inline">\(\alpha = 0.05\)</span>: a fixed threshold borrowed from someone else’s decision problem, not derived from yours.</p>
+<p>Run this simulation for the same scenario as Section III (baseline conversion 3%, lift <span class="math inline">\(\sim \mathcal{N}(0, 0.01^2)\)</span>) and the picture that emerges is a curve that climbs steadily as <span class="math inline">\(\theta\)</span> rises, then flattens. Lower thresholds stop fast but deploy the wrong variant often enough to leave real value on the table; pushing <span class="math inline">\(\theta\)</span> higher buys a steady reduction in error at the cost of a longer test, and for this scenario that trade keeps paying off all the way to the edge of a sensible search range. For <span class="math inline">\(N = 500{,}000\)</span>, the curve peaks at <span class="math inline">\(\theta^* = 0.99\)</span>: at that threshold, the simulated tests stop after roughly 33 days on average and deploy the wrong variant about 9% of the time, against a roughly threefold higher error rate for thresholds around 0.80. Worth noting for anyone tempted to treat the third decimal as gospel: the curve is nearly flat for <span class="math inline">\(\theta\)</span> above 0.95, so the exact peak matters far less than simply being somewhere in that neighborhood rather than down near 0.80.</p>
+<p>How does <span class="math inline">\(\theta^*\)</span> move with Post-Test <span class="math inline">\(N\)</span>? As <span class="math inline">\(N\)</span> grows, so does the value riding on getting the call right, since that one decision gets multiplied across more deployments. The simulation bears this out directly: <span class="math inline">\(\theta^*\)</span> rises from <span class="math inline">\(0.93\)</span> at <span class="math inline">\(N = 50{,}000\)</span> to <span class="math inline">\(0.97\)</span> by <span class="math inline">\(N = 200{,}000\)</span> and reaches <span class="math inline">\(0.99\)</span>, the most patient threshold in the grid, by around <span class="math inline">\(N = 350{,}000\)</span>, holding there through <span class="math inline">\(N = 10^6\)</span>. This mirrors the pattern reported in Zaliznyak and Powers’s own simulations: as Post-Test <span class="math inline">\(N\)</span> grows, the stakes of each stopping decision rise, and the optimal threshold rises with them, demanding stronger evidence before committing. There is no dip back down at the largest populations in this scenario. The pull toward patience simply gets stronger and then saturates once the candidate thresholds run out.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -709,7 +720,7 @@ Figure&nbsp;1: Test &amp; Roll sample size versus the classical NHST sample size
 <span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Post-Test N"</span>, <span class="at">y =</span> <span class="st">"Optimal threshold (theta*)"</span>) <span class="sc">+</span></span>
 <span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
+<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-stopping-results-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -737,7 +748,7 @@ Figure&nbsp;3: Optimal threshold θ* as Post-Test N varies from 50,000 to 1,000,
 </div>
 </div>
 </div>
-<p>The practical output of all of this is a single number. Your experimentation platform does not need a p-value, and it does not need an arbitrary 14-day window. It needs <span class="math inline">\theta^*</span>, calibrated once to your typical Post-Test <span class="math inline">N</span> and your historical effect size distribution, and then a standing rule: stop when <span class="math inline">\Pr(\text{best}) &gt; \theta^*</span>, deploy whichever variant is leading, move on. This also sidesteps the peeking problem documented in Johari et al.&nbsp;(2017): checking a p-value every day and stopping the first time it crosses 0.05 inflates the false positive rate, because every unplanned look is an unaccounted chance to stop on noise. A <span class="math inline">\Pr(\text{best})</span> threshold does not have that problem, since it is calibrated against a simulation that already includes a look every single day.</p>
+<p>The practical output of all of this is a single number. Your experimentation platform does not need a p-value, and it does not need an arbitrary 14-day window. It needs <span class="math inline">\(\theta^*\)</span>, calibrated once to your typical Post-Test <span class="math inline">\(N\)</span> and your historical effect size distribution, and then a standing rule: stop when <span class="math inline">\(\Pr(\text{best}) &gt; \theta^*\)</span>, deploy whichever variant is leading, move on. This also sidesteps the peeking problem documented in Johari et al.&nbsp;(2017): checking a p-value every day and stopping the first time it crosses 0.05 inflates the false positive rate, because every unplanned look is an unaccounted chance to stop on noise. A <span class="math inline">\(\Pr(\text{best})\)</span> threshold does not have that problem, since it is calibrated against a simulation that already includes a look every single day.</p>
 <p>Stopping at the right moment solves the question of <em>when</em>. It says nothing about whether the effect you measured at that moment is the effect you will actually get once the variant is rolled out. Conditioning on having just crossed a threshold means conditioning on having seen an unusually favorable run of data, and that inflation has a name. It is the Winner’s Curse, and it is the subject of Section V.</p>
 </section>
 </section>
@@ -746,18 +757,18 @@ Figure&nbsp;3: Optimal threshold θ* as Post-Test N varies from 50,000 to 1,000,
 <p>The first two failure modes of NHST-based experimentation live in the design phase: the wrong sample size (Section III) and the wrong stopping rule (Section IV). The third failure happens <em>after</em> the test ends, and it does not require you to make a mistake. Even with the right sample size and a flawless stopping rule, the effect you report is still, on average, too large. This is the Winner’s Curse.</p>
 <p>The name comes from auction theory, and the parallel is exact. In a first-price auction, the winning bid tends to overpay precisely because it was the highest of many noisy guesses about an asset’s true value. In experimentation, the bid is your effect-size estimate, the auction is statistical significance, and the asset is the truth. You only “win” (ship a result) when your estimate is unusually large relative to the noise, and that same property that let it win is the property that makes it overpay.</p>
 <p>Put more mechanically: when you select results based on statistical significance, you are running a filter that only passes experiments where the observed effect was unusually large. This is not randomness, it is a systematic selection effect. The threshold acts as a floor on the observed effect size. Everything below that floor is invisible to you. Everything above it gets shipped.</p>
-<p>Let <span class="math inline">\hat{\tau}</span> denote the observed treatment effect, <span class="math inline">\tau</span> the true effect, and SE the standard error of the estimate. Under NHST, you observe and act on <span class="math inline">\hat{\tau}</span> only when</p>
-<p><span class="math display">
+<p>Let <span class="math inline">\(\hat{\tau}\)</span> denote the observed treatment effect, <span class="math inline">\(\tau\)</span> the true effect, and SE the standard error of the estimate. Under NHST, you observe and act on <span class="math inline">\(\hat{\tau}\)</span> only when</p>
+<p><span class="math display">\[
 |\hat{\tau}| &gt; z_{\alpha/2} \cdot \text{SE}
-</span></p>
+\]</span></p>
 <p>The conditional expectation</p>
-<p><span class="math display">
+<p><span class="math display">\[
 \mathbb{E}\big[\hat{\tau} \mid |\hat{\tau}| &gt; z_{\alpha/2} \cdot \text{SE}\big]
-</span></p>
-<p>is strictly larger in magnitude than <span class="math inline">\tau</span> whenever power is less than 1. This is the Winner’s Curse stated formally. Gelman and Carlin (2014) name the gap between the two quantities the <em>Type M (magnitude) error</em>, or <em>exaggeration ratio</em>.</p>
+\]</span></p>
+<p>is strictly larger in magnitude than <span class="math inline">\(\tau\)</span> whenever power is less than 1. This is the Winner’s Curse stated formally. Gelman and Carlin (2014) name the gap between the two quantities the <em>Type M (magnitude) error</em>, or <em>exaggeration ratio</em>.</p>
 <section id="seeing-it-in-simulation" class="level3">
 <h3 class="anchored" data-anchor-id="seeing-it-in-simulation">Seeing it in simulation</h3>
-<p>Building on Gelman and Carlin (2014) and using the simulation setup popularised by Zaliznyak (2026, an online technical essay): baseline conversion at 65%, true lifts drawn from <span class="math inline">\mathcal{N}(0, 0.01^2)</span> so that effects are centred on zero, most small and a few large in either direction, with the design calibrated to detect a 1% relative lift (65% to 65.65%) at 80% power and <span class="math inline">\alpha = 0.05</span>. We reproduce that setup below, drawing 50,000 true effects, simulating a two-sample proportion test for each, and comparing the distribution of true effects against observed effects among the results that reach significance.</p>
+<p>Building on Gelman and Carlin (2014) and using the simulation setup popularised by Zaliznyak (2026, an online technical essay): baseline conversion at 65%, true lifts drawn from <span class="math inline">\(\mathcal{N}(0, 0.01^2)\)</span> so that effects are centred on zero, most small and a few large in either direction, with the design calibrated to detect a 1% relative lift (65% to 65.65%) at 80% power and <span class="math inline">\(\alpha = 0.05\)</span>. We reproduce that setup below, drawing 50,000 true effects, simulating a two-sample proportion test for each, and comparing the distribution of true effects against observed effects among the results that reach significance.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -837,10 +848,10 @@ Figure&nbsp;4: True vs.&nbsp;observed effect among statistically significant res
 <section id="how-large-is-the-bias-really" class="level3">
 <h3 class="anchored" data-anchor-id="how-large-is-the-bias-really">How large is the bias, really</h3>
 <p>It is tempting to attach a single number to this and move on, but the honest answer depends on power, and the two cleanest numbers worth remembering both come from the original sources rather than from any one simulation run. Running Gelman and Carlin’s (2014) own <code>retrodesign</code> logic at the power levels practitioners actually argue about: at 80% power the average exaggeration ratio is about 1.12x, at 50% power it is about 1.41x, and you need power to fall to roughly 25% before the ratio crosses 2x, the point at which the shipped effect is, on average, double the truth.</p>
-<p>There is a second, complementary way to see the same bias. As shown in Zaliznyak (2026), because the sampling distribution of <span class="math inline">\hat{\tau}</span> is symmetric around <span class="math inline">\tau</span>, the probability that a significant result overstates the true effect is</p>
-<p><span class="math display">
+<p>There is a second, complementary way to see the same bias. As shown in Zaliznyak (2026), because the sampling distribution of <span class="math inline">\(\hat{\tau}\)</span> is symmetric around <span class="math inline">\(\tau\)</span>, the probability that a significant result overstates the true effect is</p>
+<p><span class="math display">\[
 \Pr\big(\hat{\tau} &gt; \tau \mid \text{significant}\big) = \frac{0.5}{\text{power}}
-</span></p>
+\]</span></p>
 <p>At 80% power that is 62.5%, meaningfully more likely to overstate than understate. Below 50% power, the formula’s numerator exceeds its denominator, and a significant result is mathematically guaranteed to overstate the true effect, every time.</p>
 <p>If your team sizes experiments for fixed two-week windows regardless of expected effect size, you are very likely running below 80% power on a meaningful share of your tests. Below 50% power, a statistically significant result is not merely likely to overstate the truth, it is mathematically guaranteed to. The Winner’s Curse is not a statistical curiosity; it is a systematic, predictable overstatement built into every “win” on your roadmap.</p>
 <p>This is precisely the Type M error introduced in the <a href="https://joaovieira22.github.io/posts/AB%20Testing/ab_test_probably_wrong.html">A/B testing guide</a>, and now we can see exactly where it comes from mechanically: it is the arithmetic consequence of conditioning on a threshold.</p>
@@ -850,22 +861,22 @@ Figure&nbsp;4: True vs.&nbsp;observed effect among statistically significant res
 <section id="section-vi.-the-fix-shrink-your-estimates-before-you-ship" class="level2">
 <h2 class="anchored" data-anchor-id="section-vi.-the-fix-shrink-your-estimates-before-you-ship">Section VI. The Fix: Shrink Your Estimates Before You Ship</h2>
 <p>Two levers fix the Winner’s Curse. The first is more power. The second is a prior.</p>
-<p><strong>Increase power.</strong> This works, but it is not free. Holding the minimum detectable effect and significance level fixed, moving from 50% power to 80% power requires the sample size to grow by a factor of <span class="math inline">\left(\frac{z_{\alpha/2} + z_{0.80}}{z_{\alpha/2} + z_{0.50}}\right)^2</span>. With <span class="math inline">\alpha = 0.05</span> two-sided, <span class="math inline">z_{\alpha/2} \approx 1.96</span> and <span class="math inline">z_{0.80} \approx 0.84</span> at 80% power, giving <span class="math inline">\left(\frac{1.96 + 0.84}{1.96 + 0}\right)^2 \approx 2.04</span>. Roughly double the traffic, not the smaller cost some practitioners assume, but nowhere close to free.</p>
+<p><strong>Increase power.</strong> This works, but it is not free. Holding the minimum detectable effect and significance level fixed, moving from 50% power to 80% power requires the sample size to grow by a factor of <span class="math inline">\(\left(\frac{z_{\alpha/2} + z_{0.80}}{z_{\alpha/2} + z_{0.50}}\right)^2\)</span>. With <span class="math inline">\(\alpha = 0.05\)</span> two-sided, <span class="math inline">\(z_{\alpha/2} \approx 1.96\)</span> and <span class="math inline">\(z_{0.80} \approx 0.84\)</span> at 80% power, giving <span class="math inline">\(\left(\frac{1.96 + 0.84}{1.96 + 0}\right)^2 \approx 2.04\)</span>. Roughly double the traffic, not the smaller cost some practitioners assume, but nowhere close to free.</p>
 <p><strong>Shrink the estimate.</strong> This is free, requires no additional traffic, and can be applied after the experiment has already ended. It is the focus of the rest of this section.</p>
 <section id="the-mechanism" class="level3">
 <h3 class="anchored" data-anchor-id="the-mechanism">The mechanism</h3>
-<p>You observed <span class="math inline">\hat{\tau}</span> with standard error SE. You also have a prior over effect sizes, <span class="math inline">\mathcal{N}(0, \sigma_\delta^2)</span>, encoding your belief about how large effects in this domain realistically get. This is the same <span class="math inline">\sigma_\delta</span> from the Test &amp; Roll formula in Section III, not a new object, just a new use for it. Combining a Gaussian prior with a Gaussian likelihood gives a posterior mean of</p>
-<p><span class="math display">
+<p>You observed <span class="math inline">\(\hat{\tau}\)</span> with standard error SE. You also have a prior over effect sizes, <span class="math inline">\(\mathcal{N}(0, \sigma_\delta^2)\)</span>, encoding your belief about how large effects in this domain realistically get. This is the same <span class="math inline">\(\sigma_\delta\)</span> from the Test &amp; Roll formula in Section III, not a new object, just a new use for it. Combining a Gaussian prior with a Gaussian likelihood gives a posterior mean of</p>
+<p><span class="math display">\[
 \tilde{\tau} = \frac{\sigma_\delta^2}{\sigma_\delta^2 + \text{SE}^2} \cdot \hat{\tau}
-</span></p>
-<p>This is the shrinkage estimator. When <span class="math inline">\sigma_\delta</span> is small relative to SE (effects in this domain are usually small and your estimate is noisy), the posterior pulls hard toward zero. When <span class="math inline">\sigma_\delta</span> is large relative to SE, the posterior barely moves from <span class="math inline">\hat{\tau}</span>.</p>
+\]</span></p>
+<p>This is the shrinkage estimator. When <span class="math inline">\(\sigma_\delta\)</span> is small relative to SE (effects in this domain are usually small and your estimate is noisy), the posterior pulls hard toward zero. When <span class="math inline">\(\sigma_\delta\)</span> is large relative to SE, the posterior barely moves from <span class="math inline">\(\hat{\tau}\)</span>.</p>
 </section>
 <section id="a-worked-example" class="level3">
 <h3 class="anchored" data-anchor-id="a-worked-example">A worked example</h3>
-<p>Suppose you observe <span class="math inline">\hat{\tau} = 0.05</span>, with a prior standard deviation on effects of <span class="math inline">\sigma_\delta = 0.02</span> (you expect most real effects in this domain to fall within about <span class="math inline">\pm 4\%</span>) and a standard error of <span class="math inline">\text{SE} = 0.015</span>. The posterior mean is</p>
-<p><span class="math display">
+<p>Suppose you observe <span class="math inline">\(\hat{\tau} = 0.05\)</span>, with a prior standard deviation on effects of <span class="math inline">\(\sigma_\delta = 0.02\)</span> (you expect most real effects in this domain to fall within about <span class="math inline">\(\pm 4\%\)</span>) and a standard error of <span class="math inline">\(\text{SE} = 0.015\)</span>. The posterior mean is</p>
+<p><span class="math display">\[
 \tilde{\tau} = \frac{0.02^2}{0.02^2 + 0.015^2} \cdot 0.05 = \frac{0.0004}{0.000625} \cdot 0.05 \approx 0.64 \times 0.05 = 3.2\%
-</span></p>
+\]</span></p>
 <p>The shrinkage estimator pulls the reported effect from 5% down to 3.2%. This is not pessimism, it is the correct posterior expectation given a realistic prior on effect sizes. Report 3.2%, not 5%.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
@@ -918,33 +929,33 @@ Figure&nbsp;5: Observed effect vs.&nbsp;shrinkage-adjusted estimate. The dashed 
 </section>
 <section id="when-to-shrink-and-when-to-push-back-on-the-prior" class="level3">
 <h3 class="anchored" data-anchor-id="when-to-shrink-and-when-to-push-back-on-the-prior">When to shrink, and when to push back on the prior</h3>
-<p>Shrinkage earns its keep when your platform runs at low power, when the result in front of you is borderline significant, or when you have a defensible historical estimate of <span class="math inline">\sigma_\delta</span> from past experiments in the same domain. It earns its keep less when you have strong outside evidence the true effect should be large, or when the test was well-powered enough that SE is small relative to <span class="math inline">\sigma_\delta</span> in the first place, since the posterior barely moves in that regime anyway.</p>
-<p>Estimate <span class="math inline">\sigma_\delta</span> from your own history: take the standard deviation of observed effects across your platform’s past significant experiments, then nudge it down slightly, since those historical estimates carry their own Winner’s Curse. If you have no history to draw on, <span class="math inline">\sigma_\delta = 0.02</span> is a reasonable, conservative starting point for most consumer product metrics.</p>
+<p>Shrinkage earns its keep when your platform runs at low power, when the result in front of you is borderline significant, or when you have a defensible historical estimate of <span class="math inline">\(\sigma_\delta\)</span> from past experiments in the same domain. It earns its keep less when you have strong outside evidence the true effect should be large, or when the test was well-powered enough that SE is small relative to <span class="math inline">\(\sigma_\delta\)</span> in the first place, since the posterior barely moves in that regime anyway.</p>
+<p>Estimate <span class="math inline">\(\sigma_\delta\)</span> from your own history: take the standard deviation of observed effects across your platform’s past significant experiments, then nudge it down slightly, since those historical estimates carry their own Winner’s Curse. If you have no history to draw on, <span class="math inline">\(\sigma_\delta = 0.02\)</span> is a reasonable, conservative starting point for most consumer product metrics.</p>
 <p>Wrong sample size, wrong stopping rule, inflated estimate: all three failure modes covered so far live <em>inside</em> a single experiment. Section VII asks a different question entirely, not how to run one experiment correctly, but how to allocate a finite experimentation budget across many experiments to maximize long-run value.</p>
 </section>
 </section>
 <section id="section-vii.-small-wins-vs-big-swings-which-strategy-generates-more-value" class="level2">
 <h2 class="anchored" data-anchor-id="section-vii.-small-wins-vs-big-swings-which-strategy-generates-more-value">Section VII. Small Wins vs Big Swings: Which Strategy Generates More Value?</h2>
-<p>Every fix so far has targeted a single experiment: size it correctly (Section III), stop it at the right moment (Section IV), and correct the winner’s estimate before acting on it (Sections V–VI). None of that touches a prior question, the one that actually decides how much value a quarter of testing creates. A product team walks into the quarter with a fixed pool of <span class="math inline">N_{\text{total}}</span> total users for experimentation and a fixed deployment audience of size <span class="math inline">N_{\text{post}}</span>. Before it runs a single test, it has already made the choice that matters most: spend that budget on many small, well-understood bets, or on experiments testing larger, riskier ideas?</p>
-<p>Define two strategies, both operating inside the Test &amp; Roll framework of Feit and Berman (2019). Each strategy runs <span class="math inline">k</span> experiments within the same budget <span class="math inline">N_{\text{total}}</span>, so every experiment receives <span class="math inline">n = N_{\text{total}}/k</span> test-stage users and is evaluated against the same deployment audience <span class="math inline">N_{\text{post}}</span>. The only difference is the prior on the true effect <span class="math inline">\delta</span> for each experiment.</p>
-<p><strong>Incremental.</strong> True effects are drawn from <span class="math inline">\mathcal{N}(0.005, 0.003^2)</span>. This is the world of copy edits, button colours, and layout tweaks on a mature surface: nearly all effects are positive, variance is low.</p>
-<p><strong>Big Swing.</strong> True effects are drawn from <span class="math inline">\mathcal{N}(0, 0.020^2)</span>. This is the world of ranking-algorithm rewrites, pricing redesigns, and structurally new features: the prior is centred on zero, the variance is high, and outcomes can be substantially positive <em>or</em> substantially negative.</p>
+<p>Every fix so far has targeted a single experiment: size it correctly (Section III), stop it at the right moment (Section IV), and correct the winner’s estimate before acting on it (Sections V–VI). None of that touches a prior question, the one that actually decides how much value a quarter of testing creates. A product team walks into the quarter with a fixed pool of <span class="math inline">\(N_{\text{total}}\)</span> total users for experimentation and a fixed deployment audience of size <span class="math inline">\(N_{\text{post}}\)</span>. Before it runs a single test, it has already made the choice that matters most: spend that budget on many small, well-understood bets, or on experiments testing larger, riskier ideas?</p>
+<p>Define two strategies, both operating inside the Test &amp; Roll framework of Feit and Berman (2019). Each strategy runs <span class="math inline">\(k\)</span> experiments within the same budget <span class="math inline">\(N_{\text{total}}\)</span>, so every experiment receives <span class="math inline">\(n = N_{\text{total}}/k\)</span> test-stage users and is evaluated against the same deployment audience <span class="math inline">\(N_{\text{post}}\)</span>. The only difference is the prior on the true effect <span class="math inline">\(\delta\)</span> for each experiment.</p>
+<p><strong>Incremental.</strong> True effects are drawn from <span class="math inline">\(\mathcal{N}(0.005, 0.003^2)\)</span>. This is the world of copy edits, button colours, and layout tweaks on a mature surface: nearly all effects are positive, variance is low.</p>
+<p><strong>Big Swing.</strong> True effects are drawn from <span class="math inline">\(\mathcal{N}(0, 0.020^2)\)</span>. This is the world of ranking-algorithm rewrites, pricing redesigns, and structurally new features: the prior is centred on zero, the variance is high, and outcomes can be substantially positive <em>or</em> substantially negative.</p>
 <p>Intuition strongly favours Incremental. Small lifts compound, ship reliably, and rarely produce a bad quarter. The simulation says the opposite: <strong>Big Swings generate roughly 3.8× more average quarterly value than Incremental</strong>, and the mechanism is a direct consequence of a mathematical property that no amount of precision engineering can neutralise.</p>
 <section id="the-convexity-argument" class="level3">
 <h3 class="anchored" data-anchor-id="the-convexity-argument">The convexity argument</h3>
 <p>At the end of a test, the roll-stage value of a single experiment is</p>
-<p><span class="math display">
+<p><span class="math display">\[
 V(\hat\delta) \;=\; \max(\hat\delta,\; 0)\;\times\; N_{\text{post}},
-</span></p>
-<p>where <span class="math inline">\hat\delta</span> is the effect estimate (shrinkage-corrected, per Section VI) and the <span class="math inline">\max(\cdot, 0)</span> operator encodes the deployment decision: only deploy winners. This function is <strong>convex</strong> in <span class="math inline">\hat\delta</span>, it is flat at zero below the threshold and equal to <span class="math inline">\hat\delta \cdot N_{\text{post}}</span> above it. Jensen’s inequality therefore gives</p>
-<p><span class="math display">
+\]</span></p>
+<p>where <span class="math inline">\(\hat\delta\)</span> is the effect estimate (shrinkage-corrected, per Section VI) and the <span class="math inline">\(\max(\cdot, 0)\)</span> operator encodes the deployment decision: only deploy winners. This function is <strong>convex</strong> in <span class="math inline">\(\hat\delta\)</span>, it is flat at zero below the threshold and equal to <span class="math inline">\(\hat\delta \cdot N_{\text{post}}\)</span> above it. Jensen’s inequality therefore gives</p>
+<p><span class="math display">\[
 \mathbb{E}\!\left[V(\delta)\right] \;\geq\; V\!\left(\mathbb{E}[\delta]\right),
-</span></p>
-<p>with <em>strict</em> inequality whenever <span class="math inline">\delta</span> has positive variance and places mass on both sides of zero. <strong>A wider prior distribution is rewarded, not punished, by a rule that only ever deploys winners.</strong></p>
-<p>The gap is not abstract. For any <span class="math inline">\delta \sim \mathcal{N}(\mu, \sigma^2)</span>, the expected positive part has the closed form</p>
-<p><span class="math display">
+\]</span></p>
+<p>with <em>strict</em> inequality whenever <span class="math inline">\(\delta\)</span> has positive variance and places mass on both sides of zero. <strong>A wider prior distribution is rewarded, not punished, by a rule that only ever deploys winners.</strong></p>
+<p>The gap is not abstract. For any <span class="math inline">\(\delta \sim \mathcal{N}(\mu, \sigma^2)\)</span>, the expected positive part has the closed form</p>
+<p><span class="math display">\[
 \mathbb{E}[\max(\delta, 0)] \;=\; \mu\,\Phi\!\left(\frac{\mu}{\sigma}\right) \;+\; \sigma\,\phi\!\left(\frac{\mu}{\sigma}\right).
-</span></p>
+\]</span></p>
 <p>Applying this to the two priors:</p>
 <table class="caption-top table">
 <colgroup>
@@ -955,45 +966,45 @@ V(\hat\delta) \;=\; \max(\hat\delta,\; 0)\;\times\; N_{\text{post}},
 <thead>
 <tr class="header">
 <th>Quantity</th>
-<th>Incremental <span class="math inline">\mathcal{N}(0.005, 0.003^2)</span></th>
-<th>Big Swing <span class="math inline">\mathcal{N}(0, 0.020^2)</span></th>
+<th>Incremental <span class="math inline">\(\mathcal{N}(0.005, 0.003^2)\)</span></th>
+<th>Big Swing <span class="math inline">\(\mathcal{N}(0, 0.020^2)\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\mu</span></td>
+<td><span class="math inline">\(\mu\)</span></td>
 <td>0.005</td>
 <td>0.000</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\sigma</span></td>
+<td><span class="math inline">\(\sigma\)</span></td>
 <td>0.003</td>
 <td>0.020</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\mathbb{E}[\max(\delta, 0)]</span></td>
+<td><span class="math inline">\(\mathbb{E}[\max(\delta, 0)]\)</span></td>
 <td>~0.00506</td>
 <td>~0.00798</td>
 </tr>
 <tr class="even">
-<td>Jensen gap vs <span class="math inline">\max(\mu, 0)</span></td>
+<td>Jensen gap vs <span class="math inline">\(\max(\mu, 0)\)</span></td>
 <td>~0.00006 (tiny)</td>
 <td>~0.00798 (all of it)</td>
 </tr>
 </tbody>
 </table>
 <p>Incremental’s option value is almost entirely its mean; the Jensen gap is negligible. Big Swing’s option value is <em>entirely</em> convexity: its mean is zero, yet it generates a <strong>57.7% higher expected payoff</strong> per deployed experiment than Incremental, before any data are collected.</p>
-<p>You only deploy winners. A failed experiment costs you the test-stage traffic and nothing more, the stopping rule prevents you from rolling a loser. A successful experiment is deployed to the full <span class="math inline">N_{\text{post}}</span>. When <span class="math inline">N_{\text{post}}</span> is large, variance stops being a risk to manage and becomes an asset to seek: the decision rule captures the full upside of a wide prior while truncating its downside at zero.</p>
+<p>You only deploy winners. A failed experiment costs you the test-stage traffic and nothing more, the stopping rule prevents you from rolling a loser. A successful experiment is deployed to the full <span class="math inline">\(N_{\text{post}}\)</span>. When <span class="math inline">\(N_{\text{post}}\)</span> is large, variance stops being a risk to manage and becomes an asset to seek: the decision rule captures the full upside of a wide prior while truncating its downside at zero.</p>
 </section>
 <section id="why-the-gap-in-practice-is-far-larger-than-57.7" class="level3">
 <h3 class="anchored" data-anchor-id="why-the-gap-in-practice-is-far-larger-than-57.7">Why the gap in practice is far larger than 57.7%</h3>
-<p>The closed-form ratio of 1.577× assumes the deployment filter is perfect: we always know which experiments have <span class="math inline">\delta &gt; 0</span> and deploy exactly those. In practice, we deploy when the z-score <span class="math inline">\hat\delta / \widehat{\mathrm{se}}</span> exceeds the threshold <span class="math inline">\theta^*</span> (here <span class="math inline">\theta^* = 1.96</span>), using a noisy estimate. This introduces a second, decisive asymmetry.</p>
-<p>The detection threshold in effect-size units is <span class="math inline">c = \theta^* \times \widehat{\mathrm{se}}</span>. With <span class="math inline">n = 50{,}000</span> users per arm and per-user noise <span class="math inline">\sigma_y = 0.466</span>:</p>
-<p><span class="math display">
+<p>The closed-form ratio of 1.577× assumes the deployment filter is perfect: we always know which experiments have <span class="math inline">\(\delta &gt; 0\)</span> and deploy exactly those. In practice, we deploy when the z-score <span class="math inline">\(\hat\delta / \widehat{\mathrm{se}}\)</span> exceeds the threshold <span class="math inline">\(\theta^*\)</span> (here <span class="math inline">\(\theta^* = 1.96\)</span>), using a noisy estimate. This introduces a second, decisive asymmetry.</p>
+<p>The detection threshold in effect-size units is <span class="math inline">\(c = \theta^* \times \widehat{\mathrm{se}}\)</span>. With <span class="math inline">\(n = 50{,}000\)</span> users per arm and per-user noise <span class="math inline">\(\sigma_y = 0.466\)</span>:</p>
+<p><span class="math display">\[
 \widehat{\mathrm{se}} \;=\; \frac{2\sigma_y}{\sqrt{n}} \;=\; \frac{2 \times 0.466}{\sqrt{50{,}000}} \;\approx\; 0.00417, \qquad c \;=\; 1.96 \times 0.00417 \;\approx\; 0.00817.
-</span></p>
-<p>For <strong>Incremental</strong>, most true effects (<span class="math inline">\mu = 0.005</span>) lie <em>below</em> <span class="math inline">c \approx 0.00817</span>. A given experiment’s estimate must be lucky enough to exceed the threshold, an event that happens roughly 27% of the time. Many genuinely positive experiments are <em>never detected</em> and their value is never captured. The overall filter efficiency, the fraction of perfect-information value that the filter actually delivers, is only <strong>38%</strong> for Incremental.</p>
-<p>For <strong>Big Swing</strong>, effects that exist are large (<span class="math inline">\sigma = 0.020</span>). When a truly large positive effect is present, the threshold is easily crossed. Roughly half of experiments draw a negative true effect and are correctly <em>not deployed</em> (the false-positive rate is below 2%). The filter efficiency is <strong>90%</strong> for Big Swing.</p>
+\]</span></p>
+<p>For <strong>Incremental</strong>, most true effects (<span class="math inline">\(\mu = 0.005\)</span>) lie <em>below</em> <span class="math inline">\(c \approx 0.00817\)</span>. A given experiment’s estimate must be lucky enough to exceed the threshold, an event that happens roughly 27% of the time. Many genuinely positive experiments are <em>never detected</em> and their value is never captured. The overall filter efficiency, the fraction of perfect-information value that the filter actually delivers, is only <strong>38%</strong> for Incremental.</p>
+<p>For <strong>Big Swing</strong>, effects that exist are large (<span class="math inline">\(\sigma = 0.020\)</span>). When a truly large positive effect is present, the threshold is easily crossed. Roughly half of experiments draw a negative true effect and are correctly <em>not deployed</em> (the false-positive rate is below 2%). The filter efficiency is <strong>90%</strong> for Big Swing.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1009,7 +1020,7 @@ V(\hat\delta) \;=\; \max(\hat\delta,\; 0)\;\times\; N_{\text{post}},
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\mathbb{E}[\max(\delta, 0)]</span> per experiment</td>
+<td><span class="math inline">\(\mathbb{E}[\max(\delta, 0)]\)</span> per experiment</td>
 <td>~0.00506</td>
 <td>~0.00798</td>
 </tr>
@@ -1019,7 +1030,7 @@ V(\hat\delta) \;=\; \max(\hat\delta,\; 0)\;\times\; N_{\text{post}},
 <td><strong>90%</strong></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\mathbb{E}[\delta_{\text{deployed}}]</span> per experiment</td>
+<td><span class="math inline">\(\mathbb{E}[\delta_{\text{deployed}}]\)</span> per experiment</td>
 <td>~0.00192</td>
 <td>~0.00722</td>
 </tr>
@@ -1030,7 +1041,7 @@ V(\hat\delta) \;=\; \max(\hat\delta,\; 0)\;\times\; N_{\text{post}},
 </tr>
 </tbody>
 </table>
-<p>The total predicted quarterly value is <span class="math inline">k \times \mathbb{E}[\delta_{\text{deployed}} \cdot \mathbf{1}_{\text{deploy}}] \times N_{\text{post}} = 20 \times 0.00192 \times 10^7 \approx 384{,}000</span> for Incremental and <span class="math inline">\approx 1{,}444{,}000</span> for Big Swing. The simulation confirms this.</p>
+<p>The total predicted quarterly value is <span class="math inline">\(k \times \mathbb{E}[\delta_{\text{deployed}} \cdot \mathbf{1}_{\text{deploy}}] \times N_{\text{post}} = 20 \times 0.00192 \times 10^7 \approx 384{,}000\)</span> for Incremental and <span class="math inline">\(\approx 1{,}444{,}000\)</span> for Big Swing. The simulation confirms this.</p>
 </section>
 <section id="simulation" class="level3">
 <h3 class="anchored" data-anchor-id="simulation">Simulation</h3>
@@ -1086,8 +1097,8 @@ Figure&nbsp;6: Distribution of total quarterly value across 30,000 simulated qua
 </section>
 <section id="two-forces-one-conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="two-forces-one-conclusion">Two forces, one conclusion</h3>
-<p><strong>Force 1: convexity.</strong> The deployment filter passes large positive draws and blocks large negative draws. A wide prior (<span class="math inline">\sigma = 0.020</span>) puts substantial probability on effects of <span class="math inline">0.05</span> or more; those draws, once deployed to <span class="math inline">10^7</span> users, generate enormous value on their own. A narrow prior (<span class="math inline">\sigma = 0.003</span>) has essentially no mass above <span class="math inline">0.02</span>; even a uniformly correct deployment decision cannot produce a transformational outcome because the effect distribution has no tail to exploit.</p>
-<p><strong>Force 2: filter efficiency.</strong> Incremental’s typical effect of <span class="math inline">0.005</span> lies <em>below</em> the detection threshold <span class="math inline">0.00817</span>. The experiment must get lucky with its noisy estimate to exceed the threshold, meaning roughly 62% of genuinely positive Incremental experiments are never deployed and their value is permanently forfeited. Big Swing effects are large enough, when they exist, that the detection threshold is crossed reliably, making the filter nearly lossless for positive experiments while correctly screening nearly all negative ones.</p>
+<p><strong>Force 1: convexity.</strong> The deployment filter passes large positive draws and blocks large negative draws. A wide prior (<span class="math inline">\(\sigma = 0.020\)</span>) puts substantial probability on effects of <span class="math inline">\(0.05\)</span> or more; those draws, once deployed to <span class="math inline">\(10^7\)</span> users, generate enormous value on their own. A narrow prior (<span class="math inline">\(\sigma = 0.003\)</span>) has essentially no mass above <span class="math inline">\(0.02\)</span>; even a uniformly correct deployment decision cannot produce a transformational outcome because the effect distribution has no tail to exploit.</p>
+<p><strong>Force 2: filter efficiency.</strong> Incremental’s typical effect of <span class="math inline">\(0.005\)</span> lies <em>below</em> the detection threshold <span class="math inline">\(0.00817\)</span>. The experiment must get lucky with its noisy estimate to exceed the threshold, meaning roughly 62% of genuinely positive Incremental experiments are never deployed and their value is permanently forfeited. Big Swing effects are large enough, when they exist, that the detection threshold is crossed reliably, making the filter nearly lossless for positive experiments while correctly screening nearly all negative ones.</p>
 <p>Together these two forces explain why the simulated lift (~3.76×) is much larger than the pure-convexity prediction (1.577×): the filter actively penalises the thin-tailed prior and actively rewards the fat-tailed one.</p>
 </section>
 <section id="where-each-strategy-wins" class="level3">
@@ -1141,9 +1152,9 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 </figure>
 </div>
 </div>
-<p>The pattern in <a href="#tbl-decision-table" class="quarto-xref">Table&nbsp;1</a> is the practical projection of Azevedo, Deng, Montiel-Olea, Rao, and Weyl (2020), who measured the prior distribution of innovation quality directly from Microsoft Bing’s EXP platform. Their headline finding: the tail coefficient of the success-rate metric is <span class="math inline">\alpha = 1.31</span>, far below the critical threshold <span class="math inline">\alpha = 3</span> at which their Theorem 2 says lean, many-shots experimentation dominates high-powered, few-shot experimentation. Rejections of <span class="math inline">\alpha = 2</span> and <span class="math inline">\alpha = 3</span> both carry <span class="math inline">p &lt; 0.001</span>. Empirically, the top 2% of ideas accounted for 74.8% of all historical gains, an extreme Pareto concentration that arises directly from the fat-tailed prior interacting with the deployment filter. The implication is the one this section’s simulation produces from first principles: when the tail is fat, the optimal strategy is to maximise shots at it, not to power each shot precisely.</p>
+<p>The pattern in <a href="#tbl-decision-table" class="quarto-xref">Table&nbsp;1</a> is the practical projection of Azevedo, Deng, Montiel-Olea, Rao, and Weyl (2020), who measured the prior distribution of innovation quality directly from Microsoft Bing’s EXP platform. Their headline finding: the tail coefficient of the success-rate metric is <span class="math inline">\(\alpha = 1.31\)</span>, far below the critical threshold <span class="math inline">\(\alpha = 3\)</span> at which their Theorem 2 says lean, many-shots experimentation dominates high-powered, few-shot experimentation. Rejections of <span class="math inline">\(\alpha = 2\)</span> and <span class="math inline">\(\alpha = 3\)</span> both carry <span class="math inline">\(p &lt; 0.001\)</span>. Empirically, the top 2% of ideas accounted for 74.8% of all historical gains, an extreme Pareto concentration that arises directly from the fat-tailed prior interacting with the deployment filter. The implication is the one this section’s simulation produces from first principles: when the tail is fat, the optimal strategy is to maximise shots at it, not to power each shot precisely.</p>
 <p>The two analyses are complementary. Azevedo et al.&nbsp;establish <em>which domains</em> have fat-tailed priors (search ranking, ad algorithms, pricing); the convexity argument here establishes <em>why</em> high prior variance pays regardless of domain, because any one-sided deployment filter creates the asymmetric payoff that Jensen’s inequality rewards.</p>
-<p>If your effect-size prior has a standard deviation below 1% and your <span class="math inline">N_{\text{post}}</span> is under 100,000, you are in Incremental territory. If your prior SD exceeds 2% <strong>or</strong> <span class="math inline">N_{\text{post}}</span> exceeds 500,000, Big Swings dominate. When the two signals point in opposite directions, run the simulation in this section with your own <code>effect_mean</code>, <code>effect_sd</code>, and <code>N_post</code>.</p>
+<p>If your effect-size prior has a standard deviation below 1% and your <span class="math inline">\(N_{\text{post}}\)</span> is under 100,000, you are in Incremental territory. If your prior SD exceeds 2% <strong>or</strong> <span class="math inline">\(N_{\text{post}}\)</span> exceeds 500,000, Big Swings dominate. When the two signals point in opposite directions, run the simulation in this section with your own <code>effect_mean</code>, <code>effect_sd</code>, and <code>N_post</code>.</p>
 </section>
 <section id="a-concrete-recommendation" class="level3">
 <h3 class="anchored" data-anchor-id="a-concrete-recommendation">A concrete recommendation</h3>
@@ -1154,10 +1165,10 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 </section>
 <section id="section-viii.-full-r-implementation-from-nhst-to-profit-maximizing-stopping" class="level2">
 <h2 class="anchored" data-anchor-id="section-viii.-full-r-implementation-from-nhst-to-profit-maximizing-stopping">Section VIII. Full R Implementation: From NHST to Profit-Maximizing Stopping</h2>
-<p>Sections III through VII each fixed one piece of the experimentation pipeline in isolation: the right sample size, the right stopping rule, the right correction for the Winner’s Curse, and the right portfolio of bets to run in the first place. None of that is useful until it runs end to end on one real decision. This section takes a single, concrete test through all four steps, using the same prior structure established throughout the post, <span class="math inline">\delta \sim \mathcal{N}(0, \sigma_\delta^2)</span>, now applied to specific numbers a practitioner could lift directly into their own codebase.</p>
+<p>Sections III through VII each fixed one piece of the experimentation pipeline in isolation: the right sample size, the right stopping rule, the right correction for the Winner’s Curse, and the right portfolio of bets to run in the first place. None of that is useful until it runs end to end on one real decision. This section takes a single, concrete test through all four steps, using the same prior structure established throughout the post, <span class="math inline">\(\delta \sim \mathcal{N}(0, \sigma_\delta^2)\)</span>, now applied to specific numbers a practitioner could lift directly into their own codebase.</p>
 <section id="the-scenario" class="level3">
 <h3 class="anchored" data-anchor-id="the-scenario">The scenario</h3>
-<p>An e-commerce team is testing a change to the checkout flow. Baseline conversion is 3%. The Post-Test population, the number of users who will see the winning variant once the test concludes, is <span class="math inline">N = 500{,}000</span>. The team’s prior on the treatment effect is the same one used in Sections III through VII: most checkout tweaks move conversion by a fraction of a point, a few move it more, and the honest starting belief is centred on zero with a standard deviation of one percentage point.</p>
+<p>An e-commerce team is testing a change to the checkout flow. Baseline conversion is 3%. The Post-Test population, the number of users who will see the winning variant once the test concludes, is <span class="math inline">\(N = 500{,}000\)</span>. The team’s prior on the treatment effect is the same one used in Sections III through VII: most checkout tweaks move conversion by a fraction of a point, a few move it more, and the honest starting belief is centred on zero with a standard deviation of one percentage point.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1170,7 +1181,7 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 </section>
 <section id="step-1.-sizing-the-test" class="level3">
 <h3 class="anchored" data-anchor-id="step-1.-sizing-the-test">Step 1. Sizing the test</h3>
-<p><code>test_roll_n()</code> from Section III gives the profit-maximizing test size for this <span class="math inline">N</span>, this baseline variance, and this prior. The classical benchmark, sized with <code>pwr.2p.test()</code> for the same one-point MDE, gives the comparison.</p>
+<p><code>test_roll_n()</code> from Section III gives the profit-maximizing test size for this <span class="math inline">\(N\)</span>, this baseline variance, and this prior. The classical benchmark, sized with <code>pwr.2p.test()</code> for the same one-point MDE, gives the comparison.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1190,11 +1201,11 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 <pre><code>[1] 5275.334</code></pre>
 </div>
 </div>
-<p><span class="math inline">n^* \approx 8{,}104</span> per arm against an NHST benchmark of <span class="math inline">n_{\text{NHST}} \approx 5{,}276</span>. This is the same crossover Section III flagged: at <span class="math inline">N = 500{,}000</span>, above the roughly 223,000 threshold where the two curves cross, Test &amp; Roll asks for <em>more</em> data than NHST, not less, because the value sitting in the roll stage is large enough to justify the extra precision. Anyone porting this scenario to a smaller Post-Test <span class="math inline">N</span> should expect the comparison to flip, exactly as the crossover plot in Section III shows.</p>
+<p><span class="math inline">\(n^* \approx 8{,}104\)</span> per arm against an NHST benchmark of <span class="math inline">\(n_{\text{NHST}} \approx 5{,}276\)</span>. This is the same crossover Section III flagged: at <span class="math inline">\(N = 500{,}000\)</span>, above the roughly 223,000 threshold where the two curves cross, Test &amp; Roll asks for <em>more</em> data than NHST, not less, because the value sitting in the roll stage is large enough to justify the extra precision. Anyone porting this scenario to a smaller Post-Test <span class="math inline">\(N\)</span> should expect the comparison to flip, exactly as the crossover plot in Section III shows.</p>
 </section>
 <section id="step-2.-running-the-test-with-the-optimal-stopping-rule" class="level3">
 <h3 class="anchored" data-anchor-id="step-2.-running-the-test-with-the-optimal-stopping-rule">Step 2. Running the test with the optimal stopping rule</h3>
-<p>Section IV’s worked example already calibrated <span class="math inline">\theta^*</span> for this exact Post-Test <span class="math inline">N</span>, so it does not need to be recomputed here. We extend that section’s tooling with one new function, <code>simulate_single_test()</code>, which plays out a single realised path of daily data rather than the ten thousand parallel paths <code>run_simulation()</code> uses for calibration, and checks the same <span class="math inline">\Pr(\text{best}) &gt; \theta^*</span> stopping condition each day.</p>
+<p>Section IV’s worked example already calibrated <span class="math inline">\(\theta^*\)</span> for this exact Post-Test <span class="math inline">\(N\)</span>, so it does not need to be recomputed here. We extend that section’s tooling with one new function, <code>simulate_single_test()</code>, which plays out a single realised path of daily data rather than the ten thousand parallel paths <code>run_simulation()</code> uses for calibration, and checks the same <span class="math inline">\(\Pr(\text{best}) &gt; \theta^*\)</span> stopping condition each day.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1253,11 +1264,11 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 <pre><code>[1] "treatment"</code></pre>
 </div>
 </div>
-<p>In this realisation, <span class="math inline">\Pr(\text{best})</span> never clears <span class="math inline">\theta^* = 0.99</span> before the planned 60-day window closes; it reaches roughly 0.955 by day 60 without crossing 0.99, the threshold Section IV’s value-curve optimisation returns for this <span class="math inline">N</span>. The test runs the full window and is deployed at the day-60 read, since the posterior still favours treatment. That is not a failure of the stopping rule, it is the rule working as intended at this scale: with <span class="math inline">N = 500{,}000</span> waiting in the roll stage, the value-curve optimisation in Section IV pushes <span class="math inline">\theta^*</span> close to certainty, because a few extra days of testing cost almost nothing next to the value of being right about which variant reaches half a million users. Worth noting for anyone replicating this: at <span class="math inline">135</span> users per arm per day, 60 days lands at 8,100 per arm, within four users of the <span class="math inline">n^* \approx 8{,}104</span> that Step 1 derived independently from the closed-form formula. The fixed-horizon sizing and the calibrated stopping rule agree almost exactly here, which is itself a useful sanity check that the two tools in Sections III and IV are pointing at the same answer.</p>
+<p>In this realisation, <span class="math inline">\(\Pr(\text{best})\)</span> never clears <span class="math inline">\(\theta^* = 0.99\)</span> before the planned 60-day window closes; it reaches roughly 0.955 by day 60 without crossing 0.99, the threshold Section IV’s value-curve optimisation returns for this <span class="math inline">\(N\)</span>. The test runs the full window and is deployed at the day-60 read, since the posterior still favours treatment. That is not a failure of the stopping rule, it is the rule working as intended at this scale: with <span class="math inline">\(N = 500{,}000\)</span> waiting in the roll stage, the value-curve optimisation in Section IV pushes <span class="math inline">\(\theta^*\)</span> close to certainty, because a few extra days of testing cost almost nothing next to the value of being right about which variant reaches half a million users. Worth noting for anyone replicating this: at <span class="math inline">\(135\)</span> users per arm per day, 60 days lands at 8,100 per arm, within four users of the <span class="math inline">\(n^* \approx 8{,}104\)</span> that Step 1 derived independently from the closed-form formula. The fixed-horizon sizing and the calibrated stopping rule agree almost exactly here, which is itself a useful sanity check that the two tools in Sections III and IV are pointing at the same answer.</p>
 </section>
 <section id="step-3.-correcting-for-the-winners-curse" class="level3">
 <h3 class="anchored" data-anchor-id="step-3.-correcting-for-the-winners-curse">Step 3. Correcting for the Winner’s Curse</h3>
-<p><code>shrink_estimate()</code> from Section VI takes the raw effect observed at the stopping day and pulls it toward zero using the same <span class="math inline">\sigma_\delta</span> prior that has been used throughout.</p>
+<p><code>shrink_estimate()</code> from Section VI takes the raw effect observed at the stopping day and pulls it toward zero using the same <span class="math inline">\(\sigma_\delta\)</span> prior that has been used throughout.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1277,7 +1288,7 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 <pre><code>[1] 0.004259072</code></pre>
 </div>
 </div>
-<p>The raw observed effect is roughly <span class="math inline">0.42</span> percentage points; the shrinkage-adjusted estimate is roughly <span class="math inline">0.39</span> percentage points. The correction is modest here because 8,100 observations per arm produce a standard error small enough, relative to <span class="math inline">\sigma_\delta = 0.01</span>, that the posterior does not move far from the data. That is not always the case, and Step 4 uses the shrunk number, not the raw one, on principle.</p>
+<p>The raw observed effect is roughly <span class="math inline">\(0.42\)</span> percentage points; the shrinkage-adjusted estimate is roughly <span class="math inline">\(0.39\)</span> percentage points. The correction is modest here because 8,100 observations per arm produce a standard error small enough, relative to <span class="math inline">\(\sigma_\delta = 0.01\)</span>, that the posterior does not move far from the data. That is not always the case, and Step 4 uses the shrunk number, not the raw one, on principle.</p>
 </section>
 <section id="what-changed-between-the-raw-and-shrinkage-adjusted-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="what-changed-between-the-raw-and-shrinkage-adjusted-numbers">What changed between the raw and shrinkage-adjusted numbers</h3>
@@ -1371,7 +1382,7 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 </section>
 <section id="step-5.-where-this-sits-in-the-portfolio" class="level3">
 <h3 class="anchored" data-anchor-id="step-5.-where-this-sits-in-the-portfolio">Step 5. Where this sits in the portfolio</h3>
-<p>With <span class="math inline">N_{\text{post}} \approx 500{,}000</span>, this test sits almost exactly on the boundary Section VII draws between Incremental and Big Swing territory, closer in spirit to the thin-tailed Incremental example than to the wide Big Swing prior, but running at a Post-Test <span class="math inline">N</span> large enough to sit right at the edge where Section VII’s own classification rule starts to favour wider bets. The honest read is that a single checkout-copy tweak like this one is correctly treated as Incremental: precision matters more here than variance, and the small, defensible revenue number above is exactly the kind of outcome that strategy is built to produce. But a team running only tests shaped like this one, on a surface this large, is leaving the convexity gains from Section VII on the table. The checkout flow is worth the occasional Big Swing test too, a structural redesign rather than a copy change, sized and evaluated with the same pipeline, but drawn from a wider prior.</p>
+<p>With <span class="math inline">\(N_{\text{post}} \approx 500{,}000\)</span>, this test sits almost exactly on the boundary Section VII draws between Incremental and Big Swing territory, closer in spirit to the thin-tailed Incremental example than to the wide Big Swing prior, but running at a Post-Test <span class="math inline">\(N\)</span> large enough to sit right at the edge where Section VII’s own classification rule starts to favour wider bets. The honest read is that a single checkout-copy tweak like this one is correctly treated as Incremental: precision matters more here than variance, and the small, defensible revenue number above is exactly the kind of outcome that strategy is built to produce. But a team running only tests shaped like this one, on a surface this large, is leaving the convexity gains from Section VII on the table. The checkout flow is worth the occasional Big Swing test too, a structural redesign rather than a copy change, sized and evaluated with the same pipeline, but drawn from a wider prior.</p>
 <p>This pipeline produces a number you can defend to a VP. The final section turns that pipeline into a decision framework: knowing which of these tools is the right one to reach for, and when.</p>
 </section>
 </section>
@@ -1403,19 +1414,19 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 <tr class="even">
 <td>Test &amp; Roll</td>
 <td>Most product and growth experiments with a known Post-Test N</td>
-<td>A reasonable prior on <span class="math inline">\sigma_\delta</span>, ideally estimated from the historical spread of the team’s own past effects</td>
-<td>The prior can be wrong, and a badly miscalibrated <span class="math inline">\sigma_\delta</span> produces a sample size as misleading as the NHST number it was meant to replace</td>
+<td>A reasonable prior on <span class="math inline">\(\sigma_\delta\)</span>, ideally estimated from the historical spread of the team’s own past effects</td>
+<td>The prior can be wrong, and a badly miscalibrated <span class="math inline">\(\sigma_\delta\)</span> produces a sample size as misleading as the NHST number it was meant to replace</td>
 </tr>
 <tr class="odd">
 <td>mSPRT or always-valid monitoring</td>
 <td>Teams that need frequentist Type I error guarantees while peeking continuously</td>
 <td>A pre-specified alpha-spending function fixed before the test starts</td>
-<td>More conservative than the Bayesian <span class="math inline">\Pr(\text{best})</span> stopping rule from Section IV, since it is built to control error rates rather than maximise expected value</td>
+<td>More conservative than the Bayesian <span class="math inline">\(\Pr(\text{best})\)</span> stopping rule from Section IV, since it is built to control error rates rather than maximise expected value</td>
 </tr>
 <tr class="even">
-<td>Bayesian expected loss or <span class="math inline">\Pr(\text{best})</span> stopping</td>
+<td>Bayesian expected loss or <span class="math inline">\(\Pr(\text{best})\)</span> stopping</td>
 <td>Teams optimising for long-run profit who are comfortable reporting posterior probability statements</td>
-<td>A loss function or an explicit business tolerance <span class="math inline">\theta</span> for how much expected value to leave on the table</td>
+<td>A loss function or an explicit business tolerance <span class="math inline">\(\theta\)</span> for how much expected value to leave on the table</td>
 <td>Does not control frequentist Type I error without further calibration, which matters if the result will be reported outside the team that ran the test</td>
 </tr>
 </tbody>
@@ -1423,11 +1434,11 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 <p>These four are not mutually exclusive, and treating them as competing schools of thought misses the point of building all four into one pipeline. As discussed in the A/B testing guide, a mature experimentation programme typically runs NHST or mSPRT at the platform level, for guardrail monitoring across hundreds of simultaneous experiments where frequentist error control genuinely matters, and reserves Test &amp; Roll plus Bayesian stopping for the individual ship-or-hold decision on any one test, where the objective is profit rather than error control. The two layers answer different questions, and a platform that uses only one of them is either over-controlling individual decisions it should be optimising, or under-controlling the aggregate false-positive rate across a portfolio it should be guarding.</p>
 <section id="five-questions-for-your-analytics-team" class="level3">
 <h3 class="anchored" data-anchor-id="five-questions-for-your-analytics-team">Five questions for your analytics team</h3>
-<p><strong>What is our <span class="math inline">\sigma_\delta</span>, and where did it come from?</strong> A team that can answer this with a number pulled from the historical variance of past effects has a calibrated prior. A team that answers with a guess, or with the MDE from a template, is running Test &amp; Roll with NHST’s same blind spot, just renamed.</p>
-<p><strong>What is our Post-Test N for this specific test?</strong> If the answer is a formula, sample size was set by the actual economics of the decision. If the answer is “we always run two weeks,” sample size was set by habit, and Section III’s whole argument is that habit and optimal <span class="math inline">n^*</span> rarely agree.</p>
+<p><strong>What is our <span class="math inline">\(\sigma_\delta\)</span>, and where did it come from?</strong> A team that can answer this with a number pulled from the historical variance of past effects has a calibrated prior. A team that answers with a guess, or with the MDE from a template, is running Test &amp; Roll with NHST’s same blind spot, just renamed.</p>
+<p><strong>What is our Post-Test N for this specific test?</strong> If the answer is a formula, sample size was set by the actual economics of the decision. If the answer is “we always run two weeks,” sample size was set by habit, and Section III’s whole argument is that habit and optimal <span class="math inline">\(n^*\)</span> rarely agree.</p>
 <p><strong>Did we correct for the Winner’s Curse before reporting this number?</strong> A reported lift that has not been shrunk is the raw, threshold-conditioned estimate Section V described, not a defensible number. The gap between the two, as Step 3 of Section VIII showed, is rarely zero.</p>
 <p><strong>Is this test an Incremental or a Big Swing, and does our traffic allocation reflect that classification?</strong> A team that cannot answer this is very likely running everything as a cautious Incremental test by default, which Section VII showed forfeits most of the convexity gain available from a wider portfolio.</p>
-<p><strong>What would we have to believe about <span class="math inline">\sigma_\delta</span> for our current sample size practice to be optimal?</strong> This question runs the logic backward: given the sample sizes the team actually uses, what implicit prior would make that choice optimal? When the implicit answer does not match what the team actually believes about its own effect sizes, the practice is inconsistent with the team’s stated beliefs, and that inconsistency is usually costing real revenue.</p>
+<p><strong>What would we have to believe about <span class="math inline">\(\sigma_\delta\)</span> for our current sample size practice to be optimal?</strong> This question runs the logic backward: given the sample sizes the team actually uses, what implicit prior would make that choice optimal? When the implicit answer does not match what the team actually believes about its own effect sizes, the practice is inconsistent with the team’s stated beliefs, and that inconsistency is usually costing real revenue.</p>
 <p>Statistical significance was built to answer a different question than the one a business needs answered: whether an effect is real, not whether acting on it is worth more than it costs. Test &amp; Roll, optimal stopping, shrinkage correction, and portfolio allocation are not exotic alternatives bolted onto that framework. They are the direct consequence of asking the right question from the start, what allocation of <em>this</em> specific budget, to <em>this</em> specific population, maximises expected value. Every method in this post follows from that one reframing, and the pipeline in Section VIII is what it looks like applied to a single afternoon’s worth of checkout data.</p>
 </section>
 </section>
@@ -1438,8 +1449,11 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 <li>Feit, E. M. &amp; Berman, R. (2019). Test &amp; Roll: Profit-Maximizing A/B Tests. <em>Marketing Science</em>, 38(6), 1038–1058.</li>
 <li>Fisher, R. A. (1925). <em>Statistical Methods for Research Workers</em>. Oliver &amp; Boyd.</li>
 <li>Gelman, A. &amp; Carlin, J. (2014). Beyond power calculations: Assessing type S (sign) and type M (magnitude) errors. <em>Perspectives on Psychological Science</em>, 9(6), 641–651.</li>
+<li>Gigerenzer, G. (2004). Mindless statistics. <em>Journal of Socio-Economics</em>, 33(5), 587–606.</li>
+<li>Hubbard, R. (2004). Alphabet Soup: Blurring the distinctions between p’s and α’s in psychological research. <em>Theory &amp; Psychology</em>, 14(3), 295–327.</li>
 <li>Johari, R., Koomen, P., Pekelis, L. &amp; Walsh, D. (2017). Peeking at A/B Tests: Why it Matters and What to Do About It. <em>KDD ’17</em>, 1517–1525.</li>
 <li>Kohavi, R., Tang, D. &amp; Xu, Y. (2020). <em>Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing</em>. Cambridge University Press.</li>
+<li>Lindquist, E. F. (1940). <em>Statistical Analysis in Educational Research</em>. Houghton Mifflin.</li>
 <li>Neyman, J. &amp; Pearson, E. S. (1933). On the problem of the most efficient tests of statistical hypotheses. <em>Philosophical Transactions of the Royal Society A</em>, 231, 289–337.</li>
 <li>Zaliznyak, R. (2025). The Value of Big Swings. <em>rzaliznyak-math.github.io</em>. <a href="https://rzaliznyak-math.github.io/main/ab-testing/big-swings.html">https://rzaliznyak-math.github.io/main/ab-testing/big-swings.html</a></li>
 <li>Zaliznyak, R. (2026). The Winner’s Curse. <em>rzaliznyak-math.github.io</em>. <a href="https://rzaliznyak-math.github.io/main/ab-testing/winners-curse.html">https://rzaliznyak-math.github.io/main/ab-testing/winners-curse.html</a></li>
@@ -1451,7 +1465,7 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1603,6 +1617,13 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -1943,7 +1964,7 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 <span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>Suppose the true average lift across those 100 tests was +2% on a metric worth €10M in annual revenue, a realistic number for a mid-sized subscription product. Shipping the winning variant in any one test, even without statistical significance, captures that lift *in expectation*, because the variant that beat control in the sample is more likely than not to be the genuinely better one. The arithmetic is simple: 2% of €10M is €200k per test. Across 100 tests that is €20M in foregone annual revenue. Naturally, the exact figure depends on effect persistence, rollout assumptions, and the realized correlation between sample-winners and true-winners across the portfolio; a more conservative accounting that shrinks each observed lift toward zero (as we do formally in Section VI) would land at a smaller number. The *direction* of the opportunity cost, however, is unambiguous: the significance filter did not protect the organisation from shipping something harmful. The variants were not harmful, they were simply not provably better, which is a very different statement. A VP of Data reading this should be asking not "were the tests run correctly?" but "what did it cost us to require that they be run correctly?"</span>
 <span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>The root cause is that statistical significance was designed for scientific inference, not for business decisions. Fisher (1925) and Neyman and Pearson (1933) built null hypothesis significance testing to control false positive rates in contexts where a false positive destroys reproducibility and wastes years of follow-on research. The framework encodes an assumption: that declaring an effect where none exists is the most expensive kind of error a researcher can make. In business, that assumption is often wrong. If you choose variant A over variant B and the two are in fact equal, users experience A regardless, and the *user-level* incremental cost is approximately zero. There are, of course, real costs to shipping any variant: engineering maintenance, operational complexity, UX consistency, support burden. The point is not that false positives are free in an absolute sense; it is that in most consumer product contexts the user-level payoff structure is far closer to symmetric than NHST assumes, and often skewed the other way: a false negative means not shipping A when A is genuinely better, and that is real revenue lost every day the test runs and every day after it ends. A decision rule built on the assumption that Type I and Type II errors are symmetric will systematically leave money on the table whenever that assumption fails, and in most product contexts it does.</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>The root cause is that statistical significance was designed for scientific inference, not for business decisions. Fisher (1925) built tests of significance as a continuous measure of evidence against the null. Neyman and Pearson (1933) later built a separate framework for hypothesis testing with explicit Type I and Type II error control. The hybrid we now call NHST, the recipe of p-value plus fixed threshold plus reject-or-accept decision, was codified in mid-20th century applied textbooks, most influentially by Lindquist (1940), and it is what practitioners actually use today (Gigerenzer 2004; Hubbard 2004). All three variants share a common purpose: statistical inference in scientific contexts where the cost of declaring a spurious effect is high. The framework encodes an assumption: that declaring an effect where none exists is the most expensive kind of error a researcher can make. In business, that assumption is often wrong. If you choose variant A over variant B and the two are in fact equal, users experience A regardless, and the *user-level* incremental cost is approximately zero. There are, of course, real costs to shipping any variant: engineering maintenance, operational complexity, UX consistency, support burden. The point is not that false positives are free in an absolute sense; it is that in most consumer product contexts the user-level payoff structure is far closer to symmetric than NHST assumes, and often skewed the other way: a false negative means not shipping A when A is genuinely better, and that is real revenue lost every day the test runs and every day after it ends. A decision rule built on the assumption that Type I and Type II errors are symmetric will systematically leave money on the table whenever that assumption fails, and in most product contexts it does.</span>
 <span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>As we saw in the A/B testing guide <span class="co">[</span><span class="ot">From RCTs to A/B Tests</span><span class="co">](https://joaovieira22.github.io/posts/AB%20Testing/ab_test_probably_wrong.html)</span>, Type M error captures a related failure mode: even when NHST does detect an effect, the magnitude it reports is often overstated. The deeper issue here is different. NHST was never trying to maximise the right quantity in the first place.</span>
 <span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a></span>
@@ -1953,7 +1974,7 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 <span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section II. What Statistical Significance Was Actually Designed For</span></span>
 <span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a>The original purpose of NHST is not what most practitioners think it is. Fisher (1925) introduced the p-value as a continuous measure of evidence against the null hypothesis, not as a binary decision rule. In Fisher's framing, a p-value of 0.04 was not categorically different from 0.06. It was simply more evidence against the null, to be weighed alongside everything else the researcher knew about the problem. Neyman and Pearson (1933) introduced the binary decision framework a few years later, with explicit Type I and Type II error control and pre-registered decision rules. The 0.05 threshold that practitioners treat as a law of nature was a convention Fisher suggested in passing for agricultural experiments, a pragmatic cutoff to keep tables of critical values manageable rather than an epistemic boundary between truth and falsehood. Neither framework was designed with profit maximisation in mind.</span>
+<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a>The original purpose of NHST is not what most practitioners think it is, and it does not have a single clean origin. Fisher (1925) introduced the p-value as a continuous measure of evidence against the null hypothesis, not as a binary decision rule. In Fisher's framing, a p-value of 0.04 was not categorically different from 0.06. It was simply more evidence against the null, to be weighed alongside everything else the researcher knew about the problem. Neyman and Pearson (1933) introduced a separate binary decision framework a few years later, with explicit Type I and Type II error control and pre-registered decision rules. The two frameworks were never meant to be combined. Lindquist (1940), writing for educational researchers, was the first to merge them into the p-value-plus-threshold recipe that became the standard applied procedure, and it is this hybrid, not either original, that practitioners now call NHST (Gigerenzer 2004; Hubbard 2004). The 0.05 threshold that practitioners treat as a law of nature was a convention Fisher suggested in passing for agricultural experiments, a pragmatic cutoff to keep tables of critical values manageable rather than an epistemic boundary between truth and falsehood. None of the three frameworks, neither Fisher's, nor Neyman-Pearson's, nor the Lindquist hybrid, was designed with profit maximisation in mind.</span>
 <span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a>The asymmetry of error costs in business is what breaks the framework. In science, a false positive means publishing a result that does not replicate, damaging careers and eroding the credibility of the field. In business, the picture is more nuanced. A false positive means shipping variant A when A and B are actually equal: the user-level incremental payoff is roughly zero (users experience A regardless, and A was already an acceptable default or you would not have tested it), but the firm still pays engineering, maintenance, and complexity costs that scale with the number of shipped variants. A false negative means not shipping A when A is genuinely better, and the cost is the lift times the size of the roll population times the length of the delay. Kohavi, Tang and Xu (2020) discuss this same asymmetry in detail. In most consumer product contexts, the Type II cost dominates the Type I cost by an order of magnitude or more; the Type I and Type II framing that treats these as symmetric costs strikes a balance that is rarely the right one for a firm whose objective is profit.</span>
 <span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a></span>
@@ -2761,17 +2782,47 @@ Table&nbsp;1: Portfolio strategy by domain and effect distribution.
 <span id="cb31-873"><a href="#cb31-873" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Feit, E. M. &amp; Berman, R. (2019). Test &amp; Roll: Profit-Maximizing A/B Tests. *Marketing Science*, 38(6), 1038–1058.</span>
 <span id="cb31-874"><a href="#cb31-874" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fisher, R. A. (1925). *Statistical Methods for Research Workers*. Oliver &amp; Boyd.</span>
 <span id="cb31-875"><a href="#cb31-875" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gelman, A. &amp; Carlin, J. (2014). Beyond power calculations: Assessing type S (sign) and type M (magnitude) errors. *Perspectives on Psychological Science*, 9(6), 641–651.</span>
-<span id="cb31-876"><a href="#cb31-876" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Johari, R., Koomen, P., Pekelis, L. &amp; Walsh, D. (2017). Peeking at A/B Tests: Why it Matters and What to Do About It. *KDD '17*, 1517–1525.</span>
-<span id="cb31-877"><a href="#cb31-877" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kohavi, R., Tang, D. &amp; Xu, Y. (2020). *Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing*. Cambridge University Press.</span>
-<span id="cb31-878"><a href="#cb31-878" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Neyman, J. &amp; Pearson, E. S. (1933). On the problem of the most efficient tests of statistical hypotheses. *Philosophical Transactions of the Royal Society A*, 231, 289–337.</span>
-<span id="cb31-879"><a href="#cb31-879" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zaliznyak, R. (2025). The Value of Big Swings. *rzaliznyak-math.github.io*. <span class="co">[</span><span class="ot">https://rzaliznyak-math.github.io/main/ab-testing/big-swings.html</span><span class="co">](https://rzaliznyak-math.github.io/main/ab-testing/big-swings.html)</span></span>
-<span id="cb31-880"><a href="#cb31-880" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zaliznyak, R. (2026). The Winner's Curse. *rzaliznyak-math.github.io*. <span class="co">[</span><span class="ot">https://rzaliznyak-math.github.io/main/ab-testing/winners-curse.html</span><span class="co">](https://rzaliznyak-math.github.io/main/ab-testing/winners-curse.html)</span></span>
-<span id="cb31-881"><a href="#cb31-881" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zaliznyak, R. &amp; Powers, J. (2026). AB Testing is an Optimization Problem. *rzaliznyak-math.github.io*. <span class="co">[</span><span class="ot">https://rzaliznyak-math.github.io/main/ab-testing/ab-testing-optimization.html</span><span class="co">](https://rzaliznyak-math.github.io/main/ab-testing/ab-testing-optimization.html)</span></span>
+<span id="cb31-876"><a href="#cb31-876" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gigerenzer, G. (2004). Mindless statistics. *Journal of Socio-Economics*, 33(5), 587–606.</span>
+<span id="cb31-877"><a href="#cb31-877" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hubbard, R. (2004). Alphabet Soup: Blurring the distinctions between p's and α's in psychological research. *Theory &amp; Psychology*, 14(3), 295–327.</span>
+<span id="cb31-878"><a href="#cb31-878" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Johari, R., Koomen, P., Pekelis, L. &amp; Walsh, D. (2017). Peeking at A/B Tests: Why it Matters and What to Do About It. *KDD '17*, 1517–1525.</span>
+<span id="cb31-879"><a href="#cb31-879" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kohavi, R., Tang, D. &amp; Xu, Y. (2020). *Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing*. Cambridge University Press.</span>
+<span id="cb31-880"><a href="#cb31-880" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Lindquist, E. F. (1940). *Statistical Analysis in Educational Research*. Houghton Mifflin.</span>
+<span id="cb31-881"><a href="#cb31-881" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Neyman, J. &amp; Pearson, E. S. (1933). On the problem of the most efficient tests of statistical hypotheses. *Philosophical Transactions of the Royal Society A*, 231, 289–337.</span>
+<span id="cb31-882"><a href="#cb31-882" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zaliznyak, R. (2025). The Value of Big Swings. *rzaliznyak-math.github.io*. <span class="co">[</span><span class="ot">https://rzaliznyak-math.github.io/main/ab-testing/big-swings.html</span><span class="co">](https://rzaliznyak-math.github.io/main/ab-testing/big-swings.html)</span></span>
+<span id="cb31-883"><a href="#cb31-883" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zaliznyak, R. (2026). The Winner's Curse. *rzaliznyak-math.github.io*. <span class="co">[</span><span class="ot">https://rzaliznyak-math.github.io/main/ab-testing/winners-curse.html</span><span class="co">](https://rzaliznyak-math.github.io/main/ab-testing/winners-curse.html)</span></span>
+<span id="cb31-884"><a href="#cb31-884" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zaliznyak, R. &amp; Powers, J. (2026). AB Testing is an Optimization Problem. *rzaliznyak-math.github.io*. <span class="co">[</span><span class="ot">https://rzaliznyak-math.github.io/main/ab-testing/ab-testing-optimization.html</span><span class="co">](https://rzaliznyak-math.github.io/main/ab-testing/ab-testing-optimization.html)</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 João Vieira</p>
+</div>   
+    <div class="nav-footer-center">
+<p>The Causal Layer — Applied writing on causal inference, pricing, and forecasting.</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/joao-vieira-iseg/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:joaoviei7a@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
 
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

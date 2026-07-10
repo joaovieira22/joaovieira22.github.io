@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>All Posts – The Causal Layer</title>
+<title>Series – The Causal Layer</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./foto3.jpeg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -111,66 +109,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -387,7 +327,7 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="./posts.html"> 
 <span class="menu-text">All Posts</span></a>
   </li>  
   <li class="nav-item">
@@ -424,23 +364,23 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="QSUyRkIlMjB0ZXN0aW5n">A/B testing <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QmF5ZXNpYW4lMjBzdGF0aXN0aWNz">Bayesian statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y2F1c2FsJTIwaW5mZXJlbmNl">causal inference <span class="quarto-category-count">(6)</span></div><div class="category" data-category="ZGlmZmVyZW5jZS1pbi1kaWZmZXJlbmNlcw==">difference-in-differences <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZWNvbm9tZXRyaWNz">econometrics <span class="quarto-category-count">(5)</span></div><div class="category" data-category="ZXhwZXJpbWVudGF0aW9u">experimentation <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bmV0d29yayUyMGVmZmVjdHM=">network effects <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(5)</span></div><div class="category" data-category="c3BpbGxvdmVycw==">spillovers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGhlb3J5">theory <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">All Posts</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Series</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Three arcs, one goal: turn a business question into a defensible number.</p>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -452,181 +392,49 @@ window.Quarto = {
 </header>
 
 
-
+<p>Most posts here belong to one of three ongoing arcs. Each arc has its own reading order, so you can start from the beginning or jump to what you need.</p>
+<p>Pick an arc from the <strong>Series</strong> menu at the top of the page. If you’re new here, start with <strong>Causal Inference</strong> — it’s the foundation the other two build on.</p>
+<div class="grid series-grid">
+<div class="g-col-12 g-col-md-4">
+<section id="causal-inference" class="level3 series-card card-causal">
+<h3 class="anchored" data-anchor-id="causal-inference">🟢 Causal Inference</h3>
+<p>Identification strategies, potential outcomes, DAGs, and the methods that let you defend a number in front of a skeptical stakeholder.</p>
+<p><strong>Covers:</strong> A/B testing, DiD, RDD, IV, synthetic control, matching, G-computation, DML, causal forests, uplift modelling.</p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="pricing-demand" class="level3 series-card card-pricing">
+<h3 class="anchored" data-anchor-id="pricing-demand">🟠 Pricing &amp; Demand</h3>
+<p>Price elasticity, two-sided market pricing, dynamic pricing, MMM, and the causal experiments that make pricing decisions defensible.</p>
+<p><strong>Covers:</strong> elasticity estimation, personalized pricing, MMM, geo experiments, revenue optimization, marketplace dynamics.</p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="forecasting" class="level3 series-card card-forecasting">
+<h3 class="anchored" data-anchor-id="forecasting">🔵 Forecasting</h3>
+<p>Probabilistic forecasting, model evaluation, and where forecasting stops being causal inference. From ETS to foundation models, with honesty about what each can and cannot do.</p>
+<p><strong>Covers:</strong> ETS, ARIMA, hierarchical reconciliation, probabilistic forecasting, conformal prediction, foundation models.</p>
+</section>
+</div>
+</div>
+<hr>
+<section id="how-the-arcs-connect" class="level2">
+<h2 class="anchored" data-anchor-id="how-the-arcs-connect">How the arcs connect</h2>
+<p>The three arcs are separate but they answer complementary questions.</p>
+<ul>
+<li><strong>Causal inference</strong> asks <em>what would have happened otherwise?</em></li>
+<li><strong>Pricing</strong> asks <em>what should we do?</em>, and reuses causal methods to measure the effect of price and marketing decisions.</li>
+<li><strong>Forecasting</strong> asks <em>what is likely to happen?</em>, and feeds both pricing decisions and experimentation planning.</li>
+</ul>
+<hr>
+<p><em>New posts publish weekly. If you want them in your inbox, subscribe via the index.xml or drop me a message on <a href="https://www.linkedin.com/in/joao-vieira-iseg/">LinkedIn</a>.</em></p>
 
 
 <!-- -->
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-
-<th>
-Description
-</th>
-
-<th>
-Categories
-</th>
-
-<th>
-Reading Time
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="Y2F1c2FsJTIwaW5mZXJlbmNlJTJDQSUyRkIlMjB0ZXN0aW5nJTJDbmV0d29yayUyMGVmZmVjdHMlMkNzcGlsbG92ZXJzJTJDUg==" data-listing-date-sort="1785279600000" data-listing-file-modified-sort="1783296883518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="55" data-listing-word-count-sort="10966" data-listing-title-sort="A/B Testing with Spillovers: A Runbook" data-listing-filename-sort="runbook.qmd">
-<td>
-<span class="listing-date">Jul 29, 2026</span>
-</td>
-<td>
-<a href="./posts/AB_Spillovers_Runbook/runbook.html" class="title listing-title">A/B Testing with Spillovers: A Runbook</a>
-</td>
-<td>
-<span class="listing-description">The practical companion to ‘When A/B Tests Lie’: a step-by-step path from detection to design to estimator for experiments where units can contaminate each other, with full R code.</span>
-</td>
-<td>
-<span class="listing-categories">causal inference, A/B testing, network effects, spillovers, R</span>
-</td>
-<td>
-<span class="listing-reading-time">55 min</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="QSUyRkIlMjB0ZXN0aW5nJTJDY2F1c2FsJTIwaW5mZXJlbmNlJTJDZXhwZXJpbWVudGF0aW9uJTJDUiUyQ0JheWVzaWFuJTIwc3RhdGlzdGljcyUyQ2Vjb25vbWV0cmljcw==" data-listing-date-sort="1783292400000" data-listing-file-modified-sort="1783667121134" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="61" data-listing-word-count-sort="12083" data-listing-title-sort="A/B Testing Is an Optimization Problem" data-listing-filename-sort="ab_testing_optimization.qmd">
-<td>
-<span class="listing-date">Jul 6, 2026</span>
-</td>
-<td>
-<a href="./posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html" class="title listing-title">A/B Testing Is an Optimization Problem</a>
-</td>
-<td>
-<span class="listing-description">Statistical significance was built for scientific inference, not for profit. A practitioner’s guide to reframing A/B tests as a Test &amp; Roll decision problem, with the closed-form sample size that maximises expected profit instead of minimising false positives.</span>
-</td>
-<td>
-<span class="listing-categories">A/B testing, causal inference, experimentation, R, Bayesian statistics, econometrics</span>
-</td>
-<td>
-<span class="listing-reading-time">61 min</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="Y2F1c2FsJTIwaW5mZXJlbmNlJTJDQSUyRkIlMjB0ZXN0aW5nJTJDbmV0d29yayUyMGVmZmVjdHMlMkNlY29ub21ldHJpY3MlMkNS" data-listing-date-sort="1782082800000" data-listing-file-modified-sort="1783296883515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="101" data-listing-word-count-sort="20129" data-listing-title-sort="When A/B Tests Lie: Spillovers, Interference, and SUTVA Violations" data-listing-filename-sort="when_ab_tests_lie.qmd">
-<td>
-<span class="listing-date">Jun 22, 2026</span>
-</td>
-<td>
-<a href="./posts/AB testing com Spillovers/when_ab_tests_lie.html" class="title listing-title">When A/B Tests Lie: Spillovers, Interference, and SUTVA Violations</a>
-</td>
-<td>
-<span class="listing-description">The fundamental assumption of A/B testing fails silently in every platform where users share content, compete for attention, or trade in the same market. A complete practitioner guide to detecting, measuring, and designing around spillovers, with real cases from Kuaishou, Amazon, and Facebook. With full R implementation.</span>
-</td>
-<td>
-<span class="listing-categories">causal inference, A/B testing, network effects, econometrics, R</span>
-</td>
-<td>
-<span class="listing-reading-time">101 min</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-categories="QSUyRkIlMjB0ZXN0aW5nJTJDY2F1c2FsJTIwaW5mZXJlbmNlJTJDZXhwZXJpbWVudGF0aW9uJTJDUiUyQ0JheWVzaWFuJTIwc3RhdGlzdGljcyUyQ2Vjb25vbWV0cmljcw==" data-listing-date-sort="1781391600000" data-listing-file-modified-sort="1783296883511" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="86" data-listing-word-count-sort="17035" data-listing-title-sort="From RCTs to A/B Tests: A Practitioner's Guide to Trustworthy Experimentation" data-listing-filename-sort="ab_test_probably_wrong.qmd">
-<td>
-<span class="listing-date">Jun 14, 2026</span>
-</td>
-<td>
-<a href="./posts/AB Testing/ab_test_probably_wrong.html" class="title listing-title">From RCTs to A/B Tests: A Practitioner’s Guide to Trustworthy Experimentation</a>
-</td>
-<td>
-<span class="listing-description">The RCT is the gold standard of causal inference. The A/B test is its industrial implementation, and it is harder to do correctly than most organisations admit. A complete practitioner guide covering design, diagnostics, power, sequential testing, fat tails, interference, and Bayesian decision theory. With full R implementation.</span>
-</td>
-<td>
-<span class="listing-categories">A/B testing, causal inference, experimentation, R, Bayesian statistics, econometrics</span>
-</td>
-<td>
-<span class="listing-reading-time">86 min</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-categories="Y2F1c2FsJTIwaW5mZXJlbmNlJTJDZWNvbm9tZXRyaWNzJTJDZGlmZmVyZW5jZS1pbi1kaWZmZXJlbmNlcyUyQ1I=" data-listing-date-sort="1780873200000" data-listing-file-modified-sort="1783296883538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="44" data-listing-word-count-sort="8744" data-listing-title-sort="The Causal Compass: From Classical DiD to the Callaway–Sant'Anna Framework" data-listing-filename-sort="did_for_ceos.qmd">
-<td>
-<span class="listing-date">Jun 8, 2026</span>
-</td>
-<td>
-<a href="./posts/DID/did_for_ceos.html" class="title listing-title">The Causal Compass: From Classical DiD to the Callaway–Sant’Anna Framework</a>
-</td>
-<td>
-<span class="listing-description">Why staggered rollout analyses using TWFE can be misleading, and how to fix it. A practitioner’s guide from the canonical 2×2 DiD to cohort-time ATTs, with full R implementation.</span>
-</td>
-<td>
-<span class="listing-categories">causal inference, econometrics, difference-in-differences, R</span>
-</td>
-<td>
-<span class="listing-reading-time">44 min</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-categories="dGhlb3J5JTJDY2F1c2FsJTIwaW5mZXJlbmNlJTJDZWNvbm9tZXRyaWNz" data-listing-date-sort="1780527600000" data-listing-file-modified-sort="1783296883538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4454" data-listing-title-sort="What Is a Counterfactual?" data-listing-filename-sort="what-is-counterfactual-index.qmd">
-<td>
-<span class="listing-date">Jun 4, 2026</span>
-</td>
-<td>
-<a href="./posts/What_is_counterfactual/what-is-counterfactual-index.html" class="title listing-title">What Is a Counterfactual?</a>
-</td>
-<td>
-<span class="listing-description">The fundamental question of causal inference: what would have happened? And how we construct that answer in practice to support business decisions.</span>
-</td>
-<td>
-<span class="listing-categories">theory, causal inference, econometrics</span>
-</td>
-<td>
-<span class="listing-reading-time">23 min</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1099,15 +907,78 @@ Reading Time
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "All Posts"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: posts</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "date desc"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  type: table</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: true</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: [date, title, description, categories, reading-time]</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> false</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Series"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Three arcs, one goal: turn a business question into a defensible number."</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> false</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Most posts here belong to one of three ongoing arcs. Each arc has its</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>own reading order, so you can start from the beginning or jump to what</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>you need.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Pick an arc from the **Series** menu at the top of the page.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>If you're new here, start with **Causal Inference** — it's the</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>foundation the other two build on.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>::: {.grid .series-grid}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>::: {.g-col-12 .g-col-md-4}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>::: {.series-card .card-causal}</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🟢 Causal Inference</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Identification strategies, potential outcomes, DAGs, and the methods</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>that let you defend a number in front of a skeptical stakeholder.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>**Covers:** A/B testing, DiD, RDD, IV, synthetic control, matching,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>G-computation, DML, causal forests, uplift modelling.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>::: {.g-col-12 .g-col-md-4}</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>::: {.series-card .card-pricing}</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🟠 Pricing &amp; Demand</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>Price elasticity, two-sided market pricing, dynamic pricing, MMM, and</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>the causal experiments that make pricing decisions defensible.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>**Covers:** elasticity estimation, personalized pricing, MMM, geo</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>experiments, revenue optimization, marketplace dynamics.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>::: {.g-col-12 .g-col-md-4}</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>::: {.series-card .card-forecasting}</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🔵 Forecasting</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>Probabilistic forecasting, model evaluation, and where forecasting</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>stops being causal inference. From ETS to foundation models, with</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>honesty about what each can and cannot do.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>**Covers:** ETS, ARIMA, hierarchical reconciliation, probabilistic</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>forecasting, conformal prediction, foundation models.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## How the arcs connect</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>The three arcs are separate but they answer complementary questions.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Causal inference** asks *what would have happened otherwise?*</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Pricing** asks *what should we do?*, and reuses causal methods to</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>  measure the effect of price and marketing decisions.</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Forecasting** asks *what is likely to happen?*, and feeds both</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>  pricing decisions and experimentation planning.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>*New posts publish weekly. If you want them in your inbox, subscribe</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>via the index.xml or drop me a message on</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">LinkedIn</span><span class="co">](https://www.linkedin.com/in/joao-vieira-iseg/)</span>.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

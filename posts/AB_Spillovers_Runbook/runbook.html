@@ -64,13 +64,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../favicon.ico" rel="icon">
+<link href="../../foto3.jpeg" rel="icon" type="image/jpeg">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -82,9 +81,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-09fdf1c988cf04e6fc3f8b602695d7e1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-5471fee98bb1022e344fa01fd8cd8237.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-09fdf1c988cf04e6fc3f8b602695d7e1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c3ec530b6f8a19b58ffd72ce98371a5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-6ea507b90afd36dfcf636ae1abab9ce3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c3ec530b6f8a19b58ffd72ce98371a5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,26 +111,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -161,18 +147,6 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="A/B Testing with Spillovers: A Runbook – The Causal Layer">
-<meta property="og:description" content="The practical companion to ‘When A/B Tests Lie’: a step-by-step path from detection to design to estimator for experiments where units can contaminate each other, with full R code.">
-<meta property="og:image" content="https://joaovieira22.github.io/posts/AB_Spillovers_Runbook/runbook_files/figure-html/unnamed-chunk-1-1.png">
-<meta property="og:site_name" content="The Causal Layer">
-<meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1536">
-<meta name="twitter:title" content="A/B Testing with Spillovers: A Runbook – The Causal Layer">
-<meta name="twitter:description" content="The practical companion to ‘When A/B Tests Lie’: a step-by-step path from detection to design to estimator for experiments where units can contaminate each other, with full R code.">
-<meta name="twitter:image" content="https://joaovieira22.github.io/posts/AB_Spillovers_Runbook/runbook_files/figure-html/unnamed-chunk-1-1.png">
-<meta name="twitter:image-height" content="960">
-<meta name="twitter:image-width" content="1536">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -344,6 +318,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../foto3.jpeg" alt="" class="navbar-logo light-content">
+    <img src="../../foto3.jpeg" alt="" class="navbar-logo dark-content">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">The Causal Layer</span>
     </a>
@@ -358,9 +336,37 @@ window.Quarto = {
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Series</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-series">    
+        <li>
+    <a class="dropdown-item" href="../../series.html">
+ <span class="dropdown-text">All Series</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../series/causal-inference.html">
+ <span class="dropdown-text">Causal Inference</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../series/pricing.html">
+ <span class="dropdown-text">Pricing &amp; Demand</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../series/forecasting.html">
+ <span class="dropdown-text">Forecasting</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../posts.html"> 
-<span class="menu-text">Posts</span></a>
+<span class="menu-text">All Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources.qmd"> 
+<span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
@@ -369,12 +375,17 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/joaovieira22"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/joao-vieira-iseg/"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://linkedin.com/in/joaoviei7a"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="mailto:joaoviei7a@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -496,7 +507,7 @@ window.Quarto = {
 </section>
 <section id="step-1-decide-do-you-actually-have-a-spillover-problem" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-decide-do-you-actually-have-a-spillover-problem">Step 1: Decide: Do you actually have a spillover problem?</h2>
-<p>Every A/B test rests on one assumption that almost nobody writes down: <strong>SUTVA</strong>, the Stable Unit Treatment Value Assumption. It says your outcome depends only on <em>your</em> treatment assignment, not on anyone else’s. Rubin (1980) formalised it as <span class="math inline">Y_i = y_i(Z_i)</span>: your potential outcome is a function of your own assignment, full stop. (For the full formalisation, including the three estimands worth keeping distinct and what a misspecified exposure mapping does to identification, see <a href="https://joaovieira22.github.io/posts/AB%20testing%20com%20Spillovers/when_ab_tests_lie.html#sec-sutva">Sections 1.1–1.2 of the companion post</a>.)</p>
+<p>Every A/B test rests on one assumption that almost nobody writes down: <strong>SUTVA</strong>, the Stable Unit Treatment Value Assumption. It says your outcome depends only on <em>your</em> treatment assignment, not on anyone else’s. Rubin (1980) formalised it as <span class="math inline">\(Y_i = y_i(Z_i)\)</span>: your potential outcome is a function of your own assignment, full stop. (For the full formalisation, including the three estimands worth keeping distinct and what a misspecified exposure mapping does to identification, see <a href="https://joaovieira22.github.io/posts/AB%20testing%20com%20Spillovers/when_ab_tests_lie.html#sec-sutva">Sections 1.1–1.2 of the companion post</a>.)</p>
 <p>This holds by default when your users genuinely don’t interact: you test a checkout button colour, User A’s screen has no way of reaching User B’s purchase decision. Kohavi, Tang, and Xu (2020) note that most classic web experimentation lives exactly here, by product design rather than luck.</p>
 <p>It breaks the moment any of the following is true for your product:</p>
 <ul>
@@ -507,7 +518,7 @@ window.Quarto = {
 <p>If none of these apply, SUTVA is fine, run your standard test, and you can stop reading. If any of them apply, you have one (or more) of three structurally different problems, and which one determines everything downstream (the diagnostic, the fix, the estimator). Get this step wrong and you’ll apply the right tool to the wrong failure.</p>
 <section id="the-three-kinds-of-spillover" class="level3">
 <h3 class="anchored" data-anchor-id="the-three-kinds-of-spillover">The three kinds of spillover</h3>
-<div class="cell" data-layout-align="default">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-spillover-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -698,9 +709,9 @@ Figure&nbsp;1: Which kind of spillover are you dealing with?
 </tr>
 </tbody>
 </table>
-<p><strong>Step 2: compute each unit’s treatment intensity.</strong> For unit <span class="math inline">i</span> in cluster <span class="math inline">j</span> of size <span class="math inline">N_j</span>, treatment intensity is the fraction of <em>other</em> units in the cluster that are treated:</p>
-<p><span class="math display">T^{\text{intensity}}_{ij} = \frac{\sum_{a \neq i} T_{aj}}{N_j - 1}</span></p>
-<p>Unit <span class="math inline">i</span> is deliberately excluded from its own denominator, otherwise your own treatment status would mechanically correlate with your own intensity score.</p>
+<p><strong>Step 2: compute each unit’s treatment intensity.</strong> For unit <span class="math inline">\(i\)</span> in cluster <span class="math inline">\(j\)</span> of size <span class="math inline">\(N_j\)</span>, treatment intensity is the fraction of <em>other</em> units in the cluster that are treated:</p>
+<p><span class="math display">\[T^{\text{intensity}}_{ij} = \frac{\sum_{a \neq i} T_{aj}}{N_j - 1}\]</span></p>
+<p>Unit <span class="math inline">\(i\)</span> is deliberately excluded from its own denominator, otherwise your own treatment status would mechanically correlate with your own intensity score.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -715,15 +726,15 @@ Figure&nbsp;1: Which kind of spillover are you dealing with?
 </div>
 </div>
 <p><strong>Step 3: run the regression.</strong></p>
-<p><span class="math display">Y_{ij} = \alpha + \beta \, T_{ij} + f\!\left(T^{\text{intensity}}_{ij}\right) + g\!\left(N_j\right) + \theta \, Y^{0}_{ij} + \epsilon_{ij}</span></p>
+<p><span class="math display">\[Y_{ij} = \alpha + \beta \, T_{ij} + f\!\left(T^{\text{intensity}}_{ij}\right) + g\!\left(N_j\right) + \theta \, Y^{0}_{ij} + \epsilon_{ij}\]</span></p>
 <ul>
-<li><span class="math inline">\beta</span> on <code>treat</code> is your <strong>direct effect</strong>: what a standard A/B test would have reported.</li>
-<li><span class="math inline">f(\cdot)</span> on <code>treat_intensity</code> is the <strong>spillover effect</strong>.</li>
-<li><span class="math inline">g(N_j)</span> controls for cluster size; leave this out and you’ll confound cluster-size effects with spillover.</li>
-<li><span class="math inline">Y^0_{ij}</span> is the pre-period value of the outcome, included purely for precision.</li>
+<li><span class="math inline">\(\beta\)</span> on <code>treat</code> is your <strong>direct effect</strong>: what a standard A/B test would have reported.</li>
+<li><span class="math inline">\(f(\cdot)\)</span> on <code>treat_intensity</code> is the <strong>spillover effect</strong>.</li>
+<li><span class="math inline">\(g(N_j)\)</span> controls for cluster size; leave this out and you’ll confound cluster-size effects with spillover.</li>
+<li><span class="math inline">\(Y^0_{ij}\)</span> is the pre-period value of the outcome, included purely for precision.</li>
 <li>Cluster your standard errors at the cluster level, not the unit level. Skip this and you’re not just biased, your confidence intervals stop being valid probability statements (Eckles, Karrer, and Ugander, 2017).</li>
 </ul>
-<p>The <strong>Flywheel Effect</strong> (what you’d actually get if everyone in a cluster were treated, i.e.&nbsp;a full rollout) is <span class="math inline">\beta + f(1)</span>. This is the number that should drive your launch decision, not <span class="math inline">\beta</span> alone.</p>
+<p>The <strong>Flywheel Effect</strong> (what you’d actually get if everyone in a cluster were treated, i.e.&nbsp;a full rollout) is <span class="math inline">\(\beta + f(1)\)</span>. This is the number that should drive your launch decision, not <span class="math inline">\(\beta\)</span> alone.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -856,13 +867,13 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </div>
-<p><em>Density check:</em> plot the distribution of <span class="math inline">T^{\text{intensity}}_{ij}</span>. If it’s a spike at 0.5 with no spread, you don’t have enough variation to identify spillovers this way, so go back and build smaller, more granular clusters.</p>
+<p><em>Density check:</em> plot the distribution of <span class="math inline">\(T^{\text{intensity}}_{ij}\)</span>. If it’s a spike at 0.5 with no spread, you don’t have enough variation to identify spillovers this way, so go back and build smaller, more granular clusters.</p>
 <p>This is exactly the path Amazon followed: 111,305 advertisers, 3,197 clusters built from an advertiser-keyword bipartite graph. The direct effect was +47.26 (not significant). The spillover coefficient was −993.25 (p &lt; 0.01), twenty times the direct effect, in the opposite direction. The placebo test was null on all nine metrics they checked. The permutation test put the observed coefficient at p = 0.006. That’s what convinced them it was real, not noise.</p>
 </section>
 <section id="if-you-suspect-contagion-kind-2-the-wgsr-metric" class="level3">
 <h3 class="anchored" data-anchor-id="if-you-suspect-contagion-kind-2-the-wgsr-metric">If you suspect contagion (Kind 2): the WGSR metric</h3>
 <p>If your mechanism is social (sharing, messaging, following), the Treatment Intensity regression above still works, but there’s a more direct diagnostic built specifically for social graphs: <strong>Within-Group Share Ratio (WGSR)</strong>, from Min et al.&nbsp;(2026). (The full derivation, the linear relationship between WGSR and ATE bias, and how Kuaishou used it pre/during/post-experiment are in <a href="https://joaovieira22.github.io/posts/AB%20testing%20com%20Spillovers/when_ab_tests_lie.html#sec-wgsr">Section 4.3 of the companion post</a>.)</p>
-<p><span class="math display">\text{WGSR} = \frac{\text{interactions within the same experimental group}}{\text{total interactions}}</span></p>
+<p><span class="math display">\[\text{WGSR} = \frac{\text{interactions within the same experimental group}}{\text{total interactions}}\]</span></p>
 <p>Under perfect SUTVA, WGSR = 1.0: every interaction stays inside its own arm. Under plain user-level randomisation with no network structure, WGSR ≈ 0.5, a coin flip: half of all interactions cross the treatment/control boundary.</p>
 <p>At Kuaishou, that’s exactly what they found under standard user-level randomisation: <strong>WGSR = 49.68%</strong>. After switching to cluster-based randomisation (covered in Step 3), WGSR jumped to <strong>90.39%</strong>. Min et al.&nbsp;found a near-linear relationship (R² &gt; 0.999 in their setting) between WGSR and the resulting bias in your ATE, which means you can use WGSR not just to detect the problem but to roughly calibrate how much of it you’re absorbing.</p>
 <div class="cell" data-layout-align="center">
@@ -1054,14 +1065,14 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h3 class="anchored" data-anchor-id="track-b-positive-spillover-contagion.-cluster-on-the-social-graph-then-recover-power-with-cupac">Track B: Positive spillover / contagion. Cluster on the social graph, then recover power with CUPAC</h3>
 <p>This is the Kuaishou playbook. Graph cluster randomisation itself goes back to Ugander, Karrer, Backstrom, and Kleinberg (2013); Kuaishou’s version is the most fully worked-out one available, because they had to solve both halves of the trade-off (bias <em>and</em> the variance it costs you) at production scale. (For the bias-variance trade-off behind cluster randomisation in general, and how it compares to switchback, ego-alter, and bipartite designs, see <a href="https://joaovieira22.github.io/posts/AB%20testing%20com%20Spillovers/when_ab_tests_lie.html#sec-cluster-randomisation">Chapter 5 of the companion post</a>.)</p>
 <p><strong>Step 1: build a multi-behaviour interaction graph.</strong> Don’t rely on a single relationship type. Combine follow, comment, like, share, and message into one weighted graph:</p>
-<p><span class="math display">W_{ij} = \sum_{d=1}^{D} \omega_d \cdot s^{(d)}_{ij}</span></p>
-<p>where <span class="math inline">s^{(d)}_{ij}</span> is the interaction strength of behaviour type <span class="math inline">d</span> between users <span class="math inline">i</span> and <span class="math inline">j</span>, and <span class="math inline">\omega_d</span> its importance weight. Multiple behaviour types make the resulting clusters more stable over time than a single-relationship graph would.</p>
+<p><span class="math display">\[W_{ij} = \sum_{d=1}^{D} \omega_d \cdot s^{(d)}_{ij}\]</span></p>
+<p>where <span class="math inline">\(s^{(d)}_{ij}\)</span> is the interaction strength of behaviour type <span class="math inline">\(d\)</span> between users <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, and <span class="math inline">\(\omega_d\)</span> its importance weight. Multiple behaviour types make the resulting clusters more stable over time than a single-relationship graph would.</p>
 <p><strong>Step 2: run Balanced Louvain, not plain Louvain.</strong> Standard Louvain optimises modularity alone, which tends to produce a few enormous clusters and many tiny ones, useless for safe traffic-splitting. Balanced Louvain (Min et al., 2026) fixes this with two mechanisms working together.</p>
 <p><em>A soft size penalty during optimisation:</em></p>
-<p><span class="math display">S_i^C = \Delta Q_i^C - \alpha \cdot P(|C|), \quad P(|C|) = \begin{cases} 0 &amp; \text{if } |C| \leq \tau \\ \bar{k} \cdot \frac{|C| - \tau}{\tau} &amp; \text{if } |C| &gt; \tau \end{cases}</span></p>
-<p>where <span class="math inline">\tau = N_{\max}/2</span> and <span class="math inline">\bar{k}</span> is the average node degree. This penalises clusters only once they cross a threshold, so small and medium clusters are untouched.</p>
-<p><em>A hard post-processing split:</em> once Louvain converges, any cluster still over <span class="math inline">N_{\max}</span> gets split by repeatedly moving its <strong>least internally-connected nodes</strong> into a new cluster, until every cluster is under the limit. This preserves each cluster’s dense core while shedding its loosely-attached fringe.</p>
-<p>Recommended starting parameters: <span class="math inline">\alpha \in [0.2, 0.5]</span>, and set <span class="math inline">N_{\max}</span> so your largest cluster is no more than 0.1–1% of your total population. At production scale, Kuaishou ran this with <span class="math inline">\alpha = 0.3</span>, <span class="math inline">N_{\max} = 250{,}000</span> on ~370 million users, producing 73,340 clusters averaging 5,045 users each, with overall modularity 0.466.</p>
+<p><span class="math display">\[S_i^C = \Delta Q_i^C - \alpha \cdot P(|C|), \quad P(|C|) = \begin{cases} 0 &amp; \text{if } |C| \leq \tau \\ \bar{k} \cdot \frac{|C| - \tau}{\tau} &amp; \text{if } |C| &gt; \tau \end{cases}\]</span></p>
+<p>where <span class="math inline">\(\tau = N_{\max}/2\)</span> and <span class="math inline">\(\bar{k}\)</span> is the average node degree. This penalises clusters only once they cross a threshold, so small and medium clusters are untouched.</p>
+<p><em>A hard post-processing split:</em> once Louvain converges, any cluster still over <span class="math inline">\(N_{\max}\)</span> gets split by repeatedly moving its <strong>least internally-connected nodes</strong> into a new cluster, until every cluster is under the limit. This preserves each cluster’s dense core while shedding its loosely-attached fringe.</p>
+<p>Recommended starting parameters: <span class="math inline">\(\alpha \in [0.2, 0.5]\)</span>, and set <span class="math inline">\(N_{\max}\)</span> so your largest cluster is no more than 0.1–1% of your total population. At production scale, Kuaishou ran this with <span class="math inline">\(\alpha = 0.3\)</span>, <span class="math inline">\(N_{\max} = 250{,}000\)</span> on ~370 million users, producing 73,340 clusters averaging 5,045 users each, with overall modularity 0.466.</p>
 <p><strong>Step 3: check WGSR went up before you trust the design.</strong> Re-run the WGSR calculation on your new cluster assignment. Kuaishou went from WGSR 49.68% (user-level) to 90.39% (cluster-level) this way; confirm you get a comparably large jump before proceeding.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
@@ -1121,8 +1132,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p><strong>Step 4: recover the statistical power you just gave up, with CUPAC.</strong> Going from millions of users to tens of thousands of clusters as your independent unit costs you a lot of power. CUPAC (Control Using Predictions As Covariates) gets a big chunk of it back:</p>
 <ol type="1">
 <li>Apply a delta-method transformation to turn your ratio metric into a bucket-level pseudo-outcome that’s easier to model and has tractable variance.</li>
-<li>Train a predictive model on <span class="math inline">K-1</span> folds of <strong>control</strong> buckets only, then generate out-of-sample predictions for the held-out fold (cross-fitting). Skipping this step matters more than it sounds: without cross-fitting, Min et al.&nbsp;(2026) measured a Type I error rate of 8.54% against a nominal 5%; with it, 5.08%.</li>
-<li>Adjust: <span class="math inline">Z_b^{\text{CUPAC}} = Z_b - \theta(\hat{Z}_b - \mathbb{E}[\hat{Z}])</span>.</li>
+<li>Train a predictive model on <span class="math inline">\(K-1\)</span> folds of <strong>control</strong> buckets only, then generate out-of-sample predictions for the held-out fold (cross-fitting). Skipping this step matters more than it sounds: without cross-fitting, Min et al.&nbsp;(2026) measured a Type I error rate of 8.54% against a nominal 5%; with it, 5.08%.</li>
+<li>Adjust: <span class="math inline">\(Z_b^{\text{CUPAC}} = Z_b - \theta(\hat{Z}_b - \mathbb{E}[\hat{Z}])\)</span>.</li>
 </ol>
 <p>On Kuaishou’s actual 7-day retention metric, this was the difference between a dead end and a finding:</p>
 <table class="caption-top table">
@@ -1172,14 +1183,14 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="track-c-cross-metric-spillover-the-seesaw.-set-a-hurdle-rate-not-a-new-design" class="level3">
 <h3 class="anchored" data-anchor-id="track-c-cross-metric-spillover-the-seesaw.-set-a-hurdle-rate-not-a-new-design">Track C: Cross-metric spillover (the Seesaw). Set a hurdle rate, not a new design</h3>
 <p>If Step 1/2 told you this is a Seesaw, stop thinking about clustering: there’s no cross-unit contamination to contain, so a redesign doesn’t apply. The fix is a decision rule, derived in closed form by Li, Luo, and Zhang (2025).</p>
-<p><strong>The idea.</strong> Instead of adopting every change that clears a zero threshold on your primary metric, require it to clear a <strong>positive hurdle</strong> <span class="math inline">z</span>. The optimal hurdle, in the symmetric case where both metrics have the same mean <span class="math inline">\mu</span> and standard deviation, is:</p>
-<p><span class="math display">z^* = \frac{\rho - 1}{\rho + 1}\,\mu</span></p>
-<p>where <span class="math inline">\rho</span> is the correlation between your primary and secondary metric, estimated from your historical experiment data.</p>
-<p><strong>What this means in practice.</strong> If your primary and secondary metrics are strongly positively correlated (<span class="math inline">\rho \to 1</span>), <span class="math inline">z^* \to 0</span>: you don’t need a hurdle, a win on one metric is a win on both. If they’re uncorrelated (<span class="math inline">\rho = 0</span>), <span class="math inline">z^* = -\mu</span>: set your hurdle equal to the average harm the innovation does to your secondary metric. If they’re strongly negatively correlated (<span class="math inline">\rho \to -1</span>), <span class="math inline">z^* \to \infty</span>: at that point, decentralised adoption on the primary metric alone isn’t salvageable with a hurdle, and you need joint measurement instead.</p>
-<p><strong>How to estimate <span class="math inline">\rho</span> and <span class="math inline">\mu</span> for your own hurdle.</strong> Pull your last dozen or so A/B tests in this product area. For each, record the effect on your primary metric and the effect on the metric you suspect is the hidden cost. Compute the correlation between those two columns: that’s your <span class="math inline">\rho</span>. The mean of the secondary-metric column is your <span class="math inline">\mu</span>.</p>
-<p><strong>Worked example, the consumer-lending case.</strong> Wang and Xiao (2025) found promotions lifted conversion by +12.3pp and lifted 60-day default by +1.8pp, both correctly measured, no estimation bias, just two metrics nobody had looked at together. With <span class="math inline">\mu = -0.3</span>, <span class="math inline">\sigma = 1</span>, <span class="math inline">\rho = -0.5</span> (illustrative parameters from the same family of models):</p>
-<p><span class="math display">z^* = \frac{-0.5 - 1}{-0.5 + 1} \times (-0.3) = 0.9</span></p>
-<p>Under a zero hurdle, roughly half of “passing” innovations get adopted, each one individually clearing its primary-metric bar, yet the simulation below shows what happens to overall performance when you track <span class="math inline">U + V</span> (primary plus secondary) instead of <span class="math inline">U</span> alone.</p>
+<p><strong>The idea.</strong> Instead of adopting every change that clears a zero threshold on your primary metric, require it to clear a <strong>positive hurdle</strong> <span class="math inline">\(z\)</span>. The optimal hurdle, in the symmetric case where both metrics have the same mean <span class="math inline">\(\mu\)</span> and standard deviation, is:</p>
+<p><span class="math display">\[z^* = \frac{\rho - 1}{\rho + 1}\,\mu\]</span></p>
+<p>where <span class="math inline">\(\rho\)</span> is the correlation between your primary and secondary metric, estimated from your historical experiment data.</p>
+<p><strong>What this means in practice.</strong> If your primary and secondary metrics are strongly positively correlated (<span class="math inline">\(\rho \to 1\)</span>), <span class="math inline">\(z^* \to 0\)</span>: you don’t need a hurdle, a win on one metric is a win on both. If they’re uncorrelated (<span class="math inline">\(\rho = 0\)</span>), <span class="math inline">\(z^* = -\mu\)</span>: set your hurdle equal to the average harm the innovation does to your secondary metric. If they’re strongly negatively correlated (<span class="math inline">\(\rho \to -1\)</span>), <span class="math inline">\(z^* \to \infty\)</span>: at that point, decentralised adoption on the primary metric alone isn’t salvageable with a hurdle, and you need joint measurement instead.</p>
+<p><strong>How to estimate <span class="math inline">\(\rho\)</span> and <span class="math inline">\(\mu\)</span> for your own hurdle.</strong> Pull your last dozen or so A/B tests in this product area. For each, record the effect on your primary metric and the effect on the metric you suspect is the hidden cost. Compute the correlation between those two columns: that’s your <span class="math inline">\(\rho\)</span>. The mean of the secondary-metric column is your <span class="math inline">\(\mu\)</span>.</p>
+<p><strong>Worked example, the consumer-lending case.</strong> Wang and Xiao (2025) found promotions lifted conversion by +12.3pp and lifted 60-day default by +1.8pp, both correctly measured, no estimation bias, just two metrics nobody had looked at together. With <span class="math inline">\(\mu = -0.3\)</span>, <span class="math inline">\(\sigma = 1\)</span>, <span class="math inline">\(\rho = -0.5\)</span> (illustrative parameters from the same family of models):</p>
+<p><span class="math display">\[z^* = \frac{-0.5 - 1}{-0.5 + 1} \times (-0.3) = 0.9\]</span></p>
+<p>Under a zero hurdle, roughly half of “passing” innovations get adopted, each one individually clearing its primary-metric bar, yet the simulation below shows what happens to overall performance when you track <span class="math inline">\(U + V\)</span> (primary plus secondary) instead of <span class="math inline">\(U\)</span> alone.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1238,7 +1249,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </div>
-<p><strong>Pre-register the hurdle, don’t set it after the fact.</strong> Setting <span class="math inline">z^*</span> once you’ve already seen the experiment’s outcome turns a principled threshold into researcher degrees of freedom dressed up as rigour. Estimate <span class="math inline">\rho</span> and <span class="math inline">\mu</span> from <em>historical</em> experiments and lock the hurdle in before the next one runs.</p>
+<p><strong>Pre-register the hurdle, don’t set it after the fact.</strong> Setting <span class="math inline">\(z^*\)</span> once you’ve already seen the experiment’s outcome turns a principled threshold into researcher degrees of freedom dressed up as rigour. Estimate <span class="math inline">\(\rho\)</span> and <span class="math inline">\(\mu\)</span> from <em>historical</em> experiments and lock the hurdle in before the next one runs.</p>
 <p>This is exactly the move Wang and Xiao (2025) made in the lending case, just implemented as a more granular per-customer policy rather than a single global hurdle. See later in this section, which covers exactly that.</p>
 </section>
 <section id="other-design-options-and-when-to-reach-for-them" class="level3">
@@ -1252,7 +1263,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </section>
 <section id="picking-your-design" class="level3">
 <h3 class="anchored" data-anchor-id="picking-your-design">Picking your design</h3>
-<div class="cell" data-layout-align="default">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
@@ -1295,8 +1306,8 @@ flowchart TD
 <p>Everything in this step assumes your experiment already ran with plain unit-level randomisation, and you can’t go back and re-run it. You still want a defensible number. This is also where you go if Step 1 told you the spillover is between <em>metrics</em> (the Seesaw), since that case never needed a redesign in the first place. It needs the targeting logic covered later in this step.</p>
 <section id="the-doubly-robust-estimator-adapted-for-spillovers" class="level3">
 <h3 class="anchored" data-anchor-id="the-doubly-robust-estimator-adapted-for-spillovers">The Doubly Robust estimator, adapted for spillovers</h3>
-<p>The standard DR estimator extends to network interference by conditioning on an <strong>exposure mapping</strong> <span class="math inline">E_i</span>, the idea Hudgens and Halloran (2008) introduced to make interference tractable, some summary of how much spillover exposure unit <span class="math inline">i</span> got (e.g.&nbsp;the treatment intensity from the Step 2 regression, or the fraction of treated friends):</p>
-<p><span class="math display">\hat\tau_{DR} = \frac{1}{n}\sum_{i=1}^n \left[ \frac{T_i - \hat e(X_i, E_i)}{\hat e(X_i, E_i)(1 - \hat e(X_i, E_i))} \left(Y_i - \hat m_{T_i}(X_i, E_i)\right) + \hat m_1(X_i, E_i) - \hat m_0(X_i, E_i) \right]</span></p>
+<p>The standard DR estimator extends to network interference by conditioning on an <strong>exposure mapping</strong> <span class="math inline">\(E_i\)</span>, the idea Hudgens and Halloran (2008) introduced to make interference tractable, some summary of how much spillover exposure unit <span class="math inline">\(i\)</span> got (e.g.&nbsp;the treatment intensity from the Step 2 regression, or the fraction of treated friends):</p>
+<p><span class="math display">\[\hat\tau_{DR} = \frac{1}{n}\sum_{i=1}^n \left[ \frac{T_i - \hat e(X_i, E_i)}{\hat e(X_i, E_i)(1 - \hat e(X_i, E_i))} \left(Y_i - \hat m_{T_i}(X_i, E_i)\right) + \hat m_1(X_i, E_i) - \hat m_0(X_i, E_i) \right]\]</span></p>
 <p>Why bother with the doubly robust version instead of a plain regression: the IPW term corrects your estimate if the outcome model is wrong, and the regression term corrects it if the propensity model is wrong. You only need to get <em>one</em> of the two right. (<a href="https://joaovieira22.github.io/posts/AB%20testing%20com%20Spillovers/when_ab_tests_lie.html#sec-dr-estimation">Full derivation →</a>)</p>
 <p><strong>Three practical decisions, in order of how much they matter.</strong></p>
 <ol type="1">
@@ -1308,7 +1319,7 @@ flowchart TD
 <section id="causal-forests-for-who-gets-hurt-or-helped-the-most" class="level3">
 <h3 class="anchored" data-anchor-id="causal-forests-for-who-gets-hurt-or-helped-the-most">Causal Forests for who gets hurt or helped the most</h3>
 <p>A single average spillover-adjusted effect tells you whether to ship. It doesn’t tell you whether the effect is uniform or concentrated in a subgroup, and for the Seesaw case in particular, that distinction is the whole game. (<a href="https://joaovieira22.github.io/posts/AB%20testing%20com%20Spillovers/when_ab_tests_lie.html#sec-causal-forests">More on heterogeneous spillover effects →</a>)</p>
-<p>Causal Forests (Athey and Wager, 2019) estimate <span class="math inline">\tau(x) = \mathbb{E}[Y(1) - Y(0) \mid X = x]</span>, the treatment effect as a function of covariates. Add your exposure variable <span class="math inline">E_i</span> as one of the covariates and you get CATE estimates that vary along both individual characteristics <em>and</em> network exposure simultaneously.</p>
+<p>Causal Forests (Athey and Wager, 2019) estimate <span class="math inline">\(\tau(x) = \mathbb{E}[Y(1) - Y(0) \mid X = x]\)</span>, the treatment effect as a function of covariates. Add your exposure variable <span class="math inline">\(E_i\)</span> as one of the covariates and you get CATE estimates that vary along both individual characteristics <em>and</em> network exposure simultaneously.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1368,10 +1379,10 @@ flowchart TD
 <p>This is where the Seesaw stops being an abstract hurdle rate and becomes an actual targeting rule you can ship. Instead of a single global hurdle, you exclude the specific customers whose predicted harm on the secondary metric is too high, using data you already logged, with no new experiment. (<a href="https://joaovieira22.github.io/posts/AB%20testing%20com%20Spillovers/when_ab_tests_lie.html#sec-ope-cvar">Full treatment, with the Switch-DR robustness check →</a>)</p>
 <p><strong>Step 1: estimate CATE for both metrics separately</strong> (you already did the risk one above; repeat for your primary metric).</p>
 <p><strong>Step 2: evaluate candidate policies offline with Doubly Robust OPE.</strong></p>
-<p><span class="math display">\hat V^{DR}(\pi) = \frac{1}{n} \sum_{i=1}^n \left[ \hat q_{\pi(X_i)}(X_i) + w_i \cdot (Y_i - \hat q_{T_i}(X_i)) \right], \quad w_i = \frac{\pi(T_i \mid X_i)}{\hat b(T_i \mid X_i)}</span></p>
+<p><span class="math display">\[\hat V^{DR}(\pi) = \frac{1}{n} \sum_{i=1}^n \left[ \hat q_{\pi(X_i)}(X_i) + w_i \cdot (Y_i - \hat q_{T_i}(X_i)) \right], \quad w_i = \frac{\pi(T_i \mid X_i)}{\hat b(T_i \mid X_i)}\]</span></p>
 <p>This lets you ask “what would my default rate have been under this alternative targeting rule?” using your existing logged experiment data, with no new rollout needed.</p>
 <p><strong>Step 3: add a CVaR safety constraint.</strong></p>
-<p><span class="math display">\Pi^{safe} = \left\{\pi \in \Pi : \hat R_{risk}(\pi) \leq \gamma \right\}, \quad \hat R_{risk}(\pi) = \text{CVaR}_\alpha\left[Y_{risk} \mid \pi(X)\right]</span></p>
+<p><span class="math display">\[\Pi^{safe} = \left\{\pi \in \Pi : \hat R_{risk}(\pi) \leq \gamma \right\}, \quad \hat R_{risk}(\pi) = \text{CVaR}_\alpha\left[Y_{risk} \mid \pi(X)\right]\]</span></p>
 <p>This caps your policy’s exposure to tail risk, not just its average risk, which matters when the cost of getting the riskiest customers wrong is disproportionate.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
@@ -1439,8 +1450,8 @@ flowchart TD
 </div>
 </div>
 <p>When estimating average potential outcomes under any exposure mapping, prefer the <strong>Hajek estimator</strong> over the unbiased-but-high-variance Horvitz-Thompson estimator, unless your sample is very small or your exposure conditions are evenly populated everywhere (<a href="https://joaovieira22.github.io/posts/AB%20testing%20com%20Spillovers/when_ab_tests_lie.html#sec-hajek">full comparison of the two →</a>):</p>
-<p><span class="math display">\hat\tau_{Hajek}(d, d') = \frac{\displaystyle\sum_i \frac{Y_i \cdot \mathbf{1}(E_i = d)}{\pi_i(d)}}{\displaystyle\sum_i \frac{\mathbf{1}(E_i = d)}{\pi_i(d)}} - \frac{\displaystyle\sum_i \frac{Y_i \cdot \mathbf{1}(E_i = d')}{\pi_i(d')}}{\displaystyle\sum_i \frac{\mathbf{1}(E_i = d')}{\pi_i(d')}}</span></p>
-<p>The small bias it introduces is usually a good trade for the variance reduction, the same logic Yuan et al.&nbsp;(2021) and Aronow and Samii (2017) both rely on. The inclusion probabilities <span class="math inline">\pi_i(d)</span> are rarely solvable in closed form, so estimate them by Monte Carlo, re-running your randomisation procedure many times and recording how often unit <span class="math inline">i</span> ends up in exposure condition <span class="math inline">d</span>.</p>
+<p><span class="math display">\[\hat\tau_{Hajek}(d, d') = \frac{\displaystyle\sum_i \frac{Y_i \cdot \mathbf{1}(E_i = d)}{\pi_i(d)}}{\displaystyle\sum_i \frac{\mathbf{1}(E_i = d)}{\pi_i(d)}} - \frac{\displaystyle\sum_i \frac{Y_i \cdot \mathbf{1}(E_i = d')}{\pi_i(d')}}{\displaystyle\sum_i \frac{\mathbf{1}(E_i = d')}{\pi_i(d')}}\]</span></p>
+<p>The small bias it introduces is usually a good trade for the variance reduction, the same logic Yuan et al.&nbsp;(2021) and Aronow and Samii (2017) both rely on. The inclusion probabilities <span class="math inline">\(\pi_i(d)\)</span> are rarely solvable in closed form, so estimate them by Monte Carlo, re-running your randomisation procedure many times and recording how often unit <span class="math inline">\(i\)</span> ends up in exposure condition <span class="math inline">\(d\)</span>.</p>
 <p>This is the most setup-intensive option in this whole runbook. Reach for it only when your business decision genuinely hinges on getting the exposure mapping right, not just on detecting that <em>some</em> spillover exists. Step 2’s diagnostics, plus a treatment-intensity-style DR estimate from earlier in this step, are enough for the large majority of launch decisions.</p>
 <p><strong>Your action at the end of Step 4:</strong> you should now have a single defensible number, a spillover-adjusted ATE or a targeting policy with an estimated effect under a safety constraint, ready to take into Step 5.</p>
 <hr>
@@ -1471,8 +1482,8 @@ flowchart TD
 <section id="when-its-genuinely-fine-to-skip-all-of-this" class="level3">
 <h3 class="anchored" data-anchor-id="when-its-genuinely-fine-to-skip-all-of-this">When it’s genuinely fine to skip all of this</h3>
 <p>Cluster randomisation buys you less bias at the cost of more variance, formally:</p>
-<p><span class="math display">\text{DEFF} = 1 + (m - 1) \cdot \text{ICC}</span></p>
-<p>where <span class="math inline">m</span> is your average cluster size and ICC is the intra-cluster correlation. Larger clusters and higher ICC both inflate your design effect, meaning your effective sample size shrinks faster than your nominal one.</p>
+<p><span class="math display">\[\text{DEFF} = 1 + (m - 1) \cdot \text{ICC}\]</span></p>
+<p>where <span class="math inline">\(m\)</span> is your average cluster size and ICC is the intra-cluster correlation. Larger clusters and higher ICC both inflate your design effect, meaning your effective sample size shrinks faster than your nominal one.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1537,7 +1548,7 @@ flowchart TD
 </section>
 <section id="the-full-checklist" class="level3">
 <h3 class="anchored" data-anchor-id="the-full-checklist">The full checklist</h3>
-<p><strong>Before the experiment.</strong> Map the interference mechanism (social, competitive, or resource-based): this single decision determines everything else. Choose your randomisation unit accordingly: user, cluster (social or competitive graph), time (switchback), or bipartite (two-sided marketplace). Define your spillover diagnostic in advance: WGSR ≥ 0.85 for social, sufficient treatment-intensity variation for competitive. If cross-metric spillover is plausible, pre-register your hurdle rate <span class="math inline">z^*</span> now, before you see results.</p>
+<p><strong>Before the experiment.</strong> Map the interference mechanism (social, competitive, or resource-based): this single decision determines everything else. Choose your randomisation unit accordingly: user, cluster (social or competitive graph), time (switchback), or bipartite (two-sided marketplace). Define your spillover diagnostic in advance: WGSR ≥ 0.85 for social, sufficient treatment-intensity variation for competitive. If cross-metric spillover is plausible, pre-register your hurdle rate <span class="math inline">\(z^*\)</span> now, before you see results.</p>
 <p><strong>During the experiment.</strong> Monitor your diagnostic daily: is WGSR holding above 0.85, is treatment intensity varying enough across clusters. Watch guardrail metrics for the Seesaw signature: primary up, secondary down, on metrics that don’t usually move together.</p>
 <p><strong>After the experiment.</strong> Run the placebo test (regress pre-period outcomes on your spillover diagnostic; it should come back null). Apply the right estimator if bias shows up: DR when you’re unsure whether your propensity or outcome model is right, Hajek with Monte Carlo inclusion probabilities for exposure-mapping designs, CUPAC for variance recovery after cluster randomisation. <strong>Always report both the naive ATE and the spillover-adjusted ATE to stakeholders.</strong> The gap between the two is the actual price tag of the interference you found, so don’t let it disappear from the writeup.</p>
 </section>
@@ -1677,7 +1688,7 @@ flowchart TD
 
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1829,6 +1840,13 @@ flowchart TD
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -3182,8 +3200,35 @@ flowchart TD
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 João Vieira</p>
+</div>   
+    <div class="nav-footer-center">
+<p>The Causal Layer — Applied writing on causal inference, pricing, and forecasting.</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/joao-vieira-iseg/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:joaoviei7a@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
 
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
