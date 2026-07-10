@@ -64,13 +64,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../favicon.ico" rel="icon">
+<link href="../../foto3.jpeg" rel="icon" type="image/jpeg">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -82,9 +81,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-09fdf1c988cf04e6fc3f8b602695d7e1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-5471fee98bb1022e344fa01fd8cd8237.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-09fdf1c988cf04e6fc3f8b602695d7e1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c3ec530b6f8a19b58ffd72ce98371a5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-6ea507b90afd36dfcf636ae1abab9ce3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c3ec530b6f8a19b58ffd72ce98371a5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,26 +111,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -161,18 +147,6 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="The Causal Compass: From Classical DiD to the Callaway–Sant’Anna Framework – The Causal Layer">
-<meta property="og:description" content="Why staggered rollout analyses using TWFE can be misleading, and how to fix it. A practitioner’s guide from the canonical 2×2 DiD to cohort-time ATTs, with full R implementation.">
-<meta property="og:image" content="https://joaovieira22.github.io/posts/DID/did_for_ceos_files/figure-html/canonical-did-1.png">
-<meta property="og:site_name" content="The Causal Layer">
-<meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1536">
-<meta name="twitter:title" content="The Causal Compass: From Classical DiD to the Callaway–Sant’Anna Framework – The Causal Layer">
-<meta name="twitter:description" content="Why staggered rollout analyses using TWFE can be misleading, and how to fix it. A practitioner’s guide from the canonical 2×2 DiD to cohort-time ATTs, with full R implementation.">
-<meta name="twitter:image" content="https://joaovieira22.github.io/posts/DID/did_for_ceos_files/figure-html/canonical-did-1.png">
-<meta name="twitter:image-height" content="960">
-<meta name="twitter:image-width" content="1536">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -344,6 +318,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../foto3.jpeg" alt="" class="navbar-logo light-content">
+    <img src="../../foto3.jpeg" alt="" class="navbar-logo dark-content">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">The Causal Layer</span>
     </a>
@@ -358,9 +336,37 @@ window.Quarto = {
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Series</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-series">    
+        <li>
+    <a class="dropdown-item" href="../../series.html">
+ <span class="dropdown-text">All Series</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../series/causal-inference.html">
+ <span class="dropdown-text">Causal Inference</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../series/pricing.html">
+ <span class="dropdown-text">Pricing &amp; Demand</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../series/forecasting.html">
+ <span class="dropdown-text">Forecasting</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../posts.html"> 
-<span class="menu-text">Posts</span></a>
+<span class="menu-text">All Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources.qmd"> 
+<span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
@@ -369,12 +375,17 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/joaovieira22"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/joao-vieira-iseg/"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://linkedin.com/in/joaoviei7a"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="mailto:joaoviei7a@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -517,7 +528,7 @@ window.Quarto = {
 <section id="the-22-setup" class="level3">
 <h3 class="anchored" data-anchor-id="the-22-setup">The 2×2 Setup</h3>
 <p>The canonical DiD design has four cells: two groups (treated, control) and two time periods (pre, post). The parameter of interest is the <strong>average treatment effect on the treated</strong> (ATT), and the estimator is:</p>
-<p><span class="math display">\widehat{ATT} = \underbrace{(\bar{Y}^{T}_{post} - \bar{Y}^{T}_{pre})}_{\text{Change for treated}} - \underbrace{(\bar{Y}^{C}_{post} - \bar{Y}^{C}_{pre})}_{\text{Change for control}}</span></p>
+<p><span class="math display">\[\widehat{ATT} = \underbrace{(\bar{Y}^{T}_{post} - \bar{Y}^{T}_{pre})}_{\text{Change for treated}} - \underbrace{(\bar{Y}^{C}_{post} - \bar{Y}^{C}_{pre})}_{\text{Change for control}}\]</span></p>
 <p>The first difference captures the total change for treated units. The second difference subtracts the change that would have occurred anyway due to common time trends. Together they isolate the treatment effect. Note that the ATT is the effect for the treated group specifically; it differs from the ATE (average treatment effect on the entire population) unless treatment is randomly assigned.</p>
 <p><strong>A concrete business example.</strong> You raise prices in Portugal but not in Spain. You want the causal impact on monthly churn:</p>
 <table class="caption-top table">
@@ -634,9 +645,9 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p><strong>Parallel Trends</strong>: In the absence of treatment, the average outcomes for treated and control groups would have followed the same trajectory over time.</p>
 </blockquote>
-<p>Formally, denoting <span class="math inline">Y_t(0)</span> as the untreated potential outcome:</p>
-<p><span class="math display">\mathbb{E}[Y_t(0) - Y_{t-1}(0) \mid D = 1] = \mathbb{E}[Y_t(0) - Y_{t-1}(0) \mid D = 0]</span></p>
-<p>This assumption is untestable in the post-treatment period: we never observe <span class="math inline">Y_t(0)</span> for treated units after treatment. What we <em>can</em> do is inspect pre-treatment trends as supporting evidence. If the groups were on parallel paths before treatment, it is more credible (though not certain) that they would have remained so.</p>
+<p>Formally, denoting <span class="math inline">\(Y_t(0)\)</span> as the untreated potential outcome:</p>
+<p><span class="math display">\[\mathbb{E}[Y_t(0) - Y_{t-1}(0) \mid D = 1] = \mathbb{E}[Y_t(0) - Y_{t-1}(0) \mid D = 0]\]</span></p>
+<p>This assumption is untestable in the post-treatment period: we never observe <span class="math inline">\(Y_t(0)\)</span> for treated units after treatment. What we <em>can</em> do is inspect pre-treatment trends as supporting evidence. If the groups were on parallel paths before treatment, it is more credible (though not certain) that they would have remained so.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -654,9 +665,9 @@ It is a statement about what would have happened in a counterfactual world, not 
 </section>
 <section id="estimation-via-twfe-why-it-works-in-22" class="level3">
 <h3 class="anchored" data-anchor-id="estimation-via-twfe-why-it-works-in-22">Estimation via TWFE: Why It Works in 2×2</h3>
-<p>In the canonical setting, the DiD estimate is identical to the coefficient <span class="math inline">\hat{\beta}^{TWFE}</span> from this regression:</p>
-<p><span class="math display">Y_{it} = \alpha_i + \lambda_t + \beta^{TWFE} D_{it} + \varepsilon_{it}</span></p>
-<p>where <span class="math inline">\alpha_i</span> are unit fixed effects, <span class="math inline">\lambda_t</span> are time fixed effects, and <span class="math inline">D_{it} \in \{0,1\}</span> is the treatment indicator (equal to 1 when unit <span class="math inline">i</span> is treated at time <span class="math inline">t</span>, 0 otherwise). The unit FEs absorb time-invariant group differences; the time FEs absorb common shocks; <span class="math inline">\beta^{TWFE}</span> captures the residual, which is exactly the DiD estimate.</p>
+<p>In the canonical setting, the DiD estimate is identical to the coefficient <span class="math inline">\(\hat{\beta}^{TWFE}\)</span> from this regression:</p>
+<p><span class="math display">\[Y_{it} = \alpha_i + \lambda_t + \beta^{TWFE} D_{it} + \varepsilon_{it}\]</span></p>
+<p>where <span class="math inline">\(\alpha_i\)</span> are unit fixed effects, <span class="math inline">\(\lambda_t\)</span> are time fixed effects, and <span class="math inline">\(D_{it} \in \{0,1\}\)</span> is the treatment indicator (equal to 1 when unit <span class="math inline">\(i\)</span> is treated at time <span class="math inline">\(t\)</span>, 0 otherwise). The unit FEs absorb time-invariant group differences; the time FEs absorb common shocks; <span class="math inline">\(\beta^{TWFE}\)</span> captures the residual, which is exactly the DiD estimate.</p>
 <p>In a 2×2 design, TWFE is equivalent to DiD. This is the source of its appeal, and the source of a dangerous false confidence when applied to more complex settings.</p>
 <hr>
 </section>
@@ -705,8 +716,8 @@ It is a statement about what would have happened in a counterfactual world, not 
 <section id="the-goodman-bacon-decomposition-theorem" class="level3">
 <h3 class="anchored" data-anchor-id="the-goodman-bacon-decomposition-theorem">The Goodman-Bacon Decomposition Theorem</h3>
 <p>Goodman-Bacon (2021) delivered the definitive diagnosis. He proved that in a staggered design, the TWFE estimator is a variance-weighted average of all possible 2×2 DiD comparisons that can be formed from the data.</p>
-<p>With <span class="math inline">K</span> timing cohorts, this produces <span class="math inline">O(K^2)</span> pairwise comparisons. Some are economically valid. Others are contaminated.</p>
-<div class="cell" data-layout-align="default">
+<p>With <span class="math inline">\(K\)</span> timing cohorts, this produces <span class="math inline">\(O(K^2)\)</span> pairwise comparisons. Some are economically valid. Others are contaminated.</p>
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
@@ -733,14 +744,14 @@ flowchart TD
 </div>
 </div>
 </div>
-<p><strong>The contaminated comparison.</strong> Suppose Cohort A is treated at <span class="math inline">t=2</span> and Cohort B is treated at <span class="math inline">t=4</span>. TWFE forms a comparison where Cohort B is the “treated” unit and Cohort A (already treated) serves as the “control” during periods 3 and 4. But Cohort A’s outcomes in those periods include Cohort A’s own treatment effect. If treatment effects vary across cohorts or over time, this comparison is contaminated and its contribution to the TWFE estimate can receive negative weight.</p>
+<p><strong>The contaminated comparison.</strong> Suppose Cohort A is treated at <span class="math inline">\(t=2\)</span> and Cohort B is treated at <span class="math inline">\(t=4\)</span>. TWFE forms a comparison where Cohort B is the “treated” unit and Cohort A (already treated) serves as the “control” during periods 3 and 4. But Cohort A’s outcomes in those periods include Cohort A’s own treatment effect. If treatment effects vary across cohorts or over time, this comparison is contaminated and its contribution to the TWFE estimate can receive negative weight.</p>
 </section>
 <section id="the-negative-weights-problem-a-numerical-example" class="level3">
 <h3 class="anchored" data-anchor-id="the-negative-weights-problem-a-numerical-example">The Negative Weights Problem: A Numerical Example</h3>
 <p>Let us make this concrete. Imagine three cohorts:</p>
 <ul>
-<li><strong>Cohort E</strong> (Early): treated at <span class="math inline">t=2</span>, with treatment effects that grow over time (ATT = 1 at <span class="math inline">t=2</span>, 3 at <span class="math inline">t=3</span>, 5 at <span class="math inline">t=4</span>, 7 at <span class="math inline">t=5</span>)</li>
-<li><strong>Cohort L</strong> (Late): treated at <span class="math inline">t=4</span>, with ATT = 1 at <span class="math inline">t=4</span>, 3 at <span class="math inline">t=5</span></li>
+<li><strong>Cohort E</strong> (Early): treated at <span class="math inline">\(t=2\)</span>, with treatment effects that grow over time (ATT = 1 at <span class="math inline">\(t=2\)</span>, 3 at <span class="math inline">\(t=3\)</span>, 5 at <span class="math inline">\(t=4\)</span>, 7 at <span class="math inline">\(t=5\)</span>)</li>
+<li><strong>Cohort L</strong> (Late): treated at <span class="math inline">\(t=4\)</span>, with ATT = 1 at <span class="math inline">\(t=4\)</span>, 3 at <span class="math inline">\(t=5\)</span></li>
 <li><strong>Cohort N</strong>: never treated</li>
 </ul>
 <p>Every true treatment effect is positive. But the Goodman-Bacon decomposition reveals two distinct problems in this setting. First, TWFE forms a Late-vs-Early comparison that uses Cohort E’s outcomes (already contaminated by its own treatment effect) as the counterfactual for Cohort L, a substantively invalid comparison. Second, because Cohort E’s treatment effects grow over time (it has been treated longer), this contaminated comparison can receive negative weight in the variance-weighted TWFE average. Depending on group sizes and timing, the overall TWFE coefficient can be biased downward or even negative.</p>
@@ -920,7 +931,7 @@ flowchart TD
 <h3 class="anchored" data-anchor-id="a-different-philosophy-forward-engineering">A Different Philosophy: Forward Engineering</h3>
 <p>The TWFE approach runs a convenient regression and tries to interpret its coefficient. Callaway and Sant’Anna (2021) take the opposite approach: start by defining the parameter you actually want to estimate, then derive the estimator.</p>
 <p>This “forward engineering” philosophy has three pillars:</p>
-<div class="cell" data-layout-align="default">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
@@ -945,18 +956,18 @@ flowchart LR
 </section>
 <section id="the-cohort-time-att-the-fundamental-building-block" class="level3">
 <h3 class="anchored" data-anchor-id="the-cohort-time-att-the-fundamental-building-block">The Cohort-Time ATT: The Fundamental Building Block</h3>
-<p>Throughout this article, we use <strong>cohort</strong> to refer to the set of units that first receive treatment in the same calendar period <span class="math inline">g</span>. Let <span class="math inline">G</span> denote the random variable indicating the period in which a unit first receives treatment (<span class="math inline">G = \infty</span> for never-treated units). The CS literature also calls these “groups”; we use “cohort” for clarity but the terms are equivalent.</p>
+<p>Throughout this article, we use <strong>cohort</strong> to refer to the set of units that first receive treatment in the same calendar period <span class="math inline">\(g\)</span>. Let <span class="math inline">\(G\)</span> denote the random variable indicating the period in which a unit first receives treatment (<span class="math inline">\(G = \infty\)</span> for never-treated units). The CS literature also calls these “groups”; we use “cohort” for clarity but the terms are equivalent.</p>
 <p>The unit of analysis in the CS framework is the cohort-time average treatment effect:</p>
-<p><span class="math display">ATT(g,t) = \mathbb{E}[Y_t(g) - Y_t(0) \mid G = g]</span></p>
+<p><span class="math display">\[ATT(g,t) = \mathbb{E}[Y_t(g) - Y_t(0) \mid G = g]\]</span></p>
 <p>where:</p>
 <ul>
-<li><span class="math inline">g</span> = the calendar time when a cohort <strong>first</strong> becomes treated (the “cohort”)</li>
-<li><span class="math inline">t</span> = the calendar time at which we evaluate the effect</li>
-<li><span class="math inline">Y_t(g)</span> = potential outcome at time <span class="math inline">t</span> for a unit first treated at <span class="math inline">g</span></li>
-<li><span class="math inline">Y_t(0)</span> = counterfactual potential outcome without treatment</li>
+<li><span class="math inline">\(g\)</span> = the calendar time when a cohort <strong>first</strong> becomes treated (the “cohort”)</li>
+<li><span class="math inline">\(t\)</span> = the calendar time at which we evaluate the effect</li>
+<li><span class="math inline">\(Y_t(g)\)</span> = potential outcome at time <span class="math inline">\(t\)</span> for a unit first treated at <span class="math inline">\(g\)</span></li>
+<li><span class="math inline">\(Y_t(0)\)</span> = counterfactual potential outcome without treatment</li>
 </ul>
-<p>This formulation assumes an <strong>absorbing treatment</strong>: once treated at time <span class="math inline">g</span>, a unit remains treated in all subsequent periods. If treatment can be reversed or repeatedly switched, the standard CS framework does not directly apply; see de Chaisemartin &amp; D’Haultfœuille (2020) for that case.</p>
-<p>Each <span class="math inline">ATT(g,t)</span> is directly interpretable: <em>“What was the average effect of treatment, at calendar time <span class="math inline">t</span>, for the cohort that began treatment at time <span class="math inline">g</span>?”</em></p>
+<p>This formulation assumes an <strong>absorbing treatment</strong>: once treated at time <span class="math inline">\(g\)</span>, a unit remains treated in all subsequent periods. If treatment can be reversed or repeatedly switched, the standard CS framework does not directly apply; see de Chaisemartin &amp; D’Haultfœuille (2020) for that case.</p>
+<p>Each <span class="math inline">\(ATT(g,t)\)</span> is directly interpretable: <em>“What was the average effect of treatment, at calendar time <span class="math inline">\(t\)</span>, for the cohort that began treatment at time <span class="math inline">\(g\)</span>?”</em></p>
 <p>No negative weights. No contaminated comparisons. No ambiguity about what the estimate means.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -968,20 +979,20 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>The ATT(g,t) matrix.</strong> Think of it as a grid with treatment cohorts on rows (<span class="math inline">g</span>) and calendar time on columns (<span class="math inline">t</span>). Pre-treatment cells (<span class="math inline">t &lt; g</span>) serve as parallel trends diagnostics; they should be near zero. Post-treatment cells (<span class="math inline">t \geq g</span>) are the causal parameters of interest.</p>
+<p><strong>The ATT(g,t) matrix.</strong> Think of it as a grid with treatment cohorts on rows (<span class="math inline">\(g\)</span>) and calendar time on columns (<span class="math inline">\(t\)</span>). Pre-treatment cells (<span class="math inline">\(t &lt; g\)</span>) serve as parallel trends diagnostics; they should be near zero. Post-treatment cells (<span class="math inline">\(t \geq g\)</span>) are the causal parameters of interest.</p>
 </div>
 </div>
 </section>
 <section id="identification-assumptions" class="level3">
 <h3 class="anchored" data-anchor-id="identification-assumptions">Identification Assumptions</h3>
 <p><strong>Assumption 1: No Anticipation</strong></p>
-<p>Units do not change behaviour in anticipation of future treatment. Formally, for <span class="math inline">t &lt; g</span>:</p>
-<p><span class="math display">\mathbb{E}[Y_t(g) \mid G = g] = \mathbb{E}[Y_t(0) \mid G = g]</span></p>
-<p>In business contexts: companies should not change behaviour before a new pricing algorithm goes live in ways that would shift the outcome variable. If significant anticipation occurs (e.g., inventory pre-loading before a cost-optimisation rollout), <span class="math inline">ATT(g,t)</span> captures the effect relative to already-adjusted baselines, which is a different parameter than the pure treatment effect. In such cases, redefine <span class="math inline">g</span> to the period when anticipation begins, or interpret the estimate accordingly.</p>
+<p>Units do not change behaviour in anticipation of future treatment. Formally, for <span class="math inline">\(t &lt; g\)</span>:</p>
+<p><span class="math display">\[\mathbb{E}[Y_t(g) \mid G = g] = \mathbb{E}[Y_t(0) \mid G = g]\]</span></p>
+<p>In business contexts: companies should not change behaviour before a new pricing algorithm goes live in ways that would shift the outcome variable. If significant anticipation occurs (e.g., inventory pre-loading before a cost-optimisation rollout), <span class="math inline">\(ATT(g,t)\)</span> captures the effect relative to already-adjusted baselines, which is a different parameter than the pure treatment effect. In such cases, redefine <span class="math inline">\(g\)</span> to the period when anticipation begins, or interpret the estimate accordingly.</p>
 <p><strong>Assumption 2: Conditional Parallel Trends</strong></p>
-<p>Conditional on pre-treatment covariates <span class="math inline">X</span>, the trend in untreated potential outcomes for cohort <span class="math inline">g</span> matches the trend for the comparison group (never-treated or not-yet-treated). All comparisons are anchored at the <strong>last pre-treatment period <span class="math inline">g-1</span></strong> for cohort <span class="math inline">g</span>:</p>
-<p><span class="math display">\mathbb{E}[Y_t(0) - Y_{g-1}(0) \mid X, G = g] = \mathbb{E}[Y_t(0) - Y_{g-1}(0) \mid X, \text{comparison}]</span></p>
-<p>The conditioning on <span class="math inline">X</span> is a key advantage: if treated and control cohorts differ in observable characteristics that drive outcome trends, unconditional parallel trends fails, but conditional parallel trends may still hold. This expands the range of settings where DiD is credible.</p>
+<p>Conditional on pre-treatment covariates <span class="math inline">\(X\)</span>, the trend in untreated potential outcomes for cohort <span class="math inline">\(g\)</span> matches the trend for the comparison group (never-treated or not-yet-treated). All comparisons are anchored at the <strong>last pre-treatment period <span class="math inline">\(g-1\)</span></strong> for cohort <span class="math inline">\(g\)</span>:</p>
+<p><span class="math display">\[\mathbb{E}[Y_t(0) - Y_{g-1}(0) \mid X, G = g] = \mathbb{E}[Y_t(0) - Y_{g-1}(0) \mid X, \text{comparison}]\]</span></p>
+<p>The conditioning on <span class="math inline">\(X\)</span> is a key advantage: if treated and control cohorts differ in observable characteristics that drive outcome trends, unconditional parallel trends fails, but conditional parallel trends may still hold. This expands the range of settings where DiD is credible.</p>
 <p><strong>Comparison group choices:</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -1004,13 +1015,13 @@ Note
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>notyettreated</code></td>
-<td style="text-align: left;">Units not yet treated by time <span class="math inline">t</span></td>
+<td style="text-align: left;">Units not yet treated by time <span class="math inline">\(t\)</span></td>
 <td style="text-align: left;">When all units eventually get treated; larger comparison group</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Assumption 3: Overlap</strong></p>
-<p>For each covariate profile, there are both treated and comparison units: <span class="math inline">0 &lt; P(G = g \mid X) &lt; 1</span>. Without overlap, the counterfactual cannot be constructed for some units without extrapolation.</p>
+<p>For each covariate profile, there are both treated and comparison units: <span class="math inline">\(0 &lt; P(G = g \mid X) &lt; 1\)</span>. Without overlap, the counterfactual cannot be constructed for some units without extrapolation.</p>
 </section>
 <section id="doubly-robust-estimation" class="level3">
 <h3 class="anchored" data-anchor-id="doubly-robust-estimation">Doubly Robust Estimation</h3>
@@ -1036,7 +1047,7 @@ Note
 </tr>
 <tr class="even">
 <td style="text-align: left;">Inverse Probability Weighting (IPW)</td>
-<td style="text-align: left;">Propensity score <span class="math inline">P(G=g \mid X)</span></td>
+<td style="text-align: left;">Propensity score <span class="math inline">\(P(G=g \mid X)\)</span></td>
 <td style="text-align: left;">Propensity score correctly specified</td>
 </tr>
 <tr class="odd">
@@ -1046,9 +1057,9 @@ Note
 </tr>
 </tbody>
 </table>
-<p>The DR estimator combines inverse-probability weighting and outcome regression via a doubly robust score. Using the notation of Sant’Anna &amp; Zhao (2020), where <span class="math inline">G_g = \mathbf{1}\{G = g\}</span> is the cohort indicator and <span class="math inline">C</span> is the comparison-group indicator:</p>
-<p><span class="math display">\widehat{ATT}^{DR}(g,t) = \mathbb{E}\left[\left(\frac{G_g}{\mathbb{E}[G_g]} - \frac{\hat{p}_g(X) \cdot C}{(1-\hat{p}_g(X))\,\mathbb{E}\!\left[\frac{\hat{p}_g(X)\, C}{1-\hat{p}_g(X)}\right]}\right)\!\!\left(Y_t - Y_{g-1} - \hat{m}_{g,t}(X)\right)\right]</span></p>
-<p>where <span class="math inline">\hat{p}_g(X) = \hat{P}(G = g \mid X,\, G_g + C = 1)</span> is the estimated propensity score and <span class="math inline">\hat{m}_{g,t}(X)</span> is the estimated conditional mean of <span class="math inline">(Y_t - Y_{g-1})</span> for the comparison group. See Sant’Anna &amp; Zhao (2020, eq. 3.1) for the full formal derivation.</p>
+<p>The DR estimator combines inverse-probability weighting and outcome regression via a doubly robust score. Using the notation of Sant’Anna &amp; Zhao (2020), where <span class="math inline">\(G_g = \mathbf{1}\{G = g\}\)</span> is the cohort indicator and <span class="math inline">\(C\)</span> is the comparison-group indicator:</p>
+<p><span class="math display">\[\widehat{ATT}^{DR}(g,t) = \mathbb{E}\left[\left(\frac{G_g}{\mathbb{E}[G_g]} - \frac{\hat{p}_g(X) \cdot C}{(1-\hat{p}_g(X))\,\mathbb{E}\!\left[\frac{\hat{p}_g(X)\, C}{1-\hat{p}_g(X)}\right]}\right)\!\!\left(Y_t - Y_{g-1} - \hat{m}_{g,t}(X)\right)\right]\]</span></p>
+<p>where <span class="math inline">\(\hat{p}_g(X) = \hat{P}(G = g \mid X,\, G_g + C = 1)\)</span> is the estimated propensity score and <span class="math inline">\(\hat{m}_{g,t}(X)\)</span> is the estimated conditional mean of <span class="math inline">\((Y_t - Y_{g-1})\)</span> for the comparison group. See Sant’Anna &amp; Zhao (2020, eq. 3.1) for the full formal derivation.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1067,10 +1078,10 @@ Tip
 </section>
 <section id="part-iv" class="level2">
 <h2 class="anchored" data-anchor-id="part-iv">Part IV: Aggregating ATT(g,t) into Business Answers</h2>
-<p>A study with 5 treatment cohorts and 10 post-treatment periods produces 50 <span class="math inline">ATT(g,t)</span> estimates. The richness is a feature (heterogeneity is real and important), but leadership and policy audiences need summary parameters. The CS framework provides four aggregation schemes via <code>aggte()</code>, each answering a fundamentally different substantive question. All share the general form:</p>
-<p><span class="math display">\theta = \sum_{g \in \mathcal{G}} \sum_{\substack{t \geq g \\ t \leq T}} w(g,t) \cdot ATT(g,t)</span></p>
-<p>The weighting functions <span class="math inline">w(g,t)</span> are the essential difference between aggregators: they determine <em>whose</em> treatment effect gets prioritised and along <em>which</em> dimension heterogeneity is summarised.</p>
-<div class="cell" data-layout-align="default">
+<p>A study with 5 treatment cohorts and 10 post-treatment periods produces 50 <span class="math inline">\(ATT(g,t)\)</span> estimates. The richness is a feature (heterogeneity is real and important), but leadership and policy audiences need summary parameters. The CS framework provides four aggregation schemes via <code>aggte()</code>, each answering a fundamentally different substantive question. All share the general form:</p>
+<p><span class="math display">\[\theta = \sum_{g \in \mathcal{G}} \sum_{\substack{t \geq g \\ t \leq T}} w(g,t) \cdot ATT(g,t)\]</span></p>
+<p>The weighting functions <span class="math inline">\(w(g,t)\)</span> are the essential difference between aggregators: they determine <em>whose</em> treatment effect gets prioritised and along <em>which</em> dimension heterogeneity is summarised.</p>
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
@@ -1096,16 +1107,16 @@ flowchart TD
 <hr>
 <section id="aggregation-1-event-study-dynamic-effects-type-dynamic" class="level3">
 <h3 class="anchored" data-anchor-id="aggregation-1-event-study-dynamic-effects-type-dynamic">Aggregation 1: Event-Study / Dynamic Effects (<code>type = "dynamic"</code>)</h3>
-<p><span class="math display">\theta_{ES}(e) = \sum_{g \in \mathcal{G}} \mathbf{1}\{g + e \leq T\} \cdot P(G = g \mid G + e \leq T) \cdot ATT(g,\, g+e)</span></p>
-<p>where <span class="math inline">e = t - g</span> is <strong>event time</strong>: the number of periods elapsed since a unit’s cohort first received treatment. This converts calendar time into a common scale of exposure duration.</p>
+<p><span class="math display">\[\theta_{ES}(e) = \sum_{g \in \mathcal{G}} \mathbf{1}\{g + e \leq T\} \cdot P(G = g \mid G + e \leq T) \cdot ATT(g,\, g+e)\]</span></p>
+<p>where <span class="math inline">\(e = t - g\)</span> is <strong>event time</strong>: the number of periods elapsed since a unit’s cohort first received treatment. This converts calendar time into a common scale of exposure duration.</p>
 <p><strong>Business question:</strong> <em>“How does the treatment effect evolve as exposure duration increases?”</em></p>
 <p>This is the most informative aggregation for strategic questions about programme dynamics:</p>
 <ul>
-<li><strong><span class="math inline">e &lt; 0</span></strong>: Pre-treatment pseudo-effects. Under correct identification these should be statistically indistinguishable from zero, serving as a falsification test for parallel trends.</li>
-<li><strong><span class="math inline">e = 0</span></strong>: The immediate impact on the first period of treatment adoption.</li>
-<li><strong><span class="math inline">e &gt; 0</span></strong>: Dynamic build-up, saturation, or decay of the causal effect over time.</li>
+<li><strong><span class="math inline">\(e &lt; 0\)</span></strong>: Pre-treatment pseudo-effects. Under correct identification these should be statistically indistinguishable from zero, serving as a falsification test for parallel trends.</li>
+<li><strong><span class="math inline">\(e = 0\)</span></strong>: The immediate impact on the first period of treatment adoption.</li>
+<li><strong><span class="math inline">\(e &gt; 0\)</span></strong>: Dynamic build-up, saturation, or decay of the causal effect over time.</li>
 </ul>
-<p><strong>Example:</strong> A new HR wellness programme has <span class="math inline">\theta_{ES}(0) = 0.5\%</span> reduction in absenteeism, growing to <span class="math inline">\theta_{ES}(4) = 2.1\%</span> by the end of the first year. The event study captures this learning curve that a single TWFE coefficient would obscure entirely.</p>
+<p><strong>Example:</strong> A new HR wellness programme has <span class="math inline">\(\theta_{ES}(0) = 0.5\%\)</span> reduction in absenteeism, growing to <span class="math inline">\(\theta_{ES}(4) = 2.1\%\)</span> by the end of the first year. The event study captures this learning curve that a single TWFE coefficient would obscure entirely.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>agg.es <span class="ot">&lt;-</span> <span class="fu">aggte</span>(example_attgt, <span class="at">type =</span> <span class="st">"dynamic"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(agg.es)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Overall summary of ATT's based on event-study / dynamic aggregation:
@@ -1129,7 +1140,7 @@ Dynamic Effects:
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"><span class="math inline">e</span></th>
+<th style="text-align: left;"><span class="math inline">\(e\)</span></th>
 <th style="text-align: left;">Phase</th>
 <th style="text-align: left;">Estimate</th>
 <th style="text-align: left;">Interpretation</th>
@@ -1137,33 +1148,33 @@ Dynamic Effects:
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">-2</span></td>
+<td style="text-align: left;"><span class="math inline">\(-2\)</span></td>
 <td style="text-align: left;">Pre-treatment</td>
-<td style="text-align: left;"><span class="math inline">0.002\ [-0.18;\, 0.18]</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.002\ [-0.18;\, 0.18]\)</span></td>
 <td style="text-align: left;">Null effect; consistent with parallel trends</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">-1</span></td>
+<td style="text-align: left;"><span class="math inline">\(-1\)</span></td>
 <td style="text-align: left;">Pre-treatment</td>
-<td style="text-align: left;"><span class="math inline">0.011\ [-0.09;\, 0.11]</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.011\ [-0.09;\, 0.11]\)</span></td>
 <td style="text-align: left;">Additional support for the identifying assumption</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">0</span></td>
+<td style="text-align: left;"><span class="math inline">\(0\)</span></td>
 <td style="text-align: left;">Immediate impact</td>
-<td style="text-align: left;"><span class="math inline">0.993\ [0.91;\, 1.07]^*</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.993\ [0.91;\, 1.07]^*\)</span></td>
 <td style="text-align: left;">Average effect at the moment of adoption</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">1</span></td>
+<td style="text-align: left;"><span class="math inline">\(1\)</span></td>
 <td style="text-align: left;">1 period after</td>
-<td style="text-align: left;"><span class="math inline">2.023\ [1.90;\, 2.15]^*</span></td>
+<td style="text-align: left;"><span class="math inline">\(2.023\ [1.90;\, 2.15]^*\)</span></td>
 <td style="text-align: left;">Effect doubles: treatment maturation</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">2</span></td>
+<td style="text-align: left;"><span class="math inline">\(2\)</span></td>
 <td style="text-align: left;">2 periods after</td>
-<td style="text-align: left;"><span class="math inline">2.955\ [2.80;\, 3.11]^*</span></td>
+<td style="text-align: left;"><span class="math inline">\(2.955\ [2.80;\, 3.11]^*\)</span></td>
 <td style="text-align: left;">Effect nearly triples: growing pattern</td>
 </tr>
 </tbody>
@@ -1178,7 +1189,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Overall ATT in event-study aggregation.</strong> The Overall ATT of 1.99 reported by <code>aggte(type = "dynamic")</code> is a weighted average of <span class="math inline">\theta_{ES}(e)</span> across post-treatment event times, weighted by cohort size. It should not be interpreted as the primary global causal effect, because it conflates exposure duration with cohort composition: cohorts that happen to be observed for more post-treatment periods receive more weight. For a clean global summary that weights each cohort equally regardless of observation length, prefer <code>aggte(type = "group")</code>, its overall ATT is the leading recommendation of Callaway &amp; Sant’Anna (2021).</p>
+<p><strong>Overall ATT in event-study aggregation.</strong> The Overall ATT of 1.99 reported by <code>aggte(type = "dynamic")</code> is a weighted average of <span class="math inline">\(\theta_{ES}(e)\)</span> across post-treatment event times, weighted by cohort size. It should not be interpreted as the primary global causal effect, because it conflates exposure duration with cohort composition: cohorts that happen to be observed for more post-treatment periods receive more weight. For a clean global summary that weights each cohort equally regardless of observation length, prefer <code>aggte(type = "group")</code>, its overall ATT is the leading recommendation of Callaway &amp; Sant’Anna (2021).</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -1191,7 +1202,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Dynamic cohort composition.</strong> For different values of <span class="math inline">e</span>, the set of cohorts contributing to <span class="math inline">\theta_{ES}(e)</span> changes: earlier-treated cohorts contribute to more event-time estimates than later cohorts. <strong>Critically, the trajectory of <span class="math inline">\theta_{ES}(e)</span> can confound genuine dynamics with cohort-level heterogeneity</strong>: if early-treated cohorts have systematically different treatment effects than later cohorts, the event-study plot reflects both exposure-length effects and compositional shifts across cohorts. This contamination disappears only when cohort effects are absent. Use <code>balance_e = k</code> to restrict estimation to cohorts observed for at least <span class="math inline">k</span> post-treatment periods, which holds composition constant:</p>
+<p><strong>Dynamic cohort composition.</strong> For different values of <span class="math inline">\(e\)</span>, the set of cohorts contributing to <span class="math inline">\(\theta_{ES}(e)\)</span> changes: earlier-treated cohorts contribute to more event-time estimates than later cohorts. <strong>Critically, the trajectory of <span class="math inline">\(\theta_{ES}(e)\)</span> can confound genuine dynamics with cohort-level heterogeneity</strong>: if early-treated cohorts have systematically different treatment effects than later cohorts, the event-study plot reflects both exposure-length effects and compositional shifts across cohorts. This contamination disappears only when cohort effects are absent. Use <code>balance_e = k</code> to restrict estimation to cohorts observed for at least <span class="math inline">\(k\)</span> post-treatment periods, which holds composition constant:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>agg.es.bal <span class="ot">&lt;-</span> <span class="fu">aggte</span>(example_attgt, <span class="at">type =</span> <span class="st">"dynamic"</span>, <span class="at">balance_e =</span> <span class="dv">2</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(agg.es.bal)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1200,9 +1211,9 @@ Warning
 </section>
 <section id="aggregation-2-cohort-specific-effects-type-group" class="level3">
 <h3 class="anchored" data-anchor-id="aggregation-2-cohort-specific-effects-type-group">Aggregation 2: Cohort-Specific Effects (<code>type = "group"</code>)</h3>
-<p><span class="math display">\theta^{group}(g) = \frac{1}{T - g + 1} \sum_{t \geq g} ATT(g,\, t)</span></p>
-<p>Each cohort-specific <span class="math inline">\theta^{group}(g)</span> is the simple average of <span class="math inline">ATT(g,t)</span> across all post-treatment periods for that cohort. The overall ATT is then the cohort-size-weighted average:</p>
-<p><span class="math display">\theta^{group}_{overall} = \sum_{g \in \mathcal{G}} \theta^{group}(g) \cdot P(G = g \mid G \leq T)</span></p>
+<p><span class="math display">\[\theta^{group}(g) = \frac{1}{T - g + 1} \sum_{t \geq g} ATT(g,\, t)\]</span></p>
+<p>Each cohort-specific <span class="math inline">\(\theta^{group}(g)\)</span> is the simple average of <span class="math inline">\(ATT(g,t)\)</span> across all post-treatment periods for that cohort. The overall ATT is then the cohort-size-weighted average:</p>
+<p><span class="math display">\[\theta^{group}_{overall} = \sum_{g \in \mathcal{G}} \theta^{group}(g) \cdot P(G = g \mid G \leq T)\]</span></p>
 <p><strong>Business question:</strong> <em>“Did early-adopting cohorts experience larger (or smaller) effects than later adopters?”</em></p>
 <p>A key property: each cohort receives exactly one weight in the global average, regardless of how many post-treatment periods it has been observed. This avoids the systematic over-weighting of early-treated cohorts that afflicts TWFE and the <code>simple</code> aggregator.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>agg.gs <span class="ot">&lt;-</span> <span class="fu">aggte</span>(example_attgt, <span class="at">type =</span> <span class="st">"group"</span>)</span>
@@ -1216,7 +1227,7 @@ Group Effects:
   2      1.9545    0.0520      1.8298   2.0793  *
   3      1.5835    0.0562      1.4488   1.7183  *
   4      0.9523    0.0649      0.7968   1.1078  *</code></pre>
-<p>The descending pattern <span class="math inline">\hat\theta^{group}(g{=}2) &gt; \hat\theta^{group}(g{=}3) &gt; \hat\theta^{group}(g{=}4)</span> is substantively relevant and admits multiple explanations:</p>
+<p>The descending pattern <span class="math inline">\(\hat\theta^{group}(g{=}2) &gt; \hat\theta^{group}(g{=}3) &gt; \hat\theta^{group}(g{=}4)\)</span> is substantively relevant and admits multiple explanations:</p>
 <ul>
 <li><strong>Accumulated exposure</strong>: Early cohorts have been treated longer, allowing effects to compound.</li>
 <li><strong>Selection</strong>: Units that adopt earlier may be systematically different (higher motivation, better resources, more favourable context).</li>
@@ -1239,8 +1250,8 @@ Tip
 </section>
 <section id="aggregation-3-calendar-time-effects-type-calendar" class="level3">
 <h3 class="anchored" data-anchor-id="aggregation-3-calendar-time-effects-type-calendar">Aggregation 3: Calendar-Time Effects (<code>type = "calendar"</code>)</h3>
-<p><span class="math display">\theta^{cal}(t) = \sum_{g \in \mathcal{G}} \mathbf{1}\{t \geq g\} \cdot P(G = g \mid G \leq t) \cdot ATT(g,\, t)</span></p>
-<p><strong>Business question:</strong> <em>“What was the aggregate impact of the programme in fiscal quarter <span class="math inline">t</span>?”</em></p>
+<p><span class="math display">\[\theta^{cal}(t) = \sum_{g \in \mathcal{G}} \mathbf{1}\{t \geq g\} \cdot P(G = g \mid G \leq t) \cdot ATT(g,\, t)\]</span></p>
+<p><strong>Business question:</strong> <em>“What was the aggregate impact of the programme in fiscal quarter <span class="math inline">\(t\)</span>?”</em></p>
 <p>This aggregator maps directly to financial and operational reporting: <em>“In Q3 2024, the algorithm generated X% margin improvement across all deployed markets.”</em></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>agg.ct <span class="ot">&lt;-</span> <span class="fu">aggte</span>(example_attgt, <span class="at">type =</span> <span class="st">"calendar"</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(agg.ct)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1262,25 +1273,25 @@ Time Effects:
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"><span class="math inline">t</span></th>
+<th style="text-align: left;"><span class="math inline">\(t\)</span></th>
 <th style="text-align: left;">Contributing Cohorts</th>
 <th style="text-align: left;">Interpretation</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">t=2</span></td>
-<td style="text-align: left;">Only <span class="math inline">g=2</span> (1st year)</td>
+<td style="text-align: left;"><span class="math inline">\(t=2\)</span></td>
+<td style="text-align: left;">Only <span class="math inline">\(g=2\)</span> (1st year)</td>
 <td style="text-align: left;">Initial effect, only the earliest cohort contributes</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">t=3</span></td>
-<td style="text-align: left;"><span class="math inline">g=2</span> (2nd year) + <span class="math inline">g=3</span> (1st year)</td>
+<td style="text-align: left;"><span class="math inline">\(t=3\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(g=2\)</span> (2nd year) + <span class="math inline">\(g=3\)</span> (1st year)</td>
 <td style="text-align: left;">Combines cohort 2 maturation with cohort 3 entry</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">t=4</span></td>
-<td style="text-align: left;"><span class="math inline">g=2</span>, <span class="math inline">g=3</span>, and <span class="math inline">g=4</span></td>
+<td style="text-align: left;"><span class="math inline">\(t=4\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(g=2\)</span>, <span class="math inline">\(g=3\)</span>, and <span class="math inline">\(g=4\)</span></td>
 <td style="text-align: left;">All cohorts contribute, maximum aggregate effect</td>
 </tr>
 </tbody>
@@ -1290,8 +1301,8 @@ Time Effects:
 </section>
 <section id="aggregation-4-simple-att-type-simple" class="level3">
 <h3 class="anchored" data-anchor-id="aggregation-4-simple-att-type-simple">Aggregation 4: Simple ATT (<code>type = "simple"</code>)</h3>
-<p><span class="math display">\theta^{simple} = \frac{1}{\kappa} \sum_{g \in \mathcal{G}} \sum_{t \geq g} ATT(g,t) \cdot P(G = g \mid G \leq T)</span></p>
-<p>where <span class="math inline">\kappa = \sum_{g \in \mathcal{G}} \sum_{t \geq g} P(G = g \mid G \leq T)</span> normalises the weights. Each <span class="math inline">ATT(g,t)</span> cell receives a weight proportional to the cohort’s share among ever-treated units times the number of post-treatment periods that cohort contributes, which is why earlier-treated cohorts accumulate more weight.</p>
+<p><span class="math display">\[\theta^{simple} = \frac{1}{\kappa} \sum_{g \in \mathcal{G}} \sum_{t \geq g} ATT(g,t) \cdot P(G = g \mid G \leq T)\]</span></p>
+<p>where <span class="math inline">\(\kappa = \sum_{g \in \mathcal{G}} \sum_{t \geq g} P(G = g \mid G \leq T)\)</span> normalises the weights. Each <span class="math inline">\(ATT(g,t)\)</span> cell receives a weight proportional to the cohort’s share among ever-treated units times the number of post-treatment periods that cohort contributes, which is why earlier-treated cohorts accumulate more weight.</p>
 <pre><code>ATT     Std. Error  [95% Conf. Int.]
 1.6583  0.0333      1.5931  1.7236  *</code></pre>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -1304,7 +1315,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Limitation of the <code>simple</code> aggregator.</strong> <code>type = "simple"</code> systematically over-weights early-treated cohorts, because they contribute more post-treatment <span class="math inline">(g, t)</span> cells and therefore accumulate more weight. This is related to the pathological weighting of TWFE in staggered designs (though the mechanism differs: TWFE uses variance weights while the simple aggregator uses cell-count weights). Use this aggregator only for benchmarking against TWFE or for exploratory sensitivity analysis. It should never be the primary summary of the global treatment effect.</p>
+<p><strong>Limitation of the <code>simple</code> aggregator.</strong> <code>type = "simple"</code> systematically over-weights early-treated cohorts, because they contribute more post-treatment <span class="math inline">\((g, t)\)</span> cells and therefore accumulate more weight. This is related to the pathological weighting of TWFE in staggered designs (though the mechanism differs: TWFE uses variance weights while the simple aggregator uses cell-count weights). Use this aggregator only for benchmarking against TWFE or for exploratory sensitivity analysis. It should never be the primary summary of the global treatment effect.</p>
 </div>
 </div>
 <hr>
@@ -1340,7 +1351,7 @@ Warning
 <td style="text-align: left;">Complementary</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">“What was the total impact in fiscal year <span class="math inline">t</span>?”</td>
+<td style="text-align: left;">“What was the total impact in fiscal year <span class="math inline">\(t\)</span>?”</td>
 <td style="text-align: left;">Calendar-time</td>
 <td style="text-align: left;"><code>"calendar"</code></td>
 <td style="text-align: left;">Complementary</td>
@@ -1358,7 +1369,7 @@ Warning
 </section>
 <section id="part-v" class="level2">
 <h2 class="anchored" data-anchor-id="part-v">Part V: Full R Implementation with Minimum Wage Data</h2>
-<p>The <code>did</code> package ships with county-level employment data from Callaway and Sant’Anna (2021). Several US states increased their minimum wages at different points in time, creating a classic staggered adoption design. This section walks through a complete end-to-end implementation: data preparation, estimation of the <span class="math inline">ATT(g,t)</span> matrix, pre-trend testing, all four aggregations, and a head-to-head comparison with TWFE.</p>
+<p>The <code>did</code> package ships with county-level employment data from Callaway and Sant’Anna (2021). Several US states increased their minimum wages at different points in time, creating a classic staggered adoption design. This section walks through a complete end-to-end implementation: data preparation, estimation of the <span class="math inline">\(ATT(g,t)\)</span> matrix, pre-trend testing, all four aggregations, and a head-to-head comparison with TWFE.</p>
 <section id="data-preparation" class="level3">
 <h3 class="anchored" data-anchor-id="data-preparation">Data Preparation</h3>
 <div class="cell" data-layout-align="center">
@@ -1587,7 +1598,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Reading the ATT(g,t) plot.</strong> Each panel corresponds to a treatment cohort <span class="math inline">g</span>. Within each panel, observations to the left of the treatment date (pre-treatment) should be near zero; systematic deviation is evidence against parallel trends. Observations to the right are the causal effect estimates at each post-treatment period.</p>
+<p><strong>Reading the ATT(g,t) plot.</strong> Each panel corresponds to a treatment cohort <span class="math inline">\(g\)</span>. Within each panel, observations to the left of the treatment date (pre-treatment) should be near zero; systematic deviation is evidence against parallel trends. Observations to the right are the causal effect estimates at each post-treatment period.</p>
 </div>
 </div>
 </section>
@@ -1654,7 +1665,7 @@ Estimation Method:  Doubly Robust</code></pre>
 </div>
 </div>
 </div>
-<p><strong>Interpreting the pre-test.</strong> Pre-treatment coefficients (event time <span class="math inline">&lt; 0</span>) should be near zero and not statistically significant. Systematic deviations indicate parallel trends violations. The simultaneous confidence bands adjust for multiple testing across all event times; this correction is critical for honest statistical inference, as pointwise bands would understate the uncertainty.</p>
+<p><strong>Interpreting the pre-test.</strong> Pre-treatment coefficients (event time <span class="math inline">\(&lt; 0\)</span>) should be near zero and not statistically significant. Systematic deviations indicate parallel trends violations. The simultaneous confidence bands adjust for multiple testing across all event times; this correction is critical for honest statistical inference, as pointwise bands would understate the uncertainty.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1985,7 +1996,7 @@ Estimation Method:  Doubly Robust</code></pre>
 <p><strong>1. “Did you use TWFE or a modern staggered DiD estimator?”</strong> If the team ran a TWFE regression on a staggered rollout, the estimate may be biased when treatment effects vary across cohorts or over time. Ask for the Goodman-Bacon decomposition to see how much weight comes from contaminated comparisons (late-treated units against already-treated units).</p>
 <p><strong>2. “Can you show me the ATT(g,t) matrix?”</strong> If they can only show a single coefficient, all heterogeneity information is hidden. Modern DiD should show effects by cohort and by exposure duration. A single number is a starting point, not a conclusion.</p>
 <p><strong>3. “What does the pre-trend test show?”</strong> Not just “it looks parallel”: what are the actual coefficient estimates for pre-treatment periods? What is the p-value for the joint test that all pre-treatment coefficients are zero? Are simultaneous bands (not pointwise) being used?</p>
-<p><strong>4. “What does the event study tell us about dynamics?”</strong> A positive effect at <span class="math inline">e=0</span> that grows to a larger effect at <span class="math inline">e=4</span> is a very different strategic story than a large effect at <span class="math inline">e=0</span> that decays to zero by <span class="math inline">e=4</span>. The first suggests a programme that takes time to mature; the second, one that is effective only for early adopters or fades with habituation. TWFE cannot distinguish these narratives. The CS event study can.</p>
+<p><strong>4. “What does the event study tell us about dynamics?”</strong> A positive effect at <span class="math inline">\(e=0\)</span> that grows to a larger effect at <span class="math inline">\(e=4\)</span> is a very different strategic story than a large effect at <span class="math inline">\(e=0\)</span> that decays to zero by <span class="math inline">\(e=4\)</span>. The first suggests a programme that takes time to mature; the second, one that is effective only for early adopters or fades with habituation. TWFE cannot distinguish these narratives. The CS event study can.</p>
 <p><strong>5. “How sensitive are the conclusions to violations of parallel trends?”</strong> Under the HonestDiD framework (Rambachan &amp; Roth, 2023), you can bound conclusions under specified violations. If the “the programme worked” finding holds even when parallel trends is violated by 50% of its magnitude, you have a robust result. If it collapses under a 5% violation, caution is warranted regardless of the pre-test outcome.</p>
 <hr>
 </section>
@@ -1994,7 +2005,7 @@ Estimation Method:  Doubly Robust</code></pre>
 <p>The organisations that will win in the next decade are not those with the most data. They are those with the best <strong>causal models</strong>: the ability to know with confidence what actually drives results, and therefore where to invest next.</p>
 <p>Modern DiD, particularly the Callaway and Sant’Anna estimator, is not a technical refinement for academic purists. It is a practical tool that:</p>
 <ul>
-<li>Produces estimates with unambiguous economic interpretations: <span class="math inline">ATT(g,t)</span> means what it says</li>
+<li>Produces estimates with unambiguous economic interpretations: <span class="math inline">\(ATT(g,t)\)</span> means what it says</li>
 <li>Uses more transparent, researcher-controlled weighting schemes (cohort size, not statistical variance), though some aggregators such as calendar-time still involve implicit weights that should be interpreted carefully</li>
 <li>Provides honest pre-testing that does not rely on contaminated comparisons</li>
 <li>Delivers doubly robust inference that protects against common modelling errors</li>
@@ -2023,7 +2034,7 @@ Estimation Method:  Doubly Robust</code></pre>
 
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -2175,6 +2186,13 @@ Estimation Method:  Doubly Robust</code></pre>
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -3491,8 +3509,35 @@ Estimation Method:  Doubly Robust</code></pre>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 João Vieira</p>
+</div>   
+    <div class="nav-footer-center">
+<p>The Causal Layer — Applied writing on causal inference, pricing, and forecasting.</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/joao-vieira-iseg/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:joaoviei7a@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
 
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -11,27 +11,58 @@ about:
     - icon: envelope
       text: Email
       href: mailto:joaoviei7a@gmail.com
----
-I'm a Strategy Consultant and Economist at **EY-Parthenon**, and hold a Ph.D. in Economics from ISEG – University of Lisbon, where I also spent three years as a Teaching Assistant in applied econometrics and microeconomics.
-
-My doctoral thesis, *Essays on Panel Data Mode Regression*, developed new estimators for modal regression in panel data settings, a minimum distance estimator with fixed effects, and an extension allowing for interactive fixed effects via common correlated effects, with an application to public policy. It was approved unanimously, with distinction and honors.
-
-My work sits at the intersection of causal inference, forecasting, and strategic decision-making. At EY-Parthenon, I design quasi-experimental frameworks — difference-in-differences, regression discontinuity, instrumental variables — to answer hard questions on large-scale datasets: did this policy work? what would have happened without this intervention? how elastic is demand at this price point? I've applied these methods across public policy evaluation, financial instrument impact assessment, and pricing strategy, always with the goal of turning rigorous analysis into decisions that actually get made.
-
-This blog is where I think out loud about the methods I use and care about. Some posts work through theory and intuition. Others are hands-on walkthroughs with real code and data. Most are somewhere in between.
-
-### What I write about
-- **Counterfactual analysis**: synthetic controls, difference-in-differences, interrupted time series
-- **Causal inference**: identification strategies, DAGs, potential outcomes framework, treatment effect heterogeneity (CATE, causal forests)
-- **Forecasting**: probabilistic forecasting, model evaluation, uncertainty quantification
-- **Applied examples**: using real and simulated data to answer concrete questions, with full R implementation
-
-### Background
-- **Senior Consultant, Data Analytics & Causal Inference**: EY-Parthenon *(2024 – present)*
-- **Ph.D. in Economics**: ISEG, University of Lisbon *(2019 – 2026)*
-- **MSc in Applied Econometrics and Forecasting**: ISEG, University of Lisbon
-- **BSc in Management**: Faculty of Economics, University of Coimbra
-
+    - icon: github
+      text: GitHub
+      href: https://github.com/joaovieira22
 ---
 
-*All views are my own. Code is available on GitHub.*
+I'm an economist and data scientist working at the intersection of
+**causal inference**, **pricing**, and **forecasting**.
+
+My day-to-day work is about turning a business question into an
+identification strategy, a model, and a defensible number. I care less
+about which method is fashionable this year and more about which one
+actually answers the question in front of me — and about being honest
+when the data can't.
+
+I'm currently a Senior Consultant at **EY-Parthenon** in Lisbon, working
+on econometric evaluation and decision analytics for public and private
+stakeholders. In parallel, I'm finishing a **Ph.D. in Economics** at
+**ISEG – University of Lisbon**, on nonlinear panel-data estimators with
+heterogeneous effects. Before EY I spent three years as a Visiting
+Assistant Professor at ISEG, teaching applied econometrics, microeconomics
+and investment evaluation.
+
+This blog is where I think out loud about the methods I use. Some posts
+are theory and intuition. Others are full walkthroughs with R code you
+can run. Most sit in between. The goal is rigour without textbook padding.
+
+## What I write about
+
+- **Causal inference** — DiD, RDD, IV, synthetic control, DML, causal
+  forests. Identification strategies, DAGs, potential outcomes, and the
+  robustness checks that keep you honest.
+- **Pricing & demand** — price elasticity, demand modelling, two-sided
+  market pricing, dynamic pricing, MMM, causal price experiments.
+- **Experimentation** — A/B testing under interference, switchback
+  experiments, CUPED, uplift modelling, heterogeneous treatment effects.
+- **Forecasting** — probabilistic forecasting, model evaluation,
+  uncertainty quantification, and where forecasting stops being causal
+  inference.
+
+## Background
+
+- **Ph.D. in Economics** — ISEG, University of Lisbon *(2020 – present)*
+- **MSc in Applied Econometrics and Forecasting** — ISEG, University of Lisbon
+- **BSc in Management** — Faculty of Economics, University of Coimbra
+- **Senior Consultant** — EY-Parthenon *(2024 – present)*
+- **Visiting Assistant Professor** — ISEG, University of Lisbon *(2021 – 2024)*
+
+## Affiliations
+
+- Member, **REM** — Research in Economics and Mathematics
+- Member, **CEMAPRE** — Center for Applied Mathematics for Forecasting
+  and Economic Decision
+
+*All views are my own. Code for every post is available on
+https://github.com/joaovieira22.*

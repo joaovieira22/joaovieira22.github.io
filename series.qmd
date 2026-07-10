@@ -1,0 +1,73 @@
+---
+title: "Series"
+subtitle: "Three arcs, one goal: turn a business question into a defensible number."
+toc: false
+page-layout: full
+---
+
+Most posts here belong to one of three ongoing arcs. Each arc has its
+own reading order, so you can start from the beginning or jump to what
+you need.
+
+Pick an arc from the **Series** menu at the top of the page.
+If you're new here, start with **Causal Inference** — it's the
+foundation the other two build on.
+
+::: {.grid .series-grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.series-card .card-causal}
+### 🟢 Causal Inference
+
+Identification strategies, potential outcomes, DAGs, and the methods
+that let you defend a number in front of a skeptical stakeholder.
+
+**Covers:** A/B testing, DiD, RDD, IV, synthetic control, matching,
+G-computation, DML, causal forests, uplift modelling.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.series-card .card-pricing}
+### 🟠 Pricing & Demand
+
+Price elasticity, two-sided market pricing, dynamic pricing, MMM, and
+the causal experiments that make pricing decisions defensible.
+
+**Covers:** elasticity estimation, personalized pricing, MMM, geo
+experiments, revenue optimization, marketplace dynamics.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.series-card .card-forecasting}
+### 🔵 Forecasting
+
+Probabilistic forecasting, model evaluation, and where forecasting
+stops being causal inference. From ETS to foundation models, with
+honesty about what each can and cannot do.
+
+**Covers:** ETS, ARIMA, hierarchical reconciliation, probabilistic
+forecasting, conformal prediction, foundation models.
+:::
+:::
+
+:::
+
+---
+
+## How the arcs connect
+
+The three arcs are separate but they answer complementary questions.
+
+- **Causal inference** asks *what would have happened otherwise?*
+- **Pricing** asks *what should we do?*, and reuses causal methods to
+  measure the effect of price and marketing decisions.
+- **Forecasting** asks *what is likely to happen?*, and feeds both
+  pricing decisions and experimentation planning.
+
+---
+
+*New posts publish weekly. If you want them in your inbox, subscribe
+via the index.xml or drop me a message on
+[LinkedIn](https://www.linkedin.com/in/joao-vieira-iseg/).*

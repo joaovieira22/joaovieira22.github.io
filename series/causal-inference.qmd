@@ -1,0 +1,35 @@
+---
+title: "🟢 Causal Inference"
+subtitle: "Identification strategies, potential outcomes, and the methods behind defensible decisions."
+toc: true
+toc-depth: 3
+page-layout: full
+listing:
+  - id: causal-posts
+    contents:
+      - "../posts/**/*.qmd"
+    include:
+      categories: ["causal-inference","causal inference" ]
+    sort: "date asc"
+    type: default
+    fields: [date, title, description, reading-time]
+    max-items: 30
+---
+
+Every business decision is a causal question in disguise. *Did this
+work? Was it worth the money? What would have happened without it?*
+The methods on this page are the ones I reach for when the answer
+matters and the data is not a randomized trial.
+
+This is the foundation arc of the blog. The other two — pricing and
+forecasting — build on the vocabulary and habits established here.
+
+---
+
+## Posts in this series
+
+::: {#causal-posts}
+:::
+
+---
+

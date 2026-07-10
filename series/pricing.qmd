@@ -1,0 +1,34 @@
+---
+title: "🟠 Pricing & Demand"
+subtitle: "Price elasticity, revenue optimization, and the causal experiments behind pricing decisions."
+toc: true
+toc-depth: 3
+page-layout: full
+listing:
+  - id: pricing-posts
+    contents:
+      - "../posts/**/*.qmd"
+    include:
+      categories: ["pricing", "pricing and demand", "pricing & demand"]
+    sort: "date asc"
+    type: default
+    fields: [date, title, description, reading-time]
+    max-items: 30
+---
+
+Pricing is where causal inference stops being an academic exercise and
+starts moving money. Every price change is a treatment. Every demand
+response is a causal effect. The methods on this page turn that
+intuition into decisions defensible in front of a commercial team.
+
+This arc reuses the vocabulary of the causal-inference arc and applies
+it to elasticity, demand, revenue, and marketplace dynamics.
+
+---
+
+## Posts in this series
+
+::: {#pricing-posts}
+:::
+
+---

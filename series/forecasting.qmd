@@ -1,0 +1,35 @@
+---
+title: "🔵 Forecasting"
+subtitle: "Probabilistic forecasting, model evaluation, and where forecasting stops being causal inference."
+toc: true
+toc-depth: 3
+page-layout: full
+listing:
+  - id: forecasting-posts
+    contents:
+      - "../posts/**/*.qmd"
+    include:
+      categories: ["forecasting"]
+    sort: "date asc"
+    type: default
+    fields: [date, title, description, reading-time]
+    max-items: 30
+---
+
+Forecasting answers a different question than causal inference — not
+*what would have happened otherwise*, but *what is likely to happen
+next*. Both matter. Neither replaces the other. The posts on this page
+walk through the methods I use and, more importantly, the ones I
+choose not to use.
+
+If you're coming from the causal-inference arc, start with *Forecasting
+Is Not Causal Inference* — it's the bridge between the two.
+
+---
+
+## Posts in this series
+
+::: {#forecasting-posts}
+:::
+
+---

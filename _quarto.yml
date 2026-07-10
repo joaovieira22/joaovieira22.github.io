@@ -4,37 +4,77 @@ project:
 
 website:
   title: "The Causal Layer"
-  description: "Causal inference, econometrics, and the methods behind defensible decisions."
+  description: "Causal inference, pricing, and forecasting for practitioners."
+  favicon: foto3.jpeg
+  site-url: https://joaovieira22.github.io/
+  repo-url: https://github.com/joaovieira22/joaovieira22.github.io
+  page-navigation: true
+  back-to-top-navigation: true
+
   navbar:
+    background: primary
+    pinned: true
+    collapse-below: lg
+    logo: foto3.jpeg
     left:
-      - href: index.qmd
-        text: Home
-      - href: posts.qmd
-        text: Posts
-      - href: about.qmd
-        text: About
+      - text: "Home"
+        href: index.qmd
+      - text: "Series"
+        menu:
+          - text: "All Series"
+            href: series.qmd
+          - text: "---"
+          - text: "Causal Inference"
+            href: series/causal-inference.qmd
+          - text: "Pricing & Demand"
+            href: series/pricing.qmd
+          - text: "Forecasting"
+            href: series/forecasting.qmd
+      - text: "All Posts"
+        href: posts.qmd
+      - text: "Resources"
+        href: resources.qmd
+      - text: "About"
+        href: about.qmd
     right:
-      - icon: github
-        href: https://github.com/joaovieira22
       - icon: linkedin
-        href: https://linkedin.com/in/joaoviei7a
+        href: https://www.linkedin.com/in/joao-vieira-iseg/
+      - icon: envelope
+        href: mailto:joaoviei7a@gmail.com
+      - icon: rss
+        href: index.xml
 
-  favicon: favicon.ico
-
-  open-graph: true
-  twitter-card: true
+  page-footer:
+    left: "© 2026 João Vieira"
+    center: "The Causal Layer — Applied writing on causal inference, pricing, and forecasting."
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/joao-vieira-iseg/
+      - icon: envelope
+        href: mailto:joaoviei7a@gmail.com
 
 format:
   html:
     theme:
-      light: flatly
+      light: cosmo
       dark: darkly
-    highlight-style: github
-    code-fold: true
-    code-tools: true
+    css: styles.css
     toc: true
     toc-depth: 3
+    toc-location: right
+    code-fold: true
+    code-tools: true
+    code-overflow: scroll
+    fig-align: center
     fig-width: 8
     fig-height: 5
-    html-math-method: katex
-    css: styles.css
+    highlight-style: github
+    smooth-scroll: true
+    link-external-newwindow: true
+    link-external-icon: true
+    anchor-sections: true
+    citations-hover: true
+    footnotes-hover: true
+
+execute:
+  freeze: auto
