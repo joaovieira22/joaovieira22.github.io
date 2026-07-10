@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Resources – The Causal Layer</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./foto3.jpeg" rel="icon" type="image/jpeg">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c3ec530b6f8a19b58ffd72ce98371a5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-6ea507b90afd36dfcf636ae1abab9ce3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c3ec530b6f8a19b58ffd72ce98371a5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./foto3.jpeg" alt="" class="navbar-logo light-content">
+    <img src="./foto3.jpeg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">The Causal Layer</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Series</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-series">    
+        <li>
+    <a class="dropdown-item" href="./series.html">
+ <span class="dropdown-text">All Series</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="./series/causal-inference.html">
+ <span class="dropdown-text">Causal Inference</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./series/pricing.html">
+ <span class="dropdown-text">Pricing &amp; Demand</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./series/forecasting.html">
+ <span class="dropdown-text">Forecasting</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./posts.html"> 
+<span class="menu-text">All Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./resources.html" aria-current="page"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/joao-vieira-iseg/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:joaoviei7a@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#books" id="toc-books" class="nav-link active" data-scroll-target="#books">Books</a>
+  <ul class="collapse">
+  <li><a href="#causal-inference" id="toc-causal-inference" class="nav-link" data-scroll-target="#causal-inference">Causal Inference</a></li>
+  <li><a href="#pricing-demand-revenue-management" id="toc-pricing-demand-revenue-management" class="nav-link" data-scroll-target="#pricing-demand-revenue-management">Pricing, Demand &amp; Revenue Management</a></li>
+  <li><a href="#forecasting" id="toc-forecasting" class="nav-link" data-scroll-target="#forecasting">Forecasting</a></li>
+  <li><a href="#experimentation" id="toc-experimentation" class="nav-link" data-scroll-target="#experimentation">Experimentation</a></li>
+  <li><a href="#bayesian-methods" id="toc-bayesian-methods" class="nav-link" data-scroll-target="#bayesian-methods">Bayesian Methods</a></li>
+  </ul></li>
+  <li><a href="#courses" id="toc-courses" class="nav-link" data-scroll-target="#courses">Courses</a></li>
+  <li><a href="#blogs-practitioner-sites" id="toc-blogs-practitioner-sites" class="nav-link" data-scroll-target="#blogs-practitioner-sites">Blogs &amp; Practitioner Sites</a>
+  <ul class="collapse">
+  <li><a href="#econometrics-causal-inference" id="toc-econometrics-causal-inference" class="nav-link" data-scroll-target="#econometrics-causal-inference">Econometrics &amp; Causal Inference</a></li>
+  <li><a href="#experimentation-product-data-science" id="toc-experimentation-product-data-science" class="nav-link" data-scroll-target="#experimentation-product-data-science">Experimentation &amp; Product Data Science</a></li>
+  <li><a href="#pricing-mmm-marketing-science" id="toc-pricing-mmm-marketing-science" class="nav-link" data-scroll-target="#pricing-mmm-marketing-science">Pricing, MMM &amp; Marketing Science</a></li>
+  <li><a href="#forecasting-1" id="toc-forecasting-1" class="nav-link" data-scroll-target="#forecasting-1">Forecasting</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general">General</a></li>
+  </ul></li>
+  <li><a href="#papers-i-keep-coming-back-to" id="toc-papers-i-keep-coming-back-to" class="nav-link" data-scroll-target="#papers-i-keep-coming-back-to">Papers I keep coming back to</a>
+  <ul class="collapse">
+  <li><a href="#did-staggered-adoption" id="toc-did-staggered-adoption" class="nav-link" data-scroll-target="#did-staggered-adoption">DiD / Staggered Adoption</a></li>
+  <li><a href="#synthetic-control" id="toc-synthetic-control" class="nav-link" data-scroll-target="#synthetic-control">Synthetic Control</a></li>
+  <li><a href="#regression-discontinuity" id="toc-regression-discontinuity" class="nav-link" data-scroll-target="#regression-discontinuity">Regression Discontinuity</a></li>
+  <li><a href="#dml-causal-forests" id="toc-dml-causal-forests" class="nav-link" data-scroll-target="#dml-causal-forests">DML &amp; Causal Forests</a></li>
+  <li><a href="#experimentation-1" id="toc-experimentation-1" class="nav-link" data-scroll-target="#experimentation-1">Experimentation</a></li>
+  <li><a href="#marketing-mix-modeling" id="toc-marketing-mix-modeling" class="nav-link" data-scroll-target="#marketing-mix-modeling">Marketing Mix Modeling</a></li>
+  </ul></li>
+  <li><a href="#r-packages-that-i-actually-use" id="toc-r-packages-that-i-actually-use" class="nav-link" data-scroll-target="#r-packages-that-i-actually-use">R Packages (that I actually use)</a>
+  <ul class="collapse">
+  <li><a href="#causal-inference-1" id="toc-causal-inference-1" class="nav-link" data-scroll-target="#causal-inference-1">Causal Inference</a></li>
+  <li><a href="#forecasting-2" id="toc-forecasting-2" class="nav-link" data-scroll-target="#forecasting-2">Forecasting</a></li>
+  <li><a href="#bayesian" id="toc-bayesian" class="nav-link" data-scroll-target="#bayesian">Bayesian</a></li>
+  <li><a href="#general-1" id="toc-general-1" class="nav-link" data-scroll-target="#general-1">General</a></li>
+  </ul></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  <li><a href="#communities" id="toc-communities" class="nav-link" data-scroll-target="#communities">Communities</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Resources</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Books, courses, papers, and tools I actually use — not a wish list.</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>A curated collection of the material I go back to. Not an exhaustive list — just what has been genuinely useful for my work in causal inference, pricing, and forecasting.</p>
+<p>If something on this page led you somewhere interesting, let me know.</p>
+<hr>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<section id="causal-inference" class="level3">
+<h3 class="anchored" data-anchor-id="causal-inference">Causal Inference</h3>
+<ul>
+<li><strong>Angrist &amp; Pischke</strong> — <em>Mostly Harmless Econometrics</em> (2009). The classic. Read chapters 3 (regression) and 5 (DiD) at least twice.</li>
+<li><strong>Cunningham</strong> — <em>Causal Inference: The Mixtape</em> (2021). Free online: <a href="https://mixtape.scunning.com/" class="uri">https://mixtape.scunning.com/</a>. The most practitioner-friendly introduction to identification strategies.</li>
+<li><strong>Hernán &amp; Robins</strong> — <em>Causal Inference: What If</em> (2020). Free online: <a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/" class="uri">https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/</a>. The potential outcomes framework, done rigorously.</li>
+<li><strong>Pearl, Glymour &amp; Jewell</strong> — <em>Causal Inference in Statistics: A Primer</em> (2016). The graphical / DAG side of causal inference.</li>
+<li><strong>Facure</strong> — <em>Causal Inference for the Brave and True</em> (2022). Free online: <a href="https://matheusfacure.github.io/python-causality-handbook/" class="uri">https://matheusfacure.github.io/python-causality-handbook/</a>. Python-first, notebook-style walkthroughs.</li>
+</ul>
+</section>
+<section id="pricing-demand-revenue-management" class="level3">
+<h3 class="anchored" data-anchor-id="pricing-demand-revenue-management">Pricing, Demand &amp; Revenue Management</h3>
+<ul>
+<li><strong>Phillips</strong> — <em>Pricing and Revenue Optimization</em> (2021, 2nd ed.). The book on the subject.</li>
+<li><strong>Talluri &amp; van Ryzin</strong> — <em>The Theory and Practice of Revenue Management</em> (2004). Deeper on the airline/hotel revenue management side.</li>
+<li><strong>Ariely</strong> — <em>Predictably Irrational</em> (2008). Behavioural side of pricing. Short, useful.</li>
+</ul>
+</section>
+<section id="forecasting" class="level3">
+<h3 class="anchored" data-anchor-id="forecasting">Forecasting</h3>
+<ul>
+<li><strong>Hyndman &amp; Athanasopoulos</strong> — <em>Forecasting: Principles and Practice</em> (2021, 3rd ed.). Free online: <a href="https://otexts.com/fpp3/" class="uri">https://otexts.com/fpp3/</a>. The reference.</li>
+<li><strong>Petropoulos et al.</strong> — <em>Forecasting: theory and practice</em> (2022). A 300-page survey paper. Free: <a href="https://arxiv.org/abs/2012.03854" class="uri">https://arxiv.org/abs/2012.03854</a>.</li>
+</ul>
+</section>
+<section id="experimentation" class="level3">
+<h3 class="anchored" data-anchor-id="experimentation">Experimentation</h3>
+<ul>
+<li><strong>Kohavi, Tang &amp; Xu</strong> — <em>Trustworthy Online Controlled Experiments</em> (2020). Written by people who run experiments at scale (Microsoft, Airbnb, LinkedIn). If you only read one book on A/B testing, read this one.</li>
+<li><strong>Gerber &amp; Green</strong> — <em>Field Experiments: Design, Analysis, and Interpretation</em> (2012). The academic counterpart. Strong on design.</li>
+</ul>
+</section>
+<section id="bayesian-methods" class="level3">
+<h3 class="anchored" data-anchor-id="bayesian-methods">Bayesian Methods</h3>
+<ul>
+<li><strong>McElreath</strong> — <em>Statistical Rethinking</em> (2020, 2nd ed.). The book that makes Bayesian inference click. Companion lectures on YouTube.</li>
+<li><strong>Gelman et al.</strong> — <em>Bayesian Data Analysis</em> (2013, 3rd ed.). Free online: <a href="https://sites.stat.columbia.edu/gelman/book/" class="uri">https://sites.stat.columbia.edu/gelman/book/</a>. The reference.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="courses" class="level2">
+<h2 class="anchored" data-anchor-id="courses">Courses</h2>
+<ul>
+<li><p><strong>MIT OCW — 14.32 Econometrics</strong> (undergraduate).<br>
+<a href="https://ocw.mit.edu/courses/14-32-econometrics-spring-2007/" class="uri">https://ocw.mit.edu/courses/14-32-econometrics-spring-2007/</a></p></li>
+<li><p><strong>MIT OCW — 14.382 Econometrics</strong> (graduate).<br>
+<a href="https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/" class="uri">https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/</a></p></li>
+<li><p><strong>MIT OCW — 14.310x Data Analysis for Social Scientists</strong> (Duflo &amp; Ellison).<br>
+<a href="https://ocw.mit.edu/courses/14-310x-data-analysis-for-social-scientists-spring-2023/" class="uri">https://ocw.mit.edu/courses/14-310x-data-analysis-for-social-scientists-spring-2023/</a><br>
+Probability, statistics, regression, and applied causal inference framed around policy questions. Great pairing with <em>Mostly Harmless Econometrics</em> — the textbook gives you the theory, this course gives you the applied intuition.</p></li>
+<li><p><strong>MIT OCW — 14.750x Political Economy and Economic Development</strong> (Duflo &amp; Banerjee).<br>
+<a href="https://ocw.mit.edu/courses/14-750-political-economy-and-economic-development-spring-2018/" class="uri">https://ocw.mit.edu/courses/14-750-political-economy-and-economic-development-spring-2018/</a><br>
+Advanced applied causal inference in development economics, from the Nobel-winning J-PAL team.</p></li>
+<li><p><strong>The Effect — Video Series (Nick Huntington-Klein)</strong>.<br>
+<a href="https://www.youtube.com/playlist?list=PLwJRxp3blEvZyQBTTOMFRP_TDaSdly3gU" class="uri">https://www.youtube.com/playlist?list=PLwJRxp3blEvZyQBTTOMFRP_TDaSdly3gU</a><br>
+Full companion video series to the book <em>The Effect</em>. 69+ episodes on research design and causal inference, from DAGs to IV to synthetic control. Book (free): <a href="https://theeffectbook.net/" class="uri">https://theeffectbook.net/</a>.</p></li>
+<li><p><strong>The Effect — Video Series (Nick Huntington-Klein)</strong>. <a href="https://www.youtube.com/playlist?list=PLwJRxp3blEvZyQBTTOMFRP_TDaSdly3gU" class="uri">https://www.youtube.com/playlist?list=PLwJRxp3blEvZyQBTTOMFRP_TDaSdly3gU</a> Full companion video series to the book <em>The Effect</em>. 69+ episodes on research design and causal inference, from DAGs to IV to synthetic control.</p></li>
+<li><p><strong>Statistical Rethinking Lectures — McElreath</strong> (YouTube).<br>
+<a href="https://github.com/rmcelreath/stat_rethinking_2024" class="uri">https://github.com/rmcelreath/stat_rethinking_2024</a><br>
+The best Bayesian course, free.</p></li>
+<li><p><strong>Causal Inference Bootcamp — Duke / Kyle Butts</strong>.<br>
+<a href="https://kylebutts.com/econ-teaching.html" class="uri">https://kylebutts.com/econ-teaching.html</a></p></li>
+</ul>
+</section>
+<section id="blogs-practitioner-sites" class="level2">
+<h2 class="anchored" data-anchor-id="blogs-practitioner-sites">Blogs &amp; Practitioner Sites</h2>
+<section id="econometrics-causal-inference" class="level3">
+<h3 class="anchored" data-anchor-id="econometrics-causal-inference">Econometrics &amp; Causal Inference</h3>
+<ul>
+<li><strong>Chris Bilder</strong> — <a href="https://www.chrisbilder.com/" class="uri">https://www.chrisbilder.com/</a>. Categorical data and applied stats, with R code you can actually run.</li>
+<li><strong>Andrew Gelman</strong> — <a href="https://statmodeling.stat.columbia.edu/" class="uri">https://statmodeling.stat.columbia.edu/</a>. Bayesian statistics, methodology critique, occasional politics.</li>
+<li><strong>Marc Bellemare</strong> — <a href="https://marcfbellemare.com/wordpress/" class="uri">https://marcfbellemare.com/wordpress/</a>. Applied econometrics, IV, and academic career advice.</li>
+<li><strong>Ryan Cornelius (Very Sensible)</strong> — <a href="https://verysensible.com/" class="uri">https://verysensible.com/</a>. Causal inference for practitioners.</li>
+<li><strong>Andrew Heiss</strong> — <a href="https://www.andrewheiss.com/blog/" class="uri">https://www.andrewheiss.com/blog/</a>. Bayesian econometrics with R walkthroughs.</li>
+<li><strong>Nick Huntington-Klein</strong> — <a href="https://nickchk.com/" class="uri">https://nickchk.com/</a>. Econometrics teaching, R packages, and thoughtful writing.</li>
+</ul>
+</section>
+<section id="experimentation-product-data-science" class="level3">
+<h3 class="anchored" data-anchor-id="experimentation-product-data-science">Experimentation &amp; Product Data Science</h3>
+<ul>
+<li><strong>Netflix Tech Blog — Experimentation</strong> — <a href="https://netflixtechblog.com/tagged/experimentation" class="uri">https://netflixtechblog.com/tagged/experimentation</a>.</li>
+<li><strong>Airbnb Data Science</strong> — <a href="https://medium.com/airbnb-engineering/ai-ml" class="uri">https://medium.com/airbnb-engineering/ai-ml</a>.</li>
+<li><strong>Uber Engineering — Experimentation</strong> — <a href="https://www.uber.com/en-PT/blog/engineering/" class="uri">https://www.uber.com/en-PT/blog/engineering/</a>.</li>
+<li><strong>Booking.com — Data &amp; Experimentation</strong> — <a href="https://booking.ai/" class="uri">https://booking.ai/</a>.</li>
+<li><strong>Spotify R&amp;D</strong> — <a href="https://research.atspotify.com/" class="uri">https://research.atspotify.com/</a>.</li>
+</ul>
+</section>
+<section id="pricing-mmm-marketing-science" class="level3">
+<h3 class="anchored" data-anchor-id="pricing-mmm-marketing-science">Pricing, MMM &amp; Marketing Science</h3>
+<ul>
+<li><strong>PyMC Labs Blog</strong> — <a href="https://www.pymc-labs.com/blog-posts/" class="uri">https://www.pymc-labs.com/blog-posts/</a>. Bayesian MMM, marketing measurement, PyMC-Marketing tutorials.</li>
+<li><strong>Google Ads Attribution &amp; Incrementality</strong> (search “Google Ads Data Hub” and “geo experiments” documentation).</li>
+</ul>
+</section>
+<section id="forecasting-1" class="level3">
+<h3 class="anchored" data-anchor-id="forecasting-1">Forecasting</h3>
+<ul>
+<li><strong>Rob Hyndman’s Blog</strong> — <a href="https://robjhyndman.com/hyndsight/" class="uri">https://robjhyndman.com/hyndsight/</a>. From the co-author of <em>Forecasting: Principles and Practice</em>.</li>
+<li><strong>Nixtla Blog</strong> — <a href="https://nixtla.github.io/nixtla/" class="uri">https://nixtla.github.io/nixtla/</a>. Python-first forecasting stack (StatsForecast, MLForecast, NeuralForecast).</li>
+</ul>
+</section>
+<section id="general" class="level3">
+<h3 class="anchored" data-anchor-id="general">General</h3>
+<ul>
+<li><strong>R-bloggers</strong> — <a href="https://www.r-bloggers.com/" class="uri">https://www.r-bloggers.com/</a>. Aggregator of R content. Set up an RSS feed on causal / forecasting tags.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="papers-i-keep-coming-back-to" class="level2">
+<h2 class="anchored" data-anchor-id="papers-i-keep-coming-back-to">Papers I keep coming back to</h2>
+<section id="did-staggered-adoption" class="level3">
+<h3 class="anchored" data-anchor-id="did-staggered-adoption">DiD / Staggered Adoption</h3>
+<ul>
+<li>Callaway &amp; Sant’Anna (2021). <em>Difference-in-differences with multiple time periods</em>. Journal of Econometrics. <a href="https://doi.org/10.1016/j.jeconom.2020.12.001" class="uri">https://doi.org/10.1016/j.jeconom.2020.12.001</a></li>
+<li>Goodman-Bacon (2021). <em>Difference-in-differences with variation in treatment timing</em>. Journal of Econometrics.</li>
+<li>Sun &amp; Abraham (2021). <em>Estimating dynamic treatment effects in event studies with heterogeneous treatment effects</em>. Journal of Econometrics.</li>
+<li>Roth, Sant’Anna, Bilinski &amp; Poe (2023). <em>What’s trending in difference-in-differences?</em> Journal of Econometrics.</li>
+</ul>
+</section>
+<section id="synthetic-control" class="level3">
+<h3 class="anchored" data-anchor-id="synthetic-control">Synthetic Control</h3>
+<ul>
+<li>Abadie, Diamond &amp; Hainmueller (2010). <em>Synthetic control methods for comparative case studies</em>. JASA.</li>
+<li>Abadie (2021). <em>Using synthetic controls: feasibility, data requirements, and methodological aspects</em>. JEL.</li>
+</ul>
+</section>
+<section id="regression-discontinuity" class="level3">
+<h3 class="anchored" data-anchor-id="regression-discontinuity">Regression Discontinuity</h3>
+<ul>
+<li>Cattaneo, Idrobo &amp; Titiunik (2019). <em>A practical introduction to regression discontinuity designs</em>. Cambridge.</li>
+</ul>
+</section>
+<section id="dml-causal-forests" class="level3">
+<h3 class="anchored" data-anchor-id="dml-causal-forests">DML &amp; Causal Forests</h3>
+<ul>
+<li>Chernozhukov et al.&nbsp;(2018). <em>Double/debiased machine learning</em>. Econometrics Journal.</li>
+<li>Wager &amp; Athey (2018). <em>Estimation and inference of heterogeneous treatment effects using random forests</em>. JASA.</li>
+</ul>
+</section>
+<section id="experimentation-1" class="level3">
+<h3 class="anchored" data-anchor-id="experimentation-1">Experimentation</h3>
+<ul>
+<li>Deng, Xu, Kohavi &amp; Walker (2013). <em>Improving the sensitivity of online controlled experiments by utilizing pre-experiment data</em> — the CUPED paper.</li>
+<li>Bojinov, Simchi-Levi &amp; Zhao (2023). <em>Design and analysis of switchback experiments</em>. Management Science.</li>
+</ul>
+</section>
+<section id="marketing-mix-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="marketing-mix-modeling">Marketing Mix Modeling</h3>
+<ul>
+<li>Jin, Wang, Sun, Chan &amp; Koehler (2017). <em>Bayesian methods for media mix modeling with carryover and shape effects</em>. Google.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="r-packages-that-i-actually-use" class="level2">
+<h2 class="anchored" data-anchor-id="r-packages-that-i-actually-use">R Packages (that I actually use)</h2>
+<section id="causal-inference-1" class="level3">
+<h3 class="anchored" data-anchor-id="causal-inference-1">Causal Inference</h3>
+<ul>
+<li><strong><code>fixest</code></strong> — <a href="https://lrberge.github.io/fixest/" class="uri">https://lrberge.github.io/fixest/</a>. Fast fixed-effects regression. My default for DiD and panel data.</li>
+<li><strong><code>did</code></strong> — <a href="https://bcallaway11.github.io/did/" class="uri">https://bcallaway11.github.io/did/</a>. Callaway &amp; Sant’Anna staggered-adoption DiD.</li>
+<li><strong><code>Synth</code></strong> — synthetic control.</li>
+<li><strong><code>rdrobust</code></strong> — Cattaneo et al.&nbsp;RDD implementation.</li>
+<li><strong><code>grf</code></strong> — <a href="https://grf-labs.github.io/grf/" class="uri">https://grf-labs.github.io/grf/</a>. Generalized random forests (causal forests, DML).</li>
+<li><strong><code>DoubleML</code></strong> — <a href="https://docs.doubleml.org/" class="uri">https://docs.doubleml.org/</a>. Chernozhukov et al.&nbsp;DML in R.</li>
+<li><strong><code>marginaleffects</code></strong> — <a href="https://marginaleffects.com/" class="uri">https://marginaleffects.com/</a>. Interpretation of anything, from OLS to Bayesian.</li>
+<li><strong><code>adjustedCurves</code></strong> — G-computation for survival.</li>
+</ul>
+</section>
+<section id="forecasting-2" class="level3">
+<h3 class="anchored" data-anchor-id="forecasting-2">Forecasting</h3>
+<ul>
+<li><strong><code>fable</code></strong> and <strong><code>fabletools</code></strong> — <a href="https://fable.tidyverts.org/" class="uri">https://fable.tidyverts.org/</a>. Hyndman’s tidyverse forecasting stack.</li>
+<li><strong><code>forecast</code></strong> — the older classic.</li>
+<li><strong><code>prophet</code></strong> — <a href="https://facebook.github.io/prophet/" class="uri">https://facebook.github.io/prophet/</a>.</li>
+</ul>
+</section>
+<section id="bayesian" class="level3">
+<h3 class="anchored" data-anchor-id="bayesian">Bayesian</h3>
+<ul>
+<li><strong><code>brms</code></strong> — <a href="https://paul-buerkner.github.io/brms/" class="uri">https://paul-buerkner.github.io/brms/</a>. Bayesian regression, Stan under the hood, formula syntax.</li>
+<li><strong><code>rstanarm</code></strong> — Bayesian versions of standard R models.</li>
+<li><strong><code>CausalImpact</code></strong> — Google’s BSTS for causal inference.</li>
+</ul>
+</section>
+<section id="general-1" class="level3">
+<h3 class="anchored" data-anchor-id="general-1">General</h3>
+<ul>
+<li><strong><code>tidyverse</code></strong> — <code>dplyr</code>, <code>ggplot2</code>, <code>tidyr</code>, <code>purrr</code>.</li>
+<li><strong><code>patchwork</code></strong> — combining ggplot2 figures.</li>
+<li><strong><code>scales</code></strong> — proper axis formatting.</li>
+<li><strong><code>gt</code></strong> and <strong><code>kableExtra</code></strong> — tables that don’t embarrass you.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<ul>
+<li><strong><code>statsmodels</code></strong> — the basics: OLS, panel, GLM.</li>
+<li><strong><code>linearmodels</code></strong> — panel data, IV, and system estimators.</li>
+<li><strong><code>econml</code></strong> — <a href="https://econml.azurewebsites.net/" class="uri">https://econml.azurewebsites.net/</a>. Microsoft’s DML / meta-learners / policy learning.</li>
+<li><strong><code>pymc</code></strong> — <a href="https://www.pymc.io/" class="uri">https://www.pymc.io/</a>. Probabilistic programming, general-purpose Bayesian modelling.</li>
+<li><strong><code>pymc-marketing</code></strong> — <a href="https://www.pymc-marketing.io/" class="uri">https://www.pymc-marketing.io/</a>. Bayesian MMM out of the box: adstock, saturation, budget optimisation.</li>
+<li><strong><code>causalinference</code></strong> — implements matching and other estimators.</li>
+<li><strong><code>dowhy</code></strong> — <a href="https://www.pywhy.org/dowhy/" class="uri">https://www.pywhy.org/dowhy/</a>. Causal inference with a graphical model layer.</li>
+<li><strong><code>nixtla</code> stack</strong> — <code>statsforecast</code>, <code>mlforecast</code>, <code>neuralforecast</code>.</li>
+</ul>
+<hr>
+</section>
+<section id="communities" class="level2">
+<h2 class="anchored" data-anchor-id="communities">Communities</h2>
+<ul>
+<li><strong>Causal Inference Slack</strong> (invite through the Mixtape site).</li>
+<li><strong>R for Data Science online community</strong> — <a href="https://rfordatasci.com/" class="uri">https://rfordatasci.com/</a>.</li>
+<li><strong>Cross Validated</strong> (stats.stackexchange.com) — still the best place to ask sharp methodological questions.</li>
+</ul>
+<hr>
+<p><em>If a link here is broken or you have a strong recommendation to add, let me know via <a href="mailto:joaoviei7a@gmail.com">email</a> or LinkedIn.</em></p>
+
+
+<!-- -->
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/joaovieira22\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Resources"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Books, courses, papers, and tools I actually use — not a wish list."</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">toc-depth:</span><span class="co"> 3</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>A curated collection of the material I go back to. Not an exhaustive</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>list — just what has been genuinely useful for my work in causal</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>inference, pricing, and forecasting.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>If something on this page led you somewhere interesting, let me know.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Books</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### Causal Inference</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Angrist &amp; Pischke** — *Mostly Harmless Econometrics* (2009).</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  The classic. Read chapters 3 (regression) and 5 (DiD) at least twice.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Cunningham** — *Causal Inference: The Mixtape* (2021).</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  Free online: <span class="ot">&lt;https://mixtape.scunning.com/&gt;</span>. The most practitioner-friendly</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  introduction to identification strategies.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Hernán &amp; Robins** — *Causal Inference: What If* (2020).</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  Free online: <span class="ot">&lt;https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/&gt;</span>.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  The potential outcomes framework, done rigorously.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Pearl, Glymour &amp; Jewell** — *Causal Inference in Statistics: A Primer* (2016).</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  The graphical / DAG side of causal inference.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Facure** — *Causal Inference for the Brave and True* (2022).</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  Free online: <span class="ot">&lt;https://matheusfacure.github.io/python-causality-handbook/&gt;</span>.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  Python-first, notebook-style walkthroughs.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pricing, Demand &amp; Revenue Management</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Phillips** — *Pricing and Revenue Optimization* (2021, 2nd ed.).</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  The book on the subject.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Talluri &amp; van Ryzin** — *The Theory and Practice of Revenue Management* (2004).</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  Deeper on the airline/hotel revenue management side.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ariely** — *Predictably Irrational* (2008).</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  Behavioural side of pricing. Short, useful.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">### Forecasting</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Hyndman &amp; Athanasopoulos** — *Forecasting: Principles and Practice* (2021, 3rd ed.).</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  Free online: <span class="ot">&lt;https://otexts.com/fpp3/&gt;</span>. The reference.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Petropoulos et al.** — *Forecasting: theory and practice* (2022).</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  A 300-page survey paper. Free: <span class="ot">&lt;https://arxiv.org/abs/2012.03854&gt;</span>.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">### Experimentation</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Kohavi, Tang &amp; Xu** — *Trustworthy Online Controlled Experiments* (2020).</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  Written by people who run experiments at scale (Microsoft, Airbnb, LinkedIn).</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  If you only read one book on A/B testing, read this one.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Gerber &amp; Green** — *Field Experiments: Design, Analysis, and Interpretation* (2012).</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  The academic counterpart. Strong on design.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bayesian Methods</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**McElreath** — *Statistical Rethinking* (2020, 2nd ed.).</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  The book that makes Bayesian inference click. Companion lectures on YouTube.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Gelman et al.** — *Bayesian Data Analysis* (2013, 3rd ed.).</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  Free online: <span class="ot">&lt;https://sites.stat.columbia.edu/gelman/book/&gt;</span>. The reference.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">## Courses</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**MIT OCW — 14.32 Econometrics** (undergraduate).  </span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://ocw.mit.edu/courses/14-32-econometrics-spring-2007/&gt;</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**MIT OCW — 14.382 Econometrics** (graduate).  </span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/&gt;</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**MIT OCW — 14.310x Data Analysis for Social Scientists** (Duflo &amp; Ellison).  </span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://ocw.mit.edu/courses/14-310x-data-analysis-for-social-scientists-spring-2023/&gt;</span>  </span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>  Probability, statistics, regression, and applied causal inference framed</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>around policy questions. Great pairing with *Mostly Harmless Econometrics* —</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>the textbook gives you the theory, this course gives you the applied intuition.</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**MIT OCW — 14.750x Political Economy and Economic Development** (Duflo &amp; Banerjee).  </span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://ocw.mit.edu/courses/14-750-political-economy-and-economic-development-spring-2018/&gt;</span>  </span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>  Advanced applied causal inference in development economics, from the</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>Nobel-winning J-PAL team.</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The Effect — Video Series (Nick Huntington-Klein)**.  </span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://www.youtube.com/playlist?list=PLwJRxp3blEvZyQBTTOMFRP_TDaSdly3gU&gt;</span>  </span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>  Full companion video series to the book *The Effect*. 69+ episodes on</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>research design and causal inference, from DAGs to IV to synthetic control.</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>Book (free): <span class="ot">&lt;https://theeffectbook.net/&gt;</span>.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The Effect — Video Series (Nick Huntington-Klein)**.</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>  <span class="ot">&lt;https://www.youtube.com/playlist?list=PLwJRxp3blEvZyQBTTOMFRP_TDaSdly3gU&gt;</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>  Full companion video series to the book *The Effect*. 69+ episodes on</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>  research design and causal inference, from DAGs to IV to synthetic control.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Statistical Rethinking Lectures — McElreath** (YouTube).  </span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://github.com/rmcelreath/stat_rethinking_2024&gt;</span>  </span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>  The best Bayesian course, free.</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Causal Inference Bootcamp — Duke / Kyle Butts**.  </span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://kylebutts.com/econ-teaching.html&gt;</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="fu">## Blogs &amp; Practitioner Sites</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="fu">### Econometrics &amp; Causal Inference</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Chris Bilder** — <span class="ot">&lt;https://www.chrisbilder.com/&gt;</span>.</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>  Categorical data and applied stats, with R code you can actually run.</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Andrew Gelman** — <span class="ot">&lt;https://statmodeling.stat.columbia.edu/&gt;</span>.</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>  Bayesian statistics, methodology critique, occasional politics.</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Marc Bellemare** — <span class="ot">&lt;https://marcfbellemare.com/wordpress/&gt;</span>.</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>  Applied econometrics, IV, and academic career advice.</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ryan Cornelius (Very Sensible)** — <span class="ot">&lt;https://verysensible.com/&gt;</span>.</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>  Causal inference for practitioners.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Andrew Heiss** — <span class="ot">&lt;https://www.andrewheiss.com/blog/&gt;</span>.</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>  Bayesian econometrics with R walkthroughs.</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Nick Huntington-Klein** — <span class="ot">&lt;https://nickchk.com/&gt;</span>.</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>  Econometrics teaching, R packages, and thoughtful writing.</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="fu">### Experimentation &amp; Product Data Science</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Netflix Tech Blog — Experimentation** —</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>  <span class="ot">&lt;https://netflixtechblog.com/tagged/experimentation&gt;</span>.</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Airbnb Data Science** — <span class="ot">&lt;https://medium.com/airbnb-engineering/ai-ml&gt;</span>.</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Uber Engineering — Experimentation** —</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>  <span class="ot">&lt;https://www.uber.com/en-PT/blog/engineering/&gt;</span>.</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Booking.com — Data &amp; Experimentation** —</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>  <span class="ot">&lt;https://booking.ai/&gt;</span>.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Spotify R&amp;D** — <span class="ot">&lt;https://research.atspotify.com/&gt;</span>.</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pricing, MMM &amp; Marketing Science</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**PyMC Labs Blog** — <span class="ot">&lt;https://www.pymc-labs.com/blog-posts/&gt;</span>.</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>  Bayesian MMM, marketing measurement, PyMC-Marketing tutorials.</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Google Ads Attribution &amp; Incrementality**</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>  (search "Google Ads Data Hub" and "geo experiments" documentation).</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="fu">### Forecasting</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Rob Hyndman's Blog** — <span class="ot">&lt;https://robjhyndman.com/hyndsight/&gt;</span>.</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>  From the co-author of *Forecasting: Principles and Practice*.</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Nixtla Blog** — <span class="ot">&lt;https://nixtla.github.io/nixtla/&gt;</span>.</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>  Python-first forecasting stack (StatsForecast, MLForecast, NeuralForecast).</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="fu">### General</span></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**R-bloggers** — <span class="ot">&lt;https://www.r-bloggers.com/&gt;</span>.</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>  Aggregator of R content. Set up an RSS feed on causal / forecasting tags.</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="fu">## Papers I keep coming back to</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="fu">### DiD / Staggered Adoption</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Callaway &amp; Sant'Anna (2021). *Difference-in-differences with multiple time periods*. Journal of Econometrics. <span class="ot">&lt;https://doi.org/10.1016/j.jeconom.2020.12.001&gt;</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Goodman-Bacon (2021). *Difference-in-differences with variation in treatment timing*. Journal of Econometrics.</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sun &amp; Abraham (2021). *Estimating dynamic treatment effects in event studies with heterogeneous treatment effects*. Journal of Econometrics.</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Roth, Sant'Anna, Bilinski &amp; Poe (2023). *What's trending in difference-in-differences?* Journal of Econometrics.</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="fu">### Synthetic Control</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Abadie, Diamond &amp; Hainmueller (2010). *Synthetic control methods for comparative case studies*. JASA.</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Abadie (2021). *Using synthetic controls: feasibility, data requirements, and methodological aspects*. JEL.</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="fu">### Regression Discontinuity</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cattaneo, Idrobo &amp; Titiunik (2019). *A practical introduction to regression discontinuity designs*. Cambridge.</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="fu">### DML &amp; Causal Forests</span></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chernozhukov et al. (2018). *Double/debiased machine learning*. Econometrics Journal.</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wager &amp; Athey (2018). *Estimation and inference of heterogeneous treatment effects using random forests*. JASA.</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="fu">### Experimentation</span></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Deng, Xu, Kohavi &amp; Walker (2013). *Improving the sensitivity of online controlled experiments by utilizing pre-experiment data* — the CUPED paper.</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bojinov, Simchi-Levi &amp; Zhao (2023). *Design and analysis of switchback experiments*. Management Science.</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="fu">### Marketing Mix Modeling</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jin, Wang, Sun, Chan &amp; Koehler (2017). *Bayesian methods for media mix modeling with carryover and shape effects*. Google.</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="fu">## R Packages (that I actually use)</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="fu">### Causal Inference</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`fixest`** — <span class="ot">&lt;https://lrberge.github.io/fixest/&gt;</span>.</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>  Fast fixed-effects regression. My default for DiD and panel data.</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`did`** — <span class="ot">&lt;https://bcallaway11.github.io/did/&gt;</span>.</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>  Callaway &amp; Sant'Anna staggered-adoption DiD.</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`Synth`** — synthetic control.</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`rdrobust`** — Cattaneo et al. RDD implementation.</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`grf`** — <span class="ot">&lt;https://grf-labs.github.io/grf/&gt;</span>.</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>  Generalized random forests (causal forests, DML).</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`DoubleML`** — <span class="ot">&lt;https://docs.doubleml.org/&gt;</span>.</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>  Chernozhukov et al. DML in R.</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`marginaleffects`** — <span class="ot">&lt;https://marginaleffects.com/&gt;</span>.</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>  Interpretation of anything, from OLS to Bayesian.</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`adjustedCurves`** — G-computation for survival.</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="fu">### Forecasting</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`fable`** and **`fabletools`** — <span class="ot">&lt;https://fable.tidyverts.org/&gt;</span>.</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>  Hyndman's tidyverse forecasting stack.</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`forecast`** — the older classic.</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`prophet`** — <span class="ot">&lt;https://facebook.github.io/prophet/&gt;</span>.</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bayesian</span></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`brms`** — <span class="ot">&lt;https://paul-buerkner.github.io/brms/&gt;</span>.</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>  Bayesian regression, Stan under the hood, formula syntax.</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`rstanarm`** — Bayesian versions of standard R models.</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`CausalImpact`** — Google's BSTS for causal inference.</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="fu">### General</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`tidyverse`** — <span class="in">`dplyr`</span>, <span class="in">`ggplot2`</span>, <span class="in">`tidyr`</span>, <span class="in">`purrr`</span>.</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`patchwork`** — combining ggplot2 figures.</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`scales`** — proper axis formatting.</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`gt`** and **`kableExtra`** — tables that don't embarrass you.</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="fu">## Python</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`statsmodels`** — the basics: OLS, panel, GLM.</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`linearmodels`** — panel data, IV, and system estimators.</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`econml`** — <span class="ot">&lt;https://econml.azurewebsites.net/&gt;</span>.</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>  Microsoft's DML / meta-learners / policy learning.</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`pymc`** — <span class="ot">&lt;https://www.pymc.io/&gt;</span>.</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>  Probabilistic programming, general-purpose Bayesian modelling.</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`pymc-marketing`** — <span class="ot">&lt;https://www.pymc-marketing.io/&gt;</span>.</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>  Bayesian MMM out of the box: adstock, saturation, budget optimisation.</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`causalinference`** — implements matching and other estimators.</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`dowhy`** — <span class="ot">&lt;https://www.pywhy.org/dowhy/&gt;</span>.</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>  Causal inference with a graphical model layer.</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`nixtla` stack** — <span class="in">`statsforecast`</span>, <span class="in">`mlforecast`</span>, <span class="in">`neuralforecast`</span>.</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="fu">## Communities</span></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Causal Inference Slack** (invite through the Mixtape site).</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**R for Data Science online community** — <span class="ot">&lt;https://rfordatasci.com/&gt;</span>.</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Cross Validated** (stats.stackexchange.com) — still the best place to</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>  ask sharp methodological questions.</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>*If a link here is broken or you have a strong recommendation to add,</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>let me know via <span class="co">[</span><span class="ot">email</span><span class="co">](mailto:joaoviei7a@gmail.com)</span> or LinkedIn.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 João Vieira</p>
+</div>   
+    <div class="nav-footer-center">
+<p>The Causal Layer — Applied writing on causal inference, pricing, and forecasting.</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/joao-vieira-iseg/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:joaoviei7a@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -4,7 +4,7 @@
     "items": []
   },
   {
-    "listing": "/posts.html",
+    "listing": "/index.html",
     "items": [
       "/posts/AB_Spillovers_Runbook/runbook.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
@@ -15,7 +15,7 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/posts.html",
     "items": [
       "/posts/AB_Spillovers_Runbook/runbook.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
