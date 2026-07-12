@@ -7,6 +7,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/AB_Spillovers_Runbook/runbook.html",
+      "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB Testing/ab_test_probably_wrong.html",
@@ -18,6 +19,7 @@
     "listing": "/posts.html",
     "items": [
       "/posts/AB_Spillovers_Runbook/runbook.html",
+      "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB Testing/ab_test_probably_wrong.html",
@@ -33,11 +35,14 @@
       "/posts/AB Testing/ab_test_probably_wrong.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
+      "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
       "/posts/AB_Spillovers_Runbook/runbook.html"
     ]
   },
   {
     "listing": "/series/pricing.html",
-    "items": []
+    "items": [
+      "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html"
+    ]
   }
 ]
