@@ -1,14 +1,17 @@
 [
   {
     "listing": "/series/forecasting.html",
-    "items": []
+    "items": [
+      "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html"
+    ]
   },
   {
     "listing": "/index.html",
     "items": [
-      "/posts/AB_Spillovers_Runbook/runbook.html",
+      "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
+      "/posts/AB_Spillovers_Runbook/runbook.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB Testing/ab_test_probably_wrong.html",
       "/posts/DID/did_for_ceos.html",
@@ -18,9 +21,10 @@
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/AB_Spillovers_Runbook/runbook.html",
+      "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
+      "/posts/AB_Spillovers_Runbook/runbook.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB Testing/ab_test_probably_wrong.html",
       "/posts/DID/did_for_ceos.html",
@@ -34,9 +38,10 @@
       "/posts/DID/did_for_ceos.html",
       "/posts/AB Testing/ab_test_probably_wrong.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
+      "/posts/AB_Spillovers_Runbook/runbook.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
-      "/posts/AB_Spillovers_Runbook/runbook.html"
+      "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html"
     ]
   },
   {

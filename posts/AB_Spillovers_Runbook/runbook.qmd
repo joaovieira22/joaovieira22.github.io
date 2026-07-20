@@ -1,7 +1,7 @@
 ---
 title: "A/B Testing with Spillovers: A Runbook"
 description: "The practical companion to 'When A/B Tests Lie': a step-by-step path from detection to design to estimator for experiments where units can contaminate each other, with full R code."
-date: 2026-07-29
+date: 2026-06-29
 categories: [causal inference, A/B testing, network effects, spillovers, R]
 #draft: true
 ---
