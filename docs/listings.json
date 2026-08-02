@@ -8,6 +8,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/CUPED/cuped_post.html",
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
       "/posts/Propensity_Score_Matching/propensity_score_masterclass.html",
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
@@ -22,6 +23,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/CUPED/cuped_post.html",
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
       "/posts/Propensity_Score_Matching/propensity_score_masterclass.html",
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
@@ -44,7 +46,8 @@
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
       "/posts/Propensity_Score_Matching/propensity_score_masterclass.html",
-      "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html"
+      "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
+      "/posts/CUPED/cuped_post.html"
     ]
   },
   {

@@ -22,16 +22,16 @@ I'm an economist and data scientist working at the intersection of
 My day-to-day work is about turning a business question into an
 identification strategy, a model, and a defensible number. I care less
 about which method is fashionable this year and more about which one
-actually answers the question in front of me — and about being honest
+actually answers the question in front of me, and about being honest
 when the data can't.
 
 I'm currently a Senior Consultant at **EY-Parthenon** in Lisbon, working
 on econometric evaluation and decision analytics for public and private
-stakeholders. In parallel, I'm finishing a **Ph.D. in Economics** at
-**ISEG – University of Lisbon**, on nonlinear panel-data estimators with
-heterogeneous effects. Before EY I spent three years as a Visiting
-Assistant Professor at ISEG, teaching applied econometrics, microeconomics
-and investment evaluation.
+stakeholders. I hold a **Ph.D. in Economics** from **ISEG – University
+of Lisbon**, awarded with Distinction *cum laude*, on nonlinear
+panel-data estimators with heterogeneous effects. Before EY I spent
+three years as a Visiting Assistant Professor at ISEG, teaching applied
+econometrics, microeconomics and investment evaluation.
 
 This blog is where I think out loud about the methods I use. Some posts
 are theory and intuition. Others are full walkthroughs with R code you
@@ -39,29 +39,29 @@ can run. Most sit in between. The goal is rigour without textbook padding.
 
 ## What I write about
 
-- **Causal inference** — DiD, RDD, IV, synthetic control, DML, causal
+- **Causal inference**: DiD, RDD, IV, synthetic control, DML, causal
   forests. Identification strategies, DAGs, potential outcomes, and the
   robustness checks that keep you honest.
-- **Pricing & demand** — price elasticity, demand modelling, two-sided
+- **Pricing & demand**: price elasticity, demand modelling, two-sided
   market pricing, dynamic pricing, MMM, causal price experiments.
-- **Experimentation** — A/B testing under interference, switchback
+- **Experimentation**: A/B testing under interference, switchback
   experiments, CUPED, uplift modelling, heterogeneous treatment effects.
-- **Forecasting** — probabilistic forecasting, model evaluation,
+- **Forecasting**: probabilistic forecasting, model evaluation,
   uncertainty quantification, and where forecasting stops being causal
   inference.
 
 ## Background
 
-- **Ph.D. in Economics** — ISEG, University of Lisbon *(2020 – present)*
-- **MSc in Applied Econometrics and Forecasting** — ISEG, University of Lisbon
-- **BSc in Management** — Faculty of Economics, University of Coimbra
-- **Senior Consultant** — EY-Parthenon *(2024 – present)*
-- **Visiting Assistant Professor** — ISEG, University of Lisbon *(2021 – 2024)*
+- **Ph.D. in Economics**: ISEG, University of Lisbon *(2020 – 2026, Distinction cum laude)*
+- **MSc in Applied Econometrics and Forecasting**: ISEG, University of Lisbon
+- **BSc in Management**: Faculty of Economics, University of Coimbra
+- **Senior Consultant**: EY-Parthenon *(2024 – present)*
+- **Visiting Assistant Professor**: ISEG, University of Lisbon *(2021 – 2024)*
 
 ## Affiliations
 
-- Member, **REM** — Research in Economics and Mathematics
-- Member, **CEMAPRE** — Center for Applied Mathematics for Forecasting
+- Member, **REM**: Research in Economics and Mathematics
+- Member, **CEMAPRE**: Center for Applied Mathematics for Forecasting
   and Economic Decision
 
 *All views are my own. Code for every post is available on
