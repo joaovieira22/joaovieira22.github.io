@@ -8,6 +8,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Two-Sided Markets/two-sided-markets.html",
       "/posts/CUPED/cuped_post.html",
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
       "/posts/Propensity_Score_Matching/propensity_score_masterclass.html",
@@ -23,6 +24,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/Two-Sided Markets/two-sided-markets.html",
       "/posts/CUPED/cuped_post.html",
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
       "/posts/Propensity_Score_Matching/propensity_score_masterclass.html",
@@ -47,13 +49,15 @@
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
       "/posts/Propensity_Score_Matching/propensity_score_masterclass.html",
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
-      "/posts/CUPED/cuped_post.html"
+      "/posts/CUPED/cuped_post.html",
+      "/posts/Two-Sided Markets/two-sided-markets.html"
     ]
   },
   {
     "listing": "/series/pricing.html",
     "items": [
-      "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html"
+      "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
+      "/posts/Two-Sided Markets/two-sided-markets.html"
     ]
   }
 ]
