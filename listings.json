@@ -8,6 +8,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Switchback/switchback_experiments.html",
       "/posts/Two-Sided Markets/two-sided-markets.html",
       "/posts/CUPED/cuped_post.html",
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
@@ -24,6 +25,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/Switchback/switchback_experiments.html",
       "/posts/Two-Sided Markets/two-sided-markets.html",
       "/posts/CUPED/cuped_post.html",
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
@@ -50,7 +52,8 @@
       "/posts/Propensity_Score_Matching/propensity_score_masterclass.html",
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
       "/posts/CUPED/cuped_post.html",
-      "/posts/Two-Sided Markets/two-sided-markets.html"
+      "/posts/Two-Sided Markets/two-sided-markets.html",
+      "/posts/Switchback/switchback_experiments.html"
     ]
   },
   {
