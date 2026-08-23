@@ -8,6 +8,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Cannibalization/Cannibalization.html",
       "/posts/Switchback/switchback_experiments.html",
       "/posts/Two-Sided Markets/two-sided-markets.html",
       "/posts/CUPED/cuped_post.html",
@@ -25,6 +26,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/Cannibalization/Cannibalization.html",
       "/posts/Switchback/switchback_experiments.html",
       "/posts/Two-Sided Markets/two-sided-markets.html",
       "/posts/CUPED/cuped_post.html",
@@ -53,7 +55,8 @@
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
       "/posts/CUPED/cuped_post.html",
       "/posts/Two-Sided Markets/two-sided-markets.html",
-      "/posts/Switchback/switchback_experiments.html"
+      "/posts/Switchback/switchback_experiments.html",
+      "/posts/Cannibalization/Cannibalization.html"
     ]
   },
   {
