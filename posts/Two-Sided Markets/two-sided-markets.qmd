@@ -1,7 +1,7 @@
 ---
 title: "Why Raising Prices Can Reduce Revenue in Two-Sided Markets"
 description: "A practitioner's walkthrough of two-sided market pricing: why single-sided elasticity models mislead, the chicken-and-egg problem for launch platforms, three modelling approaches (structural, reduced-form, Bayesian), and the review checklist for marketplace pricing analyses."
-date: 2026-08-10
+date: 2026-08-31
 categories: [pricing, causal inference, two-sided markets, marketplace, R]
 ---
 
