@@ -1,87 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://joaovieira22.github.io/series.html</loc>
-    <lastmod>2026-07-09T20:37:36.802Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/series/forecasting.html</loc>
-    <lastmod>2026-07-09T20:39:51.076Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/resources.html</loc>
-    <lastmod>2026-07-09T20:38:38.555Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/What_is_counterfactual/what-is-counterfactual-index.html</loc>
-    <lastmod>2026-07-06T00:14:43.538Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/Switchback/switchback_experiments.html</loc>
-    <lastmod>2026-07-20T08:01:25.205Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html</loc>
-    <lastmod>2026-07-12T23:35:34.493Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/DID/did_for_ceos.html</loc>
-    <lastmod>2026-07-06T00:14:43.538Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/Cannibalization/Cannibalization.html</loc>
-    <lastmod>2026-08-23T22:22:15.422Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/AB_Spillovers_Runbook/runbook.html</loc>
-    <lastmod>2026-07-20T07:55:17.792Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/AB Testing/ab_test_probably_wrong.html</loc>
-    <lastmod>2026-07-06T00:14:43.511Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/about.html</loc>
-    <lastmod>2026-08-02T20:37:51.676Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/index.html</loc>
-    <lastmod>2026-07-09T20:37:39.400Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/AB testing com Spillovers/when_ab_tests_lie.html</loc>
-    <lastmod>2026-07-06T00:14:43.515Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html</loc>
-    <lastmod>2026-07-10T07:05:21.134Z</lastmod>
+    <loc>https://joaovieira22.github.io/posts/Propensity_Score_Matching/propensity_score_masterclass.html</loc>
+    <lastmod>2026-08-31T09:10:17.510Z</lastmod>
   </url>
   <url>
     <loc>https://joaovieira22.github.io/posts/CUPED/cuped_post.html</loc>
-    <lastmod>2026-08-02T20:31:56.972Z</lastmod>
+    <lastmod>2026-08-31T09:10:17.508Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html</loc>
-    <lastmod>2026-07-08T17:25:48.693Z</lastmod>
+    <loc>https://joaovieira22.github.io/posts/AB Testing/ab_test_probably_wrong.html</loc>
+    <lastmod>2026-08-31T09:10:17.503Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/posts/Propensity_Score_Matching/propensity_score_masterclass.html</loc>
-    <lastmod>2026-07-25T20:00:04.966Z</lastmod>
+    <loc>https://joaovieira22.github.io/posts/AB_Spillovers_Runbook/runbook.html</loc>
+    <lastmod>2026-08-31T09:10:17.504Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/posts/Two-Sided Markets/two-sided-markets.html</loc>
-    <lastmod>2026-07-13T22:33:39.450Z</lastmod>
+    <loc>https://joaovieira22.github.io/posts/DID/did_for_ceos.html</loc>
+    <lastmod>2026-08-31T09:10:17.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html</loc>
+    <lastmod>2026-08-31T09:10:17.504Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/What_is_counterfactual/what-is-counterfactual-index.html</loc>
+    <lastmod>2026-08-31T09:10:17.512Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/series/forecasting.html</loc>
+    <lastmod>2026-08-31T09:10:17.512Z</lastmod>
   </url>
   <url>
     <loc>https://joaovieira22.github.io/posts.html</loc>
-    <lastmod>2026-07-09T20:37:34.472Z</lastmod>
+    <lastmod>2026-08-31T09:10:17.502Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/series/causal-inference.html</loc>
-    <lastmod>2026-07-09T20:39:51.054Z</lastmod>
+    <loc>https://joaovieira22.github.io/index.html</loc>
+    <lastmod>2026-08-31T09:10:17.502Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/resources.html</loc>
+    <lastmod>2026-08-31T09:10:17.512Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/series.html</loc>
+    <lastmod>2026-08-31T09:10:17.512Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/about.html</loc>
+    <lastmod>2026-08-31T09:10:17.342Z</lastmod>
   </url>
   <url>
     <loc>https://joaovieira22.github.io/series/pricing.html</loc>
-    <lastmod>2026-07-09T20:39:51.091Z</lastmod>
+    <lastmod>2026-08-31T09:10:17.512Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/series/causal-inference.html</loc>
+    <lastmod>2026-08-31T09:10:17.512Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/Two-Sided Markets/two-sided-markets.html</loc>
+    <lastmod>2026-08-31T09:43:52.453Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/AB testing com Spillovers/when_ab_tests_lie.html</loc>
+    <lastmod>2026-08-31T09:10:17.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html</loc>
+    <lastmod>2026-08-31T09:10:17.509Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/Cannibalization/Cannibalization.html</loc>
+    <lastmod>2026-08-31T09:10:17.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/Switchback/switchback_experiments.html</loc>
+    <lastmod>2026-08-31T09:10:17.511Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html</loc>
+    <lastmod>2026-08-31T09:10:17.509Z</lastmod>
   </url>
 </urlset>
