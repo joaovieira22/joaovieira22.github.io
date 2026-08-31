@@ -77,4 +77,4 @@ format:
     footnotes-hover: true
 
 execute:
-  freeze: auto
+  freeze: true
