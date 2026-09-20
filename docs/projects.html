@@ -123,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -432,7 +432,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -460,7 +460,25 @@ window.Quarto = {
 <p>Projects with code, data, and reproducible output. Blog posts explain the method; these pages show the full pipeline end to end.</p>
 <div id="listing-projects-list" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-
+<div class="g-col-1" data-index="0" data-listing-date-sort="1789945200000" data-listing-file-modified-sort="1789914897073" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="234" data-listing-word-count-sort="46715">
+<a href="./projects/teacher-forecasting/teacher_requirements_mainland_portugal_2025_2040.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img loading='lazy' src="projects\teacher-forecasting\figures\data_pipeline.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Projecting teacher requirements in mainland Portugal, 2025-2040
+</h5>
+<div class="card-text listing-description delink">
+The Portuguese school system is passing through two demographic transitions at once, and they push in opposite directions. On the demand side, the fall in births works its…
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Sep 21, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
@@ -950,7 +968,7 @@ window.Quarto = {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-list</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    contents:</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">      - "projects/*/index.qmd"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">      - "projects/*/*.qmd"</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    sort: "date desc"</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    type: grid</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    grid-columns: 2</span></span>

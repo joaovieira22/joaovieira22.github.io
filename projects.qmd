@@ -6,7 +6,7 @@ toc: false
 listing:
   - id: projects-list
     contents:
-      - "projects/*/index.qmd"
+      - "projects/*/*.qmd"
     sort: "date desc"
     type: grid
     grid-columns: 2

@@ -50,7 +50,9 @@
   },
   {
     "listing": "/projects.html",
-    "items": []
+    "items": [
+      "/projects/teacher-forecasting/teacher_requirements_mainland_portugal_2025_2040.html"
+    ]
   },
   {
     "listing": "/series/causal-inference.html",
