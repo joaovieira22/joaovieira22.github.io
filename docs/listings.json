@@ -2,12 +2,14 @@
   {
     "listing": "/series/forecasting.html",
     "items": [
-      "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html"
+      "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
+      "/posts/Teacher Shortage/post_teacher_requirements_2025_2040.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Teacher Shortage/post_teacher_requirements_2025_2040.html",
       "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
       "/posts/Synthetic Control/synthetic_control.html",
       "/posts/Two-Sided Markets/two-sided-markets.html",
@@ -28,6 +30,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/Teacher Shortage/post_teacher_requirements_2025_2040.html",
       "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
       "/posts/Synthetic Control/synthetic_control.html",
       "/posts/Two-Sided Markets/two-sided-markets.html",
@@ -71,6 +74,12 @@
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
       "/posts/Two-Sided Markets/two-sided-markets.html",
       "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/teacher-forecasting/index.html"
     ]
   }
 ]

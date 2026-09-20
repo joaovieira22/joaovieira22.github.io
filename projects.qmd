@@ -1,0 +1,22 @@
+---
+title: "Projects"
+subtitle: "Applied work: forecasting, causal inference, and packages."
+page-layout: full
+toc: false
+listing:
+  - id: projects-list
+    contents:
+      - "projects/*/index.qmd"
+    sort: "date desc"
+    type: grid
+    grid-columns: 2
+    categories: true
+    fields: [image, date, title, description, categories]
+    image-placeholder: foto3.jpeg
+---
+
+Projects with code, data, and reproducible output. Blog posts explain the
+method; these pages show the full pipeline end to end.
+
+::: {#projects-list}
+:::

@@ -32,6 +32,8 @@ website:
             href: series/forecasting.qmd
       - text: "All Posts"
         href: posts.qmd
+      - text: "Projects"
+        href: projects.qmd
       - text: "Resources"
         href: resources.qmd
       - text: "About"
@@ -45,8 +47,8 @@ website:
         href: index.xml
 
   page-footer:
-    left: "© 2026 João Vieira"
-    center: "The Causal Layer — Applied writing on causal inference, pricing, and forecasting."
+    left: "Â© 2026 JoÃ£o Vieira"
+    center: "The Causal Layer â€” Applied writing on causal inference, pricing, and forecasting."
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/joao-vieira-iseg/
