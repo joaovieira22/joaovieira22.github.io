@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://joaovieira22.github.io/series.html</loc>
-    <lastmod>2026-07-09T20:37:36.802Z</lastmod>
+    <lastmod>2026-09-20T13:13:06.202Z</lastmod>
   </url>
   <url>
     <loc>https://joaovieira22.github.io/series/forecasting.html</loc>
@@ -10,71 +10,79 @@
   </url>
   <url>
     <loc>https://joaovieira22.github.io/resources.html</loc>
-    <lastmod>2026-07-09T20:38:38.555Z</lastmod>
+    <lastmod>2026-09-20T13:13:06.176Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/projects/teacher-forecasting/teacher_requirements_mainland_portugal_2025_2040.html</loc>
+    <lastmod>2026-09-20T14:34:57.073Z</lastmod>
   </url>
   <url>
     <loc>https://joaovieira22.github.io/posts/What_is_counterfactual/what-is-counterfactual-index.html</loc>
     <lastmod>2026-09-20T13:13:21.780Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/posts/Synthetic Control/synthetic_control.html</loc>
-    <lastmod>2026-09-20T13:13:21.647Z</lastmod>
+    <loc>https://joaovieira22.github.io/posts/Teacher_Shortage/post_teacher_requirements_2025_2040.html</loc>
+    <lastmod>2026-09-20T14:32:19.705Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/posts/Propensity_Score_Matching/propensity_score_masterclass.html</loc>
-    <lastmod>2026-09-20T13:13:21.589Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html</loc>
-    <lastmod>2026-09-20T13:13:21.537Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/DID/did_for_ceos.html</loc>
-    <lastmod>2026-09-20T13:13:21.486Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/Cannibalization/Cannibalization.html</loc>
-    <lastmod>2026-09-20T13:13:21.430Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/AB_Spillovers_Runbook/runbook.html</loc>
-    <lastmod>2026-09-20T13:13:21.187Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/AB Testing/ab_test_probably_wrong.html</loc>
-    <lastmod>2026-09-20T13:13:21.148Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/about.html</loc>
-    <lastmod>2026-08-02T20:37:51.676Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/index.html</loc>
-    <lastmod>2026-09-20T13:13:06.099Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/AB testing com Spillovers/when_ab_tests_lie.html</loc>
-    <lastmod>2026-09-20T13:13:21.171Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html</loc>
-    <lastmod>2026-09-20T13:13:21.230Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/CUPED/cuped_post.html</loc>
-    <lastmod>2026-09-20T13:13:21.460Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html</loc>
-    <lastmod>2026-09-20T13:13:21.518Z</lastmod>
+    <loc>https://joaovieira22.github.io/posts/Switchback/switchback_experiments.html</loc>
+    <lastmod>2026-09-20T13:13:21.619Z</lastmod>
   </url>
   <url>
     <loc>https://joaovieira22.github.io/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html</loc>
     <lastmod>2026-09-20T13:13:21.567Z</lastmod>
   </url>
   <url>
-    <loc>https://joaovieira22.github.io/posts/Switchback/switchback_experiments.html</loc>
-    <lastmod>2026-09-20T13:13:21.619Z</lastmod>
+    <loc>https://joaovieira22.github.io/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html</loc>
+    <lastmod>2026-09-20T13:13:21.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/CUPED/cuped_post.html</loc>
+    <lastmod>2026-09-20T13:13:21.460Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html</loc>
+    <lastmod>2026-09-20T13:13:21.230Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/AB testing com Spillovers/when_ab_tests_lie.html</loc>
+    <lastmod>2026-09-20T13:13:21.171Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/index.html</loc>
+    <lastmod>2026-09-20T13:13:06.099Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/about.html</loc>
+    <lastmod>2026-09-20T13:13:06.032Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/AB Testing/ab_test_probably_wrong.html</loc>
+    <lastmod>2026-09-20T13:13:21.148Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/AB_Spillovers_Runbook/runbook.html</loc>
+    <lastmod>2026-09-20T13:13:21.187Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/Cannibalization/Cannibalization.html</loc>
+    <lastmod>2026-09-20T13:13:21.430Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/DID/did_for_ceos.html</loc>
+    <lastmod>2026-09-20T13:13:21.486Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html</loc>
+    <lastmod>2026-09-20T13:13:21.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/Propensity_Score_Matching/propensity_score_masterclass.html</loc>
+    <lastmod>2026-09-20T13:13:21.589Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joaovieira22.github.io/posts/Synthetic Control/synthetic_control.html</loc>
+    <lastmod>2026-09-20T13:13:21.647Z</lastmod>
   </url>
   <url>
     <loc>https://joaovieira22.github.io/posts/Two-Sided Markets/two-sided-markets.html</loc>
@@ -85,31 +93,15 @@
     <lastmod>2026-09-20T13:13:06.123Z</lastmod>
   </url>
   <url>
+    <loc>https://joaovieira22.github.io/projects.html</loc>
+    <lastmod>2026-09-20T13:13:06.144Z</lastmod>
+  </url>
+  <url>
     <loc>https://joaovieira22.github.io/series/causal-inference.html</loc>
     <lastmod>2026-09-20T13:13:27.241Z</lastmod>
   </url>
   <url>
     <loc>https://joaovieira22.github.io/series/pricing.html</loc>
     <lastmod>2026-09-20T13:13:27.260Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/projects.html</loc>
-    <lastmod>2026-09-19T18:22:14.901Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/projects/teacher-forecasting/index.html</loc>
-    <lastmod>2026-09-19T18:22:48.496Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/posts/Teacher Shortage/post_teacher_requirements_2025_2040.html</loc>
-    <lastmod>2026-09-20T13:13:21.666Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/projects/teacher-forecasting/teacher_requirements_mainland_portugal_2025_2040 (1).html</loc>
-    <lastmod>2026-09-20T13:13:26.382Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joaovieira22.github.io/projects/teacher-forecasting/teacher_requirements_mainland_portugal_2025_2040.html</loc>
-    <lastmod>2026-09-20T13:29:45.288Z</lastmod>
   </url>
 </urlset>
