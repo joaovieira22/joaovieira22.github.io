@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/G-Computation/g-computation.html",
       "/posts/Teacher_Shortage/post_teacher_requirements_2025_2040.html",
       "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
       "/posts/Synthetic Control/synthetic_control.html",
@@ -30,6 +31,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/G-Computation/g-computation.html",
       "/posts/Teacher_Shortage/post_teacher_requirements_2025_2040.html",
       "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
       "/posts/Synthetic Control/synthetic_control.html",
@@ -71,7 +73,8 @@
       "/posts/Cannibalization/Cannibalization.html",
       "/posts/Two-Sided Markets/two-sided-markets.html",
       "/posts/Synthetic Control/synthetic_control.html",
-      "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html"
+      "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
+      "/posts/G-Computation/g-computation.html"
     ]
   },
   {
