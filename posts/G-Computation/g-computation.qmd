@@ -1,5 +1,5 @@
 ---
-title: "G-Computation: The Causal Tool You Should Be Using Instead of Regression"
+title: "G-Computation: The Causal Tool You Should Be Using After Regression"
 description: "Why reading regression coefficients directly is rarely sufficient for decision-making, and how g-computation delivers the causal estimates that actually answer business questions. With full R implementation using marginaleffects."
 date: 2026-09-28
 categories: [causal inference, g-computation, R, marginaleffects]
