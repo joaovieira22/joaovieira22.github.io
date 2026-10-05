@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
       "/posts/G-Computation/g-computation.html",
       "/posts/Teacher_Shortage/post_teacher_requirements_2025_2040.html",
       "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
@@ -20,7 +21,6 @@
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
       "/posts/Propensity_Score_Matching/propensity_score_masterclass.html",
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
-      "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
       "/posts/AB_Spillovers_Runbook/runbook.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
@@ -32,6 +32,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
       "/posts/G-Computation/g-computation.html",
       "/posts/Teacher_Shortage/post_teacher_requirements_2025_2040.html",
       "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
@@ -43,7 +44,6 @@
       "/posts/Forecasting_is_ not_Causal_Inference/forecasting-is-not-causal-inference.html",
       "/posts/Propensity_Score_Matching/propensity_score_masterclass.html",
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
-      "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
       "/posts/AB_Spillovers_Runbook/runbook.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
@@ -66,7 +66,6 @@
       "/posts/AB Testing/ab_test_probably_wrong.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB_Spillovers_Runbook/runbook.html",
-      "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
       "/posts/AB_Testing_Profit_Optimization/ab_testing_optimization.html",
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
       "/posts/Propensity_Score_Matching/propensity_score_masterclass.html",
@@ -77,7 +76,8 @@
       "/posts/Two-Sided Markets/two-sided-markets.html",
       "/posts/Synthetic Control/synthetic_control.html",
       "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
-      "/posts/G-Computation/g-computation.html"
+      "/posts/G-Computation/g-computation.html",
+      "/posts/AB Houldouts/long-term-effects-universal-holdouts.html"
     ]
   },
   {
