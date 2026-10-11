@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/ATE/the-ate-is-often-the-wrong-metric.html",
       "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
       "/posts/G-Computation/g-computation.html",
       "/posts/Teacher_Shortage/post_teacher_requirements_2025_2040.html",
@@ -32,6 +33,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/ATE/the-ate-is-often-the-wrong-metric.html",
       "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
       "/posts/G-Computation/g-computation.html",
       "/posts/Teacher_Shortage/post_teacher_requirements_2025_2040.html",
@@ -77,7 +79,8 @@
       "/posts/Synthetic Control/synthetic_control.html",
       "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
       "/posts/G-Computation/g-computation.html",
-      "/posts/AB Houldouts/long-term-effects-universal-holdouts.html"
+      "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
+      "/posts/ATE/the-ate-is-often-the-wrong-metric.html"
     ]
   },
   {
