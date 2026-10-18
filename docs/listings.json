@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Instrumental_Variables/iv-post-merged.html",
       "/posts/ATE/the-ate-is-often-the-wrong-metric.html",
       "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
       "/posts/G-Computation/g-computation.html",
@@ -33,6 +34,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/Instrumental_Variables/iv-post-merged.html",
       "/posts/ATE/the-ate-is-often-the-wrong-metric.html",
       "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
       "/posts/G-Computation/g-computation.html",
@@ -80,7 +82,8 @@
       "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
       "/posts/G-Computation/g-computation.html",
       "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
-      "/posts/ATE/the-ate-is-often-the-wrong-metric.html"
+      "/posts/ATE/the-ate-is-often-the-wrong-metric.html",
+      "/posts/Instrumental_Variables/iv-post-merged.html"
     ]
   },
   {
