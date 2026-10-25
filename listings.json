@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/RDD/Regression_Discontinuity_Design.html",
       "/posts/Instrumental_Variables/iv-post-merged.html",
       "/posts/ATE/the-ate-is-often-the-wrong-metric.html",
       "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
@@ -27,7 +28,6 @@
       "/posts/AB_Spillovers_Runbook/runbook.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB Testing/ab_test_probably_wrong.html",
-      "/posts/RDD/Regression_Discontinuity_Design.html",
       "/posts/DID/did_for_ceos.html",
       "/posts/What_is_counterfactual/what-is-counterfactual-index.html"
     ]
@@ -35,6 +35,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/RDD/Regression_Discontinuity_Design.html",
       "/posts/Instrumental_Variables/iv-post-merged.html",
       "/posts/ATE/the-ate-is-often-the-wrong-metric.html",
       "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
@@ -53,7 +54,6 @@
       "/posts/AB_Spillovers_Runbook/runbook.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB Testing/ab_test_probably_wrong.html",
-      "/posts/RDD/Regression_Discontinuity_Design.html",
       "/posts/DID/did_for_ceos.html",
       "/posts/What_is_counterfactual/what-is-counterfactual-index.html"
     ]
@@ -69,7 +69,6 @@
     "items": [
       "/posts/What_is_counterfactual/what-is-counterfactual-index.html",
       "/posts/DID/did_for_ceos.html",
-      "/posts/RDD/Regression_Discontinuity_Design.html",
       "/posts/AB Testing/ab_test_probably_wrong.html",
       "/posts/AB testing com Spillovers/when_ab_tests_lie.html",
       "/posts/AB_Spillovers_Runbook/runbook.html",
@@ -86,7 +85,8 @@
       "/posts/G-Computation/g-computation.html",
       "/posts/AB Houldouts/long-term-effects-universal-holdouts.html",
       "/posts/ATE/the-ate-is-often-the-wrong-metric.html",
-      "/posts/Instrumental_Variables/iv-post-merged.html"
+      "/posts/Instrumental_Variables/iv-post-merged.html",
+      "/posts/RDD/Regression_Discontinuity_Design.html"
     ]
   },
   {
