@@ -1,7 +1,7 @@
 ---
 title: "Marketing Mix Modeling: The Bayesian Way"
 description: "A practitioner's walkthrough of Bayesian marketing mix modeling: what an MMM is, why the Bayesian framing is used, the five ways it fails to identify what it claims to measure, the three dominant frameworks, the calibration bridge to experimental and quasi-experimental causal identification, a five-layer system architecture, an R simulation where an unobserved confounder flips the channel ranking until a lift-test anchor corrects it, and a review checklist for MMMs."
-date: 2026-10-05
+date: 2026-11-02
 categories: [marketing analytics, causal inference, bayesian, mmm, R]
 ---
 
