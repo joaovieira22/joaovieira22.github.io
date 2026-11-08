@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Survival Analysis/causal_survival_analysis.html",
       "/posts/MMM Bayesian/mmm-bayesian-way.html",
       "/posts/RDD/Regression_Discontinuity_Design.html",
       "/posts/Instrumental_Variables/iv-post-merged.html",
@@ -36,6 +37,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/Survival Analysis/causal_survival_analysis.html",
       "/posts/MMM Bayesian/mmm-bayesian-way.html",
       "/posts/RDD/Regression_Discontinuity_Design.html",
       "/posts/Instrumental_Variables/iv-post-merged.html",
@@ -89,7 +91,8 @@
       "/posts/ATE/the-ate-is-often-the-wrong-metric.html",
       "/posts/Instrumental_Variables/iv-post-merged.html",
       "/posts/RDD/Regression_Discontinuity_Design.html",
-      "/posts/MMM Bayesian/mmm-bayesian-way.html"
+      "/posts/MMM Bayesian/mmm-bayesian-way.html",
+      "/posts/Survival Analysis/causal_survival_analysis.html"
     ]
   },
   {
