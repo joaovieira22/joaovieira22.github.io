@@ -1,7 +1,7 @@
 ---
 title: "Causal Price Experiments: When A/B Testing Isn't Enough"
 description: "A practitioner's walkthrough of price experiments: why a price is not a feature, the wrong-sign problem where a clean A/B test can tell you to raise a price you should cut, forward-looking demand and why two price points cannot recover the gradient, lead-day bias in marketplaces of expirable goods, designing an experiment that balances elasticity, revenue and tail risk, the causal-inference foundations, and a full R simulation of the wrong sign with its debiasing."
-date: 2026-16-09
+date: 2026-11-15
 categories: [pricing, experimentation, causal inference, revenue management]
 ---
 
