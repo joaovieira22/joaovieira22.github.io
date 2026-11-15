@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Causal Price Experiments When AB Testing Isn't Enough/causal-price-experiments.html",
       "/posts/Survival Analysis/causal_survival_analysis.html",
       "/posts/MMM Bayesian/mmm-bayesian-way.html",
       "/posts/RDD/Regression_Discontinuity_Design.html",
@@ -37,6 +38,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/Causal Price Experiments When AB Testing Isn't Enough/causal-price-experiments.html",
       "/posts/Survival Analysis/causal_survival_analysis.html",
       "/posts/MMM Bayesian/mmm-bayesian-way.html",
       "/posts/RDD/Regression_Discontinuity_Design.html",
@@ -92,7 +94,8 @@
       "/posts/Instrumental_Variables/iv-post-merged.html",
       "/posts/RDD/Regression_Discontinuity_Design.html",
       "/posts/MMM Bayesian/mmm-bayesian-way.html",
-      "/posts/Survival Analysis/causal_survival_analysis.html"
+      "/posts/Survival Analysis/causal_survival_analysis.html",
+      "/posts/Causal Price Experiments When AB Testing Isn't Enough/causal-price-experiments.html"
     ]
   },
   {
@@ -100,7 +103,8 @@
     "items": [
       "/posts/Price_Elasticity_OLS_to_Causal/price_elasticity_estimation.html",
       "/posts/Two-Sided Markets/two-sided-markets.html",
-      "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html"
+      "/posts/Dinamic Pricing/dynamic-pricing-is-not-revenue-management.html",
+      "/posts/Causal Price Experiments When AB Testing Isn't Enough/causal-price-experiments.html"
     ]
   }
 ]
